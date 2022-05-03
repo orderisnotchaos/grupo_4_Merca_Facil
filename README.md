@@ -5,9 +5,9 @@ Buscamos apuntar a un mercado de jovenes adultos de edades entre 22 y 45 años q
 y busquen una forma más sintetica de administrar sus compras en supermercados, además de poseer métodos de pago digitales y dispositivos electrónicos como tablet, celular, pc, etc... estos tendrán la facilidad de (mediante nuestro servicio) poder administrar sus compras desde la comodidad de sus hogares.
 
 <-- añadir descripciones (individual) -->
-Integrantes: 
-. Karen Quinteros
-. Jan Zambrano
-. Yuriana Palacios
-. Andrés Ferrari
+Integrantes: <br />
+. Karen Quinteros<br />
+. Jan Zambrano<br />
+. Yuriana Palacios<br />
+. Andrés Ferrari<br />
 Estudiante de ingeniería electrónica en la Universidad Tecnólogica Nacional y entusiasta en el mundo de la programación con deseos de conseguir su primera experiencia laboral formal como programador web. Amante de los animales
