@@ -7,8 +7,8 @@ y busquen una forma más sintetica de administrar sus compras en supermercados, 
 <-- añadir descripciones (individual) -->
 Integrantes: <br />
 . Karen Quinteros<br />
-. Andrés Ferrari<br />
 . Yuriana Palacios<br />
+. Andrés Ferrari<br />
 Estudiante de ingeniería electrónica en la Universidad Tecnólogica Nacional y entusiasta en el mundo de la programación con deseos de conseguir su primera experiencia laboral formal como programador web. Amante de los animales.<br />
 . Jan Zambrano<br />
 Técnico Informático con perfil híbrido que combina la tecnología y el marketing desde un punto de vista técnico. Conocimientos en manejo de base de datos, email marketing, web analytics, SEO, SEM, HTML, CSS, CMS. Venezolano, Residiendo en en el Sur de Chile, Los Ángeles Bio bio.<br />
