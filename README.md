@@ -26,3 +26,5 @@ https://www.exito.com/<br />
 https://merqueo.com/<br />
 https://www.miniso.co/ <br />
 https://justo.mx/ <br />
+
+Estos sitios de referencia fueron elegidos, ya que en estas páginas venden diversos productos y algunas tienen similitudes con lo que tenemos en mente, permitiéndonos así poder inspirarnos y tomar buenas ideas.
