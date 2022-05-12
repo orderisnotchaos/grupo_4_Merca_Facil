@@ -20,6 +20,8 @@ Técnico Informático con perfil híbrido que combina la tecnología y el market
 
 <strong>Sitios de referencia:</strong><br />
 
+https://coto.com.ar<br />
+https://www.carrefour.com.ar/<br />
 https://www.mayorista10.cl/<br />
 https://www.alvi.cl/<br />
 https://www.exito.com/<br />
