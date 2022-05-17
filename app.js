@@ -1,7 +1,7 @@
 const express = require("Express");
 const app = express();
 const path = require("path");
-console.log(__dirname + "\\public");
+
 app.use( express.static (__dirname + "\\public"));
 
 app.listen(8000,() => {

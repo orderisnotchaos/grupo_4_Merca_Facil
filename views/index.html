@@ -1,33 +1,113 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ejercicio1</title>
+        <title>mercaFacil</title>
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
         <script src="https://kit.fontawesome.com/c1d2f4ffc4.js" crossorigin="anonymous"></script>
 
     </head>
-    <body>
-        <header>
+    <body class="body">
+        <header class="main__header">
+            <div = class="logo-container">
+                <div class="logo"><img src="/images/logo-banner.png" alt="logo png" class="logo-img"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="search-box">
+                    <input type="text" class="input-search" placeholder="Buscar...">
+                </div>
+            </div>
             <nav class="nav">
                 <ul class="nav__ul">
-                    <li class="nav__li"><i class="fa-solid fa-house"></i><a href = "#">Inicio</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-users"></i><a href = "#"></i>Sobre Nosotros</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-dollar-sign"></i><a href = "#">Gana dinero</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-circle-question"></i><a href = "#">Ayuda</a></li>
-                </ul>
-
-                <ul class="nav__responsive-ul">
-                    <div class="nav__responsive-button"></div>
-                    <div class="nav__li-container">
-                        <li class="nav__responsive-li"><i class="fa-solid fa-house"></i><a href = "#">Inicio</a></li>
-                        <li class="nav__responsive-li"><i class="fa-solid fa-users"></i><a href = "#">Sobre Nosotros</a></li>
-                        <li class="nav__responsive-li"><i class="fa-solid fa-dollar-sign"></i><a href = "#">Gana dinero</a></li>
-                        <li class="nav__responsive-li"><i class="fa-solid fa-circle-question"></i><a href = "#">Ayuda</a></li>
-                    </div>
+                    <li class="nav__li"><a href = "#">Home</a></li>
+                    <li class="nav__li"><a href = "#"></i>Sobre Nosotros</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "#">Mis pedidos</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Cuenta</a></li>
                 </ul>
             </nav>
             
         </header>
+        <div class="banner-comunidad-container">
+            <img src="/images/comunidad-600px-b.jpg" alt="banner-comunidad" class="img-banner-comunidad">
+        </div>
 
+        <h2>PRODUCTOS</h2>
+        <div class="products-container">
+
+            <div class="product1"> <p>DESPENSA</p></div>
+            <div class="product2"><p>BEBIDAS</p></div>
+            <div class="product3"><p>MASCOTAS</p></div>
+            <div class="product4"><p>BEBÉS</p></div>
+            <div class="product5"><p>CUIDADO PERSONAL</p></div>
+            <div class="product6"><p>LIMPIEZA</p></div>
+        </div>
+
+        <p class="most-saled-products-title">PRODUCTOS MÁS VENDIDOS</p>
+        <div class="products-container2">
+            <div class="product7"></div>
+            <div class="product8"></div>
+            <div class="product9"></div>
+            <div class="product10"></div>
+        </div>
     </body>
+    <footer class="footer">
+
+        <table>
+
+            <tr>
+
+              <th>
+
+                  Información
+
+              </th>
+
+              <th>
+
+                Información de contacto
+
+              </th>
+
+              <th>
+
+                Síguenos en:
+
+              </th>
+
+            </tr>
+
+            <tr>
+
+              <td>              
+
+                Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de
+                pago. ¡Y siempre es seguro!
+
+              </td>
+
+              <td>
+
+                  Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de
+                  productos. Es un beneficio de Mercado Puntos.
+
+              </td>
+
+              <td>
+
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+              </td>
+
+            </tr>
+
+          </table>
+
+          <p class="copyright-note">
+                <i>
+                   Copyright © 1999-2019 Merca Fácil S.R.L
+                </i>
+          </p>
+    </footer>
 </html>

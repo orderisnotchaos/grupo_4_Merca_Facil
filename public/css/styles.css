@@ -1,54 +1,191 @@
-.nav__responsive-ul{
-    display: none;
+.body{
+    background-color: #35D0BA;
 }
 
-.nav{
-    background-color: slateblue;
+.main__header{
+    background-color: #FF9234;
+    padding: 0;
+    margin: 0;
+}
+
+.logo{
+    box-sizing: border-box;
+    display: flex;
+    height: 33px;
+    width: 88px;
+}
+
+.logo-img{
+
+    width:85px;
+    height: 85px;
+    margin-top:-3px;
+}
+
+.wrapper{
+
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 10px;
+}
+.nav__ul{
+
+    display: flex;
+    list-style: none;
+    justify-content:flex-end;
 }
 
 .nav__li{
-    display: inline-block;
-    padding: 12px; 
-    color: #fff;
-}
 
-.nav__li:hover > a {
-
-    color: #ccc;
-}
-
-.nav__li:hover{
-
-    color: #ccc;
+    margin: 0 1%;
 }
 
 .nav__li a{
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav__li i {
-    box-sizing: border-box;
-    text-align: right;
-    margin-right: 5px;
-    width :30px;
-    color: #016;
-}
-
-.nav__responsive-li a{
-    color : #016;
-    text-decoration: none;
-}
-
-@media only screen and (max-width:561) {
-    .nav__ul{
-        display: none;
-    }
-
-    .nav{
-        height: 37px;
-        width: 100%;
-        background-color: #69c;
-    }
     
+    text-decoration: none;
+}
+
+.banner-comunidad-container{
+    display: flex;
+}
+
+.img-banner-comunidad{
+    justify-content: center;
+    margin-left: 5%;
+    height: 500px;
+    width: 800px;
+}
+
+.products-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product1{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.product2{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.product3{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.product4{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.product5{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.product6{
+
+    height: 300px;
+    width: 400px;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.most-saled-products-title{
+
+    text-align: center;
+}
+
+.products-container2{
+    display: flex;
+}
+.product7{
+
+    height: 200px;
+    width: 350px;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.product8{
+
+    height: 200px;
+    width: 350px;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: -50px;
+}
+
+.product9{
+
+    height: 200px;
+    width: 350px;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: -50px;
+}
+
+.product10{
+
+    height: 200px;
+    width: 350px;
+    margin: 5px;
+    background-image: url("/images/despensa01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-left: -50px;
+}
+
+
+.footer{
+
+    background-color: #D92027;
 }
