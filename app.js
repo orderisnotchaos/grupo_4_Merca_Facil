@@ -19,6 +19,16 @@ app.get('/tienda', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get('/login', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/login.html");
+});
+
+app.get('/pago', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/checkout.html");
+});
+
 
 app.get('/home', (req, res) => { 
     
