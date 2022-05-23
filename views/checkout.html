@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MercaFacil - Pagina de pago</title>
+        <title>MercaFacil - Finalizar compra</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
@@ -41,11 +41,116 @@
             </nav>
             
         </header>
-       
+        <div class="sub-header">
+            <h2>Finalizar compra</h2>
+        </div>
+    </div>
+    <div class="ingresar-cuenta">
+        <p>¿Ya eres cliente? <a href = "#">Haz clic aquí para acceder</a></p>
+    </div>
+    <div class="box-checkout">        
+        <section class="box-form-checkout">
+            <form  class="box-form" action="/" method="POST">
+                <p>        
+                    <label class="form-label-hide" for="nombre">Nombre y apellido</label>   
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre y apellido" minlength="4" required>
+                </p>
+                           
+                
+                <p>
+                    <label class="form-label-hide" for="provincia">Provincia</label>
+                    <input type="text" id="provincia" name="provincia" placeholder="Ingrese su provincia" required>
+                </p>
+                
+                <p>
+                    <label class="form-label-hide" for="c_postal">Código postal</label>
+                    <input type="text" id="c_postal" name="c_postal" placeholder="Ingrese su código postal" required>
+                </p>
+                
+                <p>
+                    <label class="form-label-hide" for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+                </p>
+                
+                <p>
+                    <label class="form-label-hide" for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su e-mail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                </p>
 
+                <p>
+                    <label class="form-label-hide" for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                </p>
 
-
+                <p>
+                    <label class="form-label-hide" for="contrasena">Contraseña</label>
+                    <input type="password" name="contrasena1" id="contrasena1" placeholder="Ingrese su Contraseña" minlength="6" required>
+                </p>
         
+                <p>
+                    <label class="form-label-hide" for="contrasena">Confirmar contraseña</label>
+                    <input type="password" name="contrasena2" id="contrasena2" placeholder="Confirmar contraseña" minlength="6" required>
+                </p>   
+                
+                <p>
+                    <label class="form-label-hide" for="nota">Notas del pedido (opcional)</label>
+                    <textarea name="nota" rows="10" cols="50">Ingrese su notas del pedido</textarea>
+                </p>                           
+            </form>            
+        </section>
+
+        <section class="box-purchase-information">
+            <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-nrix" colspan="2">Tu pedido</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-cly1">Producto</td>
+                    <td class="tg-mwxe">Subtotal</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Titulo de producto | Cantidad x 1</td>
+                    <td class="tg-mwxe">$ 10.000</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Subtotal</td>
+                    <td class="tg-mwxe">$ 10.000</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Envió</td>
+                    <td class="tg-mwxe">
+                        <label class="form-radio" for="tres-dias"><input type="radio" name="perfil" id="tres-dias" value="Comprar"> $ 2000 Envió en 3 días Hábiles</label><br>
+                        <label class="form-radio" for="dia-siguiente"><input type="radio" name="perfil" id="dia-siguiente" value="Vender"> $5000 Express, siguiente dia</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Impuesto de 19%</td>
+                    <td class="tg-mwxe">$ 1.900</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Total</td>
+                    <td class="tg-mwxe">$ 11.900</td>
+                  </tr>
+                </tbody>
+                </table>
+                <div class="payment">
+                    <p>Paga de forma segura con tu tarjeta de crédito.</p>
+                    <form  class="box-form" action="/" method="POST"></form>
+                    <input type="number" id="numbercard" name="numbercard" placeholder="Numero de tarjeta" required>
+                    <div class="box-card-2colmn">
+                        <input type="text" id="datecard" name="datecard" placeholder="MM / AA" required>
+                        <input type="number" id="cvvcard" name="cvvcard" placeholder="Código CVV" required>
+                    </div>
+                    <p>
+                        <input class="btn-form" id="enviar" type="submit" name="enviar" value="PAGAR">
+                    </p> 
+                </div>
+        </section>
+    </div>  
+
     </body>
     <footer class="footer">
         <div class="contenedor-footer">

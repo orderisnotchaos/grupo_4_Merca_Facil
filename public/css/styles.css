@@ -271,6 +271,130 @@ h1, h2, h3, h4, h5, h6, .nav{
     text-align: center;
 }
 
+/* Estilos de pagina de pago */
+.ingresar-cuenta{
+    font-size: 24px;
+    text-align: center;
+}
+
+.box-checkout{
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+.box-form-checkout{
+    align-items: center;
+    align-self: center;
+    padding: 30px 30px;
+    width: 50%;
+}
+
+.box-purchase-information{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 100%;
+    margin-top: 40px;
+    padding: 30px 30px;
+    width: 50%;
+}
+
+.box-form-checkout label, .box-form-checkout input, .box-form-checkout textarea{
+    display: block;
+    font-size: 24px;
+    width: 100%;
+}
+
+.box-form-checkout label{
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+    width:100%
+}
+
+.tg td{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size:22px;
+    overflow:hidden;
+    padding:10px 5px
+    ;word-break:normal;
+}
+
+.tg th{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size:22px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg .tg-cly1{
+    text-align:left;
+    vertical-align:middle;
+}
+
+.tg .tg-mwxe{
+    text-align:right;
+    vertical-align:middle;
+}
+
+.tg .tg-nrix{
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.payment #numbercard{
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+
+.box-card-2colmn{
+    width: 100%;
+    margin: auto;
+}
+
+.payment #datecard{
+    font-size: 24px;
+    width: 49%;
+    margin-bottom: 10px;
+    border: 1px solid;
+    float: left;
+}
+
+.payment #cvvcard{
+    font-size: 24px;
+    width: 49%;
+    margin-bottom: 10px;
+    border: 1px solid;
+    float: right;
+}
+
+.payment #enviar{
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
 /* Lo oculto provisionalmente */
 
 .sub__nav__ul{
