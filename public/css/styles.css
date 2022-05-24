@@ -1,5 +1,6 @@
 .body{
     background-color: #35D0BA;
+    margin: 0;
 }
 
 .main__header{
@@ -79,7 +80,7 @@
     width: 400px;
     background-color: #35D0BA;
     margin: 5px;
-    background-image: url("/images/despensa01.jpg");
+    background-image: url("/images/bebidas01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -90,7 +91,7 @@
     width: 400px;
     background-color: #35D0BA;
     margin: 5px;
-    background-image: url("/images/despensa01.jpg");
+    background-image: url("/images/mascotas01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -101,7 +102,7 @@
     width: 400px;
     background-color: #35D0BA;
     margin: 5px;
-    background-image: url("/images/despensa01.jpg");
+    background-image: url("/images/bebes01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -112,7 +113,7 @@
     width: 400px;
     background-color: #35D0BA;
     margin: 5px;
-    background-image: url("/images/despensa01.jpg");
+    background-image: url("/images/cuidados01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -123,7 +124,7 @@
     height: 300px;
     width: 400px;
     margin: 5px;
-    background-image: url("/images/despensa01.jpg");
+    background-image: url("/images/limpieza01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -187,5 +188,5 @@
 
 .footer{
 
-    background-color: #D92027;
+    background-color: #FFCD3C;
 }
