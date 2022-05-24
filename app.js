@@ -56,10 +56,19 @@ app.get('/productos', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
-
 app.get('/404', (req, res) => { 
     
     res.sendFile(__dirname + "/views/404.html");
+});
+
+app.get('/productCart', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/productCart.html");
+});
+
+app.get('/productDetail', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/productDetail.html");
 });
 
 app.all('*', (req, res) => {

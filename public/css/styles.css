@@ -401,6 +401,106 @@ h1, h2, h3, h4, h5, h6, .nav{
     margin-bottom: 10px;
 }
 
+/*Karen productDetail*/
+
+.detalle-producto{
+    display: flex;
+    width: 100%;
+    padding-top: 150px;    
+}
+
+.imagen-detalle-producto{  
+    flex-grow: 0.3;
+    text-align: center;    
+}
+
+.contenido-detalle-producto {
+    align-self: center;
+    flex-grow: 0.7;
+    
+}
+.nombre-detalle-producto, .precio-detalle-producto{ 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botones-detalle-producto button{
+    background-color:grey; /*color botón*/
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    border-radius: 7px; /*bordes redondos*/
+    color: #ffffff; /*color texto*/
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 15px ; /*espacio alrededor texto*/  
+    text-decoration: none; /*decoración texto*/ 
+}
+
+.botones-detalle-producto a{
+    color: gray; /*color texto*/ 
+    text-decoration: none; /*decoración texto*/ 
+}
+/*Karen productCart*/
+
+.carrito-compra{
+    padding-top: 110px;  
+    text-align:center;
+}
+   
+.borde-tabla{
+    border-left:rgb(0, 0, 0);
+    border-right:rgb(0, 0, 0);
+    border-bottom: #000;
+}
+
+.borde-tabla-horizontal{
+    
+    border-left:#333;
+}
+
+.contenedor {
+    display: flex;
+    text-align: center;
+    padding-left: 100px;
+}
+
+.tabla1 table {
+    text-align: center;
+    flex-grow: 0.7;
+    }
+    
+.tabla1 table tr td {
+    width: 100px
+    }
+    
+  
+.tabla2 table {
+    
+    text-align: center;
+    border-bottom: #000;
+    border-left:rgb(0, 0, 0);
+    margin: 20px;
+}
+    
+.tabla2-botones{
+    padding-left: 12px;
+    margin:auto;
+    text-align: left;
+}
+
+
+.tabla2-botones button{
+    background-color:grey; /*color botón*/
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    border-radius: 7px; /*bordes redondos*/
+    color: #ffffff; /*color texto*/
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px ; /*espacio alrededor texto*/  
+    text-decoration: none; /*decoración texto*/ 
+}
+   
+
+
 
 /* Lo oculto provisionalmente */
 
