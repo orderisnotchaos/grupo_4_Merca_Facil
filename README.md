@@ -8,6 +8,7 @@ y busquen una forma más sintética de administrar sus compras en supermercados,
 <-- añadir descripciones (individual) -->
 Integrantes: <br />
 . Karen Quinteros<br />
+Estudiante de ingeniería electrónica, con gran motivación y expectativa de aprender y conocer sobre el desarrollo web, Soy Colombiana residente en Tuluá.<br />
 . Yuriana Palacios<br />
 Licenciada en educación física y aprendiz de programación web. Actualmente cursando Full Stack en Digital House. Mexicana. Con residencia en Monterrey, Nuevo León.<br />
 . Andrés Ferrari<br />
