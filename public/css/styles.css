@@ -444,6 +444,7 @@ h1, h2, h3, h4, h5, h6, .nav{
 .carrito-compra{
     padding-top: 110px;  
     text-align:center;
+    font-family: 'Montserrat', sans-serif !important;
 }
    
 .borde-tabla{
