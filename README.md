@@ -9,6 +9,7 @@ y busquen una forma más sintética de administrar sus compras en supermercados,
 Integrantes: <br />
 . Karen Quinteros<br />
 . Yuriana Palacios<br />
+Licenciada en educación física y aprendiz de programación web. Actualmente cursando Full Stack en Digital House. Mexicana. Con residencia en Monterrey, Nuevo León.<br />
 . Andrés Ferrari<br />
 Estudiante de ingeniería electrónica en la Universidad Tecnológica Nacional y entusiasta en el mundo de la programación con deseos de conseguir su primera experiencia laboral formal como programador web. Amante de los animales.<br />
 . Jan Zambrano<br />
