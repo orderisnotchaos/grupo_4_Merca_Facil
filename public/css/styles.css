@@ -1,78 +1,115 @@
-.body{
+*{
+    box-sizing: border-box ;
+    padding: 0px;
+}
+
+body{
     background-color: #35D0BA;
-    margin: 0;
+    overflow-x: hidden;
+}
+
+p, a{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6, .nav{
+    font-family: 'Bebas Neue', cursive !important
+    ;
 }
 
 .main__header{
+    align-items: center;
     background-color: #FF9234;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    padding: 0px 20px;
+    position: fixed;
+    width: 100%;
 }
 
-.logo{
-    box-sizing: border-box;
-    display: flex;
-    height: 33px;
-    width: 88px;
+.logo-container{
+    padding: 10px 0px 5px 0px;
+    width: 25%;
 }
 
 .logo-img{
-
-    width:85px;
     height: 85px;
     margin-top:-3px;
+    width:85px;
 }
 
-.wrapper{
-
+.main__header .wrapper{
+    align-items: center;
     display: flex;
     justify-content: center;
-    width: 350px;
-    height: 10px;
+    width: 27%       
 }
-.nav__ul{
 
+.main__header .nav{
+    align-items: center;
     display: flex;
-    list-style: none;
+    justify-content: flex-end;
+    width: 48%;    
+}
+
+.nav__ul{
+    display: flex;
+    flex-flow: wrap;
     justify-content:flex-end;
+    list-style: none;
 }
 
 .nav__li{
-
-    margin: 0 1%;
+    color: #fff;
+    padding: 0px 20px;
 }
 
 .nav__li a{
-    
+    color: #fff;
+    font-size: 20px;    
     text-decoration: none;
 }
 
 .banner-comunidad-container{
-    display: flex;
+    padding-top: 101px;
 }
 
 .img-banner-comunidad{
-    justify-content: center;
-    margin-left: 5%;
-    height: 500px;
-    width: 800px;
+    height: auto;
+    width: 100%;
+}
+
+.titulo-seccion{
+    font-size: 40px;
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.categorias-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 8%;
+    width: 100%;
+}
+
+.categoria{
+    margin-bottom: 22px;
+    padding: 0px 13px;
+    width: 33.333%;
 }
 
 .products-container{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    padding: 0px 8%;
+    width: 100%;
 }
 
-.product1{
-    height: 300px;
-    width: 400px;
-    background-color: #35D0BA;
-    margin: 5px;
-    background-image: url("/images/despensa01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
+.product{
+    background: #fff;
+    margin: 0px 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 23.433%;
 }
 
 .product2{
@@ -130,63 +167,375 @@
     display: inline-block;
 }
 
-.most-saled-products-title{
+.precio-product{
+    color: #D92027;
+    font-size: 28px;
+}
 
+.product img{
+    width: 100%;
+}
+
+.footer{
+    background-color: #D92027;
+    margin-top: 50px;
+}
+
+.contenedor-footer{
+    display: flex;
+    padding: 30px 8%;
+    width: 100%;
+}
+
+.widget1, .widget2, .widget3, .widget4{
+    margin-bottom: 20px;
+    padding: 0px 15px;
+    width: 25%;
+}
+
+.widget1 img{
+    width: 150px;
+}
+
+.contenedor-footer a{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    text-decoration:none;
+}
+
+.contenedor-footer li{
+    list-style: none;
+}
+
+.widget-titulo{
+    color: #fff;
+    font-size: 30px;
+}
+
+.social-icon{
+    margin-top: 20px;
+}
+
+.social-icon a{
+    background: #fff !important;
+    border-radius: 50%!important;
+    color: #D92027;
+    font-size: 20px !important; 
+    margin-right: 10px;
+    text-align: center !important;
+    vertical-align: middle !important;   
+}
+
+.social-icon .instagram{    
+    padding: 5px 8.3px!important;
+}
+
+.social-icon .facebook{
+    padding: 5px 10.8px;
+}
+
+.social-icon .twitter{
+    padding: 5px 6.999px;
+}
+
+.copyright-note{
+    color: #fff;
+    font-weight: 600;
+    margin: 0px;
+    padding: 20px 0px;
     text-align: center;
 }
 
-.products-container2{
+/* Estilo de pagina de login */
+
+.sub-header{
+    background-color:#D92027;
+    color:#fff;
+    font-size: 42px;
+    padding: 30px 0px 1px 0px;
+    padding-top: 101px;
+    text-align:center;
+
+}
+
+.box-login{
     display: flex;
+    margin: auto;
+    width: 90%;
 }
-.product7{
 
-    height: 200px;
-    width: 350px;
-    margin: 5px;
-    background-image: url("/images/despensa01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
+.box-form-login, .box-img-login{
+    align-items: center;
+    align-self: center;
+    padding: 50px 30px;
+    width: 50%;    
+}
+
+.box-img-login img{
+    width: 100%;
+}
+
+.box-login label, .box-login input{
+    display: block;
+    font-size: 24px;
+    width: 100%;
+}
+
+.box-login label{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.link-pass-lost a{
+    color: #000;
+    font-size: 24px;
+}
+
+.link-pass-lost{
+    text-align: center;
+}
+
+.registo-text{
+    font-size: 32px;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+}
+
+/* Estilos de pagina de pago */
+.ingresar-cuenta{
+    font-size: 24px;
+    text-align: center;
+}
+
+.box-checkout{
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+.box-form-checkout{
+    align-items: center;
+    align-self: center;
+    padding: 30px 30px;
+    width: 50%;
+}
+
+.box-purchase-information{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+    height: 100%;
+    margin-top: 40px;
+    padding: 30px 30px;
+    width: 50%;
+}
+
+.box-form-checkout label, .box-form-checkout input, .box-form-checkout textarea{
+    display: block;
+    font-size: 24px;
+    width: 100%;
+}
+
+.box-form-checkout label{
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.tg  {
+    border-collapse:collapse;
+    border-spacing:0;
+    width:100%
+}
+
+.tg td{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size:22px;
+    overflow:hidden;
+    padding:10px 5px
+    ;word-break:normal;
+}
+
+.tg th{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size:22px;
+    font-weight:normal;
+    overflow:hidden;
+    padding:10px 5px;
+    word-break:normal;
+}
+
+.tg .tg-cly1{
+    text-align:left;
+    vertical-align:middle;
+}
+
+.tg .tg-mwxe{
+    text-align:right;
+    vertical-align:middle;
+}
+
+.tg .tg-nrix{
+    background-color: #000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.mensj-pago{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px 0px;
+    
+}
+
+.payment #numbercard{
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+
+.box-card-2colmn{
+    width: 100%;
+    margin: auto;
+}
+
+.payment #datecard{
+    font-size: 24px;
+    width: 49%;
+    margin-bottom: 10px;
+    border: 1px solid;
+    float: left;
+}
+
+.payment #cvvcard{
+    font-size: 24px;
+    width: 49%;
+    margin-bottom: 10px;
+    border: 1px solid;
+    float: right;
+}
+
+.payment #enviar{
+    font-size: 24px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*Karen productDetail*/
+
+.detalle-producto{
+    display: flex;
+    width: 100%;
+    padding-top: 150px;    
+}
+
+.imagen-detalle-producto{  
+    flex-grow: 0.3;
+    text-align: center;    
+}
+
+.contenido-detalle-producto {
+    align-self: center;
+    flex-grow: 0.7;
+    
+}
+.nombre-detalle-producto, .precio-detalle-producto{ 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.botones-detalle-producto button{
+    background-color:grey; /*color botón*/
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    border-radius: 7px; /*bordes redondos*/
+    color: #ffffff; /*color texto*/
     display: inline-block;
+    margin: 15px 10px;
+    padding: 15px ; /*espacio alrededor texto*/  
+    text-decoration: none; /*decoración texto*/ 
 }
 
-.product8{
+.botones-detalle-producto a{
+    color: gray; /*color texto*/ 
+    text-decoration: none; /*decoración texto*/ 
+}
+/*Karen productCart*/
 
-    height: 200px;
-    width: 350px;
-    margin: 5px;
-    background-image: url("/images/despensa01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
+.carrito-compra{
+    padding-top: 110px;  
+    text-align:center;
+    font-family: 'Montserrat', sans-serif !important;
+}
+   
+.borde-tabla{
+    border-left:rgb(0, 0, 0);
+    border-right:rgb(0, 0, 0);
+    border-bottom: #000;
+}
+
+.borde-tabla-horizontal{
+    
+    border-left:#333;
+}
+
+.contenedor {
+    display: flex;
+    text-align: center;
+    padding-left: 100px;
+}
+
+.tabla1 table {
+    text-align: center;
+    flex-grow: 0.7;
+    }
+    
+.tabla1 table tr td {
+    width: 100px
+    }
+    
+  
+.tabla2 table {
+    
+    text-align: center;
+    border-bottom: #000;
+    border-left:rgb(0, 0, 0);
+    margin: 20px;
+}
+    
+.tabla2-botones{
+    padding-left: 12px;
+    margin:auto;
+    text-align: left;
+}
+
+
+.tabla2-botones button{
+    background-color:grey; /*color botón*/
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    border-radius: 7px; /*bordes redondos*/
+    color: #ffffff; /*color texto*/
     display: inline-block;
-    margin-left: -50px;
+    margin: 5px 10px;
+    padding: 10px ; /*espacio alrededor texto*/  
+    text-decoration: none; /*decoración texto*/ 
 }
-
-.product9{
-
-    height: 200px;
-    width: 350px;
-    margin: 5px;
-    background-image: url("/images/despensa01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    margin-left: -50px;
-}
-
-.product10{
-
-    height: 200px;
-    width: 350px;
-    margin: 5px;
-    background-image: url("/images/despensa01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    margin-left: -50px;
-}
+   
 
 
-.footer{
 
-    background-color: #FFCD3C;
+/* Lo oculto provisionalmente */
+
+.sub__nav__ul{
+    display: none !important;
 }

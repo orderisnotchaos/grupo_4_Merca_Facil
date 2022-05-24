@@ -19,12 +19,31 @@ app.get('/tienda', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get('/login', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/login.html");
+});
+
+app.get('/pago', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/checkout.html");
+});
+
 
 app.get('/home', (req, res) => { 
     
     res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get('/sobrenosotros', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/sobrenosotros.html");
+});
+
+app.get('/mispedidos', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/mispedidos.html");
+});
 
 app.get('/contactanos', (req, res) => { 
     
@@ -37,10 +56,19 @@ app.get('/productos', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
-
 app.get('/404', (req, res) => { 
     
     res.sendFile(__dirname + "/views/404.html");
+});
+
+app.get('/productCart', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/productCart.html");
+});
+
+app.get('/productDetail', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/productDetail.html");
 });
 
 app.all('*', (req, res) => {

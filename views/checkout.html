@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MercaFacil - Finalizar compra</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header class="main__header">
+            <div = class="logo-container">
+                <div class="logo"><img src="/images/logo-banner-transparente-wht.png" alt="Logo Merca Facil Wht" class="logo-img"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="search-box">
+                    <input type="text" class="input-search" placeholder="Buscar...">
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href = "#">Inicio</a></li>
+                    <li class="nav__li"><a href = "#"></i>Nosotros</a></li>
+                    <li class="nav__li"><a href = "#"></i>Productos</a></li>
+                    <li class="nav__li"><a href = "#"></i>Contacto</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#"> Mi cuenta</a></li>
+                    <ul class="sub__nav__ul">
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Ingresar</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Pedidos</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "#">Carro de compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Finalizar compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Salir</a></li>
+                    </ul>
+                </ul>
+            </nav>
+            
+        </header>
+        <div class="sub-header">
+            <h2>Finalizar compra</h2>
+        </div>
+    </div>
+    <div class="ingresar-cuenta">
+        <p>¿Ya eres cliente? <a href = "#">Haz clic aquí para acceder</a></p>
+    </div>
+    <div class="box-checkout">        
+        <section class="box-form-checkout">
+            <form  class="box-form" action="/" method="POST">
+                <p>        
+                    <label class="form-label-hide" for="nombre">Nombre y apellido</label>   
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre y apellido" minlength="4" required>
+                </p>
+                           
+                
+                <p>
+                    <label class="form-label-hide" for="provincia">Provincia</label>
+                    <input type="text" id="provincia" name="provincia" placeholder="Ingrese su provincia" required>
+                </p>
+                
+                <p>
+                    <label class="form-label-hide" for="c_postal">Código postal</label>
+                    <input type="text" id="c_postal" name="c_postal" placeholder="Ingrese su código postal" required>
+                </p>
+                
+                <p>
+                    <label class="form-label-hide" for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Ingrese su dirección" required>
+                </p>
+                
+                <p>
+                    <label class="form-label-hide" for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Ingrese su e-mail" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
+                </p>
+
+                <p>
+                    <label class="form-label-hide" for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                </p>
+
+                <p>
+                    <label class="form-label-hide" for="contrasena">Contraseña</label>
+                    <input type="password" name="contrasena1" id="contrasena1" placeholder="Ingrese su Contraseña" minlength="6" required>
+                </p>
+        
+                <p>
+                    <label class="form-label-hide" for="contrasena">Confirmar contraseña</label>
+                    <input type="password" name="contrasena2" id="contrasena2" placeholder="Confirmar contraseña" minlength="6" required>
+                </p>   
+                
+                <p>
+                    <label class="form-label-hide" for="nota">Notas del pedido (opcional)</label>
+                    <textarea name="nota" rows="10" cols="50">Ingrese su notas del pedido</textarea>
+                </p>                           
+            </form>            
+        </section>
+
+        <section class="box-purchase-information">
+            <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-nrix" colspan="2">Tu pedido</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-cly1">Producto</td>
+                    <td class="tg-mwxe">Subtotal</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Titulo de producto | Cantidad x 1</td>
+                    <td class="tg-mwxe">$ 10.000</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Subtotal</td>
+                    <td class="tg-mwxe">$ 10.000</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Envió</td>
+                    <td class="tg-mwxe">
+                        <label class="form-radio" for="tres-dias"><input type="radio" name="perfil" id="tres-dias" value="Comprar"> $ 2000 Envió en 3 días Hábiles</label><br>
+                        <label class="form-radio" for="dia-siguiente"><input type="radio" name="perfil" id="dia-siguiente" value="Vender"> $5000 Express, siguiente dia</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Impuesto de 19%</td>
+                    <td class="tg-mwxe">$ 1.900</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-cly1">Total</td>
+                    <td class="tg-mwxe">$ 11.900</td>
+                  </tr>
+                </tbody>
+                </table>
+                <div class="payment">
+                    <p class="mensj-pago">Paga de forma segura con tu tarjeta de crédito.</p>
+                    <form  class="box-form" action="/" method="POST"></form>
+                    <input type="number" id="numbercard" name="numbercard" placeholder="Numero de tarjeta" required>
+                    <div class="box-card-2colmn">
+                        <input type="text" id="datecard" name="datecard" placeholder="MM / AA" required>
+                        <input type="number" id="cvvcard" name="cvvcard" placeholder="Código CVV" required>
+                    </div>
+                    <p>
+                        <input class="btn-form" id="enviar" type="submit" name="enviar" value="PAGAR">
+                    </p> 
+                </div>
+        </section>
+    </div>  
+
+    </body>
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="widget1">
+                <img src="/images/logo-banner.png" alt="Logo Merca Facil color" class="logo-footer">
+            </div>
+
+            <div class="widget2">
+                <h3 class="widget-titulo">Links</h3>
+                <nav class="nav-footer">
+                    <ul class="nav__ul__footer">
+                        <li><a href = "#">Inicio</a></li>
+                        <li><a href = "#"></i>Nosotros</a></li>
+                        <li><a href = "#"></i>Productos</a></li>
+                        <li><a href = "#"></i>Contacto</a></li>
+                        <li><a href = "#">Mi cuenta</a></li>                        
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="widget3">
+                <h3 class="widget-titulo">Información de contacto</h3>
+                <a href="https://www.google.cl/maps/preview" target="_blank"><p>Encuéntranos en: Buenos Aires, Argentina.</p></a>
+                <a href="tel:+54123456778901" target="_blank"><p>+54 1 23 4567-78901</p></a>
+                <a href="mailto:info@mercafacil.com.ar" target="_blank"><p>info@mercafacil.com.ar</p></a>
+            </div>
+
+            <div class="widget4"> 
+                <h3 class="widget-titulo">Síguenos en:</h3>               
+                <p class="social-icon">
+                    <a href="#" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="#" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <p class="copyright-note">Copyright © 2022 Merca Fácil S.R.L. Todos los derechos reservados. Desarrollado por Grupo 4 Digital House.</p>        
+    </footer>
+</html>

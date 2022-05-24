@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MercaFacil</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header class="main__header">
+            <div = class="logo-container">
+                <div class="logo"><img src="/images/logo-banner-transparente-wht.png" alt="Logo Merca Facil Wht" class="logo-img"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="search-box">
+                    <input type="text" class="input-search" placeholder="Buscar...">
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nav__ul">
+                    <li class="nav__li"><a href = "#">Inicio</a></li>
+                    <li class="nav__li"><a href = "#"></i>Nosotros</a></li>
+                    <li class="nav__li"><a href = "#"></i>Productos</a></li>
+                    <li class="nav__li"><a href = "#"></i>Contacto</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#"> Mi cuenta</a></li>
+                    <ul class="sub__nav__ul">
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Ingresar</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Pedidos</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "#">Carro de compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Finalizar compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Salir</a></li>
+                    </ul>
+                </ul>
+            </nav>
+            
+        </header>
+        <main>
+            <div class="detalle-producto">
+                <div class="imagen-detalle-producto">
+                    <img src="/images/generic-image.jpg" width="300px" alt="Detalle del Producto">
+                </div>
+    
+                <div class="contenido-detalle-producto">
+                    <p class="nombre-detalle-producto">NOMBRE DEL PRODUCTO</p>
+                    <p>Descripción corta del Producto</p>
+                    <p class="precio-detalle-producto">Precio $ 000.000</p>
+                    
+                    <div class="botones-detalle-producto">  
+                        <div>
+                        <form name="cart_quantity" method="post" action="index.php">
+                            <a href="#"><i class="fa-solid fa-circle-minus"></i>
+                            <input name="quantity" id="quantity" value="" size="4" onChange="UpdateCartQuantity();" />
+                            <a href=""#"><i class="fa-solid fa-circle-plus"></i><br>    
+                        </form>
+                        </div>
+                        
+                        <button type="submit"><i class="fas fa-check"></i>Finalizar Compra</button>
+                        <button type="submit"><i class="fas fa-undo"></i>Volver a Productos</button><br>                            
+                    </div>
+                </div> 
+            </div>
+        </main>
+    </body>
+
+    <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="widget1">
+                <img src="/images/logo-banner.png" alt="Logo Merca Facil color" class="logo-footer">
+            </div>
+
+            <div class="widget2">
+                <h3 class="widget-titulo">Links</h3>
+                <nav class="nav-footer">
+                    <ul class="nav__ul__footer">
+                        <li><a href = "#">Inicio</a></li>
+                        <li><a href = "#"></i>Nosotros</a></li>
+                        <li><a href = "#"></i>Productos</a></li>
+                        <li><a href = "#"></i>Contacto</a></li>
+                        <li><a href = "#">Mi cuenta</a></li>                        
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="widget3">
+                <h3 class="widget-titulo">Información de contacto</h3>
+                <a href="https://www.google.cl/maps/preview" target="_blank"><p>Encuéntranos en: Buenos Aires, Argentina.</p></a>
+                <a href="tel:+54123456778901" target="_blank"><p>+54 1 23 4567-78901</p></a>
+                <a href="mailto:info@mercafacil.com.ar" target="_blank"><p>info@mercafacil.com.ar</p></a>
+            </div>
+
+            <div class="widget4"> 
+                <h3 class="widget-titulo">Síguenos en:</h3>               
+                <p class="social-icon">
+                    <a href="#" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="#" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
+
+        <p class="copyright-note">Copyright © 2022 Merca Fácil S.R.L. Todos los derechos reservados. Desarrollado por Grupo 4 Digital House.</p>        
+    </footer>
+</html>

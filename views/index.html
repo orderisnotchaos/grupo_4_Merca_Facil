@@ -3,14 +3,19 @@
     <head>
         <title>mercaFácil</title>
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/normalize.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
-        <script src="https://kit.fontawesome.com/c1d2f4ffc4.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 
     </head>
-    <body class="body">
+    <body>
         <header class="main__header">
             <div = class="logo-container">
-                <div class="logo"><img src="/images/logo-banner.png" alt="logo png" class="logo-img"></div>
+                <div class="logo"><img src="/images/logo-banner-transparente-wht.png" alt="Logo Merca Facil Wht" class="logo-img"></div>
             </div>
 
             <div class="wrapper">
@@ -20,10 +25,18 @@
             </div>
             <nav class="nav">
                 <ul class="nav__ul">
-                    <li class="nav__li"><a href = "/404">Home</a></li>
-                    <li class="nav__li"><a href = "#"></i>Sobre Nosotros</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "#">Mis pedidos</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Cuenta</a></li>
+                    <li class="nav__li"><a href = "#">Inicio</a></li>
+                    <li class="nav__li"><a href = "#"></i>Nosotros</a></li>
+                    <li class="nav__li"><a href = "#"></i>Productos</a></li>
+                    <li class="nav__li"><a href = "#"></i>Contacto</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#"> Mi cuenta</a></li>
+                    <ul class="sub__nav__ul">
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Ingresar</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Pedidos</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "#">Carro de compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Finalizar compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Salir</a></li>
+                    </ul>
                 </ul>
             </nav>
             
@@ -32,82 +45,122 @@
             <img src="/images/comunidad-600px-b.jpg" alt="banner-comunidad" class="img-banner-comunidad">
         </div>
 
-        <h2>PRODUCTOS</h2>
-        <div class="products-container">
-
-            <div class="product1"> <p>DESPENSA</p></div>
-            <div class="product2"><p>BEBIDAS</p></div>
-            <div class="product3"><p>MASCOTAS</p></div>
-            <div class="product4"><p>BEBÉS</p></div>
-            <div class="product5"><p>CUIDADO PERSONAL</p></div>
-            <div class="product6"><p>LIMPIEZA</p></div>
+        <h2 class="titulo-seccion">CATEGORÍAS</h2>
+        <div class="categorias-container">
+            <div class="categoria"><a href="#"><img src="/images/despensa1.png" alt="Despensa" class="img-categoria"></a></div>
+            <div class="categoria"><a href="#"><img src="/images/bebidas2.png" alt="Bebidas" class="img-categoria"></a></div>
+            <div class="categoria"><a href="#"><img src="/images/mascotas3.png" alt="Mascotas" class="img-categoria"></a></div>
+            <div class="categoria"><a href="#"><img src="/images/bebes4.png" alt="Bebes" class="img-categoria"></a></div>
+            <div class="categoria"><a href="#"><img src="/images/cpersonal5.png" alt="Cuidado personal" class="img-categoria"></a></div>
+            <div class="categoria"><a href="#"><img src="/images/limpieza6.png" alt="Limpieza" class="img-categoria"></a></div>
         </div>
 
-        <p class="most-saled-products-title">PRODUCTOS MÁS VENDIDOS</p>
-        <div class="products-container2">
-            <div class="product7"></div>
-            <div class="product8"></div>
-            <div class="product9"></div>
-            <div class="product10"></div>
+        <h2 class="titulo-seccion">PRODUCTOS MÁS VENDIDOS</h2>
+        <div class="products-container">
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+            <div class="product">
+                <a href="#"><img src="/images/producto.png" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a href="#" class="titulo-product"><h4>Titulo del product</h4></a>
+                    <a href="#" class="descipcion-product"><p>Descripción corta del producto</p></a>
+                    <a href="#" class="precio-product"><h3>$2000</h3></a>
+                </div>                
+            </div>
+
+            </div>            
         </div>
     </body>
     <footer class="footer">
+        <div class="contenedor-footer">
+            <div class="widget1">
+                <img src="/images/logo-banner.png" alt="Logo Merca Facil color" class="logo-footer">
+            </div>
 
-        <table>
+            <div class="widget2">
+                <h3 class="widget-titulo">Links</h3>
+                <nav class="nav-footer">
+                    <ul class="nav__ul__footer">
+                        <li><a href = "#">Inicio</a></li>
+                        <li><a href = "#"></i>Nosotros</a></li>
+                        <li><a href = "#"></i>Productos</a></li>
+                        <li><a href = "#"></i>Contacto</a></li>
+                        <li><a href = "#">Mi cuenta</a></li>                        
+                    </ul>
+                </nav>
+            </div>
 
-            <tr>
+            <div class="widget3">
+                <h3 class="widget-titulo">Información de contacto</h3>
+                <a href="https://www.google.cl/maps/preview" target="_blank"><p>Encuéntranos en: Buenos Aires, Argentina.</p></a>
+                <a href="tel:+54123456778901" target="_blank"><p>+54 1 23 4567-78901</p></a>
+                <a href="mailto:info@mercafacil.com.ar" target="_blank"><p>info@mercafacil.com.ar</p></a>
+            </div>
 
-              <th>
+            <div class="widget4"> 
+                <h3 class="widget-titulo">Síguenos en:</h3>               
+                <p class="social-icon">
+                    <a href="#" target="_blank" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="facebook"><i class="fa-brands fa-facebook-f"></i></i></a>
+                    <a href="#" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                </p>
+            </div>
+        </div>
 
-                  Información
-
-              </th>
-
-              <th>
-
-                Información de contacto
-
-              </th>
-
-              <th>
-
-                Síguenos en:
-
-              </th>
-
-            </tr>
-
-            <tr>
-
-              <td>              
-
-                Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de
-                pago. ¡Y siempre es seguro!
-
-              </td>
-
-              <td>
-
-                  Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de
-                  productos. Es un beneficio de Mercado Puntos.
-
-              </td>
-
-              <td>
-
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-              </td>
-
-            </tr>
-
-          </table>
-
-          <p class="copyright-note">
-                <i>
-                   Copyright © 1999-2019 Merca Fácil S.R.L
-                </i>
-          </p>
+        <p class="copyright-note">Copyright © 2022 Merca Fácil S.R.L. Todos los derechos reservados. Desarrollado por Grupo 4 Digital House.</p>        
     </footer>
 </html>
