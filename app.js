@@ -35,6 +35,15 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
+app.get('/sobrenosotros', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/sobrenosotros.html");
+});
+
+app.get('/mispedidos', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/mispedidos.html");
+});
 
 app.get('/contactanos', (req, res) => { 
     
