@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: #35D0BA;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
@@ -460,7 +460,6 @@ table .borde-tabla{
 .contenedor {
     display: flex;
     justify-content: center;
-    background-color: #fff;
     border-radius: 15px;
     height: 100%;
     margin-top: 40px;
