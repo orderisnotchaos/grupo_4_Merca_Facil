@@ -495,6 +495,27 @@ table .borde-tabla{
 /*Fin productCart*/ 
 
 
+/*ESTILOS DE SOBRE NOSOTROS*/ 
+.estilos-imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 150px 10%;
+    width: 50%;
+    
+}
+.imagenes-integrantes {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .imagen-integrante {
+    margin: calc(25% - 50px);
+    height: 300px;
+    width: 300px;
+  }
+
+/*FINALIZA SOBRE NOSOTROS*/ 
 
 /* Lo oculto provisionalmente */
 
