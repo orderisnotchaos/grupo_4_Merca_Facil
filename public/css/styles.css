@@ -22,7 +22,6 @@ h1, h2, h3, h4, h5, h6, .nav{
     background-color: #FF9234;
     display: flex;
     padding: 0px 20px;
-    position: fixed;
     width: 100%;
 }
 
