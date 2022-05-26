@@ -36,7 +36,7 @@ app.get('/mispedidos', (req, res) => {
     res.sendFile(__dirname + "/views/mispedidos.html");
 });
 
-app.get('/contactanos', (req, res) => { 
+app.get('/contacto', (req, res) => { 
     
     res.sendFile(__dirname + "/views/contacto.html");
 });

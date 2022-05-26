@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MercaFacil - Pagina de Login</title>
+        <title>MercaFacil - Contacto</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
@@ -44,37 +44,37 @@
             
         </header>
         <div class="sub-header">
-            <h2>LOGIN</h2>
+            <h2>CONTACTO</h2>
         </div>
         <div class="box-login">
             <section class="box-form-login">
-                <form  class="box-form" action="/" method="POST">
+                <form  class="box-form-contacto" action="/" method="POST">
                     <p>
-                        <label class="form-label-hide" for="username">Ingrese su nombre de usuario o email</label>
-                            <input type="text" name="username" id="username" placeholder="Nombre de usuario o email" required>
+                        <label class="form-label-hide" for="nombre">Nombre completo</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required>
+                    </p>
+
+                    <p>
+                        <label class="form-label-hide" for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="Ingrese su correo electrónico" required>
                     </p>
                         
                     <p>
-                        <label class="form-label-hide" for="contrasena">Ingrese su contraseña</label>
-                        <input type="password" name="contrasena1" id="contrasena1" placeholder="Contraseña" minlength="6" required>
+                        <label class="form-label-hide" for="telefono">Telefono</label>
+                        <input type="text" name="telefono" id="telefono" placeholder="Ingrese su teléfono" required>
                     </p>
 
                     <p>
-                        <label class="form-label-hide recordar-pass" for="recordar-pass"><input type="checkbox" name="recordar-pass" id="recordar-pass" required> Recordar contraseña</label>                            
+                        <label class="form-label-hide" for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" placeholder="Ingrese su consulta" required rows="4" cols="50"></textarea>
                     </p>
-            
+
+                             
                     <p>
-                        <input class="btn-form2" id="ingresar" type="submit" name="ingrsar" value="INICIAR SESIÓN">
+                        <input class="btn-form2" id="enviar" type="submit" name="enviar" value="ENVIAR">
                     </p>                        
                 </form>
-                <p class="link-pass-lost">
-                        <a href = "#">¿Has olvidado tu contraseña?</a>
-                </p>
-
-                <h3 class="registo-text">¿Aun no tienes cuenta?</h3>
-                <p>
-                    <input class="btn-form2" id="registrar" type="submit" name="registrar" value="REGÍSTRATE">
-                </p> 
+                
             </section>
 
             <section class="box-img-login">

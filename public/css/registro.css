@@ -11,25 +11,25 @@
 }
 
 .form-registro{
-    width: 60%;
     padding-right: 8%;
+    width: 60%;
 }
 
 .box-img-registro{
-    width: 40%;
     text-align: center;
+    width: 40%;
 }
 
 .form-registro label{
-    width: 100%;
     font-size: 24px;
     font-weight: 600;
+    width: 100%;
 }
 
 .form-registro input, .form-registro select{
-    width: 100%;
     font-size: 24px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .form-registro div{
