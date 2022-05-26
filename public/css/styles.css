@@ -107,59 +107,28 @@ h1, h2, h3, h4, h5, h6, .nav{
     width: 23.433%;
 }
 
-.product2{
-    background-color: #35D0BA;
-    background-image: url("/images/bebidas01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 300px;
-    margin: 5px;
-    width: 400px;
+.box-info-product{
+    padding: 0px;
 }
 
-.product3{
-    background-color: #35D0BA;
-    background-image: url("/images/mascotas01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 300px;
-    margin: 5px;
-    width: 400px;
+.titulo-product,
+.descipcion-product,
+.precio-product{
+    text-decoration:none;    
 }
 
-.product4{
-    background-color: #35D0BA;
-    background-image: url("/images/bebes01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 300px;
-    margin: 5px;
-    width: 400px;
+.titulo-product h4, .descipcion-product p, .precio-product h3{
+    margin: 0px;
+    padding: 0px 0px 5px 0px;
 }
 
-.product5{
-    background-color: #35D0BA;
-    background-image: url("/images/cuidados01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 300px;
-    margin: 5px;
-    width: 400px;
+.titulo-product{
+    color: #FF9234;
+    font-size: 24px;
 }
 
-.product6{
-    background-image: url("/images/limpieza01.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-
-    height: 300px;
-    margin: 5px;
-    width: 400px;
+.descipcion-product{
+    color:#333;
 }
 
 .precio-product{
