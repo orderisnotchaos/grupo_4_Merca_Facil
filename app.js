@@ -15,11 +15,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('/tienda', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/index.html");
-});
-
 app.get('/login', (req, res) => { 
     
     res.sendFile(__dirname + "/views/login.html");
@@ -30,11 +25,6 @@ app.get('/pago', (req, res) => {
     res.sendFile(__dirname + "/views/checkout.html");
 });
 
-
-app.get('/home', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/index.html");
-});
 
 app.get('/sobrenosotros', (req, res) => { 
     
@@ -48,13 +38,13 @@ app.get('/mispedidos', (req, res) => {
 
 app.get('/contactanos', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/index.html");
+    res.sendFile(__dirname + "/views/contacto.html");
 });
 
 
 app.get('/productos', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/index.html");
+    res.sendFile(__dirname + "/views/productos.html");
 });
 
 app.get('/404', (req, res) => { 
