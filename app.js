@@ -1,4 +1,5 @@
 const express = require("Express");
+const req = require("express/lib/request");
 const app = express();
 const path = require("path");
 
@@ -64,6 +65,10 @@ app.get('/404', (req, res) => {
 app.get('/productCart', (req, res) => { 
     
     res.sendFile(__dirname + "/views/productCart.html");
+});
+
+app.get('/registro', (req,res) => {
+    res.sendFile(__dirname + "/views/registro.html")
 });
 
 app.get('/productDetail', (req, res) => { 

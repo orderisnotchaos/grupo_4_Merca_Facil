@@ -1,0 +1,28 @@
+
+
+.form{
+    display: flex; 
+    flex-wrap: wrap;
+    width: 60%;   
+}
+
+.form div{
+    width: 100%;
+}
+
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container div{
+    width: 30%;
+}
+
+.img{
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+}
+

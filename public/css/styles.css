@@ -22,7 +22,6 @@ h1, h2, h3, h4, h5, h6, .nav{
     background-color: #FF9234;
     display: flex;
     padding: 0px 20px;
-    position: fixed;
     width: 100%;
 }
 
@@ -112,28 +111,59 @@ h1, h2, h3, h4, h5, h6, .nav{
     width: 23.433%;
 }
 
-.box-info-product{
-    padding: 0px;
+.product2{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/bebidas01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
-.titulo-product,
-.descipcion-product,
-.precio-product{
-    text-decoration:none;    
+.product3{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/mascotas01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
-.titulo-product h4, .descipcion-product p, .precio-product h3{
-    margin: 0px;
-    padding: 0px 0px 5px 0px;
+.product4{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/bebes01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
-.titulo-product{
-    color: #FF9234;
-    font-size: 24px;
+.product5{
+    height: 300px;
+    width: 400px;
+    background-color: #35D0BA;
+    margin: 5px;
+    background-image: url("/images/cuidados01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
-.descipcion-product{
-    color:#333;
+.product6{
+
+    height: 300px;
+    width: 400px;
+    margin: 5px;
+    background-image: url("/images/limpieza01.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
 }
 
 .precio-product{
@@ -324,8 +354,8 @@ h1, h2, h3, h4, h5, h6, .nav{
     font-family: 'Montserrat', sans-serif !important;
     font-size:22px;
     overflow:hidden;
-    padding:10px 5px
-    ;word-break:normal;
+    padding:10px 5px;
+    word-break:normal;
 }
 
 .tg th{
