@@ -397,37 +397,37 @@ h1, h2, h3, h4, h5, h6, .nav{
 }
 
 .payment #numbercard{
-    font-size: 24px;
-    width: 100%;
-    margin-bottom: 10px;
     border: 1px solid;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .box-card-2colmn{
-    width: 100%;
     margin: auto;
+    width: 100%;
 }
 
 .payment #datecard{
-    font-size: 24px;
-    width: 49%;
-    margin-bottom: 10px;
     border: 1px solid;
     float: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 49%;
 }
 
 .payment #cvvcard{
-    font-size: 24px;
-    width: 49%;
-    margin-bottom: 10px;
     border: 1px solid;
     float: right;
+    font-size: 24px;
+    margin-bottom: 10px;
+    width: 49%;
 }
 
 .payment #enviar{
     font-size: 24px;
-    width: 100%;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 /*Inicio productDetail*/
@@ -455,8 +455,8 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .detalle-producto{
     display: flex;
-    width: 100%;
-    padding-top: 10px;    
+    padding-top: 10px;
+    width: 100%;    
 }
 
 .imagen-detalle-producto{  
@@ -483,25 +483,23 @@ table .borde-tabla{
 }
 
 .carrito-compra{
-    text-align:center;
     font-family: 'Montserrat', sans-serif !important;
+    text-align:center;
 }
    
 .contenedor {
-    display: flex;
-    justify-content: center;
     border-radius: 15px;
+    display: flex;
     height: 100%;
+    justify-content: center;
     margin-top: 40px;
     padding: 30px 30px;
     width: 100%;
 }
-  
-
     
 .tabla2-botones{
-    padding-left: 12px;
     margin:auto;
+    padding-left: 12px;
     text-align: left;
 }
 
@@ -517,14 +515,76 @@ table .borde-tabla{
 }
 
 .tabla2 table {
-    text-align: center;
     border-bottom: white;
     border-left:rgb(0, 0, 0);
     margin: 20px;
+    text-align: center;
 }
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
 /*Fin productCart*/ 
 
 
+/*ESTILOS DE SOBRE NOSOTROS*/ 
+
+.box-content-about{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+}
+
+.box-text-about{
+    align-items: center;
+    align-self: center;
+    font-size: 24px;
+    line-height: 1.5;
+    padding: 30px 30px;
+    text-align: justify;
+    width: 50%;
+}
+
+.box-img-about{
+    align-items: center;
+    align-self: center;
+    padding: 30px 30px;
+    width: 50%;
+}
+
+.box-img-about img{
+    width: 100%;
+}
+
+.box-content-about2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+}
+
+.estilos-imagenes{
+    align-items: center;
+    align-self: center;
+    padding: 30px 30px;
+    width: 50%;
+}
+
+.estilos-imagenes img{
+    height: 450px;
+    object-fit: cover;
+    object-position: 100% 0;
+    width: 100%;
+}
+
+.titulo-integrante{
+    font-size: 28px;
+    text-align: center;
+}
+
+/*FINALIZA SOBRE NOSOTROS*/ 
 
 /* Lo oculto provisionalmente */
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MercaFacil - Pagina de Login</title>
+        <title>MercaFacil - Sobre nosotros</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
@@ -15,7 +15,9 @@
     <body>
         <header class="main__header">
             <div = class="logo-container">
-                <div class="logo"><img src="/images/logo-banner-transparente-wht.png" alt="Logo Merca Facil Wht" class="logo-img"></div>
+                <div class="logo"><a href = "/">                    
+                    <img src="/images/logo-banner-transparente-wht.png" alt="Logo Merca Facil Wht" class="logo-img"></a>
+                </div>
             </div>
 
             <div class="wrapper">
@@ -25,16 +27,16 @@
             </div>
             <nav class="nav">
                 <ul class="nav__ul">
-                    <li class="nav__li"><a href = "#">Inicio</a></li>
-                    <li class="nav__li"><a href = "#"></i>Nosotros</a></li>
-                    <li class="nav__li"><a href = "#"></i>Productos</a></li>
-                    <li class="nav__li"><a href = "#"></i>Contacto</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#"> Mi cuenta</a></li>
+                    <li class="nav__li"><a href = "/">Inicio</a></li>
+                    <li class="nav__li"><a href = "/sobrenosotros"></i>Nosotros</a></li>
+                    <li class="nav__li"><a href = "/#productos"></i>Productos</a></li>
+                    <li class="nav__li"><a href = "/contacto"></i>Contacto</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/login"> Mi cuenta</a></li>
                     <ul class="sub__nav__ul">
-                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Ingresar</a></li>
-                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Pedidos</a></li>
-                        <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "#">Carro de compra</a></li>
-                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Finalizar compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/login">Ingresar</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/mispedidos">Pedidos</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "/productCart">Carro de compra</a></li>
+                        <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/pago">Finalizar compra</a></li>
                         <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Salir</a></li>
                     </ul>
                 </ul>
@@ -43,20 +45,51 @@
         </header>
         <div class="sub-header">
             <h2 class="titulo-seccion">SOBRE NOSOTROS</h2>
+        </div>
 
-            <p style="text-align:center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Porro tenetur sit magnam accusantium quasi rerum exercitationem aut blanditiis. 
-                Nobis consequatur 
-                voluptatum voluptatibus fuga tempore voluptate sunt quos eius, earum fugit?
-            </p>
+            <section class="box-content-about">
+                <div class="box-text-about">
+                    <p> Merca Fácil un sitio en donde puedes administrar tus compras de una forma sencilla y particular Merca Fácil es un desarrollo web que consiste en tratar de imitar y mejorar las páginas web de supermercados como coto, carrefour, merqueo, exito, miniso y demás.</p>
+                </div>
 
-            <div class="img-categoria"> <!--REVISAR ATRIBUTOS IMG CATEGORÍAS-->
-                <div class="categoria"><a href="#"><img src="/images/KAREN.png" alt="KAREN" class="img-categoria"></a></div>
-                <div class="categoria"><a href="#"><img src="/images/ANDRES.png" alt="ANDRES" class="img-categoria"></a></div>
-                <div class="categoria"><a href="#"><img src="/images/JAN.png" alt="JAN" class="img-categoria"></a></div>
-                <div class="categoria"><a href="#"><img src="/images/YURIANA.png" alt="YURIANA" class="img-categoria"></a></div>
-            </div>
+                <div class="box-img-about">
+                    <img src="/images/generic-image.jpg" alt="Banner Nosotros" class="img-about">
+                </div>
 
+                <div class="box-img-about">
+                    <img src="/images/generic-image.jpg" alt="Banner Nosotros" class="img-about">
+                </div>
+
+                <div class="box-text-about">
+                    <p>El super digital dispondrá varios tipos de productos subdivididos en 6 categorías distintas: Despensa, Bebidas, Mascotas, Bebés, Cuidado Personal y Limpieza. Dentro de estas categorías se ofrecerán los correspondientes productos de distintas marcas para que el cliente tenga disponibilidad de elegir acorde a sus preferencias (ya sean económicas o personales).</p>
+                </div>
+
+            </section>
+
+            <h3 class="titulo-seccion">INTEGRANTES</h3>
+
+            <section class="box-content-about2">
+                <div class="estilos-imagenes">
+                    <a href="#"><img src="/images/KAREN.jpg" alt="KAREN" class="imagen-integrante"></a>
+                    <h3 class="titulo-integrante">Karen Quinteros</h3>
+                </div>
+
+                <div class="estilos-imagenes">
+                    <a href="#"><img src="/images/YURIANA.jpg" alt="YURIANA" class="imagen-integrante"></a>
+                    <h3 class="titulo-integrante">Yuriana Palacios</h3>
+                </div>
+
+                <div class="estilos-imagenes">
+                    <a href="#"><img src="/images/ANDRES.jpg" alt="ANDRES" class="imagen-integrante"></a>
+                    <h3 class="titulo-integrante">Andrés Ferrari</h3>
+                </div>
+                
+                <div class="estilos-imagenes">
+                    <a href="#"><img src="/images/JAN.jpg" alt="JAN" class="imagen-integrante"></a>
+                    <h3 class="titulo-integrante">Jan Zambrano</h3>
+                </div>
+
+            </section>
 
             <footer class="footer">
                 <div class="contenedor-footer">
@@ -68,11 +101,11 @@
                         <h3 class="widget-titulo">Links</h3>
                         <nav class="nav-footer">
                             <ul class="nav__ul__footer">
-                                <li><a href = "#">Inicio</a></li>
-                                <li><a href = "#"></i>Nosotros</a></li>
-                                <li><a href = "#"></i>Productos</a></li>
-                                <li><a href = "#"></i>Contacto</a></li>
-                                <li><a href = "#">Mi cuenta</a></li>                        
+                                <li><a href = "/">Inicio</a></li>
+                                <li><a href = "/sobrenosotros"></i>Nosotros</a></li>
+                                <li><a href = "/#productos"></i>Productos</a></li>
+                                <li><a href = "/contacto"></i>Contacto</a></li>
+                                <li><a href = "/login">Mi cuenta</a></li>                        
                             </ul>
                         </nav>
                     </div>
