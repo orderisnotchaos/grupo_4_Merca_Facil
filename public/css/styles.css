@@ -466,8 +466,6 @@ table .borde-tabla{
     padding: 30px 30px;
     width: 100%;
 }
-  
-
     
 .tabla2-botones{
     padding-left: 12px;
@@ -492,6 +490,11 @@ table .borde-tabla{
     border-left:rgb(0, 0, 0);
     margin: 20px;
 }
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
 /*Fin productCart*/ 
 
 
