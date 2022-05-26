@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>MercaFacil - Pagina de registro</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <title>registro</title>
 </head>
 <body class="body">
     <header class="main__header">
@@ -28,60 +28,69 @@
         </div>
         <nav class="nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a href = "#">Inicio</a></li>
-                <li class="nav__li"><a href = "#"></i>Nosotros</a></li>
-                <li class="nav__li"><a href = "/productCart"></i>Productos</a></li>
-                <li class="nav__li"><a href = "#"></i>Contacto</a></li>
-                <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#"> Mi cuenta</a></li>
+                <li class="nav__li"><a href = "/">Inicio</a></li>
+                <li class="nav__li"><a href = "/sobrenosotros"></i>Nosotros</a></li>
+                <li class="nav__li"><a href = "/#productos"></i>Productos</a></li>
+                <li class="nav__li"><a href = "/contacto"></i>Contacto</a></li>
+                <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/login"> Mi cuenta</a></li>
                 <ul class="sub__nav__ul">
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Ingresar</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Pedidos</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "productCart">Carro de compra</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Finalizar compra</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/login">Ingresar</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/mispedidos">Pedidos</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "/productCart">Carro de compra</a></li>
+                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/pago">Finalizar compra</a></li>
                     <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Salir</a></li>
                 </ul>
             </ul>
         </nav>
         
     </header>
-
-    <form action="/crear-producto" class="form">
-        <div>
-            <label>Nombres:</label>
-            <input type="text" placeholder="Ingrese su nombre completo" name="nombre">
-        </div>
-        <div>
-            <label>apellidos:</label>
-            <input type="text" placeholder="Ingrese sus apellidos" name="apellido">
-        </div>
-        <div class="flex-container">
+    <div class="sub-header">
+        <h2>REGISTRO</h2>
+    </div>
+    <section class="box-registo">
+        <form action="/crear-producto" class="form-registro">
             <div>
-                <label>Tipo de documento:</label>
-                <select name="tipo-de-documento">
-                    <option value=""> DNI</option>
-                    <option value=""> Libreta de enrolamiento</option>
-                    <option value=""> Cédula de Ciudadanía</option>
-                </select>
+                <label>Nombres:</label>
+                <input type="text" placeholder="Ingrese su nombre completo" name="nombre">
             </div>
             <div>
-                <label>No cédula  de Ciudadanía:</label>
-                <input type="text" placeholder="Ingrese su cédula" name="cedula">
+                <label>Apellidos:</label>
+                <input type="text" placeholder="Ingrese sus apellidos" name="apellido">
             </div>
+            <div class="flex-container">
+                <div>
+                    <label>Tipo de documento:</label>
+                    <select name="tipo-de-documento">
+                        <option value=""> DNI</option>
+                        <option value=""> Libreta de enrolamiento</option>
+                        <option value=""> Cédula de Ciudadanía</option>
+                    </select>
+                </div>
+                <div>
+                    <label>No cédula  de Ciudadanía:</label>
+                    <input type="text" placeholder="Ingrese su cédula" name="cedula">
+                </div>
+            </div>
+            <div>
+                <label>Teléfono:</label>
+                <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" placeholder="Ingrese su correo electrónico" name="email">
+            </div>
+            <div>
+                <label>Contraseña:</label>
+                <input type="text" placeholder="Ingrese su contraseña" name="contraseña">
+            </div>
+            <div>
+                <input class="btn-form2" id="registrarse" type="submit" name="registrarse" value="REGISTRARSE">
+            </div>
+        </form>
+        <div class="box-img-registro">
+            <img src="/images/logo-banner.png" class="img">
         </div>
-        <div>
-            <label>Teléfono:</label>
-            <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono">
-        </div>
-        <div>
-            <label>Email:</label>
-            <input type="text" placeholder="Ingrese su correo electrónico" name="email">
-        </div>
-        <div>
-            <label>Contraseña:</label>
-            <input type="text" placeholder="Ingrese su contraseña" name="contraseña">
-        </div>
-    </form>
-    <img src="/images/logo-banner.png" class="img"
+    </section>    
 </body>
 <footer class="footer">
     <div class="contenedor-footer">
@@ -93,11 +102,11 @@
             <h3 class="widget-titulo">Links</h3>
             <nav class="nav-footer">
                 <ul class="nav__ul__footer">
-                    <li><a href = "#">Inicio</a></li>
-                    <li><a href = "#"></i>Nosotros</a></li>
-                    <li><a href = "#"></i>Productos</a></li>
-                    <li><a href = "#"></i>Contacto</a></li>
-                    <li><a href = "#">Mi cuenta</a></li>                        
+                    <li><a href = "/">Inicio</a></li>
+                    <li><a href = "/sobrenosotros"></i>Nosotros</a></li>
+                    <li><a href = "/#productos"></i>Productos</a></li>
+                    <li><a href = "/contacto"></i>Contacto</a></li>
+                    <li><a href = "/login">Mi cuenta</a></li>                        
                 </ul>
             </nav>
         </div>

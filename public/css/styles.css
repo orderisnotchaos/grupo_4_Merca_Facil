@@ -68,10 +68,6 @@ h1, h2, h3, h4, h5, h6, .nav{
     text-decoration: none;
 }
 
-.banner-comunidad-container{
-    padding-top: 101px;
-}
-
 .img-banner-comunidad{
     height: auto;
     width: 100%;
@@ -112,58 +108,58 @@ h1, h2, h3, h4, h5, h6, .nav{
 }
 
 .product2{
-    height: 300px;
-    width: 400px;
     background-color: #35D0BA;
-    margin: 5px;
     background-image: url("/images/bebidas01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+    height: 300px;
+    margin: 5px;
+    width: 400px;
 }
 
 .product3{
-    height: 300px;
-    width: 400px;
     background-color: #35D0BA;
-    margin: 5px;
     background-image: url("/images/mascotas01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+    height: 300px;
+    margin: 5px;
+    width: 400px;
 }
 
 .product4{
-    height: 300px;
-    width: 400px;
     background-color: #35D0BA;
-    margin: 5px;
     background-image: url("/images/bebes01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+    height: 300px;
+    margin: 5px;
+    width: 400px;
 }
 
 .product5{
-    height: 300px;
-    width: 400px;
     background-color: #35D0BA;
-    margin: 5px;
     background-image: url("/images/cuidados01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+    height: 300px;
+    margin: 5px;
+    width: 400px;
 }
 
 .product6{
-
-    height: 300px;
-    width: 400px;
-    margin: 5px;
     background-image: url("/images/limpieza01.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
+
+    height: 300px;
+    margin: 5px;
+    width: 400px;
 }
 
 .precio-product{
@@ -251,10 +247,13 @@ h1, h2, h3, h4, h5, h6, .nav{
 .sub-header{
     background-color:#D92027;
     color:#fff;
-    font-size: 42px;
-    padding: 30px 0px 1px 0px;
-    padding-top: 101px;
+    font-size: 42px !important;
+    padding: 20px 0px 10px;
     text-align:center;
+}
+
+.sub-header h2{
+    margin: 0;
 }
 
 .box-login{
@@ -590,24 +589,24 @@ input[type=number]::-webkit-inner-spin-button {
 /* Estilos para pagina de pedidos */
 
 .box-mis-pedidos{
-    width: 90%;
-    padding: 50px 0px;
     margin: 0 auto;
+    padding: 50px 0px;
+    width: 90%;
 }
 
 .table-pedidos tr th{
+    background-color: #FF9234 !important;
     border-color:black;
     border-style:solid;
     border-width:1px;
+    color: #fff !important;
     font-family:Montserrat, Montserrat;
+    font-size: 24px !important;
     font-weight:normal;
+    font-weight: 600 !important;
     overflow:hidden;
     padding:17px 17px;
     word-break:normal;
-    font-size: 24px !important;
-    color: #fff !important;
-    font-weight: 600 !important;
-    background-color: #FF9234 !important;
 }
 
 .table-pedidos .tg-cly1 {
@@ -620,8 +619,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 .botones-pedidos{
     margin: 0 auto;
-    text-align: center;
     margin-top: 50px;
+    text-align: center;
 }
 
 /* Lo oculto provisionalmente */

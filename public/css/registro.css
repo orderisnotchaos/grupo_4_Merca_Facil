@@ -1,28 +1,37 @@
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
 
-
-.form{
+.box-registo{
     display: flex; 
     flex-wrap: wrap;
-    width: 60%;   
+    margin: 0 auto;
+    padding: 50px 0px;
+    width: 90%;
 }
 
-.form div{
+.form-registro{
+    width: 60%;
+    padding-right: 8%;
+}
+
+.box-img-registro{
+    width: 40%;
+    text-align: center;
+}
+
+.form-registro label{
     width: 100%;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
+.form-registro input, .form-registro select{
+    width: 100%;
+    font-size: 24px;
+    margin-top: 10px;
 }
 
-.flex-container div{
-    width: 30%;
+.form-registro div{
+    margin-bottom: 20px;
 }
-
-.img{
-    display: inline-block;
-    height: 350px;
-    width: 350px;
-}
-
