@@ -29,3 +29,11 @@ window.onclick = function(event) {
       }
     }
 }
+
+/*window.onmouseout = function(event2) {
+    if (!event2.target.matches('.dropbtn') || ('dropdown-content')) {
+        console.log(event2);
+        var element = document.getElementById('myDropdown');
+        element.classList.remove('show');
+    }
+}*/
