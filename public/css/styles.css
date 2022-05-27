@@ -69,46 +69,43 @@ h1, h2, h3, h4, h5, h6, .nav{
 }
 
 /* Estilo para submenu */
-.dropdown-content .nav__li{
+.dropdown-content2 .nav__li{
     list-style: none;
     padding: 8px 0px;
     text-decoration: none;
     
 }
 
-.dropdown-content .nav__li .fa-solid{
+.dropdown-content2 .nav__li .fa-solid{
     padding: 0px 5px;
 }
 
-.dropbtn { 
-    cursor: pointer;
-} 
+.dropbtn2 {
+    border: none;
+}
   
-.dropdown {
-    display: inline-block;
+.dropdown2 {
     position: relative;
 }
   
-.dropdown-content {
-    background: #FF9234;
+.dropdown-content2 {
+    background-color: #FF9234;
     display: none;
-    overflow: auto;
-    padding: 0px 10px;
+    padding: 0px 20px;
     position: absolute;
-    position: absolute;
-    right: 0;
-    top: 68px;
+    right: -22px;
+    top: 25px;
     z-index: 1;
 }
   
-.dropdown-content li{
+.dropdown-content2 li {
     display: block;
     text-decoration: none;
 }  
   
-.show {
+.dropdown2:hover .dropdown-content2 {
     display: block;
-}
+}  
 
 /* Fin de estilos de submenu */
 

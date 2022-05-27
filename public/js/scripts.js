@@ -1,5 +1,5 @@
 // Validación de contraseña iguales
-function validate(){
+/*function validate(){
 
     var pass = document.getElementById('contrasena1').value
     var pass2 = document.getElementById('contrasena2').value
@@ -30,7 +30,7 @@ window.onclick = function(event) {
     }
 }
 
-/*window.onmouseout = function(event2) {
+window.onmouseout = function(event2) {
     if (!event2.target.matches('.dropbtn') || ('dropdown-content')) {
         console.log(event2);
         var element = document.getElementById('myDropdown');
