@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/scripts.js"></script>
 
     </head>
     <body>
@@ -26,21 +27,21 @@
             </div>
         </div>
         <nav class="nav">
-            <ul class="nav__ul">
-                <li class="nav__li"><a href = "/">Inicio</a></li>
-                <li class="nav__li"><a href = "/sobrenosotros"></i>Nosotros</a></li>
-                <li class="nav__li"><a href = "/#productos"></i>Productos</a></li>
-                <li class="nav__li"><a href = "/contacto"></i>Contacto</a></li>
-                <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/login"> Mi cuenta</a></li>
-                <ul class="sub__nav__ul">
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/login">Ingresar</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/mispedidos">Pedidos</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-cart-shopping"></i><a href = "/productCart">Carro de compra</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "/pago">Finalizar compra</a></li>
-                    <li class="nav__li"><i class="fa-solid fa-user"></i><a href = "#">Salir</a></li>
-                </ul>
-            </ul>
-        </nav>
+          <ul class="nav__ul">
+              <li class="nav__li"><a href = "/">Inicio</a></li>
+              <li class="nav__li"><a href = "/sobrenosotros"></i>Nosotros</a></li>
+              <li class="nav__li"><a href = "/#productos"></i>Productos</a></li>
+              <li class="nav__li"><a href = "/contacto"></i>Contacto</a></li>                    
+              <li class="nav__li"><i class="fa-solid fa-user"></i><a class="dropbtn" href="#" onclick="submenu()"> Mi cuenta <i class="fa-solid fa-angle-down"></i></a></li>
+                  <ul id="myDropdown" class="dropdown-content">
+                      <li class="nav__li"><i class="fa-solid fa-arrow-right-to-bracket"></i></i><a href = "/login">Ingresar</a></li>
+                      <li class="nav__li"><i class="fa-solid fa-cart-arrow-down"></i><a href = "/productCart">Carro de compra</a></li>
+                      <li class="nav__li"><i class="fa-solid fa-credit-card"></i><a href = "/pago">Finalizar compra</a></li>
+                      <li class="nav__li"><i class="fa-solid fa-box"></i><a href = "/mispedidos">Pedidos</a></li>
+                      <li class="nav__li"><i class="fa-solid fa-right-from-bracket"></i><a href = "#">Salir</a></li>
+                  </ul>                    
+          </ul>
+      </nav>
         
       </header>
         <div class="sub-header">
