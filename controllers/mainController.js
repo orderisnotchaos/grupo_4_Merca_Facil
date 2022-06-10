@@ -11,7 +11,6 @@ const controladorMain = {
         res.render (path.join(__dirname,"../views/sobrenosotros.ejs"));
     }
 
-
 };
 
 module.exports = controladorMain;

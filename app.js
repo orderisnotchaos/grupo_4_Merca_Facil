@@ -13,12 +13,15 @@ app.use( express.static (__dirname + "\\public"));
 app.set('view engine', 'ejs');
 
 app.listen(8000,() => {
-    console.log("servidor corriendo");
+    console.log("Servidor Corriendo");
 });
-
 
 app.get('/', (req, res) => { 
     res.render(__dirname + "/views/index.ejs");
+});
+
+app.get('/404', (req, res) => { 
+    res.sendFile(__dirname + "/views/404.ejs");
 });
 
 //TENGO DUDAS DE ESTO
@@ -27,19 +30,11 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/views/productos.ejs");
 });*/
 
-app.get('/404', (req, res) => { 
-    res.sendFile(__dirname + "/views/404.ejs");
-});
-
-
 //Ruteo
 app.use('/', ruteoProducto);
 app.use('/', ruteoUsuario);
 app.use('/', ruteoPrincipal);
 
-
-
-app.all('*', (req, res) => {
-    
+app.all('*', (req, res) => {  
     res.status(404).sendFile(__dirname + "/views/404.html");
 });
