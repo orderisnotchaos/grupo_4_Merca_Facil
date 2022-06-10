@@ -13,6 +13,10 @@ const controladorProducto = {
 
     checkout: (req, res) =>{
         res.render (path.join(__dirname,"../views/checkout.ejs"));
+    },
+
+    login: (req, res) =>{
+        res.render (path.join(__dirname,"../views/login.ejs"));
     }
 
 };

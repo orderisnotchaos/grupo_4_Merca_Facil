@@ -22,13 +22,6 @@ app.get('/', (req, res) => {
     res.render(__dirname + "/views/index.ejs");
 });
 
-app.get('/login', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/login.html");
-});
-
-
-
 app.get('/sobrenosotros', (req, res) => { 
     
     res.sendFile(__dirname + "/views/sobrenosotros.html");
@@ -58,6 +51,11 @@ app.get('/registro', (req,res) => {
 
     res.sendFile(__dirname + "/views/registro.html")
 });
+
+/*app.get('/login', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/login.html");
+});*/
 
 /*app.get('/pago', (req, res) => { 
     
