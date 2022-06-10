@@ -12,7 +12,7 @@ const controladorProducto = {
     },
 
     checkout: (req, res) =>{
-        res.sendFile (path.join(__dirname,"../views/checkout.html"));
+        res.render (path.join(__dirname,"../views/checkout.ejs"));
     }
 
 };

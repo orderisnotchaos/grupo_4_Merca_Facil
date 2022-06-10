@@ -41,7 +41,7 @@ app.get('/mispedidos', (req, res) => {
 
 app.get('/contacto', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/contacto.html");
+    res.render(__dirname + "/views/contacto.ejs");
 });
 
 app.get('/productos', (req, res) => { 
