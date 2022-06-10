@@ -59,6 +59,11 @@ app.get('/registro', (req,res) => {
     res.sendFile(__dirname + "/views/registro.ejs")
 });
 
+/*app.get('/login', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/login.html");
+});*/
+
 /*app.get('/pago', (req, res) => { 
     
     res.sendFile(__dirname + "/views/checkout.html");
