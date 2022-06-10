@@ -24,19 +24,19 @@ app.get('/', (req, res) => {
 
 app.get('/login', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/login.html");
+    res.sendFile(__dirname + "/views/login.ejs");
 });
 
 
 
 app.get('/sobrenosotros', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/sobrenosotros.html");
+    res.sendFile(__dirname + "/views/sobrenosotros.ejs");
 });
 
 app.get('/mispedidos', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/mispedidos.html");
+    res.sendFile(__dirname + "/views/mispedidos.ejs");
 });
 
 app.get('/contacto', (req, res) => { 
@@ -46,17 +46,17 @@ app.get('/contacto', (req, res) => {
 
 app.get('/productos', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/productos.html");
+    res.sendFile(__dirname + "/views/productos.ejs");
 });
 
 app.get('/404', (req, res) => { 
     
-    res.sendFile(__dirname + "/views/404.html");
+    res.sendFile(__dirname + "/views/404.ejs");
 });
 
 app.get('/registro', (req,res) => {
 
-    res.sendFile(__dirname + "/views/registro.html")
+    res.sendFile(__dirname + "/views/registro.ejs")
 });
 
 /*app.get('/pago', (req, res) => { 
