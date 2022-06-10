@@ -3,86 +3,39 @@ const req = require("express/lib/request");
 const app = express();
 const path = require("path");
 
-//Ruteo Karen - product.js
+//Ruteo
 const ruteoProducto = require ('./routers/product');
+const ruteoUsuario = require ('./routers/user');
+const ruteoPrincipal = require ('./routers/main');
 
 app.use( express.static (__dirname + "\\public"));
 
 app.set('view engine', 'ejs');
 
-
 app.listen(8000,() => {
-
     console.log("servidor corriendo");
 });
 
 
 app.get('/', (req, res) => { 
-
     res.render(__dirname + "/views/index.ejs");
 });
 
-app.get('/login', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/login.ejs");
-});
-
-
-
-app.get('/sobrenosotros', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/sobrenosotros.ejs");
-});
-
-app.get('/mispedidos', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/mispedidos.ejs");
-});
-
-app.get('/contacto', (req, res) => { 
-    
-    res.render(__dirname + "/views/contacto.ejs");
-});
-
-app.get('/productos', (req, res) => { 
+//TENGO DUDAS DE ESTO
+/*app.get('/productos', (req, res) => { 
     
     res.sendFile(__dirname + "/views/productos.ejs");
-});
+});*/
 
 app.get('/404', (req, res) => { 
-    
     res.sendFile(__dirname + "/views/404.ejs");
 });
 
-app.get('/registro', (req,res) => {
 
-    res.sendFile(__dirname + "/views/registro.ejs")
-});
-
-/*app.get('/login', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/login.html");
-});*/
-
-/*app.get('/pago', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/checkout.html");
-});*/
-
-/*app.get('/productCart', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/productCart.html");
-});*/
-
-/*app.get('/productDetail', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/productDetail.html");
-});*/
-
-//Ruteo Karen - product.js
+//Ruteo
 app.use('/', ruteoProducto);
-
-
+app.use('/', ruteoUsuario);
+app.use('/', ruteoPrincipal);
 
 
 

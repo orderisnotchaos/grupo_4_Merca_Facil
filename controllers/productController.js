@@ -2,7 +2,7 @@ const res = require('express/lib/response');
 const path = require('path');
 
 const controladorProducto = {
-    /*Ruteo Karen - productCart & productDetail*/
+   
     productCart: (req, res) =>{
         res.render (path.join(__dirname,"../views/productCart.ejs"));
     },
@@ -15,10 +15,9 @@ const controladorProducto = {
         res.render (path.join(__dirname,"../views/checkout.ejs"));
     },
 
-    login: (req, res) =>{
-        res.render (path.join(__dirname,"../views/login.ejs"));
-    }
-
+    mispedidos: (req, res) =>{
+        res.render (path.join(__dirname,"../views/mispedidos.ejs"));
+    },
 };
 
 module.exports = controladorProducto;

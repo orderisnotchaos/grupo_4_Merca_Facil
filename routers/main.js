@@ -1,9 +1,8 @@
 const express = require ('express');
-
 const router = express.Router();
-const productController = require ('../controllers/mainController');
+const mainController = require ('../controllers/mainController');
 
-/*Ruteo Karen - productCart & productDetail*/
-router.get ('/contacto', productController.contacto);
+router.get ('/contacto', mainController.contacto);
+router.get ('/sobrenosotros', mainController.sobrenosotros);
 
 module.exports = router;
