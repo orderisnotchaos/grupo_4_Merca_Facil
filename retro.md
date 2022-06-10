@@ -1,6 +1,7 @@
 Principales conclusiones del primer Sprint.
 Dinamica "estrella de mar".
 
+-----SPRINT 2-----
 
 1)Hacer igual:
 *Tratar de ir un paso adelante con los microdesafios.
@@ -22,3 +23,27 @@ Dinamica "estrella de mar".
 
 5)Hacer menos:
 *Prestar atencion a las imagenes del sitio.
+
+
+-----SPRINT 3-----
+
+1)Hacer igual:
+*Seguir reuniendonos semanalmente.
+*Compartir informacion puntual y dudas.
+*Aclarar temas entre el equipo.
+*Compartir avances individuales y mantener al equipo al tanto del progreso.
+
+2)Hacer mas:
+*Avanzar mas en la parte del back-end.
+*Dedicar un poco mas de tiempo para hacer push al proyecto en el repositorio.
+*Hacer el codigo mas limpio.
+
+3)Empezar a hacer:
+*Enviar commits al repositorio.
+*Hacer pull y push del proyecto todos para trabajarlo en vivo.
+
+4)Dejar de hacer:
+*Repetir los temas que ya hemos visto y acordado.
+
+5)Hacer menos:
+*Redundar en algunos temas del proyecto.
