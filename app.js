@@ -27,10 +27,7 @@ app.get('/login', (req, res) => {
     res.sendFile(__dirname + "/views/login.html");
 });
 
-app.get('/pago', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/checkout.html");
-});
+
 
 app.get('/sobrenosotros', (req, res) => { 
     
@@ -62,6 +59,11 @@ app.get('/registro', (req,res) => {
     res.sendFile(__dirname + "/views/registro.html")
 });
 
+/*app.get('/pago', (req, res) => { 
+    
+    res.sendFile(__dirname + "/views/checkout.html");
+});*/
+
 /*app.get('/productCart', (req, res) => { 
     
     res.sendFile(__dirname + "/views/productCart.html");
@@ -74,6 +76,8 @@ app.get('/registro', (req,res) => {
 
 //Ruteo Karen - product.js
 app.use('/', ruteoProducto);
+
+
 
 
 
