@@ -35,11 +35,9 @@ Licenciada en educación física y aprendiz de programación web. Actualmente cu
 . <strong>Andrés Ferrari</strong><br />
 Estudiante de ingeniería electrónica en la Universidad Tecnólogica Nacional y entusiasta en el mundo de la programación con deseos de conseguir su primera experiencia laboral formal como programador web. Amante de los animales.<br />
 . <strong>Jan Zambrano</strong><br />
->>>>>>> e89ae0f83614466173e5e1e4a051b00d7a6e1db7
 Técnico Informático con perfil híbrido que combina la tecnología y el marketing desde un punto de vista técnico. Conocimientos en manejo de base de datos, email marketing, web analytics, SEO, SEM, HTML, CSS, CMS. Venezolano, Residiendo en en el Sur de Chile, Los Ángeles Bio bio.<br />
 . <strong>Maria Manosalva</strong> <br />
 Iniciando en el mundo de la programación, actualmente trabajo en una empresa de telecomunicaciones. Colombiana, resido en Soacha Colombia.<br />
-
 
 <strong>Sitios de referencia:</strong><br />
 
