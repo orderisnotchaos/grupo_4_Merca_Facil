@@ -8,6 +8,9 @@ const ruteoProducto = require ('./routers/product');
 
 app.use( express.static (__dirname + "\\public"));
 
+app.set('view engine', 'ejs');
+
+
 app.listen(8000,() => {
 
     console.log("servidor corriendo");
@@ -16,7 +19,7 @@ app.listen(8000,() => {
 
 app.get('/', (req, res) => { 
 
-    res.sendFile(__dirname + "/views/index.html");
+    res.render(__dirname + "/views/index.ejs");
 });
 
 app.get('/login', (req, res) => { 
