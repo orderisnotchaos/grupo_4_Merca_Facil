@@ -3,6 +3,10 @@ const path = require('path');
 
 const controladorMain = {
     
+    index: (req, res) =>{
+        res.render (path.join(__dirname,"../views/index.ejs"));
+    },
+
     contacto: (req, res) =>{
         res.render (path.join(__dirname,"../views/contacto.ejs"));
     },

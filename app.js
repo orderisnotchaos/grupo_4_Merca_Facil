@@ -17,20 +17,6 @@ app.listen(8000,() => {
     console.log("Servidor Corriendo");
 });
 
-app.get('/', (req, res) => { 
-    res.render(__dirname + "/views/index.ejs");
-});
-
-app.get('/404', (req, res) => { 
-    res.sendFile(__dirname + "/views/404.ejs");
-});
-
-//TENGO DUDAS DE ESTO
-/*app.get('/productos', (req, res) => { 
-    
-    res.sendFile(__dirname + "/views/productos.ejs");
-});*/
-
 //Ruteo
 app.use('/', ruteoProducto);
 app.use('/', ruteoUsuario);
