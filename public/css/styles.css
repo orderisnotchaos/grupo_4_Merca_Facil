@@ -272,6 +272,12 @@ h1, h2, h3, h4, h5, h6, .nav{
     width: 90%;
 }
 
+.box-login{
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
 .box-form-login, .box-img-login{
     align-items: center;
     align-self: center;

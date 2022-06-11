@@ -7,6 +7,7 @@ const path = require("path");
 const ruteoProducto = require ('./routers/product');
 const ruteoUsuario = require ('./routers/user');
 const ruteoPrincipal = require ('./routers/main');
+const ruteoAdmin = require ('./routers/admin');
 
 app.use( express.static (__dirname + "\\public"));
 
@@ -34,6 +35,7 @@ app.get('/404', (req, res) => {
 app.use('/', ruteoProducto);
 app.use('/', ruteoUsuario);
 app.use('/', ruteoPrincipal);
+app.use('/', ruteoAdmin);
 
 app.all('*', (req, res) => {  
     res.status(404).sendFile(__dirname + "/views/404.html");
