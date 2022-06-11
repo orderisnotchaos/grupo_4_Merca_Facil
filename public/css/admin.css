@@ -26,3 +26,18 @@
     outline:none;
     padding-left:10px;
 }
+
+.panel section{
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    display: inline-block;
+}
+
+.panel .product article{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

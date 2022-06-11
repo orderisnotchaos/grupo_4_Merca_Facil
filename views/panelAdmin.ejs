@@ -15,14 +15,75 @@
     </head>
 <body>
     <%- include('./partials/header.ejs')-%>
-    <div class="panel">
-        <div class="inventario">
-            <div></div>
-            <div></div>
-            <div></div>
-
-        </div>
+<div class="panel">
+    <section>
+        <h3>Vista</h3>
+    </section>
+    <section>
+        <h3>Producto</h3>
+    </section>
+    <section>
+        <h3>Precio</h3>
+    </section>
+    <section>
+        <h3>Disponible</h3>
+    </section>
+    <section>
+        <i class="fa-solid fa-square-pen"></i>
+    </section>
+</div>
+<article class="product">
+    <div class="img-product">
+        <img src="/images/bebes01.jpg" alt="product-1">
     </div>
+    <div>
+        <h3>Leche en Tarro</h3>
+    </div>
+    <div>
+        <p>$15.00</p>
+    </div>
+    <div>
+        <p>35</p>
+    </div>
+    <div>
+        <button class="submit">Modificar</button>
+    </div>
+</article>
+<article class="product">
+    <div class="img-product">
+        <img src="/images/mascotas01.jpg" alt="product-2">
+    </div>
+    <div>
+        <h3>Comida para gato</h3>
+    </div>
+    <div>
+        <p>$45.00</p>
+    </div>
+    <div>
+        <p>42</p>
+    </div>
+    <div>
+        <button class="submit">Modificar</button>
+    </div>
+</article>
+<article class="product">
+    <div class="img-product">
+        <img src="/images/bebidas01.jpg" alt="product-3">
+    </div>
+    <div>
+        <h3>Agua en botella</h3>
+    </div>
+    <div>
+        <p>$32.00</p>
+    </div>
+    <div>
+        <p>15</p>
+    </div>
+    <div>
+        <button class="submit">Modificar</button>
+    </div>
+</article>
+</div>
 </body>
     <%- include('./partials/footer')-%>
 </html>
