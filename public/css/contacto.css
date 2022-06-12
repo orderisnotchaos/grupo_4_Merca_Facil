@@ -1,0 +1,36 @@
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.box-form-contacto textarea{
+    font-size: 24px;
+    width: 100%;
+}
+
+.box-contacto {
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+
+.box-form-contacto, .box-img-contacto{
+    align-items: center;
+    align-self: center;
+    padding: 50px 30px;
+    width: 50%;    
+}
+
+.box-img-contacto img{
+    width: 100%;
+}
+
+.box-contacto label, .box-contacto input{
+    display: block;
+    font-size: 24px;
+    width: 100%;
+}
+
+.box-contacto label{
+    font-weight: 600;
+    margin-bottom: 10px;
+}

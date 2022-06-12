@@ -35,3 +35,9 @@
 .form-registro div{
     margin-bottom: 20px;
 }
+
+.registo-text{
+    font-size: 32px;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+}
