@@ -456,3 +456,20 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 50px;
     text-align: center;
 }
+
+
+
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    /* acá van las reglas CSS que aplican para este media query */
+  }
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+    /* acá van las reglas CSS que aplican para este media query */
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 390px) {
+    /* acá van las reglas CSS que aplican para este media query */
+}
