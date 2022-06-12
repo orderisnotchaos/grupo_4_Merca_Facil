@@ -7,16 +7,16 @@
 }
 
 .detalle-producto{
-    font-family: 'Montserrat', sans-serif !important;
     display: flex;
+    font-family: 'Montserrat', sans-serif !important;
     justify-content: center;
-    padding-top: 60px;
     padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 .imagen-detalle-producto{  
+    flex-grow: 0.1; 
     padding-top: 50px;
-    flex-grow: 0.1;  
 }
 
 .contenido-detalle-producto p{
@@ -29,15 +29,15 @@
 
 .botones-detalle-producto a{
     color: gray; /*color texto*/ 
-    text-decoration: none; /*decoración texto*/ 
     font-size: 22px;
+    text-decoration: none; /*decoración texto*/ 
 }
 
 .botones-detalle-producto button{
     border: 1px solid #efefef /*anchura, estilo y color borde*/
     color: rgb(0, 0, 0); /*color texto*/
     display: inline-block;
+    font-size: 20px;
     margin: 20px 10px;
     padding: 5px ; /*espacio alrededor texto*/      
-    font-size: 20px;
 }
