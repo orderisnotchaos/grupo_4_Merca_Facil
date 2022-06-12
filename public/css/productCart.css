@@ -1,0 +1,59 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+table .borde-tabla{
+    border-left:white;
+    border-right:white;
+}
+
+.borde-tabla-horizontal{
+    border-left:white;
+}
+
+.carrito-compra{
+    font-family: 'Montserrat', sans-serif !important;
+    text-align:center;
+}
+   
+.contenedor {
+    border-radius: 15px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 30px 30px;
+    width: 100%;
+}
+    
+.tabla2-botones{
+    margin:auto;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.tabla2-botones button{
+    background-color:grey; /*color botón*/
+    border: 1px solid black; /*anchura, estilo y color borde*/
+    border-radius: 7px; /*bordes redondos*/
+    color: #ffffff; /*color texto*/
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px ; /*espacio alrededor texto*/  
+    text-decoration: none; /*decoración texto*/ 
+}
+
+.tabla2 table {
+    border-bottom: white;
+    border-left:rgb(0, 0, 0);
+    margin: 20px;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
