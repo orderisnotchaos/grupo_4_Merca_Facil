@@ -69,41 +69,39 @@ h1, h2, h3, h4, h5, h6, .nav{
 }
 
 /* Estilo para submenu */
-.dropdown-content2 .nav__li{
-    list-style: none;
-    padding: 8px 0px;
-    text-decoration: none;
-    
-}
-
-.dropdown-content2 .nav__li .fa-solid{
-    padding: 0px 5px;
-}
-
-.dropbtn2 {
+.dropbtn {
     border: none;
 }
   
-.dropdown2 {
+.dropdown {
+    display: inline-block;
     position: relative;
 }
+
+.dropdown-content .nav__li{
+    padding: 5px 5px;
+}
+
+.dropdown-content .nav__li .fa-solid{
+    width: 25px;
+}
   
-.dropdown-content2 {
+.dropdown-content {
     background-color: #FF9234;
     display: none;
-    padding: 0px 20px;
+    left: -35px;
+    min-width: 335px;
     position: absolute;
-    right: -22px;
-    top: 25px;
     z-index: 1;
 }
   
-.dropdown-content2 li {
+.dropdown-content a {
     display: block;
     text-decoration: none;
-}  
+}
   
-.dropdown2:hover .dropdown-content2 {
+ 
+.dropdown:hover .dropdown-content {
     display: block;
 }  
 
