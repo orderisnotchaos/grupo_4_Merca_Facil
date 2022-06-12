@@ -6,52 +6,62 @@
     font-family: "Font Awesome 6 Free" !important;
 }
 
-table .borde-tabla{
-    border-left:white;
-    border-right:white;
-}
-
-.borde-tabla-horizontal{
-    border-left:white;
-}
-
 .carrito-compra{
     font-family: 'Montserrat', sans-serif !important;
-    text-align:center;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
-   
+
 .contenedor {
-    border-radius: 15px;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    margin-top: 40px;
-    padding: 30px 30px;
     width: 100%;
+    display: flex;
+    justify-content: center;   
+    font-size: 24px;
 }
-    
-.tabla2-botones{
-    margin:auto;
-    padding-left: 12px;
+
+.contenedor .tg th{
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size:22px;
+    padding:5px;
+}
+
+.tg .tg-nrix{
+    color: #fff;
+    vertical-align:middle;
+}
+
+.tg .borde-tabla{
+    border-left:white;
+    border-right:white;
+    text-align: center;
+}
+
+.tabla2 .tg .tg-cly1{
+    border-left:rgb(0, 0, 0);
+    border-right:rgb(0, 0, 0);
+    font-size:25px; 
+}
+
+.tabla2 table {
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.tabla2-botones{  
+    padding-left: 10px;
     text-align: left;
 }
 
 .tabla2-botones button{
-    background-color:grey; /*color botón*/
-    border: 1px solid black; /*anchura, estilo y color borde*/
-    border-radius: 7px; /*bordes redondos*/
-    color: #ffffff; /*color texto*/
+    border: 1px solid #efefef /*anchura, estilo y color borde*/
+    color: rgb(0, 0, 0); /*color texto*/
     display: inline-block;
-    margin: 5px 10px;
-    padding: 10px ; /*espacio alrededor texto*/  
-    text-decoration: none; /*decoración texto*/ 
-}
-
-.tabla2 table {
-    border-bottom: white;
-    border-left:rgb(0, 0, 0);
-    margin: 20px;
-    text-align: center;
+    margin: 10px;
+    padding: 5px ; /*espacio alrededor texto*/  
+    font-size: 20px;
 }
 
 input[type=number]::-webkit-inner-spin-button {
