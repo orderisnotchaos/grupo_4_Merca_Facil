@@ -6,35 +6,39 @@
     font-family: "Font Awesome 6 Free" !important;
 }
 
-.box-form-contacto textarea{
-    font-size: 24px;
-    width: 100%;
-}
-
-.box-contacto {
+.box-login{
     display: flex;
     margin: auto;
     width: 90%;
 }
 
-.box-form-contacto, .box-img-contacto{
+.box-form-login, .box-img-login{
     align-items: center;
     align-self: center;
     padding: 50px 30px;
     width: 50%;    
 }
 
-.box-img-contacto img{
+.box-img-login img{
     width: 100%;
 }
 
-.box-contacto label, .box-contacto input{
+.box-login label, .box-login input{
     display: block;
     font-size: 24px;
     width: 100%;
 }
 
-.box-contacto label{
+.box-login label{
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.link-pass-lost a{
+    color: #000;
+    font-size: 24px;
+}
+
+.link-pass-lost{
+    text-align: center;
 }

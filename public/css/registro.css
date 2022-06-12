@@ -1,5 +1,9 @@
 *{
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 6 Free" !important;
 }
 
 .box-registo{
