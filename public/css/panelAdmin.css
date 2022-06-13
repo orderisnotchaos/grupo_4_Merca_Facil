@@ -1,0 +1,89 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.panel-admin div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.table-responsive div {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    float: initial;
+    min-height: .01%;
+}
+
+table {
+    width: 80%;
+    height: 100vh;
+    overflow-x: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr,
+.products {
+    border: 1px solid black;
+}
+
+.table tr {
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.nav-pag ol {
+    display: flex;
+    float: right;
+    margin-right: 20px;
+}
+
+.nav-pag li {
+    display: block;
+    padding: 10px;
+}
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    /* acá van las reglas CSS que aplican para este media query */
+  }
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+    /* acá van las reglas CSS que aplican para este media query */
+}
+
+/* Teléfonos móviles */
+@media screen and  (max-width: 320px) {
+    .table thead {
+        display: none;
+    }
+
+    .table tr > *:nth-child(1) {
+        display: none;
+    }
+
+    .table tbody {
+        padding: 50px;
+    }
+
+    tbody,
+    tr {
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+    }
+}

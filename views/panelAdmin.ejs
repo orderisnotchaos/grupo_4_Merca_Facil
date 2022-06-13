@@ -4,7 +4,7 @@
         <title>MercaFacil - Panel Administrador</title>
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/admin.css">
+        <link rel="stylesheet" href="/css/panelAdmin.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,78 +12,101 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
         <script type="text/javascript" src="/js/scripts.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
-    <%- include('./partials/header.ejs')-%>
-<div class="panel">
-    <section>
-        <h3>Vista</h3>
-    </section>
-    <section>
-        <h3>Producto</h3>
-    </section>
-    <section>
-        <h3>Precio</h3>
-    </section>
-    <section>
-        <h3>Disponible</h3>
-    </section>
-    <section>
-        <i class="fa-solid fa-square-pen"></i>
-    </section>
+<!-Header>
+<%- include('./partials/header.ejs')-%>
+<div class="sub-header">
+    <h2>PANEL ADMINISTRADOR</h2>
 </div>
-<article class="product">
-    <div class="img-product">
-        <img src="/images/bebes01.jpg" alt="product-1">
+<!-Panel>
+<div class="panel-admin">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><h2>Item</h2></th>
+                    <th><h2>Vista</h2></th>
+                    <th><h2>Producto</h2></th>
+                    <th><h2>Precio</h2></th>
+                    <th><h2>Disponible</h2></th>
+                    <th>
+                        <i class="fa-solid fa-square-pen"></i>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="products">
+                    <td class="item"><h4>1</h4></td>
+                    <td class="img-product">
+                        <img src="/images/bebes01.jpg" alt="product-1">
+                    </td>
+                    <td class="name-product-1">
+                        <h3>Leche en Tarro</h3>
+                    </td>
+                    <td data-title="precio" class="price">
+                        <p>$15.00</p>
+                    </td>
+                    <td data-title="Disponible" class="cant">
+                        <p>35</p>
+                    </td>
+                    <td>
+                        <button class="submit">Modificar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item"><h4>2</h4></td>
+                    <td class="img-product">
+                        <img src="/images/mascotas01.jpg" alt="product-2">
+                    </td>
+                    <td class="name-product-2">
+                        <h3>Comida para gato</h3>
+                    </td>
+                    <td data-title="precio" class="price">
+                        <p>$45.00</p>
+                    </td>
+                    <td data-title="Disponible" class="cant">
+                        <p>42</p>
+                    </td>
+                    <td>
+                        <button class="submit">Modificar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item"><h4>3</h4></td>
+                    <td class="img-product">
+                        <img src="/images/bebidas01.jpg" alt="product-3">
+                    </td>
+                    <td class="name-product-3">
+                        <h3>Agua en botella</h3>
+                    </td>
+                    <td data-title="precio" class="price">
+                        <p>$32.00</p>
+                    </td>
+                    <td data-title="Disponible" class="cant">
+                        <p>15</p>
+                    </td>
+                    <td>
+                        <button class="submit">Modificar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div>
-        <h3>Leche en Tarro</h3>
-    </div>
-    <div>
-        <p>$15.00</p>
-    </div>
-    <div>
-        <p>35</p>
-    </div>
-    <div>
-        <button class="submit">Modificar</button>
-    </div>
-</article>
-<article class="product">
-    <div class="img-product">
-        <img src="/images/mascotas01.jpg" alt="product-2">
-    </div>
-    <div>
-        <h3>Comida para gato</h3>
-    </div>
-    <div>
-        <p>$45.00</p>
-    </div>
-    <div>
-        <p>42</p>
-    </div>
-    <div>
-        <button class="submit">Modificar</button>
-    </div>
-</article>
-<article class="product">
-    <div class="img-product">
-        <img src="/images/bebidas01.jpg" alt="product-3">
-    </div>
-    <div>
-        <h3>Agua en botella</h3>
-    </div>
-    <div>
-        <p>$32.00</p>
-    </div>
-    <div>
-        <p>15</p>
-    </div>
-    <div>
-        <button class="submit">Modificar</button>
-    </div>
-</article>
 </div>
+<!-paginas>
+    <div class="nav-pag">
+        <nav class="bar-pag">
+            <ol>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">...</a></li>
+            </ol>
+        </nav>
+    </div>
 </body>
-    <%- include('./partials/footer')-%>
+<!-Footer->
+<%- include('./partials/footer')-%>
 </html>
