@@ -43,6 +43,15 @@ h1, h2, h3, h4, h5, h6, .nav{
     width: 27%       
 }
 
+.search-box {
+    width: 100%;
+    text-align: center;
+}
+
+.search-box input{
+    width: 90%;
+}
+
 .main__header .nav{
     align-items: center;
     display: flex;
@@ -66,6 +75,53 @@ h1, h2, h3, h4, h5, h6, .nav{
     color: #fff;
     font-size: 20px;    
     text-decoration: none;
+}
+
+/* Estilos de menu para dispositivos*/
+.nav-mobil{
+    float: right;
+}
+
+.menu-mobil i{
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav__ul_mobil{
+    display: none;
+}
+
+.menu-mobil:hover .nav__ul_mobil {
+    display: block;
+}
+
+.nav__ul_mobil {
+    background-color: #FF9234;
+    display: none;
+    right: 0;
+    min-width: 250px;
+    position: absolute;
+    z-index: 1;
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.nav__ul_mobil li{
+    padding: 0px 0px 10px;
+}
+
+.nav__ul_mobil li a{
+    color: #fff;
+    font-size: 20px;    
+    text-decoration: none;
+}
+
+.nav__ul_mobil li i{
+    font-size: 16px;
+}
+
+.submenu-mobil{
+    padding: 10px 20px 10px 35px;
 }
 
 /* Estilo para submenu */
@@ -363,15 +419,48 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 /* Pantallas de escritorio normales y TV incluso */
 @media (max-width: 1920px) and (min-width: 992px) {
-    /* acá van las reglas CSS que aplican para este media query */
-  }
+    .main__header .nav-mobil{display: none;
+    }
+}
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
-    /* acá van las reglas CSS que aplican para este media query */
+    .logo-container{
+        width: 20%;
+    }
+
+    .main__header .wrapper{
+        width: 60%;
+    }
+
+    .main__header .nav-mobil{
+        display: flex;
+        width: 20%;
+        justify-content: right;
+
+    }    
+
+    .main__header .nav{
+        display: none;
+    }
 }
 
 /* Teléfonos móviles */
 @media (max-width: 767px) and (min-width: 390px) {
-    /* acá van las reglas CSS que aplican para este media query */
+    .logo-container{
+        width: 15% !important;
+    }
+
+    .main__header .wrapper{
+        width: 45% !important;
+    }
+
+    .main__header .nav-mobil{
+        display: flex;
+        width: 45% !important;
+    }
+
+    .main__header .nav{
+        display: none;
+    }
 }
