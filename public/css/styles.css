@@ -255,6 +255,11 @@ h1, h2, h3, h4, h5, h6, .nav{
 .categorias-container a{
     color: #fff;
     font-size: 22px;
+    font-weight: 600;
+}
+
+.categorias-container a span{
+    font-weight: 400;
 }
 
 .categorias-container a:link {
