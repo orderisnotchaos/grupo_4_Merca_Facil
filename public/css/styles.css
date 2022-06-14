@@ -234,13 +234,13 @@ h1, h2, h3, h4, h5, h6, .nav{
 .categorias-container{
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 8%;
-    width: 100%;
+    margin: auto;
+    width: 90%;
 }
 
 .categorias-container div{
     margin: 10px;
-    width: 30.9%;
+    width: 31.87%;
 }
 
 .categorias-container div img{
@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, h6, .nav{
     margin: 0px 10px;
     margin-bottom: 20px;
     text-align: center;
-    width: 22.699%;
+    width: 23.537%;
 }
 
 .box-info-product{
@@ -359,8 +359,10 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .contenedor-footer{
     display: flex;
-    padding: 30px 8%;
-    width: 100%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 0px;
+    width: 90%;
 }
 
 .widget1, .widget2, .widget3, .widget4{
@@ -561,27 +563,31 @@ h1, h2, h3, h4, h5, h6, .nav{
     }
 
     .categorias-container div{
-        width: 47.555%;
+        width: 46.999%;
     }
 
     .product{        
-        width: 50%;
+        width: 46.999%;
     }
 }
 
 /* Teléfonos móviles */
-@media (max-width: 767px) and (min-width: 390px) {
+@media (max-width: 767px) and (min-width: 200px) {
     .logo-container{
-        width: 15% !important;
+        width: 30% !important;
     }
 
     .main__header .wrapper{
-        width: 45% !important;
+        width: 50% !important;
     }
 
-    .main__header .nav-mobil{
-        display: flex;
-        width: 45% !important;
+    .main__header .nav{
+        display: none;
+    }
+
+    .main__header .nav-mobil{display: flex;
+        justify-content: right;
+        width: 20%;
     }
 
     .main__header .nav{
@@ -593,6 +599,14 @@ h1, h2, h3, h4, h5, h6, .nav{
     }
 
     .product{        
+        width: 100%;
+    }
+
+    .contenedor-footer {
+        text-align: center;
+    }
+
+    .widget1, .widget2, .widget3, .widget4{
         width: 100%;
     }
 }
