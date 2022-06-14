@@ -78,6 +78,9 @@ h1, h2, h3, h4, h5, h6, .nav{
 }
 
 /* Estilos de menu para dispositivos*/
+.main__header .nav-mobil{display: none;
+}
+
 .nav-mobil{
     float: right;
 }
@@ -537,8 +540,7 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 /* Pantallas de escritorio normales y TV incluso */
 @media (max-width: 1920px) and (min-width: 992px) {
-    .main__header .nav-mobil{display: none;
-    }
+    
 }
 
 /* Tabletas */
