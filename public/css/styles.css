@@ -241,10 +241,70 @@ h1, h2, h3, h4, h5, h6, .nav{
     width: 100%;
 }
 
-.categoria{
-    margin-bottom: 22px;
-    padding: 0px 13px;
-    width: 33.333%;
+.categorias-container div{
+    margin: 10px;
+    width: 30.9%;
+}
+
+.categorias-container div img{
+    margin: auto;
+    width: 219px;
+    display: block;
+}
+
+.categorias-container a{
+    color: #fff;
+    font-size: 22px;
+}
+
+.categorias-container a:link {
+    text-decoration: none;
+}
+
+.categorias-container a:visited {
+    text-decoration: none;
+}
+
+.categorias-container a:hover {
+    text-decoration: none;
+}
+
+.categorias-container a:active {
+    text-decoration: none;
+}
+
+.categorias-container a span{
+    font-size: 16px;
+}
+
+.categoria-1{
+    padding: 20px;
+    background-color: #ff504f;
+}
+
+.categoria-2{
+    padding: 20px;
+    background-color: #0d2b70;
+}
+
+.categoria-3{
+    padding: 20px;
+    background-color: #ffc200;
+}
+
+.categoria-4{
+    padding: 20px;
+    background-color: #ffa3b1;
+}
+
+.categoria-5{
+    padding: 20px;
+    background-color: #00bcb6;
+}
+
+.categoria-6{
+    padding: 20px;
+    background-color: #0065b4;
 }
 
 .products-container{
