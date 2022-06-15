@@ -63,7 +63,7 @@
 }
 
 /* Teléfonos móviles */
-@media (max-width: 767px) and (min-width: 390px) {
+@media (max-width: 767px) and (min-width: 360px) {
     /* acá van las reglas CSS que aplican para este media query */
 
     .detalle-producto{  
