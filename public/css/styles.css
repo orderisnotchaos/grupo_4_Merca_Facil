@@ -43,6 +43,15 @@ h1, h2, h3, h4, h5, h6, .nav{
     width: 27%       
 }
 
+.search-box {
+    text-align: center;
+    width: 100%;
+}
+
+.search-box input{
+    width: 90%;
+}
+
 .main__header .nav{
     align-items: center;
     display: flex;
@@ -66,6 +75,57 @@ h1, h2, h3, h4, h5, h6, .nav{
     color: #fff;
     font-size: 20px;    
     text-decoration: none;
+}
+
+/* Estilos de menu para dispositivos*/
+.main__header .nav-mobil{display: none;
+}
+
+.nav-mobil{
+    float: right;
+}
+
+.menu-mobil i{
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav__ul_mobil{
+    display: none;
+}
+
+.menu-mobil:hover .nav__ul_mobil {
+    display: block;
+}
+
+.nav__ul_mobil {
+    background-color: #FF9234;
+    display: none;
+    list-style: none;
+    min-width: 250px;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.nav__ul_mobil li{
+    padding: 0px 0px 10px;
+}
+
+.nav__ul_mobil li a{
+    color: #fff;
+    font-size: 20px;    
+    text-decoration: none;
+}
+
+.nav__ul_mobil li i{
+    font-size: 16px;
+    width: 20px;
+}
+
+.submenu-mobil{
+    padding: 10px 20px 10px 35px;
 }
 
 /* Estilo para submenu */
@@ -108,10 +168,65 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 /* Fin de estilos de submenu */
 
-.img-banner-comunidad{
-    height: auto;
-    width: 100%;
+/* Slider de imágenes de inicio */
+.mySlides {
+    display: none;
 }
+
+/* Slideshow container */
+.slideshow-container {
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+/* Caption text */
+.text {
+  bottom: 8px;
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  margin: 0 2px;
+  transition: background-color 0.6s ease;
+  width: 15px;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-duration: 1.5s;
+  animation-name: fade;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}            
+
+/* fin de slider*/
 
 .titulo-seccion{
     font-size: 40px;
@@ -122,21 +237,86 @@ h1, h2, h3, h4, h5, h6, .nav{
 .categorias-container{
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 8%;
-    width: 100%;
+    margin: auto;
+    width: 90%;
 }
 
-.categoria{
-    margin-bottom: 22px;
-    padding: 0px 13px;
-    width: 33.333%;
+.categorias-container div{
+    margin: 10px;
+    width: 31.87%;
+}
+
+.categorias-container div img{
+    display: block;
+    margin: auto;
+    width: 219px;
+}
+
+.categorias-container a{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.categorias-container a span{
+    font-weight: 400;
+}
+
+.categorias-container a:link {
+    text-decoration: none;
+}
+
+.categorias-container a:visited {
+    text-decoration: none;
+}
+
+.categorias-container a:hover {
+    text-decoration: none;
+}
+
+.categorias-container a:active {
+    text-decoration: none;
+}
+
+.categorias-container a span{
+    font-size: 16px;
+}
+
+.categoria-1{
+    background-color: #ff504f;
+    padding: 20px;
+}
+
+.categoria-2{
+    background-color: #0d2b70;
+    padding: 20px;
+}
+
+.categoria-3{
+    background-color: #ffc200;
+    padding: 20px;
+}
+
+.categoria-4{
+    background-color: #ffa3b1;
+    padding: 20px;
+}
+
+.categoria-5{
+    background-color: #00bcb6;
+    padding: 20px;
+}
+
+.categoria-6{
+    background-color: #0065b4;
+    padding: 20px;
 }
 
 .products-container{
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 8%;
-    width: 100%;
+    margin: auto;
+    width: 90%;
 }
 
 .product{
@@ -144,7 +324,7 @@ h1, h2, h3, h4, h5, h6, .nav{
     margin: 0px 10px;
     margin-bottom: 20px;
     text-align: center;
-    width: 23.433%;
+    width: 23.537%;
 }
 
 .box-info-product{
@@ -187,8 +367,10 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .contenedor-footer{
     display: flex;
-    padding: 30px 8%;
-    width: 100%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 0px;
+    width: 90%;
 }
 
 .widget1, .widget2, .widget3, .widget4{
@@ -363,15 +545,75 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 /* Pantallas de escritorio normales y TV incluso */
 @media (max-width: 1920px) and (min-width: 992px) {
-    /* acá van las reglas CSS que aplican para este media query */
-  }
+    
+}
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
-    /* acá van las reglas CSS que aplican para este media query */
+    .logo-container{
+        width: 20%;
+    }
+
+    .main__header .wrapper{
+        width: 60%;
+    }
+
+    .main__header .nav-mobil{
+        display: flex;
+        justify-content: right;
+        width: 20%;
+
+    }    
+
+    .main__header .nav{
+        display: none;
+    }
+
+    .categorias-container div{
+        width: 46.999%;
+    }
+
+    .product{        
+        width: 46.999%;
+    }
 }
 
 /* Teléfonos móviles */
-@media (max-width: 767px) and (min-width: 390px) {
-    /* acá van las reglas CSS que aplican para este media query */
+@media (max-width: 767px) and (min-width: 200px) {
+    .logo-container{
+        width: 30% !important;
+    }
+
+    .main__header .wrapper{
+        width: 50% !important;
+    }
+
+    .main__header .nav{
+        display: none;
+    }
+
+    .main__header .nav-mobil{display: flex;
+        justify-content: right;
+        width: 20%;
+    }
+
+    .main__header .nav{
+        display: none;
+    }
+
+    .categorias-container div{
+        width: 100%;
+    }
+
+    .product{        
+        width: 100%;
+    }
+
+    .contenedor-footer {
+        text-align: center;
+    }
+
+    .widget1, .widget2, .widget3, .widget4{
+        width: 100%;
+    }
 }

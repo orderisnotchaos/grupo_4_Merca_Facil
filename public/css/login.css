@@ -10,6 +10,7 @@
     display: flex;
     margin: auto;
     width: 90%;
+    flex-wrap: wrap;
 }
 
 .box-form-login, .box-img-login{
@@ -41,4 +42,26 @@
 
 .link-pass-lost{
     text-align: center;
+}
+
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    
+}
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 200px) {
+    .box-form-login{
+        width: 100%;
+    }
+
+    .box-img-login{
+        width: 100%;
+        align-self: flex-start;
+    }
 }

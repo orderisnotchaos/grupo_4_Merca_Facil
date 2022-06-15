@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>mercaFácil</title>
+        <title>MercaFácil</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
@@ -10,24 +11,78 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-        <script type="text/javascript" src="/s/scripts.js"></script>
+        <script type="text/javascript" src="/js/scripts.js"></script>
 
     </head>
     <body>
         
         <%- include('./partials/header.ejs')-%>
-        <div class="banner-comunidad-container">
-            <img src="/images/comunidad-600px-b.jpg" alt="banner-comunidad" class="img-banner-comunidad">
-        </div>
 
+                     
+            <div class="slideshow-container">
+            
+                <div class="mySlides fade">
+                    <img src="/images/comunidad-600px-b.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/images/comunidad-600px-2.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/images/comunidad-600px-3.jpg" style="width:100%">
+                </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 5000); // Change image every 2 seconds
+            }
+            </script>
         <h2 class="titulo-seccion">CATEGORÍAS</h2>
         <div class="categorias-container">
-            <div class="categoria"><a href="#"><img src="/images/despensa1.png" alt="Despensa" class="img-categoria"></a></div>
-            <div class="categoria"><a href="#"><img src="/images/bebidas2.png" alt="Bebidas" class="img-categoria"></a></div>
-            <div class="categoria"><a href="#"><img src="/images/mascotas3.png" alt="Mascotas" class="img-categoria"></a></div>
-            <div class="categoria"><a href="#"><img src="/images/bebes4.png" alt="Bebes" class="img-categoria"></a></div>
-            <div class="categoria"><a href="#"><img src="/images/cpersonal5.png" alt="Cuidado personal" class="img-categoria"></a></div>
-            <div class="categoria"><a href="#"><img src="/images/limpieza6.png" alt="Limpieza" class="img-categoria"></a></div>
+            <div class="categoria-1">
+                <a href="#">Despensa<br><img src="/images/despensa1.png"><span>Ver productos</span></a>
+            </div>
+            <div class="categoria-2">
+                <a href="#">Bebidas<br><img src="/images/bebidas2.png"><span>Ver productos</span></a>
+            </div>
+            <div class="categoria-3">
+                <a href="#">Mascotas<br><img src="/images/mascotas3.png"><span>Ver productos</span></a>
+            </div>
+            <div class="categoria-4">
+                <a href="#">Bebes<br><img src="/images/bebes4.png"><span>Ver productos</span></a>
+            </div>
+            <div class="categoria-5">
+                <a href="#">Cuidado personal<br><img src="/images/cpersonal5.png"><span>Ver productos</span></a>
+            </div>
+            <div class="categoria-6">
+                <a href="#">Limpieza<br><img src="/images/limpieza6.png"><span>Ver productos</span></a>
+            </div>
         </div>
 
         <h2 id="productos" class="titulo-seccion">PRODUCTOS MÁS VENDIDOS</h2>

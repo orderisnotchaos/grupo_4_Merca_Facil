@@ -15,6 +15,7 @@
     display: flex;
     margin: auto;
     width: 90%;
+    flex-wrap: wrap;
 }
 
 .box-form-checkout{
@@ -133,4 +134,25 @@
     font-size: 24px;
     margin-bottom: 10px;
     width: 100%;
+}
+
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    
+}
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 200px) {
+    .box-form-checkout{
+        width: 100%;
+    }
+
+    .box-purchase-information{
+        width: 100%;
+    }
 }
