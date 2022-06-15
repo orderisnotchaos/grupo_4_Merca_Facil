@@ -85,10 +85,19 @@ input[type=number]::-webkit-inner-spin-button {
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
     /* acá van las reglas CSS que aplican para este media query */
+    
+    .contenedor {
+        flex-wrap: wrap;
+        font-size: 22px;
+        padding: 20px;
+    }
+    .tabla2-botones{  
+        text-align: center;
+    }
 }
 
 /* Teléfonos móviles */
-@media (max-width: 767px) and (min-width: 390px) {
+@media (max-width: 767px) and (min-width: 360px) {
     /* acá van las reglas CSS que aplican para este media query */
 
     .contenedor {
