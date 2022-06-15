@@ -19,10 +19,11 @@
 <!-Header>
 <%- include('./partials/header.ejs')-%>
 <div class="sub-header">
-    <h2>PANEL ADMINISTRADOR</h2>
+    <h2 class="name-panel">PANEL ADMINISTRADOR</h2>
 </div>
 <!-Panel>
 <div class="panel-admin">
+    <!-Tabla de exisstensias>
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -106,6 +107,23 @@
                 <li><a href="#">...</a></li>
             </ol>
         </nav>
+    </div>
+<!-Modificar productos>
+    <div class="new-products">
+        <form action="POST" class="newProduct">
+            <label for="codigo"><h2>SKU PRODUCTO:</h2></label>
+            <input class="form-control" name="codigo" required type="text" id="codigo" placeholder="Ingresa el código">
+
+            <label for="descripcion"><h2>DESCRIPCIÓN:</h2></label>
+            <textarea required id="descripcion" name="descripcion" cols="30" rows="5" class="form-control"></textarea>
+
+            <label for="precioVenta"><h2>PRECIO:</h2></label>
+            <input class="form-control" name="precioVenta" required type="number" id="precioVenta" placeholder="Precio de venta">
+
+            <label for=".existencia"><h2>EXISTENCIA:</h2></label>
+            <input class="form-control" name="existencia" required type="number" id="existencia" placeholder="Cantidad o existencia">
+            <br><br><input class="btn btn-info" type="submit" value="Guardar">
+        </form>
     </div>
 </body>
 <!-Footer->

@@ -41,6 +41,20 @@ tr,
     padding: 20px;
 }
 
+div .new-products {
+    display: inline-block;
+}
+
+label
+.codigo,
+.descripcion,
+.precioVenta,
+.existencia {
+    display:block;
+    width:auto;
+}
+
+
 .nav-pag ol {
     display: flex;
     float: right;
@@ -58,11 +72,18 @@ tr,
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
+    .name-panel {
+        font-size: 95%;
+    }
     /* acá van las reglas CSS que aplican para este media query */
 }
 
 /* Teléfonos móviles */
-@media screen and  (max-width: 320px) {
+@media screen and (max-width: 767px) {
+    .name-panel {
+        font-size: 80%;
+    }
+
     .table thead {
         display: none;
     }
