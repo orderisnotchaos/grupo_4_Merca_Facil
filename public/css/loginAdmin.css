@@ -9,12 +9,12 @@
 .box-login-admin{
     display: flex;
     margin: auto;
-    width: 100%;
-    height: 100vh;
+    width: 90%;
     padding: 5px;
 }
 
 .box-form-admin {
+    object-fit: contain;
     width: 100%;
     height: 100%;
     float: left;
@@ -33,10 +33,10 @@
 }
 
 .box-img-admin {
+    object-fit: contain;
     float: right;
     align-items: center;
     align-self: center;
-    padding: 50px 30px;
 }
 
 .box-login-admin input[type="text"],
