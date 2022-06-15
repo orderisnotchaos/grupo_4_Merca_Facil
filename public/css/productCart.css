@@ -6,10 +6,12 @@
     font-family: "Font Awesome 6 Free" !important;
 }
 
+
 .carrito-compra{
     font-family: 'Montserrat', sans-serif !important;
     padding-top: 60px;
     padding-bottom: 60px;
+    
 }
 
 .contenedor {
@@ -28,6 +30,10 @@
     padding:5px;
 }
 
+.tg .imagen{
+    color: #fff;
+}
+
 .tg .tg-nrix{
     color: #fff;
     vertical-align:middle;
@@ -37,7 +43,7 @@
     border-left:white;
     border-right:white;
     text-align: center;
-}
+}    
 
 .tabla2 .tg .tg-cly1{
     border-left:rgb(0, 0, 0);
@@ -48,11 +54,13 @@
 .tabla2 table {
     border: 1px solid black;
     margin: 20px;
+    
 }
 
 .tabla2-botones{  
     padding-left: 10px;
     text-align: left;
+ 
 }
 
 .tabla2-botones button{
@@ -62,8 +70,43 @@
     font-size: 20px;
     margin: 10px;
     padding: 5px ; /*espacio alrededor texto*/  
+    
 }
 
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
+}
+
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    /* acá van las reglas CSS que aplican para este media query */ 
+}
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+    /* acá van las reglas CSS que aplican para este media query */
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 390px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .contenedor {
+        flex-wrap: wrap;
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .contenedor .tabla2{
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    .tg .imagen{
+        display: none;
+    }
+
+    .tabla2-botones{  
+        text-align: center;
+    }
 }

@@ -6,27 +6,6 @@
     font-family: "Font Awesome 6 Free" !important;
 }
 
-.detalle-producto{
-    display: flex;
-    font-family: 'Montserrat', sans-serif !important;
-    justify-content: center;
-    padding-bottom: 60px;
-    padding-top: 60px;
-}
-
-.imagen-detalle-producto{  
-    flex-grow: 0.1; 
-    padding-top: 50px;
-}
-
-.contenido-detalle-producto p{
-    font-size: 24px;
-}
-
-.nombre-detalle-producto, .precio-detalle-producto{ 
-    font-weight: bold;
-}
-
 .botones-detalle-producto a{
     color: gray; /*color texto*/ 
     font-size: 22px;
@@ -36,8 +15,58 @@
 .botones-detalle-producto button{
     border: 1px solid #efefef; /*anchura, estilo y color borde*/
     color: rgb(0, 0, 0); /*color texto*/
-    display: inline-block;
     font-size: 20px;
     margin: 20px 10px;
-    padding: 5px ; /*espacio alrededor texto*/      
+    padding: 5px ; /*espacio alrededor texto*/   
+}
+
+.contenido-detalle-producto p{
+    font-size: 24px;
+}
+
+.detalle-producto{  
+    font-family: 'Montserrat', sans-serif !important;
+    justify-content: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.imagen-detalle-producto{  
+    padding-top: 20px;
+}
+
+.nombre-detalle-producto, .precio-detalle-producto{ 
+    font-weight: bold;
+}
+
+
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .detalle-producto{
+        display: flex;
+    }
+    
+    .imagen-detalle-producto{  
+        flex-grow: 0.1; 
+    }    
+}   
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .detalle-producto{  
+        text-align: center;
+    }   
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 390px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .detalle-producto{  
+        text-align: center;
+    }   
 }
