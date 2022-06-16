@@ -1,0 +1,60 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+
+.box-mis-pedidos{
+    margin: 0 auto;
+    padding: 50px 0px;
+    width: 90%;
+}
+
+.table-pedidos tr th{
+    background-color: #FF9234 !important;
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    color: #fff !important;
+    font-family:Montserrat, Montserrat;
+    font-size: 24px !important;
+    font-weight:normal;
+    font-weight: 600 !important;
+    overflow:hidden;
+    padding:17px 17px;
+    word-break:normal;
+}
+
+.table-pedidos .tg-cly1 {
+    text-align: center !important;
+}
+
+.table-pedidos img{
+    padding: 0px 20px;
+}
+
+.botones-pedidos{
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Pantallas de escritorio normales y TV */
+
+@media (max-width: 1920px) and (min-width: 992px) {
+    
+}
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 200px) {
+
+    
+}
