@@ -70,7 +70,9 @@
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
-
+    .estilos-imagenes img{       
+        height: 220px;
+    }
 }
 
 /* Teléfonos móviles */
