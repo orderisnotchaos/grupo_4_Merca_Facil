@@ -1,0 +1,17 @@
+[
+    {
+     "id": 0,
+     "name": "Nombre del usuario",
+     "nikname": "nombre corto",
+     "email": "correo@dominio.com",
+     "password": "*",
+     "userType": "Administrador o Cliente",
+     "description": "Descripción del producto",
+     "documentType     ":"DNI, Libreta de enrolamiento, Cédula de ciudadanía",
+     "idNumber": "Numero de cédula",
+     "telefono": 0,
+     "province": "Provincia del cliente",
+     "zipcode": 0,
+     "address": "Dirección del cliente"
+    }
+]
