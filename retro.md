@@ -47,3 +47,31 @@ Dinamica "estrella de mar".
 
 5)Hacer menos:
 *Redundar en algunos temas del proyecto.
+
+
+-----SPRINT 4-----
+
+1)Hacer igual:
+*Comunicarnos.
+*Seguimiento de cada uno de los puntos pendientes.
+*Reuniones entre semana.
+
+2)Hacer mas:
+*Hacer reuniones mas cortas.
+*Y mas reuniones.
+*Trabajar mas con el codigo js y base de datos.
+
+
+3)Empezar a hacer:
+*Retroalimentaciones entre nosotros.
+*Trabajar con el panel de carga de productos.
+*Trabajar con la base de datos json para los productos.
+
+4)Dejar de hacer:
+*Estilos a las paginas.
+*Preocuparnos por el diseño.
+*Wireframes.
+
+5)Hacer menos:
+*Estilos y enforcarnos al CSS de las paginas.
+*Trabajar con los responsives ya que deben estar listos.
