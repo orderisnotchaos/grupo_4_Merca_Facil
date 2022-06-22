@@ -46,15 +46,19 @@
 
 @media (max-width: 1920px) and (min-width: 992px) {
     
+
 }
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
-
+  
 }
 
 /* Teléfonos móviles */
 @media (max-width: 767px) and (min-width: 200px) {
 
-    
-}
+    .table-pedidos img{ 
+        display: none;
+    }
+
+    }

@@ -51,7 +51,7 @@
 .estilos-imagenes img{
     height: 450px;
     object-fit: cover;
-    object-position: 100% 0;
+    object-position: 100%;
     width: 100%;
 }
 
@@ -70,12 +70,17 @@
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
-
+    .estilos-imagenes img{       
+        height: 220px;
+    }
 }
 
 /* Teléfonos móviles */
 @media (max-width: 767px) and (min-width: 200px) {
     .box-img-about{
         width: 100%;
+    }
+    .box-text-about{
+    width: 100%;
     }
 }
