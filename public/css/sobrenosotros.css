@@ -78,4 +78,32 @@
     .box-img-about{
         width: 100%;
     }
-}
+
+    .box-text-about {
+        width: 100%;
+    }
+
+    .estilos-imagenes {       
+        width: 100%;
+    }
+
+    .estilos-imagenes img{       
+        height: 220px;
+    }
+
+    img[alt="KAREN"], img[alt="YURIANA"]{
+        object-position: 80% 0;
+    }
+
+    img[alt="ANDRES"]{
+        object-position: 48% 0;
+    }
+
+    img[alt="JAN"]{
+        object-position: 69% 0;
+    }
+
+    img[alt="MARIA"]{
+        object-position: 46% 0;
+    }
+}    
