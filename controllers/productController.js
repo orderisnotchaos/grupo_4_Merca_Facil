@@ -18,6 +18,10 @@ const controladorProducto = {
     mispedidos: (req, res) =>{
         res.render (path.join(__dirname,"../views/mispedidos.ejs"));
     },
+    crearProducto: (req, res) =>{
+
+        res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
+    },
 };
 
 module.exports = controladorProducto;
