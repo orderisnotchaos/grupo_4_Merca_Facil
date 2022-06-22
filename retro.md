@@ -1,7 +1,7 @@
 Principales conclusiones del primer Sprint.
 Dinamica "estrella de mar".
 
------SPRINT 2-----
+----- RETRO. CONCLUSIONES SPRINT 1 -----
 
 1)Hacer igual:
 *Tratar de ir un paso adelante con los microdesafios.
@@ -25,7 +25,7 @@ Dinamica "estrella de mar".
 *Prestar atencion a las imagenes del sitio.
 
 
------SPRINT 3-----
+----- RETRO. CONCLUSIONES SPRINT 2 -----
 
 1)Hacer igual:
 *Seguir reuniendonos semanalmente.
@@ -47,3 +47,31 @@ Dinamica "estrella de mar".
 
 5)Hacer menos:
 *Redundar en algunos temas del proyecto.
+
+
+----- RETRO. CONCLUSIONES SPRINT 3 -----
+
+1)Hacer igual:
+*Comunicarnos.
+*Seguimiento de cada uno de los puntos pendientes.
+*Reuniones entre semana.
+
+2)Hacer mas:
+*Hacer reuniones mas cortas.
+*Y mas reuniones.
+*Trabajar mas con el codigo js y base de datos.
+
+
+3)Empezar a hacer:
+*Retroalimentaciones entre nosotros.
+*Trabajar con el panel de carga de productos.
+*Trabajar con la base de datos json para los productos.
+
+4)Dejar de hacer:
+*Estilos a las paginas.
+*Preocuparnos por el diseño.
+*Wireframes.
+
+5)Hacer menos:
+*Estilos y enforcarnos al CSS de las paginas.
+*Trabajar con los responsives ya que deben estar listos.

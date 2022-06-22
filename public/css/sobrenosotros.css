@@ -51,7 +51,7 @@
 .estilos-imagenes img{
     height: 450px;
     object-fit: cover;
-    object-position: 100% 0;
+    object-position: 100%;
     width: 100%;
 }
 
