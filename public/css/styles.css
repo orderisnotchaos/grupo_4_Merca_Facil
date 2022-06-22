@@ -243,7 +243,7 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .categorias-container div{
     margin: 10px;
-    margin: auto;
+    margin: 15px auto;
     width: 30.99%;
 }
 
@@ -322,10 +322,10 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .product{
     background: #fff;
-    margin: 0px 10px;
+    margin: 10px auto;
     margin-bottom: 20px;
     text-align: center;
-    width: 23.537%;
+    width: 22.999%;
 }
 
 .box-info-product{
