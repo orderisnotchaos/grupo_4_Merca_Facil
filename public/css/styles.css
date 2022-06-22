@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .logo-container{
     padding: 10px 0px 5px 0px;
-    width: 25%;
+    width: 10%;
 }
 
 .logo-img{
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, .nav{
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 27%       
+    width: 30%       
 }
 
 .search-box {
@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6, .nav{
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    width: 48%;    
+    width: 60%;    
 }
 
 .nav__ul{
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .nav__li{
     color: #fff;
-    padding: 0px 20px;
+    padding: 0px 8px;
 }
 
 .nav__li a{
