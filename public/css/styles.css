@@ -243,7 +243,8 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 .categorias-container div{
     margin: 10px;
-    width: 31.87%;
+    margin: auto;
+    width: 30.99%;
 }
 
 .categorias-container div img{
