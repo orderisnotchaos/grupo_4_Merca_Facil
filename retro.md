@@ -1,7 +1,7 @@
 Principales conclusiones del primer Sprint.
 Dinamica "estrella de mar".
 
------SPRINT 2-----
+----- RETRO. CONCLUSIONES SPRINT 1 -----
 
 1)Hacer igual:
 *Tratar de ir un paso adelante con los microdesafios.
@@ -25,7 +25,7 @@ Dinamica "estrella de mar".
 *Prestar atencion a las imagenes del sitio.
 
 
------SPRINT 3-----
+----- RETRO. CONCLUSIONES SPRINT 2 -----
 
 1)Hacer igual:
 *Seguir reuniendonos semanalmente.
@@ -49,7 +49,7 @@ Dinamica "estrella de mar".
 *Redundar en algunos temas del proyecto.
 
 
------SPRINT 4-----
+----- RETRO. CONCLUSIONES SPRINT 3 -----
 
 1)Hacer igual:
 *Comunicarnos.
