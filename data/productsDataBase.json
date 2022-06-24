@@ -1,11 +1,202 @@
 [
     {
-     "id": 0,
-     "name": "Nombre del producto",
-     "price": 1,
-     "discount": 50,
-     "category": "Categorías de producto",
-     "description": "Descripción del producto",
-     "image": "nombre-de-la-imagen.jpg"
+        "id": 1,
+        "name": "Malloa",
+        "price": 2600,
+        "discount": 50,
+        "category": "Despensa",
+        "description": "Salsa de tomate italiana",
+        "image": "salsadetomate.jpg"
     }
+
+    {
+        "id": 2,
+        "name": "Carozzi",
+        "price": 870,
+        "discount": 50,
+        "category": "Despensa",
+        "description": "Fideos Espirales Bolsa 400 g",
+        "image": "fideos.jpg"
+    }
+
+    {
+        "id": 3,
+        "name": "Carozzi",
+        "price": 2800,
+        "discount": 20,
+        "category": "Despensa",
+        "description": "Pack 3 Spaghetti + 1 Salsa de Tomates Pomarola",
+        "image": "Spaghetti.jpg"
+    }
+
+    {
+        "id": 4,
+        "name": "Selecta",
+        "price": 1300,
+        "discount": 10,
+        "category": "Despensa",
+        "description": "Harina con Polvos de Hornear Bolsa1 Kg",
+        "image": "harina.jpg"
+    }
+
+    {
+        "id": 5,
+        "name": "Miraflores",
+        "price": 1450,
+        "discount": 0,
+        "category": "Despensa",
+        "description": "Arroz Grano Largo Ancho Grado 11 Kg",
+        "image": "arroz.jpg"
+    }
+
+    {
+        "id": 6,
+        "name": "Belmont",
+        "price": 3100,
+        "discount": 20,
+        "category": "Despensa",
+        "description": "Aceite Vegetal Botella1 L",
+        "image": "aceite.jpg"
+    }
+
+    {
+        "id": 7,
+        "name": "Lobos",
+        "price": 400,
+        "discount": 40,
+        "category": "Despensa",
+        "description": "Sal de Mesa Bolsa1 Kg",
+        "image": "sal.jpg"
+    }
+
+    {
+        "id": 8,
+        "name": "Lider",
+        "price": 650,
+        "discount": 50,
+        "category": "Despensa",
+        "description": "Maní Salado 160 g",
+        "image": "mani.jpg"
+    }
+
+    {
+        "id": 9,
+        "name": "Hellmann's",
+        "price": 3100,
+        "discount": 30,
+        "category": "Despensa",
+        "description": "Mayonesa regular doypack 930g",
+        "image": "mayonesa.jpg"
+    }
+
+    {
+        "id": 10,
+        "name": "Heinz Ketchup",
+        "price": 2090,
+        "discount": 20,
+        "category": "Despensa",
+        "description": "Doypack 900g",
+        "image": "ketchup.jpg"
+    }
+
+    {
+        "id": 11,
+        "name": "Diablo, Vino",
+        "price": 7390,
+        "discount": 0,
+        "category": "Bebidas",
+        "description": "Diablo Dark Red Ensamblaje 750 cc",
+        "image": "diablo.jpg"
+    }
+
+    {
+        "id": 12,
+        "name": "Toro de Piedra, Vino",
+        "price": 9650,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Cabernet Sauvignon Gran Reserva 2015 Botella 750 ml",
+        "image": "toro.jpg"
+    }
+
+    {
+        "id": 13,
+        "name": "Monster",
+        "price": 1450,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Bebida Energética RegularLata 473 ml",
+        "image": "monster.jpg"
+    }
+
+    {
+        "id": 14,
+        "name": "Vital",
+        "price": 700,
+        "discount": 0,
+        "category": "Bebidas",
+        "description": "Agua mineral con Gas Botella 1,6 L",
+        "image": "agua.jpg"
+    }
+
+    {
+        "id": 15,
+        "name": "Lider",
+        "price": 1400,
+        "discount": 0,
+        "category": "Bebidas",
+        "description": "Agua Purificada Sin Gas 6 l",
+        "image": "agua2.jpg"
+    }
+
+    {
+        "id": 16,
+        "name": "Watt's de Naranja",
+        "price": 1240,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Néctar de Naranja Light 0% Azúcar Añadida 1,5 L",
+        "image": "bebida-naranja.jpg"
+    }
+
+    {
+        "id": 17,
+        "name": "Watt's Sabor Tutti-Frutilla",
+        "price": 1240,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Néctar Sabor Tutti-Frutilla 1,5 L1,5 L",
+        "image": "bebida-frutilla.jpg"
+    }
+
+    {
+        "id": 18,
+        "name": "Jack Daniel's Whisky",
+        "price": 24750,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Whisky Bourbon N7750 ml",
+        "image": "w-jack.jpg"
+    }
+
+    {
+        "id": 19,
+        "name": "Johnnie Walker Whisky",
+        "price": 11890,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Whisky Johnnie Walker Red Label 1 L",
+        "image": "w-walker.jpg"
+    }
+
+    {
+        "id": 20,
+        "name": "Budweiser Pack",
+        "price": 7490,
+        "discount": 50,
+        "category": "Bebidas",
+        "description": "Cerveza Lager Latas 18 Un x 354 ml c/u",
+        "image": "cerveza.jpg"
+    }
+    
 ]
