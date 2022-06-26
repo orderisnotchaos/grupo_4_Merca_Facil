@@ -4,199 +4,599 @@
         "name": "Malloa",
         "price": 2600,
         "discount": 50,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Salsa de tomate italiana",
         "image": "salsadetomate.jpg"
-    }
+    },
 
     {
         "id": 2,
         "name": "Carozzi",
         "price": 870,
         "discount": 50,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Fideos Espirales Bolsa 400 g",
         "image": "fideos.jpg"
-    }
+    },
 
     {
         "id": 3,
         "name": "Carozzi",
         "price": 2800,
         "discount": 20,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Pack 3 Spaghetti + 1 Salsa de Tomates Pomarola",
         "image": "Spaghetti.jpg"
-    }
+    },
 
     {
         "id": 4,
         "name": "Selecta",
         "price": 1300,
         "discount": 10,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Harina con Polvos de Hornear Bolsa1 Kg",
         "image": "harina.jpg"
-    }
+    },
 
     {
         "id": 5,
         "name": "Miraflores",
         "price": 1450,
         "discount": 0,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Arroz Grano Largo Ancho Grado 11 Kg",
         "image": "arroz.jpg"
-    }
+    },
 
     {
         "id": 6,
         "name": "Belmont",
         "price": 3100,
         "discount": 20,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Aceite Vegetal Botella1 L",
         "image": "aceite.jpg"
-    }
+    },
 
     {
         "id": 7,
         "name": "Lobos",
         "price": 400,
         "discount": 40,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Sal de Mesa Bolsa1 Kg",
         "image": "sal.jpg"
-    }
+    },
 
     {
         "id": 8,
         "name": "Lider",
         "price": 650,
         "discount": 50,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Maní Salado 160 g",
         "image": "mani.jpg"
-    }
+    },
 
     {
         "id": 9,
         "name": "Hellmann's",
         "price": 3100,
         "discount": 30,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Mayonesa regular doypack 930g",
         "image": "mayonesa.jpg"
-    }
+    },
 
     {
         "id": 10,
         "name": "Heinz Ketchup",
         "price": 2090,
         "discount": 20,
-        "category": "Despensa",
+        "category": "despensa",
         "description": "Doypack 900g",
         "image": "ketchup.jpg"
-    }
+    },
 
     {
         "id": 11,
         "name": "Diablo, Vino",
         "price": 7390,
         "discount": 0,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Diablo Dark Red Ensamblaje 750 cc",
         "image": "diablo.jpg"
-    }
+    },
 
     {
         "id": 12,
         "name": "Toro de Piedra, Vino",
         "price": 9650,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Cabernet Sauvignon Gran Reserva 2015 Botella 750 ml",
         "image": "toro.jpg"
-    }
+    },
 
     {
         "id": 13,
         "name": "Monster",
         "price": 1450,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Bebida Energética RegularLata 473 ml",
         "image": "monster.jpg"
-    }
+    },
 
     {
         "id": 14,
         "name": "Vital",
         "price": 700,
         "discount": 0,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Agua mineral con Gas Botella 1,6 L",
         "image": "agua.jpg"
-    }
+    },
 
     {
         "id": 15,
         "name": "Lider",
         "price": 1400,
         "discount": 0,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Agua Purificada Sin Gas 6 l",
         "image": "agua2.jpg"
-    }
+    },
 
     {
         "id": 16,
         "name": "Watt's de Naranja",
         "price": 1240,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Néctar de Naranja Light 0% Azúcar Añadida 1,5 L",
         "image": "bebida-naranja.jpg"
-    }
+    },
 
     {
         "id": 17,
         "name": "Watt's Sabor Tutti-Frutilla",
         "price": 1240,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Néctar Sabor Tutti-Frutilla 1,5 L1,5 L",
         "image": "bebida-frutilla.jpg"
-    }
+    },
 
     {
         "id": 18,
         "name": "Jack Daniel's Whisky",
         "price": 24750,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Whisky Bourbon N7750 ml",
         "image": "w-jack.jpg"
-    }
+    },
 
     {
         "id": 19,
         "name": "Johnnie Walker Whisky",
         "price": 11890,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Whisky Johnnie Walker Red Label 1 L",
         "image": "w-walker.jpg"
-    }
+    },
 
     {
         "id": 20,
         "name": "Budweiser Pack",
         "price": 7490,
         "discount": 50,
-        "category": "Bebidas",
+        "category": "bebidas",
         "description": "Cerveza Lager Latas 18 Un x 354 ml c/u",
         "image": "cerveza.jpg"
+    },
+
+    {
+        "id": 21,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 22,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 23,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 24,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 25,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 26,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 27,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 28,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 29,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 30,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 31,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 32,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 33,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 34,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 35,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 36,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 37,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 38,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 39,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 40,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "bebes",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 41,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 42,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 43,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 44,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 45,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 46,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 47,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 48,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 49,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 50,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 51,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 52,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 53,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 54,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 55,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 56,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 57,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 58,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 59,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+
+    {
+        "id": 60,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
     }
     
 ]
