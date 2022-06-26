@@ -22,7 +22,7 @@ app.listen(8000,() => {
 });
 
 //Ruteo
-app.use('/', ruteoProducto);
+app.use('/product/', ruteoProducto);
 app.use('/', ruteoUsuario);
 app.use('/', ruteoPrincipal);
 app.use('/', ruteoAdmin);

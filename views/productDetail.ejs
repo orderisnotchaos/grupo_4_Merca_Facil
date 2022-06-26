@@ -16,7 +16,7 @@
         
     </head>
     <body>
-        <%- include('./partials/header.ejs')-%>
+        <%- include('./partials/header.ejs', {title: 'product.name'}) -%>
         <div class="sub-header">
             <h2>Detalle del Producto</h2>
         </div>
@@ -24,13 +24,13 @@
             <div class="detalle-producto">
                 
                 <div class="imagen-detalle-producto">
-                    <img src="/images/generic-image.jpg" width="300px" alt="Detalle del Producto">
+                    <img src="/images/<%=product.image%>" width="300px" alt="Detalle del Producto">
                 </div>
                 
                 <div class="contenido-detalle-producto">
-                    <p class="nombre-detalle-producto">NOMBRE DEL PRODUCTO</p>
-                    <p>Descripción corta del Producto</p>
-                    <p class="precio-detalle-producto">PRECIO $ 000.000</p>
+                    <p class="nombre-detalle-producto"><%= product.name  %></p>
+                    <p><%= product.description  %> </p>
+                    <p class="precio-detalle-producto">$ <%= product.price  %></p>
                     
                     <div class="botones-detalle-producto">  
                         <div>
