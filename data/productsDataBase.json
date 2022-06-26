@@ -301,102 +301,102 @@
 
     {
         "id": 31,
-        "name": "",
-        "price": 0,
+        "name": "Caminador",
+        "price": 303730,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Caminador Space Green BEBESIT 6988G",
+        "image": "products/bebes/caminador.png"
     },
 
     {
         "id": 32,
-        "name": "",
-        "price": 0,
+        "name": "Chupos",
+        "price": 39900,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Chupos AVENT Recién Nacido Ultra Air Rosa",
+        "image": "products/bebes/chupos.png"
     },
 
     {
         "id": 33,
-        "name": "",
-        "price": 0,
+        "name": "Coche",
+        "price": 599950,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Coche Bebe FJ HAPPY BABY FJBLUE",
+        "image": "products/bebes/coche.png"
     },
 
     {
         "id": 34,
-        "name": "",
-        "price": 0,
+        "name": "Cuna",
+        "price": 294550,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Cuna Corral EBABY Happy Dream 727 1 Rojo",
+        "image": "products/bebes/cuna.png"
     },
 
     {
         "id": 35,
-        "name": "",
-        "price": 0,
+        "name": "Silla Mecedora",
+        "price": 339840,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Silla Mecedora De Bebé Diamantes FISHER PRICE",
+        "image": "products/bebes/mecedora.png"
     },
 
     {
         "id": 36,
-        "name": "",
-        "price": 0,
+        "name": "Moviles",
+        "price": 63720,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Entretenedor Tortuga INFANTINO",
+        "image": "products/bebes/moviles.png"
     },
 
     {
         "id": 37,
-        "name": "",
-        "price": 0,
+        "name": "Pañalera",
+        "price": 64900,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Pañalera Para Bebe Multifuncional Jirafa",
+        "image": "products/bebes/pañalera.png"
     },
 
     {
         "id": 38,
-        "name": "",
-        "price": 0,
+        "name": "Pañales",
+        "price":  38450,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Pañales PAMPERS Swaddlers Etapa 0 x 31 und",
+        "image": "products/bebes/pañales.png"
     },
 
     {
         "id": 39,
-        "name": "",
-        "price": 0,
+        "name": "Tetero",
+        "price": 49900,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Tetero DR BROWNS Transición Rosa 9 Oz",
+        "image": "products/bebes/tetero.png"
     },
 
     {
         "id": 40,
-        "name": "",
-        "price": 0,
+        "name": "Toallitas Humedas",
+        "price": 25450,
         "discount": 0,
         "category": "bebes",
-        "description": "",
-        "image": ""
+        "description": "Toallas Humedas Acolchaditas PEQUEÑIN x 200 und",
+        "image": "products/bebes/toallitashumedas.png"
     },
 
     {
