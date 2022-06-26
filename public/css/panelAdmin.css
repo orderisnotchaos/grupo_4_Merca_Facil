@@ -1,8 +1,8 @@
-*{
+* {
     font-family: 'Montserrat', sans-serif;
 }
 
-.fa-solid{
+.fa-solid {
     font-family: "Font Awesome 6 Free" !important;
 }
 
@@ -11,6 +11,82 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
+}
+
+.btn__new-product {
+    font-weight: bold;
+    margin: auto;
+    background-color: #d7d7d7;
+    box-shadow: -10px 0px 30px -20px rgba(0,0,0,0.4);
+    border-radius: 5%;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 300ms;
+    text-align: center;
+}
+
+.btn__new-product:hover{
+    display: block;
+}
+
+.container__modal{
+    background: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 100vh;
+    left: 50%;
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    transition: all 300ms;
+    z-index: 10;
+}
+
+.header__modal{
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.header__modal label{
+    font-weight: bold;
+    background-color: #d7d7d7;
+    border-radius: 5%;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.body__modal{
+    background-color: white;
+    padding: 40px;
+    font-weight: bold;
+}
+
+.message__modal{
+    margin-top: 20px;
+    display: list-item;
+}
+
+
+/*EVENTO CLICK*/
+
+#evento-click{
+    display: none;
+}
+
+
+#evento-click:checked ~ .container__modal{
+    top: 50%;
+    visibility: visible;
+}
+
+#evento-click:checked ~ .btn__new-product{
+    top: -80px;
 }
 
 .table-responsive div {
@@ -41,8 +117,8 @@ tr,
     padding: 20px;
 }
 
-div .new-products {
-    display: inline-block;
+label .codigo {
+    display: inline;
 }
 
 label
@@ -56,6 +132,8 @@ label
 
 
 .nav-pag ol {
+    margin: auto;
+    text-align: center;
     display: flex;
     float: right;
     margin-right: 20px;
@@ -75,6 +153,10 @@ label
     .name-panel {
         font-size: 95%;
     }
+    .container__modal div {
+        display: block;
+        width: fit-content;
+    }
     /* acá van las reglas CSS que aplican para este media query */
 }
 
@@ -93,7 +175,7 @@ label
     }
 
     .table tbody {
-        padding: 50px;
+        padding: 10px;
     }
 
     tbody,
