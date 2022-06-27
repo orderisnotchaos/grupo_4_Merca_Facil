@@ -1,0 +1,93 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.detalle-producto{  
+    font-family: 'Montserrat', sans-serif !important;
+    justify-content: center;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.contenido-detalle-producto p{
+    font-size: 24px;
+}
+
+.buy-now-button {
+    border: 1px solid #222222; /*anchura, estilo y color borde*/
+    color: rgb(0, 0, 0); /*color texto*/
+    font-size: 20px;
+    margin: 20px 10px;
+    padding: 5px ; /*espacio alrededor texto*/   
+  }
+
+.form-label {
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 10px 0;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: none;
+    border: black;
+    padding: 0 15px;
+}
+
+textarea.form-input {
+    min-height: 140px;
+    resize: vertical;
+    padding: 15px;
+}
+
+
+
+
+
+.imagen-detalle-producto{  
+    padding-top: 20px;
+}
+
+.nombre-detalle-producto, .precio-detalle-producto{ 
+    font-weight: bold;
+}
+
+
+/* Pantallas de escritorio normales y TV incluso */
+@media (max-width: 1920px) and (min-width: 992px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .detalle-producto{
+        display: flex;
+    }
+    
+    .imagen-detalle-producto{  
+        flex-grow: 0.1; 
+    }    
+}   
+
+/* Tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .detalle-producto{  
+        text-align: center;
+    }   
+}
+
+/* Teléfonos móviles */
+@media (max-width: 767px) and (min-width: 360px) {
+    /* acá van las reglas CSS que aplican para este media query */
+
+    .detalle-producto{  
+        text-align: center;
+    }   
+}

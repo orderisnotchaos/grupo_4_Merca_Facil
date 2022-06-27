@@ -1,0 +1,13 @@
+.products-container div{
+  width: 200px;
+}
+
+article{
+    width: 300px;
+    display:inline-block;
+}
+
+main{
+    
+    text-align: center;
+}

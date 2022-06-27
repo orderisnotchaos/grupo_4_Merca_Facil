@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MercaFacil - Productos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/productos.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+        <script type="text/javascript" src="/js/scripts.js"></script>
+
+    </head>
+    <body>
+        <%- include('./partials/header.ejs')-%>
+        <div class="sub-header">
+            <h2>Todos los productos</h2>
+        </div>
+        <main>
+       
+        <h2 id="productos" class="titulo-seccion">DESPENSA</h2>
+        <% despensaProducts.forEach( function( product ){ %>
+        <article>
+        <div class="products-container">
+            <div class="product">
+                <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Despensa" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a class="titulo-product"><h4><%=product.name%></h4></a>
+                    <a class="descipcion-product"><p><%=product.description%></p></a>
+                    <a class="precio-product"><h3><%=product.price%></h3></a>
+                </div>                
+            </div>
+        </div>
+        </article>  
+        <% }) %>
+
+        <h2 id="productos" class="titulo-seccion">BEBIDAS</h2>
+        <% bebidasProducts.forEach( function( product ){ %>
+        <article>
+        <div class="products-container">
+            <div class="product">
+                <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Bebidas" class="img-categoria"></a>
+                <div class="box-info-product">
+                    <a class="titulo-product"><h4><%=product.name%></h4></a>
+                    <a class="descipcion-product"><p><%=product.description%></p></a>
+                    <a class="precio-product"><h3><%=product.price%></h3></a>
+                </div>                
+            </div>
+        </div>
+        </article>  
+        <% }) %>
+
+        <h2 id="productos" class="titulo-seccion">MASCOTAS</h2>
+        <% mascotasProducts.forEach( function( product ){ %>
+        <article>
+            <div class="products-container">
+                <div class="product">
+                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Mascotas" class="img-categoria"></a>
+                    <div class="box-info-product">
+                        <a class="titulo-product"><h4><%=product.name%></h4></a>
+                        <a class="descipcion-product"><p><%=product.description%></p></a>
+                        <a class="precio-product"><h3><%=product.price%></h3></a>
+                    </div>                
+                </div>
+            </div>
+        </article>  
+        <% }) %>
+       
+        <h2 id="productos" class="titulo-seccion">BEBES</h2>
+        <% bebesProducts.forEach( function( product ){ %>
+        <article>
+            <div class="products-container">
+                <div class="product">
+                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Bebes" class="img-categoria"></a>
+                    <div class="box-info-product">
+                        <a class="titulo-product"><h4><%=product.name%></h4></a>
+                        <a class="descipcion-product"><p><%=product.description%></p></a>
+                        <a class="precio-product"><h3><%=product.price%></h3></a>
+                    </div>                
+                </div>
+            </div>
+        </article>  
+        <% }) %>
+
+        <h2 id="productos" class="titulo-seccion">CUIDADO PERSONAL</h2>
+        <% cuidadoPersonalProducts.forEach( function( product ){ %>
+        <article>
+            <div class="products-container">
+                <div class="product">
+                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Cuidado Personal" class="img-categoria"></a>
+                    <div class="box-info-product">
+                        <a class="titulo-product"><h4><%=product.name%></h4></a>
+                        <a class="descipcion-product"><p><%=product.description%></p></a>
+                        <a class="precio-product"><h3><%=product.price%></h3></a>
+                    </div>                
+                </div>
+            </div>
+        </article>  
+        <% }) %>
+
+        <h2 id="productos" class="titulo-seccion">LIMPIEZA</h2>
+        <% limpiezaProducts.forEach( function( product ){ %>
+        <article>
+            <div class="products-container">
+                <div class="product">
+                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Limpieza class="img-categoria"></a>
+                    <div class="box-info-product">
+                        <a class="titulo-product"><h4><%=product.name%></h4></a>
+                        <a class="descipcion-product"><p><%=product.description%></p></a>
+                        <a class="precio-product"><h3><%=product.price%></h3></a>
+                    </div>                
+                </div>
+            </div>
+        </article>  
+        <% }) %>
+
+    </main>
+    
+</body>
+<%- include('./partials/footer')-%>
+</html>
