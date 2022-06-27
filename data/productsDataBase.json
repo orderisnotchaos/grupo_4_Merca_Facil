@@ -6,7 +6,7 @@
         "discount": 50,
         "category": "despensa",
         "description": "Salsa de tomate italiana",
-        "image": "salsadetomate.jpg"
+        "image": "products/despensa/salsadetomate.jpg"
     },
 
     {
@@ -16,7 +16,7 @@
         "discount": 50,
         "category": "despensa",
         "description": "Fideos Espirales Bolsa 400 g",
-        "image": "fideos.jpg"
+        "image": "products/despensa/fideos.jpg"
     },
 
     {
@@ -26,7 +26,7 @@
         "discount": 20,
         "category": "despensa",
         "description": "Pack 3 Spaghetti + 1 Salsa de Tomates Pomarola",
-        "image": "Spaghetti.jpg"
+        "image": "products/despensa/Spaghetti.jpg"
     },
 
     {
@@ -36,7 +36,7 @@
         "discount": 10,
         "category": "despensa",
         "description": "Harina con Polvos de Hornear Bolsa1 Kg",
-        "image": "harina.jpg"
+        "image": "products/despensa/harina.jpg"
     },
 
     {
@@ -46,7 +46,7 @@
         "discount": 0,
         "category": "despensa",
         "description": "Arroz Grano Largo Ancho Grado 11 Kg",
-        "image": "arroz.jpg"
+        "image": "products/despensa/arroz.jpg"
     },
 
     {
@@ -56,7 +56,7 @@
         "discount": 20,
         "category": "despensa",
         "description": "Aceite Vegetal Botella1 L",
-        "image": "aceite.jpg"
+        "image": "products/despensa/aceite.jpg"
     },
 
     {
@@ -66,7 +66,7 @@
         "discount": 40,
         "category": "despensa",
         "description": "Sal de Mesa Bolsa1 Kg",
-        "image": "sal.jpg"
+        "image": "products/despensa/sal.jpg"
     },
 
     {
@@ -76,7 +76,7 @@
         "discount": 50,
         "category": "despensa",
         "description": "Maní Salado 160 g",
-        "image": "mani.jpg"
+        "image": "products/despensa/mani.jpg"
     },
 
     {
@@ -86,7 +86,7 @@
         "discount": 30,
         "category": "despensa",
         "description": "Mayonesa regular doypack 930g",
-        "image": "mayonesa.jpg"
+        "image": "products/despensa/mayonesa.jpg"
     },
 
     {
@@ -96,7 +96,7 @@
         "discount": 20,
         "category": "despensa",
         "description": "Doypack 900g",
-        "image": "ketchup.jpg"
+        "image": "products/despensa/ketchup.jpg"
     },
 
     {
@@ -106,7 +106,7 @@
         "discount": 0,
         "category": "bebidas",
         "description": "Diablo Dark Red Ensamblaje 750 cc",
-        "image": "diablo.jpg"
+        "image": "products/bebidas/diablo.jpg"
     },
 
     {
@@ -116,7 +116,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Cabernet Sauvignon Gran Reserva 2015 Botella 750 ml",
-        "image": "toro.jpg"
+        "image": "products/bebidas/toro.jpg"
     },
 
     {
@@ -126,7 +126,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Bebida Energética RegularLata 473 ml",
-        "image": "monster.jpg"
+        "image": "products/bebidas/monster.jpg"
     },
 
     {
@@ -136,7 +136,7 @@
         "discount": 0,
         "category": "bebidas",
         "description": "Agua mineral con Gas Botella 1,6 L",
-        "image": "agua.jpg"
+        "image": "products/bebidas/agua.jpg"
     },
 
     {
@@ -146,7 +146,7 @@
         "discount": 0,
         "category": "bebidas",
         "description": "Agua Purificada Sin Gas 6 l",
-        "image": "agua2.jpg"
+        "image": "products/bebidas/agua2.jpg"
     },
 
     {
@@ -156,7 +156,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Néctar de Naranja Light 0% Azúcar Añadida 1,5 L",
-        "image": "bebida-naranja.jpg"
+        "image": "products/bebidas/bebida-naranja.jpg"
     },
 
     {
@@ -166,7 +166,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Néctar Sabor Tutti-Frutilla 1,5 L1,5 L",
-        "image": "bebida-frutilla.jpg"
+        "image": "products/bebidas/bebida-frutilla.jpg"
     },
 
     {
@@ -176,7 +176,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Whisky Bourbon N7750 ml",
-        "image": "w-jack.jpg"
+        "image": "products/bebidas/w-jack.jpg"
     },
 
     {
@@ -186,7 +186,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Whisky Johnnie Walker Red Label 1 L",
-        "image": "w-walker.jpg"
+        "image": "products/bebidas/w-walker.jpg"
     },
 
     {
@@ -196,7 +196,7 @@
         "discount": 50,
         "category": "bebidas",
         "description": "Cerveza Lager Latas 18 Un x 354 ml c/u",
-        "image": "cerveza.jpg"
+        "image": "products/bebidas/cerveza.jpg"
     },
 
     {
