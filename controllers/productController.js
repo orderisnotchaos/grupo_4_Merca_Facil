@@ -1,6 +1,7 @@
-const res = require('express/lib/response');
+//const res = require('express/lib/response');
 const path = require('path');
 const fs = require('fs');
+const { off } = require('process');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -41,10 +42,73 @@ const controladorProducto = {
     },
 
     edit: (req, res) => {
-		let id = req.params.id //El id que nos requiere por la url el usuario
-		let editProduct = products.find(producto => producto.id == id)
-		res.render("edit", { editProduct });
-	},  
+        const id = +req.params.id;
+		let productDetail = products.filter( function( product ){
+
+			return product.id === id;
+
+		});
+		productDetail = productDetail[ 0 ];
+		res.render('edit', { title: productDetail.name, productToEdit: productDetail } );
+	}, 
+    
+    update: (req, res) => {
+
+		let products = JSON.parse( fs.readFileSync( productsFilePath, 'utf-8' ) );
+		const id     = +req.params.id;
+
+		let name        = req.body.name;
+		let price       = req.body.price;
+		let discount    = req.body.discount;
+		let category    = req.body.category;
+		let description = req.body.description;
+        let image       = req.body.image;
+
+		let editProduct = {
+
+			id: id,
+			name: name,
+			price: price,
+			discount: discount,
+			category: category,
+			description: description,
+            image: image
+
+		};	
+
+		for( let i in products ) {
+
+			if( products[ i ].id === id ) {
+
+				products[ i ] = editProduct;
+				break;
+
+			}
+
+		}
+
+		fs.writeFileSync( productsFilePath , JSON.stringify( products ), { encoding: 'utf-8' } );
+		res.redirect( '/products' );
+
+	},
+    	// Delete - Delete one product from DB
+	destroy : (req, res) => {
+
+		let products = JSON.parse( fs.readFileSync( productsFilePath, 'utf-8' ) );
+		const id     = +req.params.id;
+
+		let productDestroyed = products.filter( function( product ){
+
+			return product.id !== id;
+
+		});
+
+		console.log( productDestroyed );
+
+		fs.writeFileSync( productsFilePath , JSON.stringify( productDestroyed ), { encoding: 'utf-8' } );
+		res.redirect( '/' );
+
+	}
     
 };
 

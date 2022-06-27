@@ -41,11 +41,11 @@
                         </form>
                         </div>
                         
-                        <button type="submit"><i class="fas fa-check"></i> FINALIZAR COMPRA </button>
+                        <button type="submit"><i class="fas fa-check"></i> AGREGAR AL CARRITO </button>
                         <button type="submit"><i class="fas fa-undo"></i> VOLVER A PRODUCTOS </button><br>
                          
                         
-                        <a href="/products/edit/<%= product.id %> " class="action-button edit">EDITAR PRODUCTO</a><br>
+                        <a href="/products/edit/<%=product.id %> " class="action-button edit">EDITAR PRODUCTO</a><br>
 						<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
