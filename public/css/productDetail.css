@@ -7,21 +7,28 @@
 }
 
 .botones-detalle-producto a{
-    color: gray; /*color texto*/ 
-    font-size: 22px;
     text-decoration: none; /*decoración texto*/ 
 }
 
-.botones-detalle-producto button{
-   
-    font-size: 20px;
-    margin-top: 15px;
+.precio-detalle-producto{
+    color: #D92027;
+    font-size: 32px !important;
+}
+
+.btn-volver-tienda{
+    align-items: center;
     background-color: rgb(173, 172, 171);
-    color: black; 
     border-radius: 8px;
-    padding: 10px 10px;
-    padding-right: 20%;
-    text-align: center;
+    color: #000;
+    display: inline-flex;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 15px 30px;
+}
+
+.btn-volver-tienda a{
+    color: #000 ;
 }
 
 .contenido-detalle-producto p{
@@ -43,34 +50,60 @@
     font-weight: bold;
 }
 
-
-.action-button {
-    font-size: 20px;
-    margin-top: 15px;
-    background-color: rgb(173, 172, 171);
-    color: black; 
-    border-radius: 8px;
-    display: inline-flex;
+.btn-agregar-carrito{
     align-items: center;
+    background-color: #3E9855;
+    border: transparent; 
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 20px;
     justify-content: center;
+    margin-top: 15px;
     padding: 15px 30px;
-  }
+}
+
+.action-button.edit {
+    align-items: center;
+    background-color: #FF9234; 
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 15px 30px;
+}
   
-  .action-button.edit {
-    font-size: 20px;
-    margin-top: 15px;
-    background-color: rgb(173, 172, 171);
-    color: black; 
-    border-radius: 8px;
-    display: inline-flex;
+.action-button.delete {
     align-items: center;
+    background-color: #D92027;
+    border-color: transparent;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 20px;
     justify-content: center;
-    padding: 15px 30px;
-  }
-  .action-button.delete {
-    background-color: rgb(255, 38, 0);
-  }
+    margin-top: 15px;
+    padding: 13px 30px;
+}
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+#quantity{
+    font-size: 24px;
+    width: 70px;
+}
+
+.detalle-categoria{
+    text-transform: capitalize;
+}
 
 
 /* Pantallas de escritorio normales y TV incluso */
@@ -79,11 +112,23 @@
 
     .detalle-producto{
         display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 90%;
     }
     
     .imagen-detalle-producto{  
-        flex-grow: 0.1; 
-    }    
+        align-items: center;
+        align-self: center;
+        width: 50%; 
+        text-align: center;
+    }   
+    
+    .contenido-detalle-producto{
+        align-items: center;
+        align-self: center;
+        width: 50%;
+    }
 }   
 
 /* Tabletas */

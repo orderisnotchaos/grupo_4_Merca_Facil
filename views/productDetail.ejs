@@ -24,36 +24,32 @@
             <div class="detalle-producto">
                 
                 <div class="imagen-detalle-producto">
-                    <img src="/images/<%=product.image%>" width="300px" alt="Detalle del Producto">
+                    <img src="/images/<%=product.image%>" width="500" alt="Detalle del Producto">
                 </div>
                 
                 <div class="contenido-detalle-producto">
                     <p class="nombre-detalle-producto"><%= product.name  %></p>
                     <p><%= product.description  %> </p>
                     <p class="precio-detalle-producto">$ <%= product.price  %></p>
+                    <p class="detalle-categoria">Categoría: <%= product.category  %></p>
                     
                     <div class="botones-detalle-producto">  
-                        <div>
                         <form name="cart_quantity" method="post" action="index.php">
-                            <a href="#"><i class="fa-solid fa-circle-minus"></i></a>
-                            <input name="quantity" id="quantity" value="" size="4" onChange="UpdateCartQuantity();" />
-                            <a href=""#"><i class="fa-solid fa-circle-plus"></i><br><br></a>     
+                            <input type="number" name="quantity" id="quantity" value="1" size="1">                                 
                         </form>
-                        </div>
                         
-                        <button type="submit"><i class="fas fa-check"></i> AGREGAR AL CARRITO </button>
-                        <button type="submit"><i class="fas fa-undo"></i> VOLVER A PRODUCTOS </button><br>
-                         
+                        <button class="btn-agregar-carrito" type="submit"><i class="fas fa-check"></i> AGREGAR AL CARRITO </button>
                         
-                        <a href="/products/edit/<%=product.id %> " class="action-button edit">EDITAR PRODUCTO</a><br>
-						<form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                        <a href="/products/" class="btn-volver-tienda" type="submit"><i class="fas fa-undo"></i> VOLVER A PRODUCTOS </a>                         
+                        
+                        <a href="/products/edit/<%=product.id %> " class="action-button edit">EDITAR PRODUCTO</a>
+						
+                        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
-                        
+						</form>                        
 
                     </div>
-                </div> 
-               
+                </div>                
             </div>
         </main>
     </body>
