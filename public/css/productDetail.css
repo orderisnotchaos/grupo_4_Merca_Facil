@@ -35,6 +35,11 @@
     font-size: 24px;
 }
 
+.nombre-detalle-producto{
+    font-size: 34px !important;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .detalle-producto{  
     font-family: 'Montserrat', sans-serif !important;
     justify-content: center;
