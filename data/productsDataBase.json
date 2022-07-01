@@ -1,1 +1,542 @@
-[{"id":1,"name":"Malloa","price":"2600","discount":"50","category":"despensa","description":"Salsa de tomate italiana","image":"products/despensa/salsadetomate.jpg"},{"id":2,"name":"Carozzi","price":870,"discount":50,"category":"despensa","description":"Fideos Espirales Bolsa 400 g","image":"products/despensa/fideos.jpg"},{"id":3,"name":"Carozzi","price":2800,"discount":20,"category":"despensa","description":"Pack 3 Spaghetti + 1 Salsa de Tomates Pomarola","image":"products/despensa/Spaghetti.jpg"},{"id":4,"name":"Selecta","price":1300,"discount":10,"category":"despensa","description":"Harina con Polvos de Hornear Bolsa1 Kg","image":"products/despensa/harina.jpg"},{"id":5,"name":"Miraflores","price":1450,"discount":0,"category":"despensa","description":"Arroz Grano Largo Ancho Grado 11 Kg","image":"products/despensa/arroz.jpg"},{"id":6,"name":"Belmont","price":3100,"discount":20,"category":"despensa","description":"Aceite Vegetal Botella1 L","image":"products/despensa/aceite.jpg"},{"id":7,"name":"Lobos","price":400,"discount":40,"category":"despensa","description":"Sal de Mesa Bolsa1 Kg","image":"products/despensa/sal.jpg"},{"id":8,"name":"Lider","price":650,"discount":50,"category":"despensa","description":"Maní Salado 160 g","image":"products/despensa/mani.jpg"},{"id":9,"name":"Hellmann's","price":3100,"discount":30,"category":"despensa","description":"Mayonesa regular doypack 930g","image":"products/despensa/mayonesa.jpg"},{"id":10,"name":"Heinz Ketchup","price":2090,"discount":20,"category":"despensa","description":"Doypack 900g","image":"products/despensa/ketchup.jpg"},{"id":11,"name":"Diablo, Vino","price":7390,"discount":0,"category":"bebidas","description":"Diablo Dark Red Ensamblaje 750 cc","image":"products/bebidas/diablo.jpg"},{"id":12,"name":"Toro de Piedra, Vino","price":9650,"discount":50,"category":"bebidas","description":"Cabernet Sauvignon Gran Reserva 2015 Botella 750 ml","image":"products/bebidas/toro.jpg"},{"id":13,"name":"Monster","price":1450,"discount":50,"category":"bebidas","description":"Bebida Energética RegularLata 473 ml","image":"products/bebidas/monster.jpg"},{"id":14,"name":"Vital","price":700,"discount":0,"category":"bebidas","description":"Agua mineral con Gas Botella 1,6 L","image":"products/bebidas/agua.jpg"},{"id":15,"name":"Lider","price":1400,"discount":0,"category":"bebidas","description":"Agua Purificada Sin Gas 6 l","image":"products/bebidas/agua2.jpg"},{"id":16,"name":"Watt's de Naranja","price":1240,"discount":50,"category":"bebidas","description":"Néctar de Naranja Light 0% Azúcar Añadida 1,5 L","image":"products/bebidas/bebida-naranja.jpg"},{"id":17,"name":"Watt's Sabor Tutti-Frutilla","price":1240,"discount":50,"category":"bebidas","description":"Néctar Sabor Tutti-Frutilla 1,5 L1,5 L","image":"products/bebidas/bebida-frutilla.jpg"},{"id":18,"name":"Jack Daniel's Whisky","price":24750,"discount":50,"category":"bebidas","description":"Whisky Bourbon N7750 ml","image":"products/bebidas/w-jack.jpg"},{"id":19,"name":"Johnnie Walker Whisky","price":11890,"discount":50,"category":"bebidas","description":"Whisky Johnnie Walker Red Label 1 L","image":"products/bebidas/w-walker.jpg"},{"id":20,"name":"Budweiser Pack","price":7490,"discount":50,"category":"bebidas","description":"Cerveza Lager Latas 18 Un x 354 ml c/u","image":"products/bebidas/cerveza.jpg"},{"id":21,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":22,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":23,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":24,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":25,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":26,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":27,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":28,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":29,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":30,"name":"","price":0,"discount":0,"category":"mascotas","description":"","image":""},{"id":31,"name":"Caminador","price":303730,"discount":0,"category":"bebes","description":"Caminador Space Green BEBESIT 6988G","image":"products/bebes/caminador.png"},{"id":32,"name":"Chupos","price":39900,"discount":0,"category":"bebes","description":"Chupos AVENT Recién Nacido Ultra Air Rosa","image":"products/bebes/chupos.png"},{"id":33,"name":"Coche","price":599950,"discount":0,"category":"bebes","description":"Coche Bebe FJ HAPPY BABY FJBLUE","image":"products/bebes/coche.png"},{"id":34,"name":"Cuna","price":294550,"discount":0,"category":"bebes","description":"Cuna Corral EBABY Happy Dream 727 1 Rojo","image":"products/bebes/cuna.png"},{"id":35,"name":"Silla Mecedora","price":339840,"discount":0,"category":"bebes","description":"Silla Mecedora De Bebé Diamantes FISHER PRICE","image":"products/bebes/mecedora.png"},{"id":36,"name":"Moviles","price":63720,"discount":0,"category":"bebes","description":"Entretenedor Tortuga INFANTINO","image":"products/bebes/moviles.png"},{"id":37,"name":"Pañalera","price":64900,"discount":0,"category":"bebes","description":"Pañalera Para Bebe Multifuncional Jirafa","image":"products/bebes/pañalera.png"},{"id":38,"name":"Pañales","price":38450,"discount":0,"category":"bebes","description":"Pañales PAMPERS Swaddlers Etapa 0 x 31 und","image":"products/bebes/pañales.png"},{"id":39,"name":"Tetero","price":49900,"discount":0,"category":"bebes","description":"Tetero DR BROWNS Transición Rosa 9 Oz","image":"products/bebes/tetero.png"},{"id":40,"name":"Toallitas Humedas","price":25450,"discount":0,"category":"bebes","description":"Toallas Humedas Acolchaditas PEQUEÑIN x 200 und","image":"products/bebes/toallitashumedas.png"},{"id":41,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":42,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":43,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":44,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":45,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":46,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":47,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":48,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":49,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":50,"name":"","price":0,"discount":0,"category":"cuidado-personal","description":"","image":""},{"id":51,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":52,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":53,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":54,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":55,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":56,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":57,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":58,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":59,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""},{"id":60,"name":"","price":0,"discount":0,"category":"limpieza","description":"","image":""}]
+[
+    {
+        "id": 1,
+        "name": "Malloa",
+        "price": "2600",
+        "discount": "50",
+        "category": "despensa",
+        "description": "Salsa de tomate italiana",
+        "image": "products/despensa/salsadetomate.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Carozzi",
+        "price": 870,
+        "discount": 50,
+        "category": "despensa",
+        "description": "Fideos Espirales Bolsa 400 g",
+        "image": "products/despensa/fideos.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Carozzi",
+        "price": 2800,
+        "discount": 20,
+        "category": "despensa",
+        "description": "Pack 3 Spaghetti + 1 Salsa de Tomates Pomarola",
+        "image": "products/despensa/Spaghetti.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Selecta",
+        "price": 1300,
+        "discount": 10,
+        "category": "despensa",
+        "description": "Harina con Polvos de Hornear Bolsa1 Kg",
+        "image": "products/despensa/harina.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Miraflores",
+        "price": 1450,
+        "discount": 0,
+        "category": "despensa",
+        "description": "Arroz Grano Largo Ancho Grado 11 Kg",
+        "image": "products/despensa/arroz.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Belmont",
+        "price": 3100,
+        "discount": 20,
+        "category": "despensa",
+        "description": "Aceite Vegetal Botella1 L",
+        "image": "products/despensa/aceite.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Lobos",
+        "price": 400,
+        "discount": 40,
+        "category": "despensa",
+        "description": "Sal de Mesa Bolsa1 Kg",
+        "image": "products/despensa/sal.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Lider",
+        "price": 650,
+        "discount": 50,
+        "category": "despensa",
+        "description": "Maní Salado 160 g",
+        "image": "products/despensa/mani.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Hellmann's",
+        "price": 3100,
+        "discount": 30,
+        "category": "despensa",
+        "description": "Mayonesa regular doypack 930g",
+        "image": "products/despensa/mayonesa.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Heinz Ketchup",
+        "price": 2090,
+        "discount": 20,
+        "category": "despensa",
+        "description": "Doypack 900g",
+        "image": "products/despensa/ketchup.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Diablo, Vino",
+        "price": 7390,
+        "discount": 0,
+        "category": "bebidas",
+        "description": "Diablo Dark Red Ensamblaje 750 cc",
+        "image": "products/bebidas/diablo.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Toro de Piedra, Vino",
+        "price": 9650,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Cabernet Sauvignon Gran Reserva 2015 Botella 750 ml",
+        "image": "products/bebidas/toro.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Monster",
+        "price": 1450,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Bebida Energética RegularLata 473 ml",
+        "image": "products/bebidas/monster.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Vital",
+        "price": 700,
+        "discount": 0,
+        "category": "bebidas",
+        "description": "Agua mineral con Gas Botella 1,6 L",
+        "image": "products/bebidas/agua.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Lider",
+        "price": 1400,
+        "discount": 0,
+        "category": "bebidas",
+        "description": "Agua Purificada Sin Gas 6 l",
+        "image": "products/bebidas/agua2.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Watt's de Naranja",
+        "price": 1240,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Néctar de Naranja Light 0% Azúcar Añadida 1,5 L",
+        "image": "products/bebidas/bebida-naranja.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Watt's Sabor Tutti-Frutilla",
+        "price": 1240,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Néctar Sabor Tutti-Frutilla 1,5 L1,5 L",
+        "image": "products/bebidas/bebida-frutilla.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Jack Daniel's Whisky",
+        "price": 24750,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Whisky Bourbon N7750 ml",
+        "image": "products/bebidas/w-jack.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Johnnie Walker Whisky",
+        "price": 11890,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Whisky Johnnie Walker Red Label 1 L",
+        "image": "products/bebidas/w-walker.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Budweiser Pack",
+        "price": 7490,
+        "discount": 50,
+        "category": "bebidas",
+        "description": "Cerveza Lager Latas 18 Un x 354 ml c/u",
+        "image": "products/bebidas/cerveza.jpg"
+    },
+    {
+        "id": 21,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 22,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 23,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 24,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 25,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 26,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 27,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 28,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 29,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 30,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "mascotas",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 31,
+        "name": "Caminador",
+        "price": 303730,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Caminador Space Green BEBESIT 6988G",
+        "image": "products/bebes/caminador.png"
+    },
+    {
+        "id": 32,
+        "name": "Chupos",
+        "price": 39900,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Chupos AVENT Recién Nacido Ultra Air Rosa",
+        "image": "products/bebes/chupos.png"
+    },
+    {
+        "id": 33,
+        "name": "Coche",
+        "price": 599950,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Coche Bebe FJ HAPPY BABY FJBLUE",
+        "image": "products/bebes/coche.png"
+    },
+    {
+        "id": 34,
+        "name": "Cuna",
+        "price": 294550,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Cuna Corral EBABY Happy Dream 727 1 Rojo",
+        "image": "products/bebes/cuna.png"
+    },
+    {
+        "id": 35,
+        "name": "Silla Mecedora",
+        "price": 339840,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Silla Mecedora De Bebé Diamantes FISHER PRICE",
+        "image": "products/bebes/mecedora.png"
+    },
+    {
+        "id": 36,
+        "name": "Moviles",
+        "price": 63720,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Entretenedor Tortuga INFANTINO",
+        "image": "products/bebes/moviles.png"
+    },
+    {
+        "id": 37,
+        "name": "Pañalera",
+        "price": 64900,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Pañalera Para Bebe Multifuncional Jirafa",
+        "image": "products/bebes/pañalera.png"
+    },
+    {
+        "id": 38,
+        "name": "Pañales",
+        "price": 38450,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Pañales PAMPERS Swaddlers Etapa 0 x 31 und",
+        "image": "products/bebes/pañales.png"
+    },
+    {
+        "id": 39,
+        "name": "Tetero",
+        "price": 49900,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Tetero DR BROWNS Transición Rosa 9 Oz",
+        "image": "products/bebes/tetero.png"
+    },
+    {
+        "id": 40,
+        "name": "Toallitas Humedas",
+        "price": 25450,
+        "discount": 0,
+        "category": "bebes",
+        "description": "Toallas Humedas Acolchaditas PEQUEÑIN x 200 und",
+        "image": "products/bebes/toallitashumedas.png"
+    },
+    {
+        "id": 41,
+        "name": "Gel Ducha Nivea",
+        "price": 1970,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Gel de Ducha Hombre Vitality Fresh Botella 250 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Gel-Ducha.jpg"
+    },
+    {
+        "id": 42,
+        "name": "Jabón líquido",
+        "price": 3450,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Jabón líquido Dove original 250 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-liquido.jpg"
+    },
+    {
+        "id": 43,
+        "name": "Talco Desodorante",
+        "price": 1890,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Talco Desodorante para Zapatillas y Pies Brooks",
+        "image": "products/cuidado-personal/products/cuidado-personal/Talco-Desodorante.jpg"
+    },
+    {
+        "id": 44,
+        "name": "Jabon en Barra",
+        "price": 2290,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Jabón en Barra Palmolive Suavidad Exfoliante Coco y Algodón x 3 Und.",
+        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-barra.jpg"
+    },
+    {
+        "id": 45,
+        "name": "Alcohol en gel",
+        "price": 6650,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Nexcare Alcohol Gel para Manos Aloe Vera y Glicerina Frasco 1000 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Alcohol-Gel.jpg"
+    },
+    {
+        "id": 46,
+        "name": "Guante Exfoliante",
+        "price": 1490,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Total SPA Guante Exfoliante",
+        "image": "products/cuidado-personal/products/cuidado-personal/Balsamos-Labial.jpg"
+    },
+    {
+        "id": 47,
+        "name": "Balsamo Labial",
+        "price": 3850,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Gelatti Kit 3 Bálsamos Labial Hello Kitty",
+        "image": "products/cuidado-personal/Balsamos-Labial.jpg"
+    },
+    {
+        "id": 48,
+        "name": "Cepillos Dentales",
+        "price": 3250,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Gelatti Pack 2 Cepillos Dentales Suave",
+        "image": "products/cuidado-personal/Cepillos-dentales.jpg"
+    },
+    {
+        "id": 49,
+        "name": "Spray Desenredante",
+        "price": 2850,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Johnson's Baby Spray Desenredante Gotas de Brillo 200 ml",
+        "image": "products/cuidado-personal/Spray-Desenredante.jpg"
+    },
+    {
+        "id": 50,
+        "name": "Esponja",
+        "price": 1950,
+        "discount": 0,
+        "category": "cuidado-personal",
+        "description": "Total SPA Esponja Sisal Mango de Madera",
+        "image": "products/cuidado-personal/Esponja.jpg"
+    },
+    {
+        "id": 51,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 52,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 53,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 54,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 55,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 56,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 57,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 58,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 59,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    },
+    {
+        "id": 60,
+        "name": "",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "",
+        "image": ""
+    }
+]
