@@ -8,8 +8,9 @@ const productController = require ('../controllers/productController');
 router.get ('/', productController.productos);
 
 /*** CREATE ONE PRODUCT ***/ 
-router.get ('/create', productController.crear);
-/*router.post('/',uploadFile.single('image'), productsController.store); 
+router.get ('/create', productController.mostrarCrear);
+router.post('/create', productController.crear);
+/*router.post('/',fileUpload.single('image'), productsController.store); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get ('/detail/:id', productController.detail);

@@ -4,7 +4,7 @@
         <title>MercaFacil - Pagina de Creación de producto</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/crearProducto.css">
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,33 +18,57 @@
 <body>
     <%- include('./partials/header.ejs')-%>
     <section>
-        <form action="/crear-producto" class="form-crear-producto">
+        <form action="/products/create" class="form-crear-producto" method="POST" enctype="multipart/form-data">
             <div>
-                <label>Nombre:</label>
-                <input type="text" placeholder="Ingrese el nombre del producto" name="nombre">
-            </div>
+                <table>
+                    <tr>
+                        <label>Nombre:</label>
+                        <div>
 
-            <div>
-                <label>Precio:</label>
-                <input type="text" placeholder="Ingrese el precio del producto" name="nombre">
-            </div>
+                            <input type="text" placeholder="Ingrese el nombre del producto" name="nombre">
+                        </div>
 
-            <div>
-                <label>descripcion:</label>
-                <textarea type="text" placeholder="Ingrese la descripcion del producto" name="nombre">
-                    
-                </textarea>
-            </div>
 
+
+
+                    </tr>
+                    <tr>
+                        <label>Precio:</label>
+
+                        <div>
+                            <input type="text" placeholder="Ingrese el precio del producto" name="nombre">
+                        </div>
+
+
+                    </tr>
+                    <tr>
+                        <label>descripcion:</label>
+                        
+                        <div>
+                            <textarea type="text" placeholder="Ingrese la descripcion del producto" name="nombre">
+
+                            </textarea>
+                        </div>
+
+                    </tr>
+
+                    <tr>
+                        <label>imágen:</label>
+                        
+                        <div>
+                            <input type="file" name="image-input">
+                        </div>
+
+                    </tr>
+                </table>
+            </div>
             <div>
-                <label>Nombres:</label>
+
                 <input type="submit" value="CREAR" id="crear" name="nombre">
-            </div>
-        </form>
 
-        <div class="box-img-registro">
-            <img src="/images/logo-banner.png" class="img">
-        </div>
+            </div>
+
+        </form>
 
     </section>
     <%- include('./partials/footer')-%>
