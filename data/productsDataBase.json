@@ -361,95 +361,94 @@
     },
     {
         "id": 41,
-        "name": "",
-        "price": 0,
+        "name": "Gel Ducha Nivea",
+        "price": 1970,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Gel de Ducha Hombre Vitality Fresh Botella 250 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Gel-Ducha.jpg"
     },
     {
         "id": 42,
-        "name": "",
-        "price": 0,
+        "name": "Jabón líquido",
+        "price": 3450,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Jabón líquido Dove original 250 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-liquido.jpg"
     },
     {
         "id": 43,
-        "name": "",
-        "price": 0,
+        "name": "Talco Desodorante",
+        "price": 1890,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Talco Desodorante para Zapatillas y Pies Brooks",
+        "image": "products/cuidado-personal/products/cuidado-personal/Talco-Desodorante.jpg"
     },
     {
         "id": 44,
-        "name": "",
-        "price": 0,
+        "name": "Jabon en Barra",
+        "price": 2290,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Jabón en Barra Palmolive Suavidad Exfoliante Coco y Algodón x 3 Und.",
+        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-barra.jpg"
     },
     {
         "id": 45,
-        "name": "",
-        "price": 0,
+        "name": "Alcohol en gel",
+        "price": 6650,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Nexcare Alcohol Gel para Manos Aloe Vera y Glicerina Frasco 1000 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Alcohol-Gel.jpg"
     },
     {
         "id": 46,
-        "name": "",
-        "price": 0,
+        "name": "Guante Exfoliante",
+        "price": 1490,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Total SPA Guante Exfoliante",
+        "image": "products/cuidado-personal/products/cuidado-personal/Balsamos-Labial.jpg"
     },
     {
         "id": 47,
-        "name": "",
-        "price": 0,
+        "name": "Balsamo Labial",
+        "price": 3850,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Gelatti Kit 3 Bálsamos Labial Hello Kitty",
+        "image": "products/cuidado-personal/Balsamos-Labial.jpg"
     },
     {
         "id": 48,
-        "name": "",
-        "price": 0,
+        "name": "Cepillos Dentales",
+        "price": 3250,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Gelatti Pack 2 Cepillos Dentales Suave",
+        "image": "products/cuidado-personal/Cepillos-dentales.jpg"
     },
     {
         "id": 49,
-        "name": "",
-        "price": 0,
+        "name": "Spray Desenredante",
+        "price": 2850,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Johnson's Baby Spray Desenredante Gotas de Brillo 200 ml",
+        "image": "products/cuidado-personal/Spray-Desenredante.jpg"
     },
     {
         "id": 50,
-        "name": "",
-        "price": 0,
+        "name": "Esponja",
+        "price": 1950,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Total SPA Esponja Sisal Mango de Madera",
+        "image": "products/cuidado-personal/Esponja.jpg"
     },
-
     {
         "id": 52,
         "name": "Cif",
