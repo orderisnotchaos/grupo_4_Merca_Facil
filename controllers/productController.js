@@ -2,17 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const { off } = require('process');
-const multer = require('multer');
 
-let multerDiskStorage = multer.diskStorage({
-
-	destination: (req, file, cb) =>{
-		cb(null, path.join(__dirname, '../public/images/products'));
-	},
-	filename: (req, file, cb) =>{
-		cb(null, Date.now() + path.extname(file.originalname));
-	},
-});
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -35,8 +25,8 @@ const controladorProducto = {
     },
 
 	procesarCrear: (req, res) =>{
-
-	}
+		res.render(path.join(__dirname, "../views/crearProducto.ejs"));
+	},
 
     productos: (req, res) =>{
         let despensaProducts = products.filter(product => product.category === "despensa")
