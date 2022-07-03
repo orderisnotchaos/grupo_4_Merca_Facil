@@ -366,7 +366,7 @@
         "discount": 0,
         "category": "cuidado-personal",
         "description": "Gel de Ducha Hombre Vitality Fresh Botella 250 ml",
-        "image": "products/cuidado-personal/products/cuidado-personal/Gel-Ducha.jpg"
+        "image": "products/cuidado-personal/Gel-Ducha.jpg"
     },
     {
         "id": 42,
@@ -375,7 +375,7 @@
         "discount": 0,
         "category": "cuidado-personal",
         "description": "Jabón líquido Dove original 250 ml",
-        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-liquido.jpg"
+        "image": "products/cuidado-personal/Jabon-liquido.jpg"
     },
     {
         "id": 43,
@@ -384,7 +384,7 @@
         "discount": 0,
         "category": "cuidado-personal",
         "description": "Talco Desodorante para Zapatillas y Pies Brooks",
-        "image": "products/cuidado-personal/products/cuidado-personal/Talco-Desodorante.jpg"
+        "image": "products/cuidado-personal/Talco-Desodorante.jpg"
     },
     {
         "id": 44,
@@ -393,7 +393,7 @@
         "discount": 0,
         "category": "cuidado-personal",
         "description": "Jabón en Barra Palmolive Suavidad Exfoliante Coco y Algodón x 3 Und.",
-        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-barra.jpg"
+        "image": "products/cuidado-personal/Jabon-barra.jpg"
     },
     {
         "id": 45,
@@ -402,7 +402,7 @@
         "discount": 0,
         "category": "cuidado-personal",
         "description": "Nexcare Alcohol Gel para Manos Aloe Vera y Glicerina Frasco 1000 ml",
-        "image": "products/cuidado-personal/products/cuidado-personal/Alcohol-Gel.jpg"
+        "image": "products/cuidado-personal/Alcohol-Gel.jpg"
     },
     {
         "id": 46,
@@ -411,7 +411,7 @@
         "discount": 0,
         "category": "cuidado-personal",
         "description": "Total SPA Guante Exfoliante",
-        "image": "products/cuidado-personal/products/cuidado-personal/Balsamos-Labial.jpg"
+        "image": "products/cuidado-personal/Guante-Exfoliante.jpg"
     },
     {
         "id": 47,
@@ -465,7 +465,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Cif",
-        "image": "products/limpieza/01.png"
+        "image": "products/limpieza/01.jpg"
     },
     {
         "id": 53,
@@ -474,7 +474,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Toalla de papel doble hoja",
-        "image": "products/limpieza/02.png"
+        "image": "products/limpieza/02.jpg"
     },
     {
         "id": 54,
@@ -483,7 +483,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Papel higiénico doble hoja",
-        "image": "products/limpieza/03.png"
+        "image": "products/limpieza/03.jpg"
     },
     {
         "id": 55,
@@ -492,7 +492,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Lavaloza concentrado",
-        "image": "products/limpieza/04.png"
+        "image": "products/limpieza/04.jpg"
     },
     {
         "id": 56,
@@ -501,7 +501,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Servilletas coctel una hoja",
-        "image": "products/limpieza/05.png"
+        "image": "products/limpieza/05.jpg"
     },
     {
         "id": 57,
@@ -510,7 +510,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Lavaloza concentrado",
-        "image": "products/limpieza/06.png"
+        "image": "products/limpieza/06.jpg"
     },
     {
         "id": 58,
@@ -519,7 +519,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Caja pañuelos triple hoja",
-        "image": "products/limpieza/07.png"
+        "image": "products/limpieza/07.jpg"
     },
     {
         "id": 59,
@@ -528,7 +528,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Desinfecta con lysoform",
-        "image": "products/limpieza/08.png"
+        "image": "products/limpieza/08.jpg"
     },
     {
         "id": 60,
