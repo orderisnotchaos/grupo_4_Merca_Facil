@@ -25,7 +25,39 @@ const controladorProducto = {
     },
 
 	procesarCrear: (req, res) =>{
-		res.render(path.join(__dirname, "../views/crearProducto.ejs"));
+
+		if( req.file === undefined ){
+
+			const error = new Error('por favor seleccione un archivo');
+			error.httpStatusCode = 400;
+			return next(error);
+
+		}else if(req.file.mimetype === 'image/png'){
+
+			req.body.image = req.file.filename;
+			req.body.id = products[ products.length-1 ].id+1 ;
+			products.push(req.body);
+			console.log(products);
+			fs.writeFile(productsFilePath,JSON.stringify(products),'utf8',(err) => {
+				if (err)
+
+				  console.log(err);
+
+				else {
+
+				  console.log("File written successfully\n");
+				  console.log("The written has the following contents:");
+
+				}});
+			res.render(path.join(__dirname, "../views/productoGuardado.ejs"));
+
+		}else{
+
+			const error = new Error('por favor seleccione un archivo de tipo imagen png');
+			error.httpStatusCode = 400;
+			return next(error);
+
+		}
 	},
 
     productos: (req, res) =>{

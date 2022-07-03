@@ -21,7 +21,7 @@ router.get ('/', productController.productos);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get ('/create', productController.mostrarCrear);
-router.post('/create',fileUpload.single('image-input'), productController.procesarCrear);
+router.post('/create',fileUpload.single('image'), productController.procesarCrear);
 /*router.post('/',fileUpload.single('image'), productsController.store); 
 
 /*** GET ONE PRODUCT ***/ 

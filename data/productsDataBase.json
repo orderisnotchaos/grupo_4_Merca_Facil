@@ -450,6 +450,15 @@
         "image": "products/cuidado-personal/Esponja.jpg"
     },
     {
+        "id": 51,
+        "name": "Ariel Doble Poder",
+        "price": 355,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Detergente Líquido",
+        "image": "products/limpieza/10.png"
+    },
+    {
         "id": 52,
         "name": "Cif",
         "price": 155,
@@ -529,15 +538,6 @@
         "category": "limpieza",
         "description": "Papel higiénico doble hoja",
         "image": "products/limpieza/09.png"
-    },
-
-    {
-        "id": 51,
-        "name": "Ariel Doble Poder",
-        "price": 355,
-        "discount": 0,
-        "category": "limpieza",
-        "description": "Detergente Líquido",
-        "image": "products/limpieza/10.png"
     }
+
 ]
