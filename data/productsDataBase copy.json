@@ -361,176 +361,94 @@
     },
     {
         "id": 41,
-        "name": "",
-        "price": 0,
+        "name": "Gel Ducha Nivea",
+        "price": 1970,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Gel de Ducha Hombre Vitality Fresh Botella 250 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Gel-Ducha.jpg"
     },
     {
         "id": 42,
-        "name": "",
-        "price": 0,
+        "name": "Jabón líquido",
+        "price": 3450,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Jabón líquido Dove original 250 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-liquido.jpg"
     },
     {
         "id": 43,
-        "name": "",
-        "price": 0,
+        "name": "Talco Desodorante",
+        "price": 1890,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Talco Desodorante para Zapatillas y Pies Brooks",
+        "image": "products/cuidado-personal/products/cuidado-personal/Talco-Desodorante.jpg"
     },
     {
         "id": 44,
-        "name": "",
-        "price": 0,
+        "name": "Jabon en Barra",
+        "price": 2290,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Jabón en Barra Palmolive Suavidad Exfoliante Coco y Algodón x 3 Und.",
+        "image": "products/cuidado-personal/products/cuidado-personal/Jabon-barra.jpg"
     },
     {
         "id": 45,
-        "name": "",
-        "price": 0,
+        "name": "Alcohol en gel",
+        "price": 6650,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Nexcare Alcohol Gel para Manos Aloe Vera y Glicerina Frasco 1000 ml",
+        "image": "products/cuidado-personal/products/cuidado-personal/Alcohol-Gel.jpg"
     },
     {
         "id": 46,
-        "name": "",
-        "price": 0,
+        "name": "Guante Exfoliante",
+        "price": 1490,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Total SPA Guante Exfoliante",
+        "image": "products/cuidado-personal/products/cuidado-personal/Balsamos-Labial.jpg"
     },
     {
         "id": 47,
-        "name": "",
-        "price": 0,
+        "name": "Balsamo Labial",
+        "price": 3850,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Gelatti Kit 3 Bálsamos Labial Hello Kitty",
+        "image": "products/cuidado-personal/Balsamos-Labial.jpg"
     },
     {
         "id": 48,
-        "name": "",
-        "price": 0,
+        "name": "Cepillos Dentales",
+        "price": 3250,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Gelatti Pack 2 Cepillos Dentales Suave",
+        "image": "products/cuidado-personal/Cepillos-dentales.jpg"
     },
     {
         "id": 49,
-        "name": "",
-        "price": 0,
+        "name": "Spray Desenredante",
+        "price": 2850,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Johnson's Baby Spray Desenredante Gotas de Brillo 200 ml",
+        "image": "products/cuidado-personal/Spray-Desenredante.jpg"
     },
     {
         "id": 50,
-        "name": "",
-        "price": 0,
+        "name": "Esponja",
+        "price": 1950,
         "discount": 0,
         "category": "cuidado-personal",
-        "description": "",
-        "image": ""
+        "description": "Total SPA Esponja Sisal Mango de Madera",
+        "image": "products/cuidado-personal/Esponja.jpg"
     },
-        {
-            "id": 52,
-            "name": "Cif",
-            "price": 155,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Cif",
-            "image": "products/limpieza/01.png"
-        },
-        {
-            "id": 53,
-            "name": "Nova",
-            "price": 201,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Toalla de papel doble hoja",
-            "image": "products/limpieza/02.png"
-        },
-        {
-            "id": 54,
-            "name": "Elite papel higiénico",
-            "price": 187,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Papel higiénico doble hoja",
-            "image": "products/limpieza/03.png"
-        },
-        {
-            "id": 55,
-            "name": "Quix",
-            "price": 194,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Lavaloza concentrado",
-            "image": "products/limpieza/04.png"
-        },
-        {
-            "id": 56,
-            "name": "Elite servilletas",
-            "price": 255,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Servilletas coctel una hoja",
-            "image": "products/limpieza/05.png"
-        },
-        {
-            "id": 57,
-            "name": "Quix lavaloza",
-            "price": 304,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Lavaloza concentrado",
-            "image": "products/limpieza/06.png"
-        },
-        {
-            "id": 58,
-            "name": "Elite Caja de pañuelos",
-            "price": 350,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Caja pañuelos triple hoja",
-            "image": "products/limpieza/07.png"
-        },
-        {
-            "id": 59,
-            "name": "lysoform",
-            "price": 234,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Desinfecta con lysoform",
-            "image": "products/limpieza/08.png"
-        },
-        {
-            "id": 60,
-            "name": "Scott Rinde max",
-            "price": 0,
-            "discount": 0,
-            "category": "limpieza",
-            "description": "Papel higiénico doble hoja",
-            "image": "products/limpieza/09.png"
-        },
-    
     {
         "id": 51,
         "name": "Ariel Doble Poder",
@@ -539,5 +457,86 @@
         "category": "limpieza",
         "description": "Detergente Líquido",
         "image": "products/limpieza/10.png"
+    },
+    {
+        "id": 52,
+        "name": "Cif",
+        "price": 155,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Cif",
+        "image": "products/limpieza/01.png"
+    },
+    {
+        "id": 53,
+        "name": "Nova",
+        "price": 201,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Toalla de papel doble hoja",
+        "image": "products/limpieza/02.png"
+    },
+    {
+        "id": 54,
+        "name": "Elite papel higiénico",
+        "price": 187,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Papel higiénico doble hoja",
+        "image": "products/limpieza/03.png"
+    },
+    {
+        "id": 55,
+        "name": "Quix",
+        "price": 194,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Lavaloza concentrado",
+        "image": "products/limpieza/04.png"
+    },
+    {
+        "id": 56,
+        "name": "Elite servilletas",
+        "price": 255,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Servilletas coctel una hoja",
+        "image": "products/limpieza/05.png"
+    },
+    {
+        "id": 57,
+        "name": "Quix lavaloza",
+        "price": 304,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Lavaloza concentrado",
+        "image": "products/limpieza/06.png"
+    },
+    {
+        "id": 58,
+        "name": "Elite Caja de pañuelos",
+        "price": 350,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Caja pañuelos triple hoja",
+        "image": "products/limpieza/07.png"
+    },
+    {
+        "id": 59,
+        "name": "lysoform",
+        "price": 234,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Desinfecta con lysoform",
+        "image": "products/limpieza/08.png"
+    },
+    {
+        "id": 60,
+        "name": "Scott Rinde max",
+        "price": 0,
+        "discount": 0,
+        "category": "limpieza",
+        "description": "Papel higiénico doble hoja",
+        "image": "products/limpieza/09.png"
     }
 ]
