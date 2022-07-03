@@ -24,7 +24,7 @@ const controladorProducto = {
         res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
     },
 
-	procesarCrear: (req, res) =>{
+	procesarCrear: (req, res, next) =>{
 
 		if( req.file === undefined ){
 
@@ -37,7 +37,6 @@ const controladorProducto = {
 			req.body.image = req.file.filename;
 			req.body.id = products[ products.length-1 ].id+1 ;
 			products.push(req.body);
-			console.log(products);
 			fs.writeFile(productsFilePath,JSON.stringify(products),'utf8',(err) => {
 				if (err)
 
@@ -58,6 +57,7 @@ const controladorProducto = {
 			return next(error);
 
 		}
+		next();
 	},
 
     productos: (req, res) =>{

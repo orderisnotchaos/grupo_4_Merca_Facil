@@ -2,10 +2,37 @@ const express = require ('express');
 const router = express.Router();
 const multer = require('multer');
 const path =require('path');
+
 let multerDiskStorage = multer.diskStorage({
 
 	destination: (req, file, cb) =>{
-		cb(null, path.join(__dirname, '../public/images/products'));
+		if(req.body.category == 'bebes'){
+			cb(null, path.join(__dirname, '../public/images/products/bebes'));
+		} else if(req.body.category == 'despensa'){
+
+			cb(null, path.join(__dirname, '../public/images/products/despensa'));
+
+		} else if(req.body.category == 'bebidas'){
+
+			cb(null, path.join(__dirname, '../public/images/products/bebidas'));
+
+		} else if(req.body.category == 'mascotas'){
+
+			cb(null, path.join(__dirname, '../public/images/products/mascotas'));
+
+		} else if(req.body.category == 'cuidado-personal'){
+
+			cb(null, path.join(__dirname, '../public/images/products/cuidado-personal'));
+
+		} else if(req.body.category == 'limpieza'){
+
+			cb(null, path.join(__dirname, '../public/images/products/limpieza'));
+
+		} else{
+
+			console.log('no se encuentra la categoria');
+
+		}
 	},
 	filename: (req, file, cb) =>{
 		cb(null, Date.now() + path.extname(file.originalname));
