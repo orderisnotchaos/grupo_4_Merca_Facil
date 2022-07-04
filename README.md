@@ -5,7 +5,6 @@ Merca Fácil es un desarrollo web que consiste en tratar de imitar y mejorar las
 Buscamos apuntar a un mercado de jóvenes adultos de edades entre 22 y 45 años que tengan acceso a la red
 y busquen una forma más sintética de administrar sus compras en supermercados, además de poseer métodos de pago digitales y dispositivos electrónicos como tablet, celular, pc, etc... estos tendrán la facilidad de (mediante nuestro servicio) poder administrar sus compras desde la comodidad de sus hogares.
 
-<-- añadir descripciones (individual) -->
 Integrantes: <br />
 . Karen Quinteros<br />
 Estudiante de ingeniería electrónica, con gran motivación y expectativa de aprender y conocer sobre el desarrollo web, Soy Colombiana residente en Tuluá.<br />
