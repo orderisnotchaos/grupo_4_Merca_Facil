@@ -54,7 +54,12 @@
 						<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
 					</div>
 					<div>
-						<button type="submit" class="button">GUARDAR</button>
+						<label class="form-label">Cargar Imagen:</label><br>
+                        <input type="file" name="image">
+                        
+					</div>
+					<div>
+						<input type="submit" value="GUARDAR" id="guardar" class="button">
 					</div>
 				</div>
 			</form>
