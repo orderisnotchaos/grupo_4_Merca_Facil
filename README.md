@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Merca Fácil un sitio en donde puedes administrar tus compras de una forma sencilla y particular
 Merca Fácil es un desarrollo web que consiste en tratar de imitar y mejorar las páginas web de supermercados como coto, carrefour, merqueo, exito, miniso y demás. El super digital dispondrá varios tipos de productos subdivididos  en 6 categorías distintas: Despensa, Bebidas, Mascotas, Bebés, Cuidado Personal y Limpieza. Dentro de estas categorías se ofrecerán los correspondientes productos de distintas marcas para que el cliente tenga disponibilidad de elegir acorde a sus preferencias (ya sean económicas o personales).
 ¿Qué buscamos?
