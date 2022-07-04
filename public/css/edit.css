@@ -11,18 +11,23 @@
     justify-content: center;
     padding-bottom: 60px;
     padding-top: 60px;
+    text-align: center;
 }
 .contenido-detalle-producto p{
     font-size: 24px;
 }
 
-.buy-now-button {
-    border: 1px solid #222222; /*anchura, estilo y color borde*/
-    color: rgb(0, 0, 0); /*color texto*/
+.button {
+    background-color: #3E9855;
+    border: transparent; 
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
     font-size: 20px;
-    margin: 20px 10px;
-    padding: 5px ; /*espacio alrededor texto*/   
-  }
+    margin-top: 15px;
+    padding: 15px 30px;
+}
 
 .form-label {
     display: inline-block;
@@ -37,8 +42,7 @@
     margin-bottom: 15px;
     font-size: 1.5em;
     border-radius: 8px;
-    border: none;
-    border: black;
+    border-style: solid;
     padding: 0 15px;
 }
 
@@ -47,10 +51,6 @@ textarea.form-input {
     resize: vertical;
     padding: 15px;
 }
-
-
-
-
 
 .imagen-detalle-producto{  
     padding-top: 20px;

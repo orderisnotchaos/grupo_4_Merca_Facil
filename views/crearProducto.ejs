@@ -17,83 +17,74 @@
     </head>
 <body>
     <%- include('./partials/header.ejs')-%>
+    <div class="sub-header">
+        <h2>CREACIÓN PRODUCTO</h2>
+    </div>
+
+    <div class="detalle-producto">
     <section>
-        <form action="/products/create" class="form-crear-producto" method="POST" enctype="multipart/form-data">
+        <form action="/products/create" method="POST" enctype="multipart/form-data">
             <div>
                 <table>
                     <tr>
-                        <label>Nombre:</label>
+                        <label class="form-label">Nombre del producto:</label>
                         <div>
-
-                            <input type="text" placeholder="Ingrese el nombre del producto" name="name">
+                            <input type="text" placeholder="Ingrese el nombre del producto" name="name" class="form-input">
                         </div>
-
-
-
-
-                    </tr>
-                    <tr>
-                        <label>Precio:</label>
-
-                        <div>
-                            <input type="text" placeholder="Ingrese el precio del producto" name="price">
-                        </div>
-
-
                     </tr>
 
                     <tr>
-                        <label>descuento:</label>
-                        
+                        <label class="form-label">Precio del producto:</label>
                         <div>
-
-                            <input type="text" placeholder="Ingrese el descuento del producto" name="discount">
-
+                            <input type="text" placeholder="Ingrese el precio del producto" name="price" class="form-input">
                         </div>
-
                     </tr>
 
                     <tr>
-                        <label>categoria:</label>
-                        
+                        <label class="form-label">Descuento:</label>
                         <div>
-
-                            <input type="text" placeholder="ingrese la categoria" name="category">
-
+                            <input type="text" placeholder="Ingrese el descuento del producto" name="discount" class="form-input">
                         </div>
-
                     </tr>
 
                     <tr>
-                        <label>descripcion:</label>
-                        
                         <div>
-                            <textarea type="text" placeholder="Ingrese la descripcion del producto" name="description">
-
-                            </textarea>
+                            <label class="form-label" for="category">Categoría:</label><br>
+                            <select name="category" id="category" class="form-input">
+                                <option value="">Elegí</option>
+                                <option value="despensa">Despensa</option>
+                                <option value="bebidas" >Bebidas</option>
+                                <option value="mascotas">Mascotas</option>
+                                <option value="bebes"   >Bebes</option>
+                                <option value="cuidado-personal" >Cuidado Personal</option>
+                                <option value="limpieza">Limpieza</option>
+                            </select>
                         </div>
-
                     </tr>
 
                     <tr>
-                        <label>imágen:</label>
-                        
+                        <label class="form-label">Descripción:</label>
+                        <div>
+                            <textarea type="text"  name="description" placeholder="Ingrese la descripción del producto" id="description" class="form-input"></textarea>
+                        </div>
+                    </tr>
+
+                    <tr>
+                        <label class="form-label">Cargar Imagen:</label>
                         <div>
                             <input type="file" name="image">
                         </div>
-
                     </tr>
                 </table>
             </div>
             <div>
-
-                <input type="submit" value="CREAR" id="crear">
-
+                <input type="submit" value="CREAR" id="crear" class="button">
             </div>
 
         </form>
 
     </section>
+    </div>  
     <%- include('./partials/footer')-%>
 </body>
 </html>
