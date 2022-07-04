@@ -5,38 +5,16 @@ const path =require('path');
 
 let multerDiskStorage = multer.diskStorage({
 
-	destination: (req, file, cb) =>{
-		if(req.body.category == 'bebes'){
-			cb(null, path.join(__dirname, '../public/images/products/bebes'));
-		} else if(req.body.category == 'despensa'){
+destination: (req, file, cb) =>{
+	cb(null, path.join(__dirname, '../public/images/'));
+},
 
-			cb(null, path.join(__dirname, '../public/images/products/despensa'));
+filename: (req, file, callback) => {
+	const newFilename = 'products/' + req.body.category + '/' + Date.now() + path.extname(file.originalname);
+	callback(null, newFilename);
+	console.log(newFilename)
+}
 
-		} else if(req.body.category == 'bebidas'){
-
-			cb(null, path.join(__dirname, '../public/images/products/bebidas'));
-
-		} else if(req.body.category == 'mascotas'){
-
-			cb(null, path.join(__dirname, '../public/images/products/mascotas'));
-
-		} else if(req.body.category == 'cuidado-personal'){
-
-			cb(null, path.join(__dirname, '../public/images/products/cuidado-personal'));
-
-		} else if(req.body.category == 'limpieza'){
-
-			cb(null, path.join(__dirname, '../public/images/products/limpieza'));
-
-		} else{
-
-			console.log('no se encuentra la categoria');
-
-		}
-	},
-	filename: (req, file, cb) =>{
-		cb(null, Date.now() + path.extname(file.originalname));
-	},
 });
 
 let fileUpload = multer({ storage: multerDiskStorage });
