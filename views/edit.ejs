@@ -24,7 +24,7 @@
 
 	<div class="detalle-producto">
 
-			<form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST">
+			<form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">		
 				<div class="contenido-detalle-producto">
 					<div class="contenido-detalle-producto">
 						<label for="name" class="form-label">Nombre del producto:</label>

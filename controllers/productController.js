@@ -98,7 +98,7 @@ const controladorProducto = {
 		let discount    = req.body.discount;
 		let category    = req.body.category;
 		let description = req.body.description;
-        let image       = req.body.image;
+        
 
 		let editProduct = {
 
@@ -106,9 +106,9 @@ const controladorProducto = {
 			name: name,
 			price: price,
 			discount: discount,
-			category: category,
+			category: category ? category : products.find(product => product.id === id).category,
 			description: description,
-            image: image
+            image: req.file ? req.file.filename : products.find(product => product.id === id).image
 
 		};	
 
