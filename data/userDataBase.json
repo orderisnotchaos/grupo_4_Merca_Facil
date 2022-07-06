@@ -1,17 +1,65 @@
 [
     {
-     "id": 0,
-     "name": "Nombre del usuario",
-     "nikname": "nombre corto",
-     "email": "correo@dominio.com",
-     "password": "*",
-     "userType": "Administrador o Cliente",
-     "description": "Descripción del producto",
-     "documentType     ":"DNI, Libreta de enrolamiento, Cédula de ciudadanía",
-     "idNumber": "Numero de cédula",
-     "telefono": 0,
-     "province": "Provincia del cliente",
-     "zipcode": 0,
-     "address": "Dirección del cliente"
+        "id": 0,
+        "firstName": "Nombre del usuario",
+        "lastName": "Apellido del usuario",
+        "email": "correo@dominio.com",
+        "password": "*",
+        "userType": "Admin o Usuario",
+        "image": "Imagen de Perfil"
+    },
+    {
+        "id": 1,
+        "firstName": "Prueba",
+        "lastName": "Cliente",
+        "email": "@gmail.com",
+        "password": "12345",
+        "userType": "Usuario",
+        "image": "Imagen de Perfil"
+    },
+    {
+        "id": 2,
+        "firstName": "Andrés",
+        "lastName": "Ferrari",
+        "email": "aferrarivalle@gmail.com",
+        "password": "12345",
+        "userType": "Admin",
+        "image": "Imagen de Perfil"
+    },
+    {
+        "id": 3,
+        "firstName": "Yuriana",
+        "lastName": "Palacios",
+        "email": "yurijp95@gmail.com",
+        "password": "12345",
+        "userType": "Admin",
+        "image": "Imagen de Perfil"
+    },
+    {
+        "id": 4,
+        "firstName": "Maria",
+        "lastName": "Manosalva",
+        "email": "cate0196@hotmail.com",
+        "password": "12345",
+        "userType": "Admin",
+        "image": "Imagen de Perfil"
+    },
+    {
+        "id": 5,
+        "firstName": "Jan",
+        "lastName": "Zambrano",
+        "email": "janczambrano@gmail.com",
+        "password": "12345",
+        "userType": "Admin",
+        "image": "Imagen de Perfil"
+    },
+    {
+        "id": 6,
+        "firstName": "Karen",
+        "lastName": "Quintero",
+        "email": "kquintero92@gmail.com",
+        "password": "12345",
+        "userType": "Admin",
+        "image": "Imagen de Perfil"
     }
 ]
