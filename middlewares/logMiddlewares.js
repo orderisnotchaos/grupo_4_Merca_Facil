@@ -1,5 +1,5 @@
 // Registro de las paginas donde ingresan los usuarios
-// Ver log.txt
+// Ver logMiddlewares.txt
 
 const fs = require('fs');
 const fecha = new Date();
