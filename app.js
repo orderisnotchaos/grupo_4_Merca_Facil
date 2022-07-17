@@ -12,14 +12,18 @@ const ruteoProducto = require ('./routers/product');
 const ruteoUsuario = require ('./routers/user');
 const ruteoPrincipal = require ('./routers/main');
 const ruteoAdmin = require ('./routers/admin');
+const session = require('express-session'); 
+
 
 // Registro de las paginas donde ingresan los usuarios
 const logMiddlewares = require ('./middlewares/logMiddlewares');
 
-
 const exp = require("constants");
 
+
 app.use( express.static (__dirname + "\\public"));
+
+app.use(session({secret: "Secreto"}));
 
 app.set('view engine', 'ejs');
 
