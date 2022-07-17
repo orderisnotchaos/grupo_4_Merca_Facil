@@ -4,9 +4,9 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 
-const { body } = require ('express-validator');
+const { check, body } = require ('express-validator');
 
-const storage = multer = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/images/avatars')
     },
@@ -39,8 +39,12 @@ router.post ('/registro', uploadFile.single('avatar'), validations, userControll
 //FORMULARIO DE LOGIN
 router.get ('/login', userController.login);
 
-//FORMULARIO DE USUARIO sugerencia
-//router.get('/profile/:userId, usersController.profile');
+
+router.post ('/login', [
+    check('email').isEmail().withMessage('Email invalido'),
+    check('password').isLength({min: 6}).withMessage('La Contraseña debe tener al menos 6 caracteres'),
+
+], userController.processLogin);
 
 
 module.exports = router;
