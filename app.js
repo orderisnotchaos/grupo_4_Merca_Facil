@@ -1,6 +1,9 @@
 const express = require("express");
 const req = require("express/lib/request");
 const app = express();
+
+app.use(express.urlencoded({ extended: false }));  //obtener informacion al enviar el formulario
+
 const path = require("path");
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
