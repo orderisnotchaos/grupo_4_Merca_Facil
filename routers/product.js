@@ -3,7 +3,7 @@ const router = express.Router();
 const multer =require("multer")
 const path = require('path');
 const fileUpload = require('../middlewares/fileUpload');
-
+const validationArray = require('../middlewares/validateDataProduct');
 // ************ Controller Require ************
 const productController = require ('../controllers/productController');
 
@@ -12,7 +12,7 @@ router.get ('/', productController.productos);
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get ('/create', productController.mostrarCrear);
-router.post('/create',fileUpload.single('image'), productController.procesarCrear);
+router.post('/create',fileUpload.single('image'), validationArray, productController.procesarCrear);
 /*router.post('/',fileUpload.single('image'), productsController.store); 
 
 /*** GET ONE PRODUCT ***/ 
