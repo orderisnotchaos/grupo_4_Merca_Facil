@@ -181,93 +181,93 @@
     },
     {
         "id": 21,
-        "name": "",
-        "price": 0,
+        "name": "Alimento Whiskas",
+        "price": 500,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Alimento para gato marca whiskas sabor carne mediano",
+        "image": "products/mascotas/alimentoGato.jpg"
     },
     {
         "id": 22,
-        "name": "",
-        "price": 0,
+        "name": "Alimento Pedigree",
+        "price": 500,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Alimento para perro adulto marca pedigree 25kg ",
+        "image": "products/mascotas/alimentoPerro.jpg"
     },
     {
         "id": 23,
-        "name": "",
-        "price": 0,
+        "name": "Casa Mascota Delux",
+        "price": 3000,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Casa para mascota de madera",
+        "image": "products/mascotas/casaParaMascotaMadera.jpg"
     },
     {
         "id": 24,
-        "name": "",
-        "price": 0,
+        "name": "Casa Mascota sencilla",
+        "price": 2000,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Casa para mascota de plastico",
+        "image": "products/mascotas/casaParaMascotaPlastico.jpg"
     },
     {
         "id": 25,
-        "name": "",
-        "price": 0,
+        "name": "Collar cafe",
+        "price": 150,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Collar para mascota de piel color cafe",
+        "image": "products/mascotas/collarMascotaCafe.jpg"
     },
     {
         "id": 26,
-        "name": "",
-        "price": 0,
+        "name": "Collar rojo",
+        "price": 100,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Collar para mascota plastico color rojo",
+        "image": "products/mascotas/collarMascotaRojo.jpg"
     },
     {
         "id": 27,
-        "name": "",
-        "price": 0,
+        "name": "Pechera azul",
+        "price": 400,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Pechera para mascotas color azul con negro mediana",
+        "image": "products/mascotas/pecheraMascotaAzul.jpg"
     },
     {
         "id": 28,
-        "name": "",
-        "price": 0,
+        "name": "Pelota Azul",
+        "price": 100,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Jueguete para mascota pelota de goma color azul",
+        "image": "products/mascotas/pelotaGomaAzul.jpg"
     },
     {
         "id": 29,
-        "name": "",
-        "price": 0,
+        "name": "Plato Interactivo para Ingesta lenta",
+        "price": 180,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Plato para mascotas interactivo. En color verde propicia ingesta lenta.",
+        "image": "products/mascotas/platoInteractivo.jpg"
     },
     {
         "id": 30,
-        "name": "",
-        "price": 0,
+        "name": "Plato para perro",
+        "price": 150,
         "discount": 0,
         "category": "mascotas",
-        "description": "",
-        "image": ""
+        "description": "Plato para perro color blanco con imagenes",
+        "image": "products/mascotas/platoParaPerro.jpg"
     },
     {
         "id": 31,
