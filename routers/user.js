@@ -49,6 +49,7 @@ const validations = [
 router.get ('/registro', userController.registro);
 
 //FORMULARIO DE PROCESAMIENTO DE REGISTRO
+//FALTA RUTA DE FORMULARIO DE REGISTRO EN registro.ejs VER INFO METODO POST *****
 router.post ('/registro', uploadFile.single('avatar'), validations, userController.processRegister);
 
 //FORMULARIO DE LOGIN
