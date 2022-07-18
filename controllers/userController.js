@@ -52,7 +52,16 @@ const controladorUsuario = {
 
     processRegister: (req, res) => {
         const resultValidation = validatonResult(req);
-        return res.send(resultValidation);
+        
+        if (resultValidation.errors.length > 0) {
+            return res.render (path.join(__dirname,"../views/registro.ejs", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            }));
+        }  
+
+        return res.send ('Las validaciones se pasaron y no hay errores.')
+
     },
 
     /* sugerencia perfil usuarip

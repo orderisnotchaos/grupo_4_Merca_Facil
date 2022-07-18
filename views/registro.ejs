@@ -20,19 +20,36 @@
 <body class="body">
     <%- include('./partials/header.ejs')-%>
     <div class="sub-header">
+
         <h2>REGISTRO</h2>
     </div>
     <section class="box-registo">
         <form method="POST" action="/crear-producto" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
-                <input type="text" placeholder="Ingrese su nombre completo" name="nombre">
+                <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
+                value= "<%= locals.oldData ? olData.nombre : null %>">
+                
+                <% if (locals.errors && errors.nombre) { %>
+                    <div class="text-danger">
+                        <%= errors.nombre.msg %>
+                    </div>
+                    <% } %> 
+                
             </div>
+            
             <div>
+                
                 <label>Apellidos:</label>
                 <input type="text" placeholder="Ingrese sus apellidos" name="apellido">
             </div>
             <div class="flex-container">
+            <% if (locals.errors && errors.apellido) { %>
+                    <div class="text-danger">
+                        <%= errors.apellido.msg %>
+                    </div>
+                    <% } %> 
+
                 <div>
                     <label>Tipo de documento:</label>
                     <select name="tipo-de-documento">
@@ -44,19 +61,39 @@
                 <div>
                     <label>No cédula  de Ciudadanía:</label>
                     <input type="text" placeholder="Ingrese su cédula" name="cedula">
+                    <% if (locals.errors && errors.cedula) { %>
+                        <div class="text-danger">
+                            <%= errors.cedula.msg %>
+                        </div>
+                        <% } %> 
                 </div>
             </div>
             <div>
                 <label>Teléfono:</label>
                 <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono">
+                <% if (locals.errors && errors.telefono) { %>
+                    <div class="text-danger">
+                        <%= errors.telefono.msg %>
+                    </div>
+                    <% } %> 
             </div>
             <div>
                 <label>Email:</label>
                 <input type="text" placeholder="Ingrese su correo electrónico" name="email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %> 
             </div>
             <div>
                 <label>Contraseña:</label>
                 <input type="text" placeholder="Ingrese su contraseña" name="contraseña">
+                <% if (locals.errors && errors.contraseña) { %>
+                    <div class="text-danger">
+                        <%= errors.contraseña.msg %>
+                    </div>
+                    <% } %> 
             </div>
             <div>
                 <input class="btn-form2" id="registrarse" type="submit" name="registrarse" value="REGISTRARSE">
