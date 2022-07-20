@@ -1,7 +1,9 @@
-Principales conclusiones del primer Sprint.
+Principales conclusiones de cada sprint.
 Dinamica "estrella de mar".
 
+
 ----- RETRO. CONCLUSIONES SPRINT 1 -----
+
 
 1)Hacer igual:
 *Tratar de ir un paso adelante con los microdesafios.
@@ -27,6 +29,7 @@ Dinamica "estrella de mar".
 
 ----- RETRO. CONCLUSIONES SPRINT 2 -----
 
+
 1)Hacer igual:
 *Seguir reuniendonos semanalmente.
 *Compartir informacion puntual y dudas.
@@ -51,6 +54,7 @@ Dinamica "estrella de mar".
 
 ----- RETRO. CONCLUSIONES SPRINT 3 -----
 
+
 1)Hacer igual:
 *Comunicarnos.
 *Seguimiento de cada uno de los puntos pendientes.
@@ -60,7 +64,6 @@ Dinamica "estrella de mar".
 *Hacer reuniones mas cortas.
 *Y mas reuniones.
 *Trabajar mas con el codigo js y base de datos.
-
 
 3)Empezar a hacer:
 *Retroalimentaciones entre nosotros.
@@ -75,3 +78,31 @@ Dinamica "estrella de mar".
 5)Hacer menos:
 *Estilos y enforcarnos al CSS de las paginas.
 *Trabajar con los responsives ya que deben estar listos.
+
+
+----- RETRO. CONCLUSIONES SPRINT 4 -----
+
+
+1)Hacer igual:
+*Darnos motivacion al sentir que el equipo se encuentra cansado y con poco animo.
+*Ser claros entre nosotros y continuar con el proyecto.
+*Comprometernos con terminar el proyecto de la mejor manera y como equipo.
+
+2)Hacer mas:
+*Aprender a comunicarnos despues de los cambios que hubo en los integrantes del equipo.
+*Seguimiento de cada uno de los puntos pendientes de los sprints 4 y 5.
+*Volver a agendar reuniones
+
+3)Empezar a hacer:
+*Reajustar y reestructurar algunas tareas del proyecto al nuevo numero de integrantes del equipo.
+*Retroalimentaciones entre nosotros.
+*Estar al dia con los temas de base de datos para no atrasarnos.
+*Ponernos al dia con las tareas que quedaron pendientes cuando el equipo se desintegro.
+
+4)Dejar de hacer:
+*Dejar tareas pendientes de sprints pasados.
+*Preocuparnos por el diseño.
+
+5)Hacer menos:
+*Acumular tareas.
+*No estar al dia con los temas de playground y con el proyecto integrador.
