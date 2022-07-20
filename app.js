@@ -22,7 +22,10 @@ app.use('/', ruteoPrincipal);
 app.use('/', ruteoAdmin);
 
 app.use( express.static (__dirname + "\\public"));
-app.use(session({secret: "Secreto"}));
+app.use(session({secret: "Secreto", 
+                resave: true,
+                saveUninitialized: true
+                }));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));  //obtener informacion al enviar el formulario
 app.use(express.json());
