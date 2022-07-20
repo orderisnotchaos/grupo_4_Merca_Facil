@@ -5,7 +5,9 @@
 .fa-solid{
     font-family: "Font Awesome 6 Free" !important;
 }
-
+.is-danger{
+    color: red;
+}
 .button {
     background-color:  #FF9234;
     border: transparent; 

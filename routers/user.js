@@ -6,7 +6,7 @@ const multer = require('multer');
 
 const { body } = require ('express-validator');
 
-const storage = multer = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/images/avatars')
     },

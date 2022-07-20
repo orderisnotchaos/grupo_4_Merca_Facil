@@ -25,9 +25,18 @@ const controladorProducto = {
     },
 
 	procesarCrear: (req, res, next) =>{
+		let errors = validationResult(req);
 
+		if(errors.isEmpty()){
+			res.render(path.join(__dirname, "../views/productoGuardado.ejs"));
+		} else{
+			console.log(errors);
+			res.render(path.join(__dirname, "../views/crearProducto.ejs"), {errors:errors.array()});
+		}
+
+		/*
 		if( req.file === undefined ){
-
+			
 			const error = new Error('por favor seleccione un archivo');
 			error.httpStatusCode = 400;
 			return next(error);
@@ -57,6 +66,7 @@ const controladorProducto = {
 			return next(error);
 
 		}
+		*/
 		next();
 	},
 
