@@ -34,10 +34,3 @@ app.use(logMiddlewares);
 app.listen(8000,() => {
     console.log("Servidor Corriendo");
 });
-
-app.listen(8000,() => {
-    console.log("Servidor Corriendo");
-});
-
-app.all('*', (req, res) => {  
-    res.status(404).sendFile(__dirname + "/views/404.html");
