@@ -25,11 +25,11 @@
     </div>
     <section class="box-registo">
 
-        <form action="/users/create" method="POST" enctype="multipart/form-data" class="form-registro">
+        <form action="/registro" method="POST" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
                 <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
-                value= "<%= locals.oldData ? olData.nombre : null %>">
+                value= "<%= locals.oldData ? oldData.nombre : null %>">
                 
                 <% if (locals.errors && errors.nombre) { %>
                     <div class="text-danger">
@@ -99,7 +99,7 @@
             <div>
                 <input class="btn-form2" id="registrarse" type="submit" name="registrarse" value="REGISTRARSE">
 
-                a href = "/products/mispedidos"><i class="fa-solid fa-box"></i> Pedidos</a></li
+                <a href = "/products/mispedidos"><i class="fa-solid fa-box"></i> Pedidos</a></li>
 
 
             </div>

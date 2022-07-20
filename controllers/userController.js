@@ -1,7 +1,7 @@
 const res = require('express/lib/response');
 const path = require('path'); 
 const fs = require('fs');
-const {check, validationResult, validatonResult, body} = require('express-validator');
+const {check, validationResult, body} = require('express-validator');
 const bcrypt = require('bcrypt');
 
 
@@ -51,13 +51,13 @@ const controladorUsuario = {
     },
 
     processRegister: (req, res) => {
-        const resultValidation = validatonResult(req);
+        const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0) {
-            return res.render (path.join(__dirname,"../views/registro.ejs", {
+            return res.render(path.join(__dirname,"../views/registro.ejs"), {
                 errors: resultValidation.mapped(),
                 oldData: req.body
-            }));
+            });
         }  
 
         return res.send ('Las validaciones se pasaron y no hay errores.')

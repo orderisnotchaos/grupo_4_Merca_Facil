@@ -52,3 +52,6 @@ Se ingresa en la Página /products/create ***El día Sun Jul 17 2022 18:46:13 GM
 Se ingresa en la Página /products/create ***El día Sun Jul 17 2022 18:47:03 GMT-0300 (hora estándar de Argentina)
 Se ingresa en la Página /products/create ***El día Sun Jul 17 2022 18:47:47 GMT-0300 (hora estándar de Argentina)
 Se ingresa en la Página /products/create ***El día Sun Jul 17 2022 18:51:22 GMT-0300 (hora estándar de Argentina)
+Se ingresa en la Página /users/create ***El día Wed Jul 20 2022 13:29:06 GMT-0300 (hora estándar de Argentina)
+Se ingresa en la Página /users/create ***El día Wed Jul 20 2022 13:29:06 GMT-0300 (hora estándar de Argentina)
+Se ingresa en la Página /users/registro ***El día Wed Jul 20 2022 13:34:01 GMT-0300 (hora estándar de Argentina)
