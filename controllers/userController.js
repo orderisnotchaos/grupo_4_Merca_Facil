@@ -1,8 +1,9 @@
 const res = require('express/lib/response');
 const path = require('path'); 
 const fs = require('fs');
-const {check, validationResult, body} = require('express-validator');
+const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
+
 
 
 
@@ -13,9 +14,9 @@ const controladorUsuario = {
     },
     processLogin: (req, res) => {
         let errors = validationResult(req);
-
+        console.log(req.body);
         if (errors.isEmpty()) {
-            let usersJSON = fs.readFileSync('users.json', {encoding: 'utf-8'});
+            let usersJSON = fs.readFileSync(path.join(__dirname, '../data/users.json'), {encoding: 'utf-8'});
             let users;
             if(usersJSON == ""){
                 users = [];

@@ -4,6 +4,11 @@ const app = express();
 const path = require("path");
 const methodOverride =  require('method-override');
 const exp = require("constants");
+const helmet = require('helmet');
+
+app.use(express.urlencoded({ extended: true }));  //obtener informacion al enviar el formulario
+app.use(express.json());
+//app.use(helmet());
 
 //Ruteo
 const ruteoProducto = require ('./routes/product');
@@ -27,8 +32,7 @@ app.use(session({secret: "Secreto",
                 saveUninitialized: true
                 }));
 app.set('view engine', 'ejs');
-app.use(express.urlencoded({ extended: false }));  //obtener informacion al enviar el formulario
-app.use(express.json());
+
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE 
 
 // Registro de las paginas donde ingresan los usuarios
