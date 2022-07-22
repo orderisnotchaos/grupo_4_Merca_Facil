@@ -28,6 +28,20 @@ const controladorProducto = {
 		let errors = validationResult(req);
 
 		if(errors.isEmpty()){
+			req.body.image = req.file.filename;
+			req.body.id = products[ products.length-1 ].id+1 ;
+			products.push(req.body);
+			fs.writeFile(productsFilePath,JSON.stringify(products),'utf8',(err) => {
+				if (err)
+
+				  console.log(err);
+
+				else {
+
+				  console.log("File written successfully\n");
+
+				}});
+
 			res.render(path.join(__dirname, "../views/productoGuardado.ejs"));
 		} else{
 			console.log(errors);
