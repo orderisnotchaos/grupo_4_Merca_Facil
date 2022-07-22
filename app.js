@@ -36,7 +36,7 @@ app.use(logMiddlewares);
 
 //Ruteo
 app.use('/products', ruteoProducto);
-app.use('/', ruteoUsuario);
+app.use('/users', ruteoUsuario);
 app.use('/', ruteoPrincipal);
 app.use('/', ruteoAdmin);
 app.listen(8000,() => {

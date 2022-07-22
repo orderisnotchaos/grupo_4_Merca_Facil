@@ -3,7 +3,9 @@ const router = express.Router();
 const {check} = require('express-validator');
 const path = require('path');
 const multer = require('multer');
-const validations = require('../middlewares/validateDataUser');
+const validations = require('../middlewares/validateDataUser'); 
+const userController = require ('../controllers/userController');
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, './public/images/avatars')
@@ -17,7 +19,6 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer( {storage} );
 
-const userController = require ('../controllers/userController');
 
 
 
@@ -38,5 +39,12 @@ router.post ('/login', [
 
 ], userController.processLogin);
 
+router.get ('/check', function (req, res){
+    if(req.session.usuarioLogueado == undefined){
+        res.send("No estas logueado");
+    }else{
+        res.send("El usuario logueado es" + req.session.usuarioLogueado.email)
+    }
+})
 
 module.exports = router;

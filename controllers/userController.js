@@ -1,40 +1,46 @@
 const res = require('express/lib/response');
 const path = require('path'); 
 const fs = require('fs');
-const { validationResult } = require('express-validator');
+const {check, validationResult, body} = require('express-validator');
 const bcrypt = require('bcrypt');
-
-
+const usersFilePath = path.join(__dirname, '../data/users.json');
+const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
 const controladorUsuario = {
 
     login: (req, res) => {
-        return res.render ('login');
+        return res.render('login');
     },
+
+
     processLogin: (req, res) => {
         let errors = validationResult(req);
-        console.log(req.body);
+        //console.log(req.body);
         if (errors.isEmpty()) {
-            let usersJSON = fs.readFileSync(path.join(__dirname, '../data/users.json'), {encoding: 'utf-8'});
+
             let users;
             if(usersJSON == ""){
                 users = [];
-            }else{
+            }
+            else{
                 users = JSON.parse(usersJSON);
             }
 
+            let usuarioALoguearse
+
             for (let i = 0; i < users.length; i++){
                 if (users[i].email == req.body.email){
-                    //if (bcrypt.compareSync(req.body.password, users[i].password)){
+                    if (bcrypt.compareSync(req.body.password, users[i].password)){
                         if (req.body.password, users[i].password){
-                        let usuarioALoguearse = users[i];
+                        usuarioALoguearse = users[i];
                         break;
                     }
                 }
-            }
+            }}
+        
             if(usuarioALoguearse == undefined){
-                return res.render ('login', {errors: [
+                return res.render('login', {errors: [
                     {msg: 'Credenciales invalidas'}
                 ]});
             }
