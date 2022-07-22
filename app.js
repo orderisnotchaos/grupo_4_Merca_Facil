@@ -6,8 +6,7 @@ const methodOverride =  require('method-override');
 const exp = require("constants");
 const helmet = require('helmet');
 
-app.use(express.urlencoded({ extended: true }));  //obtener informacion al enviar el formulario
-app.use(express.json());
+
 //app.use(helmet());
 
 //Ruteo
@@ -20,11 +19,8 @@ const session = require('express-session');
 // Registro de las paginas donde ingresan los usuarios
 const logMiddlewares = require ('./middlewares/logMiddlewares');
 
-//Ruteo
-app.use('/products', ruteoProducto);
-app.use('/', ruteoUsuario);
-app.use('/', ruteoPrincipal);
-app.use('/', ruteoAdmin);
+app.use(express.urlencoded({ extended: true }));  //obtener informacion al enviar el formulario
+app.use(express.json());
 
 app.use( express.static (__dirname + "\\public"));
 app.use(session({secret: "Secreto", 
@@ -38,6 +34,11 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 // Registro de las paginas donde ingresan los usuarios
 app.use(logMiddlewares);
 
+//Ruteo
+app.use('/products', ruteoProducto);
+app.use('/', ruteoUsuario);
+app.use('/', ruteoPrincipal);
+app.use('/', ruteoAdmin);
 app.listen(8000,() => {
     console.log("Servidor Corriendo");
 });
