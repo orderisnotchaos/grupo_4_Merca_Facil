@@ -199,3 +199,6 @@ Se ingresa en la Página /users/login ***El día Fri Jul 22 2022 17:49:17 GMT-05
 Se ingresa en la Página /users/login ***El día Fri Jul 22 2022 17:50:30 GMT-0500 (hora estándar de Colombia)
 Se ingresa en la Página /users/login ***El día Fri Jul 22 2022 17:50:30 GMT-0500 (hora estándar de Colombia)
 Se ingresa en la Página /users/login ***El día Fri Jul 22 2022 17:50:30 GMT-0500 (hora estándar de Colombia)
+Se ingresa en la Página / ***El día Fri Jul 22 2022 18:40:17 GMT-0500 (hora estándar de Colombia)
+Se ingresa en la Página /users/login ***El día Fri Jul 22 2022 18:40:17 GMT-0500 (hora estándar de Colombia)
+S

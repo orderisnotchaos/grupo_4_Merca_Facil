@@ -2,10 +2,9 @@ const res = require('express/lib/response');
 const path = require('path'); 
 const fs = require('fs');
 const {check, validationResult, body} = require('express-validator');
-const bcrypt = require('bcrypt');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
+ 
 
 const controladorUsuario = {
 
@@ -17,40 +16,23 @@ const controladorUsuario = {
     processLogin: (req, res) => {
         let errors = validationResult(req);
         //console.log(req.body);
-        if (errors.isEmpty()) {
+        //console.log({errors})
+        //console.log({usersJSON})
+        if(errors.isEmpty()){
 
-            let users;
-            if(usersJSON == ""){
-                users = [];
-            }
-            else{
-                users = JSON.parse(usersJSON);
-            }
-
-            let usuarioALoguearse
-
-            for (let i = 0; i < users.length; i++){
-                if (users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password, users[i].password)){
-                        if (req.body.password, users[i].password){
-                        usuarioALoguearse = users[i];
-                        break;
-                    }
-                }
-            }}
-        
-            if(usuarioALoguearse == undefined){
-                return res.render('login', {errors: [
-                    {msg: 'Credenciales invalidas'}
-                ]});
-            }
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.render('sucess');
-
+        usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
+        console.log({usuarioAlogear})
+        if(usuarioAlogear.password === req.body.password){
+            req.session.user ={
+                ...req.body,
+                userType: usuarioAlogear.userType
+        }
+            //console.log(req.session.user , "session")
+    
         }else{
-            return res.render ('login', {errors: errors.errors});
-        } 
-   
+            res.render('login', {errors:errors.array()})
+        }
+        }
     },
 
     registro: (req, res) => {

@@ -31,8 +31,8 @@ app.set('view engine', 'ejs');
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE 
 
-// Registro de las paginas donde ingresan los usuarios
-app.use(logMiddlewares);
+// Registro de las paginas donde ingresan los usuarios se activa luego*
+//app.use(logMiddlewares);
 
 //Ruteo
 app.use('/products', ruteoProducto);
