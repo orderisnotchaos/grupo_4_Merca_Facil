@@ -32,8 +32,13 @@
             </ul>
         <% } %>
 
+        <% if(typeof logueoInvalido != 'undefined'){ %>
+            <p style="color:red">ERROR</p>
+
+            <p style="color:red"> <%= logueoInvalido %> </p>
 
 
+        <% } %>
 
         <div class="box-login">
 

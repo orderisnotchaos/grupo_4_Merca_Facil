@@ -20,18 +20,26 @@ const controladorUsuario = {
         //console.log({usersJSON})
         if(errors.isEmpty()){
 
-        usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
-        console.log({usuarioAlogear})
-        if(usuarioAlogear.password === req.body.password){
-            req.session.user ={
-                ...req.body,
-                userType: usuarioAlogear.userType
-        }
-            //console.log(req.session.user , "session")
-    
+            usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
+            console.log(usuarioAlogear.password);
+            if( usuarioAlogear == undefined ){
+                res.render('login',{logueoInvalido:'usuario o contraseña inválidos'});
+            }else{
+
+                console.log('entre');
+                if(usuarioAlogear.password === req.body.password ){
+                    req.session.user ={
+                        ...req.body,
+                        userType: usuarioAlogear.userType
+                    }
+                    //console.log(req.session.user , "session")
+                    res.render('index');
+                }else{
+                    res.render('login', {logueoInvalido:'usuario o contraseña inválidos'})
+                }
+            }
         }else{
-            res.render('login', {errors:errors.array()})
-        }
+            res.render('login',{errors:errors.array()});
         }
     },
 
