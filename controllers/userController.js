@@ -1,6 +1,7 @@
 const res = require('express/lib/response');
 const path = require('path'); 
 const fs = require('fs');
+const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -9,6 +10,9 @@ const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const controladorUsuario = {
 
     login: (req, res) => {
+        if(req.session.user != undefined){
+            return res.render('logueado');
+        }
         return res.render('login');
     },
 
@@ -20,19 +24,22 @@ const controladorUsuario = {
         //console.log({usersJSON})
         if(errors.isEmpty()){
 
-            usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
-            console.log(usuarioAlogear.password);
+            let usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
+
             if( usuarioAlogear == undefined ){
                 res.render('login',{logueoInvalido:'usuario o contraseña inválidos'});
             }else{
 
-                console.log('entre');
                 if(usuarioAlogear.password === req.body.password ){
                     req.session.user ={
                         ...req.body,
                         userType: usuarioAlogear.userType
                     }
                     //console.log(req.session.user , "session")
+
+                if(req.body.recordar != undefined){
+                    res.cookie('recordame', usuarioAlogear.email, {maxAge: 60000000000});
+                }
                     res.render('index');
                 }else{
                     res.render('login', {logueoInvalido:'usuario o contraseña inválidos'})

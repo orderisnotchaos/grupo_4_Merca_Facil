@@ -5,7 +5,8 @@ const path = require("path");
 const methodOverride =  require('method-override');
 const exp = require("constants");
 const helmet = require('helmet');
-
+const recordameMiddleware = require('./middlewares/recordameMiddleware');
+const cookieParser = require("cookie-parser");
 
 //app.use(helmet());
 
@@ -19,6 +20,9 @@ const session = require('express-session');
 // Registro de las paginas donde ingresan los usuarios
 const logMiddlewares = require ('./middlewares/logMiddlewares');
 
+
+app.use(cookieParser());
+
 app.use(express.urlencoded({ extended: true }));  //obtener informacion al enviar el formulario
 app.use(express.json());
 
@@ -30,7 +34,7 @@ app.use(session({secret: "Secreto",
 app.set('view engine', 'ejs');
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE 
-
+app.use(recordameMiddleware);
 // Registro de las paginas donde ingresan los usuarios se activa luego*
 //app.use(logMiddlewares);
 
