@@ -45,6 +45,9 @@ router.get ('/check', function (req, res){
     }else{
         res.send("El usuario logueado es" + req.session.usuarioLogueado.email)
     }
-})
+});
+
+router.get('/logout', userController.logout)
+ 
 
 module.exports = router;

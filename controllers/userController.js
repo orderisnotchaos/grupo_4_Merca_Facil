@@ -50,6 +50,15 @@ const controladorUsuario = {
         }
     },
 
+    logout: (req, res) => {
+        req.session.destroy();
+            
+            if(req.cookies.recordame){
+                res.cookie('recordame','', {maxAge: -1})
+            }
+            res.redirect('/')
+    },
+
     registro: (req, res) => {
         res.render (path.join(__dirname,"../views/registro.ejs"));
     },
