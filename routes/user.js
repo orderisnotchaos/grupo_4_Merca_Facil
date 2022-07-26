@@ -20,15 +20,13 @@ const storage = multer.diskStorage({
 const uploadFile = multer( {storage} );
 
 
-
-
 //FORMULARIO DE REGISTRO
 router.get ('/registro', userController.registro);
 
 //FORMULARIO DE PROCESAMIENTO DE REGISTRO
 //FALTA RUTA DE FORMULARIO DE REGISTRO EN registro.ejs VER INFO METODO POST *****
 router.post ('/registro', uploadFile.single('avatar'), validations, userController.processRegister);
-
+//router.post ('/create', userController.processRegister)
 //FORMULARIO DE LOGIN
 router.get ('/login', userController.login);
 

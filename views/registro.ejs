@@ -24,18 +24,17 @@
         <h2>REGISTRO</h2>
     </div>
     <section class="box-registo">
-
-        <form action="/registro" method="POST" enctype="multipart/form-data" class="form-registro">
+        <form action="/users/registro" method="POST" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
                 <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
                 value= "<%= locals.oldData ? oldData.nombre : null %>">
                 
-                <% if (locals.errors && errors.nombre) { %>
+                <%- if (locals.errors && errors.nombre) { -%>
                     <div class="text-danger">
-                        <%= errors.nombre.msg %>
+                        <%- errors.nombre.msg -%>
                     </div>
-                    <% } %> 
+                    <%- } -%> 
                 
             </div>
             
@@ -47,7 +46,7 @@
             <div class="flex-container">
             <% if (locals.errors && errors.apellido) { %>
                     <div class="text-danger">
-                        <%= errors.apellido.msg %>
+                        <%- errors.apellido.msg %>
                     </div>
                     <% } %> 
 
@@ -97,9 +96,7 @@
                     <% } %> 
             </div>
             <div>
-                <input class="btn-form2" id="registrarse" type="submit" name="registrarse" value="REGISTRARSE">
-
-                <a href = "/products/mispedidos"><i class="fa-solid fa-box"></i> Pedidos</a></li>
+                <button type="submit" class="btn-form2" id="registrarse" name="registrarse">REGISTRARSE</button>
 
 
             </div>

@@ -71,9 +71,9 @@ const controladorUsuario = {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-        }  
+        };  
 
-        return res.send ('Las validaciones se pasaron y no hay errores.')
+        return res.send('Las validaciones se pasaron y no hay errores.')
 
     },
 
