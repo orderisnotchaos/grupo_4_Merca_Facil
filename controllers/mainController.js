@@ -13,6 +13,13 @@ const controladorMain = {
 
     sobrenosotros: (req, res) =>{
         res.render (path.join(__dirname,"../views/sobrenosotros.ejs"));
+    },
+
+    logout: (req, res) =>{
+
+        req.session = null;
+        req.cookies.recordame = null;
+        res.redirect('/');
     }
 
 };
