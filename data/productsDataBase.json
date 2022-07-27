@@ -456,7 +456,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Detergente Líquido",
-        "image": "products/limpieza/10.png"
+        "image": "products/limpieza/10.jpg"
     },
     {
         "id": 52,
@@ -537,7 +537,7 @@
         "discount": 0,
         "category": "limpieza",
         "description": "Papel higiénico doble hoja",
-        "image": "products/limpieza/09.png"
+        "image": "products/limpieza/09.jpg"
     },
     {
         "name": "",
