@@ -53,9 +53,9 @@
                 <div>
                     <label>Tipo de documento:</label>
                     <select name="tipo-de-documento">
-                        <option value=""> DNI</option>
-                        <option value=""> Libreta de enrolamiento</option>
-                        <option value=""> Cédula de Ciudadanía</option>
+                        <option value="DNI"> DNI</option>
+                        <option value="Libreta-de-enrolamiento"> Libreta de enrolamiento</option>
+                        <option value="cedula-de-ciudadania"> Cédula de Ciudadanía</option>
                     </select>
                 </div>
                 <div>
@@ -88,13 +88,8 @@
             </div>
             <div>
                 <label>Contraseña:</label>
-<<<<<<< HEAD
-                <input type="text" placeholder="Ingrese su contraseña" name="password">
+                <input type="password" placeholder="Ingrese su contraseña" name="password">
                 <% if (locals.errors && errors.password) { %>
-=======
-                <input type="password" placeholder="Ingrese su contraseña" name="contraseña">
-                <% if (locals.errors && errors.contraseña) { %>
->>>>>>> 82d2a1cea7c1b7d28fa481cc78513eb7897d170a
                     <div class="text-danger">
                         <%= errors.password.msg %>
                     </div>
