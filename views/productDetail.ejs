@@ -42,12 +42,13 @@
                         
                         <a href="/products/" class="btn-volver-tienda" type="submit"><i class="fas fa-undo"></i> VOLVER A PRODUCTOS </a>                         
                         
+                        <% if(isAdmin){ %>
                         <a href="/products/edit/<%=product.id %> " class="action-button edit">EDITAR PRODUCTO</a>
 						
                         <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>                        
-
+                        <% } %>
                     </div>
                 </div>                
             </div>

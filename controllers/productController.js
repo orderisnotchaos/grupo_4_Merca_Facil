@@ -71,8 +71,16 @@ const controladorProducto = {
 
     detail: (req, res) =>{
         let idProduct = req.params.id;
+		let isAdmin;
+
+		if(req.session.user != undefined){
+
+			isAdmin = req.session.user.userType == 'Admin' ? true : false;
+		}else{
+			isAdmin =false;
+		}
 		let product = products.find(product => product.id == idProduct)
-        res.render("productDetail", { title: product.name, product });
+        res.render("productDetail", { title: product.name, product, isAdmin });
     },
 
     edit: (req, res) => {

@@ -30,11 +30,11 @@
                 <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
                 value= "<%= locals.oldData ? oldData.nombre : null %>">
                 
-                <%- if (locals.errors && errors.nombre) { -%>
+                <% if (locals.errors && errors.nombre) { %>
                     <div class="text-danger">
-                        <%- errors.nombre.msg -%>
+                        <%= errors.nombre.msg %>
                     </div>
-                    <%- } -%> 
+                    <% } %> 
                 
             </div>
             
@@ -46,7 +46,7 @@
             <div class="flex-container">
             <% if (locals.errors && errors.apellido) { %>
                     <div class="text-danger">
-                        <%- errors.apellido.msg %>
+                        <%= errors.apellido.msg %>
                     </div>
                     <% } %> 
 
