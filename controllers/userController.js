@@ -67,13 +67,14 @@ const controladorUsuario = {
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0) {
+
             return res.render(path.join(__dirname,"../views/registro.ejs"), {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
-        };  
+        }
 
-        return res.send('Las validaciones se pasaron y no hay errores.')
+        return res.send('Las validaciones se pasaron y no hay errores.');
 
     },
 

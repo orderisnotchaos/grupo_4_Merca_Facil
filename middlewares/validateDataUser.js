@@ -7,7 +7,7 @@ const validations = [
     body('cedula').notEmpty().withMessage('Tienes que completar el formulario con tu cedula'),
     body('telefono').notEmpty().withMessage('Tienes que completar el formulario con tu telefono'),
     body('email').isEmail().withMessage('Tienes que completar el formulario con tu email'),
-    body('contraseña').notEmpty().withMessage('Tienes que completar el formulario con una contraseña'),
+    body('password').notEmpty().withMessage('Tienes que completar el formulario con una contraseña')/*,
     body('avatar').custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
@@ -22,7 +22,7 @@ const validations = [
             }
         }
         return true;
-    } )
+    } )*/
 ];
 
 module.exports = validations;
