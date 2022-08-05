@@ -108,7 +108,7 @@ Dinamica "estrella de mar".
 *No estar al dia con los temas de playground y con el proyecto integrador.
 
 
------ RETRO. CONCLUSIONES SPRINT 4 -----
+----- RETRO. CONCLUSIONES SPRINT 5 -----
 
 
 1)Hacer igual:
