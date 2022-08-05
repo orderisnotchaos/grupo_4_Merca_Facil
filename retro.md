@@ -106,3 +106,28 @@ Dinamica "estrella de mar".
 5)Hacer menos:
 *Acumular tareas.
 *No estar al dia con los temas de playground y con el proyecto integrador.
+
+
+----- RETRO. CONCLUSIONES SPRINT 4 -----
+
+
+1)Hacer igual:
+*Seguir motivados.
+*Comunicación en el equipo.
+*Motivarnos como equipo y seguir adelante con el proyecto.
+
+2)Hacer mas:
+*Reuniones de equipo.
+*Mas reuniones
+*Meter mano al codigo sin miedo a hacer cambios.
+
+3)Empezar a hacer:
+*Mejoras visuales y de codigo
+*Igualdad de sintaxis en todo el proyecto
+*Limpiar el codigo para optimizar el CRUD.
+
+4)Dejar de hacer:
+*No atender a las reuniones cuando se acuerda una fecha.
+
+5)Hacer menos:
+*Posponer actividades y/o tareas de sprint pasados.
