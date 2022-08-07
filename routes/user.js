@@ -40,6 +40,5 @@ router.get ('/check', function (req, res){
 
 /*** LOGOUT ***/ 
 router.get('/logout', userController.logout);
-
-
+ 
 module.exports = router;
