@@ -22,12 +22,12 @@ const controladorProducto = {
     mostrarCrear: (req, res) =>{
 		if(req.session.user != undefined){
 			if(req.session.user.userType == 'Admin'){
-        		res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
+        		return res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
 			}else{
-				res.send('no tienes permiso para loguear en esta página');
+				return res.send('no tienes permiso para loguear en esta página');
 			}
 		}
-		res.send('no tienes permiso para loguear en esta página');
+		return res.send('no tienes permiso para loguear en esta página');
     },
 
 	procesarCrear: (req, res, next) =>{
