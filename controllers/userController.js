@@ -59,26 +59,65 @@ const controladorUsuario = {
             res.redirect('/')
     },
 
-    registro: (req, res) => {
-        res.render (path.join(__dirname,"../views/registro.ejs"));
+    register: (req, res) => {
+        res.render (path.join(__dirname,"../views/register.ejs"));
     },
 
-    processRegister: (req, res) => {
+    processRegister: (req, res, next) => {
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0) {
 
-            return res.render(path.join(__dirname,"../views/registro.ejs"), {
+            return res.render(path.join(__dirname,"../views/register.ejs"), {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             });
+        } else {
+
+			req.body.image = req.file.filename;
+			req.body.id = usersJSON[ usersJSON.length-1 ].id+1 ;
+			usersJSON.push(req.body);
+			fs.writeFile(usersFilePath,JSON.stringify(usersJSON),'utf8',(err) => {
+				if (err)
+
+				  console.log(err);
+
+				else {
+
+				  console.log("User created successfully\n");
+
+				}});
+
+			res.render(path.join(__dirname, "../views/login.ejs"));
+
+
         }
 
-        return res.send('Las validaciones se pasaron y no hay errores.');
+        next();
+
+        //return res.send('Las validaciones se pasaron y no hay errores.');
 
     },
 
-    /* sugerencia perfil usuarip
+    destroy: (req, res) => {
+
+		let usersJSON = JSON.parse( fs.readFileSync( usersFilePath, 'utf-8' ) );
+		const id = +req.params.id;
+
+		let userDestroyed = usersJSON.filter( function( user ){
+
+			return user.id !== id;
+
+		});
+
+		console.log( userDestroyed );
+
+		fs.writeFileSync( usersFilePath , JSON.stringify( userDestroyed ), { encoding: 'utf-8' } );
+		res.redirect( '/' );
+    
+    }
+
+    /* sugerencia perfil usuario
     profile: (req, res) => {
         return res.render('userProfile'));
     },*/

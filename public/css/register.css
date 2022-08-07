@@ -1,0 +1,66 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fa-solid{
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.box-registro{
+    display: flex; 
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 50px 0px;
+    width: 90%;
+}
+
+.form-registro{
+    padding-right: 8%;
+    width: 60%;
+}
+
+.box-img-registro{
+    text-align: center;
+    width: 40%;
+}
+
+.form-registro label{
+    font-size: 24px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.form-registro input, .form-registro select{
+    font-size: 24px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form-registro div{
+    margin-bottom: 20px;
+}
+
+.registo-text{
+    font-size: 32px;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+}
+
+
+@media  (max-width : 991px) {
+
+    .form-registro{
+       
+        text-align: center;
+        width: 100% !important;
+    }
+
+    .box-img-registro{
+        display: none;
+    }
+
+    .img{
+        display: none;
+    }
+    
+}

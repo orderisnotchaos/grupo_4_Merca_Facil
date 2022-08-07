@@ -1,7 +1,7 @@
 const { body } = require ('express-validator');
 
 
-const validations = [
+const userValidations = [
     body('nombre').notEmpty().withMessage('Tienes que completar el formulario con tu nombre'),
     body('apellido').notEmpty().withMessage('Tienes que completar el formulario con tu apellido'),
     body('cedula').notEmpty().withMessage('Tienes que completar el formulario con tu cedula'),
@@ -25,4 +25,4 @@ const validations = [
     } )*/
 ];
 
-module.exports = validations;
+module.exports = userValidations;
