@@ -22,7 +22,7 @@ const controladorProducto = {
     
     mostrarCrear: (req, res) =>{
 		if(req.session.user != undefined){
-			if(req.session.user.userType == 'admin'){
+			if(req.session.user.userType == 'Admin'){
         		res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
 			}else{
 				res.send('no tienes permiso para loguear en esta página');
