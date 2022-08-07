@@ -3,8 +3,8 @@ const path = require('path');
 
 const controladorAdmin = {
 
-    admin: (req, res) =>{
-        res.render (path.join(__dirname,"../views/loginAdmin.ejs"));
+    dashboardUsers: (req, res) =>{
+        res.render (path.join(__dirname,"../views/dashboardUsers.ejs"));
     },
 
     panel: (req, res) =>{

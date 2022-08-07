@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/dashboardUsers.css">
+    <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-Header>
+    <%- include('./partials/header.ejs')-%>
+<div class="sub-header">
+    <h2 class="name-panel">USUARIOS</h2>
+</div>
+    <main>
+        <section id="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>AVATAR</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>EMAIL</th>
+                        <th>CONTRASEÑA</th>
+                        <th>ROL</th>
+                        <th>DIRECCIÓN</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="" alt="">
+                        </td>
+                        <td>Pepito</td>
+                        <td>Perez</td>
+                        <td>pepitoperez@correo.com</td>
+                        <td>123456</td>
+                        <td>Administrador</td>
+                        <td>Cll 0 #1-2</td>
+                        <td id="edit"><i class="fa-solid fa-pen-to-square"></i></td>
+                        <td id="delete"><i class="fa-solid fa-trash"></i></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="" alt="">
+                        </td>
+                        <td>Pepito</td>
+                        <td>Perez</td>
+                        <td>pepitoperez@correo.com</td>
+                        <td>123456</td>
+                        <td>Administrador</td>
+                        <td>Cll 0 #1-2</td>
+                        <td id="edit"><i class="fa-solid fa-pen-to-square"></i></td>
+                        <td id="delete"><i class="fa-solid fa-trash"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+<!-Footer->
+<%- include('./partials/footer')-%>
+</html>
