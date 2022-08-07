@@ -58,6 +58,14 @@ const controladorProducto = {
 	},
 
     productos: (req, res) =>{
+		let isAdmin;
+
+		if(req.session.user != undefined){
+
+			isAdmin = req.session.user.userType == 'Admin' ? true : false;
+		}else{
+			isAdmin =false;
+		}
         let despensaProducts = products.filter(product => product.category === "despensa")
         let bebidasProducts = products.filter(product => product.category === "bebidas")
         let mascotasProducts = products.filter(product => product.category === "mascotas")
@@ -65,7 +73,7 @@ const controladorProducto = {
         let cuidadoPersonalProducts = products.filter(product => product.category === "cuidado-personal")
         let limpiezaProducts = products.filter(product => product.category === "limpieza")
 
-  		res.render ("products",{despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
+  		res.render ("products",{isAdmin, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
 	},
 
     detail: (req, res) =>{

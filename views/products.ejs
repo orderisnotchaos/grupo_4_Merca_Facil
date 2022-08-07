@@ -21,12 +21,13 @@
             <h2>Todos los productos</h2>
         </div>
         <main>
-
+        <% if(isAdmin){ %>
         <div class="botones-detalle-producto">  
             <form action="/products/create/"">
                 <button class="button-crear" type="submit" >AGREGAR PRODUCTO</button>
         </form>      
         </div>
+        <% } %>
        
         <h2 id="productos-despensa" class="titulo-seccion">DESPENSA</h2>
         <% despensaProducts.forEach( function( product ){ %>
