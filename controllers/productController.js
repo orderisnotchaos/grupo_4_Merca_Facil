@@ -1,4 +1,3 @@
-//const res = require('express/lib/response');
 const path = require('path');
 const fs = require('fs');
 const { off } = require('process');
@@ -17,7 +16,7 @@ const controladorProducto = {
     },
 
     mispedidos: (req, res) =>{
-        res.render (path.join(__dirname,"../views/mispedidos.ejs"));
+        res.render (path.join(__dirname,"../views/myOrders.ejs"));
     },
     
     mostrarCrear: (req, res) =>{
@@ -49,7 +48,7 @@ const controladorProducto = {
 
 				}});
 
-			res.render(path.join(__dirname, "../views/productoGuardado.ejs"));
+			res.render(path.join(__dirname, "../views/productSaved.ejs"));
 		} else{
 
 			res.render(path.join(__dirname, "../views/crearProducto.ejs"), {errors:errors.array()});
@@ -66,7 +65,7 @@ const controladorProducto = {
         let cuidadoPersonalProducts = products.filter(product => product.category === "cuidado-personal")
         let limpiezaProducts = products.filter(product => product.category === "limpieza")
 
-  		res.render ("productos",{despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
+  		res.render ("products",{despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
 	},
 
     detail: (req, res) =>{

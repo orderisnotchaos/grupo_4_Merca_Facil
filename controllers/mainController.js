@@ -8,11 +8,11 @@ const controladorMain = {
     },
 
     contacto: (req, res) =>{
-        res.render (path.join(__dirname,"../views/contacto.ejs"));
+        res.render (path.join(__dirname,"../views/contact.ejs"));
     },
 
     sobrenosotros: (req, res) =>{
-        res.render (path.join(__dirname,"../views/sobrenosotros.ejs"));
+        res.render (path.join(__dirname,"../views/aboutUs.ejs"));
     },
 
     logout: (req, res) =>{

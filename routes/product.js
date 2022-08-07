@@ -27,7 +27,7 @@ router.put ('/edit/:id',fileUpload.single('image'), productController.update);
 router.delete('/delete/:id', productController.destroy);
 
 
-router.get ('/carrito', productController.productCart);
+router.get ('/productCart', productController.productCart);
 router.get ('/mispedidos', productController.mispedidos);
 router.get ('/pago', productController.checkout);
 
