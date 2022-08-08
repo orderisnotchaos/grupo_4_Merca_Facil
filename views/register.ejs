@@ -100,7 +100,13 @@
                 <label class="form-label">Cargar imagen de avatar:</label>
                         <div>
                             <input type="file" name="avatar">
-                        </div>
+                <% if (locals.errors && errors.avatar) { %>
+                    <div class="text-danger">
+                        <%= errors.avatar.msg %>
+                    </div>
+                    <% } %> 
+                </div>
+
             </div>
 
             <div>
@@ -110,7 +116,11 @@
         <div class="box-img-registro">
             <img src="/images/logo-banner.png" class="img">
         </div>
+
     </section>    
+
 </body>
+
 <%- include('./partials/footer')-%>
+
 </html>
