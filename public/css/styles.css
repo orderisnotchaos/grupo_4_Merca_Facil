@@ -458,6 +458,10 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 /* Tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
+    h2 {
+        font-size: 98%;
+    }
+
     .logo-container{
         width: 20%;
     }
@@ -488,6 +492,10 @@ h1, h2, h3, h4, h5, h6, .nav{
 
 /* Teléfonos móviles */
 @media (max-width: 767px) and (min-width: 200px) {
+    h2 {
+        font-size: 85%;
+    }
+
     .logo-container{
         width: 30% !important;
     }
