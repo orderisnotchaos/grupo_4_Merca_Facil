@@ -7,13 +7,13 @@ const userValidations = [
     body('cedula').notEmpty().withMessage('Tienes que completar el formulario con tu cedula'),
     body('telefono').notEmpty().withMessage('Tienes que completar el formulario con tu telefono'),
     body('email').isEmail().withMessage('Tienes que completar el formulario con tu email'),
-    body('password').notEmpty().withMessage('Tienes que completar el formulario con una contraseña')/*,
+    body('password').notEmpty().withMessage('Tienes que completar el formulario con una contraseña'),
     body('avatar').custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.gif'];
 
         if (!file) {
-            throw new Error('Tienes que subir una imagen');
+            throw new Error('Tienes que subir una imagen para tu perfil');
 
         } else {
             let fileExtension = path.extname(file.originalname);
@@ -22,7 +22,7 @@ const userValidations = [
             }
         }
         return true;
-    } )*/
+    } )
 ];
 
 module.exports = userValidations;

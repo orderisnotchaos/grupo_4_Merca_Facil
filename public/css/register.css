@@ -46,6 +46,10 @@
     text-align: center;
 }
 
+.text-danger{
+    color: red;
+}
+
 
 @media  (max-width : 991px) {
 
