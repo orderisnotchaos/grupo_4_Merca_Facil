@@ -1,0 +1,84 @@
+main {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+#formEditUser {
+    padding: 20px 20px;
+}
+
+#formEditUser > form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#updateAvatar {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+#formEditUser > form > input {
+    padding: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#formEditUser > form > label {
+    padding: 8px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4vh;
+}
+
+#formEditUser > form > select {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+#formEditUser > form > input:not([type="file"] , [type="image"]) {
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+/*Botones*/
+button:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+}
+
+#update {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border:none;
+    background-color: #3E9855;
+    color: white;
+}
+
+#delete {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border:none;
+    background-color: #D92027;
+    color: white;
+}
+
+#back {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border:none;
+    background-color: #FF9234;
+    color: white;
+}
+
+/*Breakpoints*/
+@media (max-width: 767px) and (min-width: 360px) {
+    #formEditUser {
+        text-align: center;
+        width: 70%;
+    }
+}

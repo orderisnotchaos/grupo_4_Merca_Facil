@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de Usuario</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/editUser.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-Header>
+    <%- include('./partials/header.ejs')-%>
+<div class="sub-header">
+    <h2 class="name-panel">EDICIÓN DE USUARIO</h2>
+</div>
+    <main>
+        <section id="formEditUser">
+            <form action="">
+                <label for="inAvatar"></label>
+                <input type="image" src="https://www.donkey.bike/wp-content/uploads/2020/12/user-member-avatar-face-profile-icon-vector-22965342-300x300.jpg">
+                <input id= "updateAvatar" type="file">
+                <label for="inName">NOMBRE</label>
+                <input id= "inName" type="text" placeholder="Nombre completo">
+                <label for="inLastName">APELLIDO</label>
+                <input id= "inLastName" type="text" placeholder="Apellido completo">
+                <label for="inEmail">EMAIL</label>
+                <input id= "inEmail" type="email" placeholder="correo@correo.com">
+                <label for="inPassword">CONTRASEÑA</label>
+                <input id= "inPassword" type="password" placeholder="Contraseña">
+                <label for="inRole">ROL</label>
+                <select name="role" id="inRole">
+                    <option value="client">Cliente</option>
+                    <option value="admin">Administrador</option>
+                </select>
+                <label for="inAddress">DIRECCIÓN</label>
+                <input id= "inAddress" type="text" placeholder="Dirección">
+                <button id="update" type="submit">ACTUALIZAR</button>
+                <button id="delete" type="button">ELIMINAR</button>
+                <button id="back" type="button">VOLVER</button>
+        </section>
+    </main>
+</body>
+<!-Footer->
+<%- include('./partials/footer')-%>
+</html>
