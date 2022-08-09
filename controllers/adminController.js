@@ -1,5 +1,8 @@
-const res = require('express/lib/response');
-const path = require('path');
+const res = require ('express/lib/response');
+const path = require ('path');
+//const dataUsers = path.join(__dirname, '../data/users.json')
+
+
 
 const controladorAdmin = {
 
@@ -16,5 +19,11 @@ const controladorAdmin = {
     }
 
 };
+
+function dataUsers (){
+    fetch('../data/users.json')
+    .then ( res => respuesta.json())
+    .then ( res => console.log(res))
+}
 
 module.exports = controladorAdmin;

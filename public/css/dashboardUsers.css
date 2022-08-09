@@ -24,14 +24,13 @@ table, td, th, tr {
     border-collapse: collapse;
     padding: 10px 10px;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 th {
     background-color: #2e2e2f;
     color: #fff;
     font-family: 'Bebas Neue', cursive;
-    font-size: 3.3vh;
+    font-size: 3vh;
 }
 
 #edit :hover{
