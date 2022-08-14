@@ -61,5 +61,17 @@
         "password": "123456",
         "userType": "Admin",
         "image": "Imagen de Perfil"
+    },
+    {
+        "nombre": "Andrés María",
+        "apellido": "Valle",
+        "tipo-de-documento": "DNI",
+        "cedula": "39805063",
+        "telefono": "01141957202",
+        "email": "aferrarivalle@gmail.com",
+        "password": "12345",
+        "registrarse": "",
+        "image": "1659911957486_img.png",
+        "id": 7
     }
 ]

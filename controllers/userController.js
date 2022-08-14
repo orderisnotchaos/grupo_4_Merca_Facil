@@ -73,7 +73,7 @@ const controladorUsuario = {
                 oldData: req.body
             });
         } else {
-
+            
 			req.body.image = req.file.filename;
 			req.body.id = usersJSON[ usersJSON.length-1 ].id+1 ;
 			usersJSON.push(req.body);
