@@ -1,7 +1,8 @@
+module.exports  = (sequelize, dataTypes) => { 
+let alias = "Product";
+let cols = {
 
-module.exports  = (sequelize, dataTypes) { 
-
-    const Products = sequelize.define( 'Products',{
+//const Products = sequelize.define( 'Products',{
         id : {
             type : dataTypes.INTEGER,
             autoIncrement : true,
@@ -25,19 +26,33 @@ module.exports  = (sequelize, dataTypes) {
             allowNull : true
         },
         description : {
-            tpye : dataTypes.TEXT('medium'),
+            type : dataTypes.TEXT('medium'),
             allowNull : false
         },
         quantity : {
             type : dataTypes.INTEGER,
             allowNull : false
         }
-    },
-    {
+    }
+
+    /*{
         tableName : 'Products',
         timestamps : false
-    });
+    });*/
 
-
-    return Products;
+    let config = {
+        tableName: "products",
+        timestamps: false
+    }
+    let Product = sequelize.define (alias, cols, config);
+    
+    Product.associate = (models)=>{
+        Product.belongsTo(models.Category, {
+            as: "category",
+            foreignKey: "category_id"
+        });
+    
+    }
+    
+    return Product;
 }

@@ -6,6 +6,7 @@ const fileUpload = require('../middlewares/fileUpload');
 const validationArray = require('../middlewares/validateDataProduct');
 // ************ Controller Require ************
 const productController = require ('../controllers/productController');
+router.get ('/listadoProducts', productController.listado);
 
 /*** GET ALL PRODUCTS ***/ 
 router.get ('/', productController.productos);

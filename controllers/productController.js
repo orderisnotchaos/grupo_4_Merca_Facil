@@ -4,8 +4,16 @@ const { off } = require('process');
 const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let db= require ("../database/models")
 
 const controladorProducto = {
+
+	listado: function(req, res){
+        db.Product.findAll()
+            .then (function(products){
+                res.render("listadoProducts", {products:products})
+        })		
+	},
    
     productCart: (req, res) =>{
         res.render (path.join(__dirname,"../views/productCart.ejs"));
