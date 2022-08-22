@@ -4,11 +4,11 @@ const { off } = require('process');
 const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 let db= require ("../database/models")
+
 db.Product.findAll()
     .then (function(data){
     products = data
 })
-
 
 const controladorProducto = {
 
@@ -18,6 +18,21 @@ const controladorProducto = {
                 res.render("listadoProducts", {products:products})
         })		
 	},
+
+	// DETAIL CON DB
+	detail: function(req, res){
+		let isAdmin;
+
+		if(req.session.user != undefined){
+			isAdmin = req.session.user.userType == 'Admin' ? true : false;
+		}else{
+			isAdmin =false;
+		}
+        db.Product.findByPk(req.params.id)
+            .then(function(products) {
+                res.render("productDetail", {products:products, isAdmin})
+            })
+    },
    
     productCart: (req, res) =>{
         res.render (path.join(__dirname,"../views/productCart.ejs"));
@@ -89,7 +104,7 @@ const controladorProducto = {
 	},
 
 	
-
+/* DETAIL CON .JSON
     detail: (req, res) =>{
         let idProduct = req.params.id;
 		let isAdmin;
@@ -102,8 +117,9 @@ const controladorProducto = {
 		}
 		let product = products.find(product => product.id == idProduct)
         res.render("productDetail", { title: product.name, product, isAdmin });
+		console.log(req.params.id)
     },
-
+*/
     edit: (req, res) => {
         const id = +req.params.id;
 		let productDetail = products.filter( function( product ){
@@ -145,9 +161,7 @@ const controladorProducto = {
 
 				products[ i ] = editProduct;
 				break;
-
 			}
-
 		}
 
 		fs.writeFileSync( productsFilePath , JSON.stringify( products ), { encoding: 'utf-8' } );
