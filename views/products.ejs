@@ -13,7 +13,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
         <script type="text/javascript" src="/js/scripts.js"></script>
-
     </head>
     <body>
         <%- include('./partials/header.ejs')-%>
@@ -25,106 +24,111 @@
         <div class="botones-detalle-producto">  
             <form action="/products/create/"">
                 <button class="button-crear" type="submit" >AGREGAR PRODUCTO</button>
-        </form>      
+            </form>      
         </div>
         <% } %>
-       
-        <h2 id="productos-despensa" class="titulo-seccion">DESPENSA</h2>
-        <% despensaProducts.forEach( function( product ){ %>
-        <article>
-        <div class="products-container">
-            <div class="product">
-                <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Despensa" class="img-categoria"></a>
-                <div class="box-info-product">
-                    <a class="titulo-product"><h4><%=product.name%></h4></a>
-                    <a class="descipcion-product"><p><%=product.description%></p></a>
-                    <a class="precio-product"><h3>$ <%=product.price%></h3></a>
-                </div>                
-            </div>
-        </div>
-        </article>  
-        <% }) %>
 
-        <h2 id="products-bebidas" class="titulo-seccion">BEBIDAS</h2>
-        <% bebidasProducts.forEach( function( product ){ %>
+        <h2 id="productos-despensa" class="titulo-seccion">DESPENSA</h2>
+        <% for (let i = 0; i < products.length; i++) { %>  
+        <% if (products[i].category_id == 1 ) { %>  
         <article>
         <div class="products-container">
             <div class="product">
-                <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Bebidas" class="img-categoria"></a>
                 <div class="box-info-product">
-                    <a class="titulo-product"><h4><%=product.name%></h4></a>
-                    <a class="descipcion-product"><p><%=product.description%></p></a>
-                    <a class="precio-product"><h3>$ <%=product.price%></h3></a>
+                    <a href="/products/detail/<%=products[i].id%>"><img src="/images/<%=products[i].image%>" alt="Despensa" class="img-categoria"></a>
+                    <a class="titulo-product"><h4><%=products[i].name%><br></h4></a>
+                    <a class="descipcion-product"><p><%=products[i].description%></p></a>
+                    <a class="precio-product"><h3>$ <%=products[i].price%></h3></a>
                 </div>                
             </div>
         </div>
         </article>  
-        <% }) %>
+        <% }} %>
+        
+        <h2 id="products-bebidas" class="titulo-seccion">BEBIDAS</h2>
+        <% for (let i = 0; i < products.length; i++) { %>  
+        <% if (products[i].category_id == 2 ) { %>
+        <article>
+        <div class="products-container">
+            <div class="product">
+                <div class="box-info-product">
+                    <a href="/products/detail/<%=products[i].id%>"><img src="/images/<%=products[i].image%>" alt="Bebidas" class="img-categoria"></a>
+                    <a class="titulo-product"><h4><%=products[i].name%></h4></a>
+                    <a class="descipcion-product"><p><%=products[i].description%></p></a>
+                    <a class="precio-product"><h3>$ <%=products[i].price%></h3></a>
+                </div>                
+            </div>
+        </div>
+        </article> 
+        <% }} %> 
 
         <h2 id="products-mascotas" class="titulo-seccion">MASCOTAS</h2>
-        <% mascotasProducts.forEach( function( product ){ %>
+        <% for (let i = 0; i < products.length; i++) { %> 
+        <% if (products[i].category_id == 3 ) { %> 
         <article>
             <div class="products-container">
                 <div class="product">
-                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Mascotas" class="img-categoria"></a>
                     <div class="box-info-product">
-                        <a class="titulo-product"><h4><%=product.name%></h4></a>
-                        <a class="descipcion-product"><p><%=product.description%></p></a>
-                        <a class="precio-product"><h3>$ <%=product.price%></h3></a>
+                        <a href="/products/detail/<%=products[i].id%>"><img src="/images/<%=products[i].image%>" alt="Mascotas" class="img-categoria"></a>
+                        <a class="titulo-product"><h4><%=products[i].name%></h4></a>
+                        <a class="descipcion-product"><p><%=products[i].description%></p></a>
+                        <a class="precio-product"><h3>$ <%=products[i].price%></h3></a>
                     </div>                
                 </div>
             </div>
         </article>  
-        <% }) %>
+        <% }} %>
        
         <h2 id="products-bebes" class="titulo-seccion">BEBES</h2>
-        <% bebesProducts.forEach( function( product ){ %>
+        <% for (let i = 0; i < products.length; i++) { %> 
+        <% if (products[i].category_id == 4 ) { %> 
         <article>
             <div class="products-container">
                 <div class="product">
-                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Bebes" class="img-categoria"></a>
                     <div class="box-info-product">
-                        <a class="titulo-product"><h4><%=product.name%></h4></a>
-                        <a class="descipcion-product"><p><%=product.description%></p></a>
-                        <a class="precio-product"><h3>$ <%=product.price%></h3></a>
+                        <a href="/products/detail/<%=products[i].id%>"><img src="/images/<%=products[i].image%>" alt="Bebes" class="img-categoria"></a>
+                        <a class="titulo-product"><h4><%=products[i].name%></h4></a>
+                        <a class="descipcion-product"><p><%=products[i].description%></p></a>
+                        <a class="precio-product"><h3>$ <%=products[i].price%></h3></a>
                     </div>                
                 </div>
             </div>
         </article>  
-        <% }) %>
+        <% }} %>
 
         <h2 id="products-cpersonal" class="titulo-seccion">CUIDADO PERSONAL</h2>
-        <% cuidadoPersonalProducts.forEach( function( product ){ %>
+        <% for (let i = 0; i < products.length; i++) { %>  
+        <% if (products[i].category_id == 5 ) { %>
         <article>
             <div class="products-container">
                 <div class="product">
-                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Cuidado Personal" class="img-categoria"></a>
                     <div class="box-info-product">
-                        <a class="titulo-product"><h4><%=product.name%></h4></a>
-                        <a class="descipcion-product"><p><%=product.description%></p></a>
-                        <a class="precio-product"><h3>$ <%=product.price%></h3></a>
+                        <a href="/products/detail/<%=products[i].id%>"><img src="/images/<%=products[i].image%>" alt="Cuidado-Personal" class="img-categoria"></a>
+                        <a class="titulo-product"><h4><%=products[i].name%></h4></a>
+                        <a class="descipcion-product"><p><%=products[i].description%></p></a>
+                        <a class="precio-product"><h3>$ <%=products[i].price%></h3></a>
                     </div>                
                 </div>
             </div>
         </article>  
-        <% }) %>
+        <% }} %>
 
         <h2 id="products-limpieza" class="titulo-seccion">LIMPIEZA</h2>
-        <% limpiezaProducts.forEach( function( product ){ %>
+        <% for (let i = 0; i < products.length; i++) { %>  
+        <% if (products[i].category_id == 6 ) { %>
         <article>
             <div class="products-container">
                 <div class="product">
-                    <a href="/products/detail/<%=product.id%>"><img src="/images/<%=product.image%>" alt="Limpieza class="img-categoria"></a>
                     <div class="box-info-product">
-                        <a class="titulo-product"><h4><%=product.name%></h4></a>
-                        <a class="descipcion-product"><p><%=product.description%></p></a>
-                        <a class="precio-product"><h3>$ <%=product.price%></h3></a>
+                        <a href="/products/detail/<%=products[i].id%>"><img src="/images/<%=products[i].image%>" alt="Limpieza" class="img-categoria"></a>
+                        <a class="titulo-product"><h4><%=products[i].name%></h4></a>
+                        <a class="descipcion-product"><p><%=products[i].description%></p></a>
+                        <a class="precio-product"><h3>$ <%=products[i].price%></h3></a>
                     </div>                
                 </div>
             </div>
-        </article>  
-        <% }) %>
-
+        </article> 
+        <% }} %>
     </main>
     
 </body>

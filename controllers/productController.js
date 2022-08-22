@@ -5,10 +5,10 @@ const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 let db= require ("../database/models")
 db.Product.findAll()
-            .then (function(data){
-                products = data
-				console.log (data)
-        })
+    .then (function(data){
+    products = data
+})
+
 
 const controladorProducto = {
 
@@ -87,6 +87,8 @@ const controladorProducto = {
 
   		res.render ("products",{isAdmin, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
 	},
+
+	
 
     detail: (req, res) =>{
         let idProduct = req.params.id;
