@@ -3,7 +3,8 @@ const fs = require('fs');
 const { off } = require('process');
 const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let db= require ("../database/models")
+let db= require ("../database/models");
+const Category = require('../database/models/Category');
 
 db.Product.findAll()
     .then (function(data){
@@ -28,7 +29,9 @@ const controladorProducto = {
 		}else{
 			isAdmin =false;
 		}
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id , {include:[
+			{ model:db.Category, as:'category'}
+			]})
             .then(function(products) {
                 res.render("productDetail", {products:products, isAdmin})
             })
