@@ -5,7 +5,6 @@ const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
- 
 
 const controladorUsuario = {
 
@@ -76,7 +75,9 @@ const controladorUsuario = {
             
 			req.body.image = req.file.filename;
 			req.body.id = usersJSON[ usersJSON.length-1 ].id+1 ;
+
 			usersJSON.push(req.body);
+
 			fs.writeFile(usersFilePath,JSON.stringify(usersJSON),'utf8',(err) => {
 				if (err)
 
