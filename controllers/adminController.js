@@ -1,8 +1,5 @@
 const res = require ('express/lib/response');
 const path = require ('path');
-//const dataUsers = path.join(__dirname, '../data/users.json')
-
-
 
 const controladorAdmin = {
 

@@ -1,5 +1,5 @@
 const User = require('./database/models/User');
-const db = require('./database/models/index');
+const db = require('./database/models');
 
 db.User.sync();
 async function sinc (db){

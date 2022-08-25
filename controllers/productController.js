@@ -19,7 +19,6 @@ const controladorProducto = {
         })		
 	},
 
-	// DETAIL CON DB
 	detail: function(req, res){
 		let isAdmin;
 
@@ -35,22 +34,29 @@ const controladorProducto = {
     },
    
     productCart: (req, res) =>{
+
         res.render (path.join(__dirname,"../views/productCart.ejs"));
     },
   
     checkout: (req, res) =>{
+
         res.render (path.join(__dirname,"../views/checkout.ejs"));
     },
 
     mispedidos: (req, res) =>{
+
         res.render (path.join(__dirname,"../views/myOrders.ejs"));
     },
     
     mostrarCrear: (req, res) =>{
+
 		if(req.session.user != undefined){
+
 			if(req.session.user.userType == 'Admin'){
+
         		return res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
 			}else{
+
 				return res.send('no tienes permiso para loguear en esta página');
 			}
 		}
@@ -103,23 +109,6 @@ const controladorProducto = {
   		res.render ("products",{isAdmin, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
 	},
 
-	
-/* DETAIL CON .JSON
-    detail: (req, res) =>{
-        let idProduct = req.params.id;
-		let isAdmin;
-
-		if(req.session.user != undefined){
-
-			isAdmin = req.session.user.userType == 'Admin' ? true : false;
-		}else{
-			isAdmin =false;
-		}
-		let product = products.find(product => product.id == idProduct)
-        res.render("productDetail", { title: product.name, product, isAdmin });
-		console.log(req.params.id)
-    },
-*/
     edit: (req, res) => {
         const id = +req.params.id;
 		let productDetail = products.filter( function( product ){
@@ -168,7 +157,7 @@ const controladorProducto = {
 		res.redirect( '/products' );
 
 	},
-    	// Delete - Delete one product from DB
+
 	destroy : (req, res) => {
 
 		let products = JSON.parse( fs.readFileSync( productsFilePath, 'utf-8' ) );

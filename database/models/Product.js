@@ -35,11 +35,6 @@ let cols = {
         }
     }
 
-    /*{
-        tableName : 'Products',
-        timestamps : false
-    });*/
-
     let config = {
         tableName: "products",
         timestamps: false

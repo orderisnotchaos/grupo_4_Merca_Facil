@@ -9,18 +9,19 @@ const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const controladorUsuario = {
 
     login: (req, res) => {
+
         if(req.session.user != undefined){
             return res.render('logueado');
         }
+        
         return res.render('login');
     },
 
 
     processLogin: (req, res) => {
+
         let errors = validationResult(req);
-        //console.log(req.body);
-        //console.log({errors})
-        //console.log({usersJSON})
+
         if(errors.isEmpty()){
 
             let usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
@@ -34,7 +35,6 @@ const controladorUsuario = {
                         ...req.body,
                         userType: usuarioAlogear.userType
                     }
-                    //console.log(req.session.user , "session")
 
                 if(req.body.recordar != undefined){
                     res.cookie('recordame', usuarioAlogear.email, {maxAge: 60000000000});
@@ -95,9 +95,6 @@ const controladorUsuario = {
         }
 
         next();
-
-        //return res.send('Las validaciones se pasaron y no hay errores.');
-
     },
 
     destroy: (req, res) => {
@@ -117,12 +114,6 @@ const controladorUsuario = {
 		res.redirect( '/' );
     
     }
-
-    /* sugerencia perfil usuario
-    profile: (req, res) => {
-        return res.render('userProfile'));
-    },*/
-
 };
 
 module.exports = controladorUsuario;

@@ -5,20 +5,14 @@ const multer = require('multer');
 const path = require('path');
 const uploadFile = require('../middlewares/uploadFileUsers');
 const userValidations = require('../middlewares/validateDataUser');
-// ************ Controller Require ************
+
 const userController = require ('../controllers/userController');
 
-/*** GET ALL USERS ***/
-//router.get ('/', userController.nombreDelControlador);
-
-/*** CREATE NEW USER ***/ 
 router.get ('/register', userController.register);
 router.post ('/register', uploadFile.single('avatar'), userValidations, userController.processRegister);
 
-/*** DELETE USER***/ 
 router.delete('/delete/:id', userController.destroy);
 
-/*** LOGIN ***/ 
 router.get ('/login', userController.login);
 
 router.post ('/login', [
@@ -38,7 +32,6 @@ router.get ('/check', function (req, res){
 
 });
 
-/*** LOGOUT ***/ 
 router.get('/logout', userController.logout);
  
 module.exports = router;
