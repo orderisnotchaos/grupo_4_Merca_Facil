@@ -19,7 +19,7 @@ let cols = {
     let Category = sequelize.define (alias, cols, config);
 
     Category.asssociate = (models)=>{
-        Category.hasMany(models.Product, {
+        Category.hasOne(models.Product, {
             as: "products",
             foreignKey: "category_id"
         });

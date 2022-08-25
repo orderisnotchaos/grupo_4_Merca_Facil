@@ -73,5 +73,17 @@
         "registrarse": "",
         "image": "1659911957486_img.png",
         "id": 7
+    },
+    {
+        "nombre": "Maria",
+        "apellido": "Cabaneiro",
+        "tipo-de-documento": "cedula-de-ciudadania",
+        "cedula": "12345678",
+        "telefono": "12345678",
+        "email": "pppp@correo.com",
+        "password": "123456",
+        "registrarse": "",
+        "image": "1661302599979_img.jpg",
+        "id": 8
     }
 ]
