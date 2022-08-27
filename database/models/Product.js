@@ -7,31 +7,31 @@ let cols = {
             type : dataTypes.INTEGER,
             autoIncrement : true,
             primaryKey : true,
-            allowNull : false
+            //allowNull : false
         },
         name : {
             type : dataTypes.STRING,
-            allowNull : false
+            //allowNull : false
         },
         image : {
             type : dataTypes.STRING,
-            allowNull : false
+            //allowNull : false
         },
         price : {
             type : dataTypes.FLOAT,
-            allowNull : false
+           //allowNull : false
         },
         category_id : {
             type : dataTypes.INTEGER,
-            allowNull : true
+            //allowNull : true
         },
         description : {
             type : dataTypes.TEXT('medium'),
-            allowNull : false
+            //allowNull : false
         },
         quantity : {
             type : dataTypes.INTEGER,
-            allowNull : false
+            //allowNull : false
         }
     }
 

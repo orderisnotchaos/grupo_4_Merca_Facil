@@ -24,38 +24,44 @@
 
 	<div class="detalle-producto">
 
-			<form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">		
+			<form action="/products/edit/<%=products.id%>" method="POST">		
 				<div class="contenido-detalle-producto">
 					<div class="contenido-detalle-producto">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" value="<%=productToEdit.name%>" placeholder="Eje: Caminador" class="form-input">
+						<input type="text" id="name" name="name" value="<%=products.name%>" placeholder="Eje: Caminador" class="form-input">
 					</div>
 					<div>
 						<label for="price" class="form-label">Precio del producto:</label>
-						<input type="text" id="price" name="price" value="<%=productToEdit.price%>" placeholder="Eje: 50000" class="form-input" >
-					</div>
-					<div>
-						<label for="discount" class="form-label">Descuento:</label>
-						<input type="text" id="discount" name="discount" value="<%=productToEdit.discount%>" placeholder="Eje: 30" class="form-input" >
+						<input type="text" id="price" name="price" value="<%=products.price%>" placeholder="Eje: 50000" class="form-input" >
 					</div>
 					<div>
 						<label for="category" class="form-label">Categoría:</label>
 						<select name="category" id="category" class="form-input">
-							<option value="">Elegí</option>
-							<option value="despensa">Despensa</option>
-							<option value="bebidas" >Bebidas</option>
-                            <option value="mascotas">Mascotas</option>
-                            <option value="bebes"   >Bebes</option>
-                            <option value="cuidado-personal" >Cuidado Personal</option>
-                            <option value="limpieza">Limpieza</option>
+							<% for (let i = 0; i < categories.length; i++ ){ %>
+                
+								<% if (categories[i].id == products.category_id) { %>
+									<option value="<%=categories[i].id%>" selected>
+										<%=categories[i].name%>
+									</option>  
+								<% } else { %>
+									<option value="<%=categories[i].id%>">
+										<%=categories[i].name%>
+									</option>  
+								<% } %>                  
+								
+							<% } %>  
 						</select>
 					</div>
 						<label for="description" class="form-label">Descripción:</label>
-						<textarea name="description" id="description" class="form-input"><%= productToEdit.description %></textarea>
+						<textarea name="description" id="description" class="form-input"><%= products.description %></textarea>
+					</div>
+					<div class="contenido-detalle-producto">
+						<label for="name" class="form-label">Cantidad:</label>
+						<input type="text" id="quantity" name="quantity" value="<%=products.quantity%>" class="form-input">
 					</div>
 					<div>
 						<label class="form-label">Cargar Imagen:</label><br>
-                        <input type="file" name="image">
+                        <input type="file" name="image" value="<%=products.image%>">
                         
 					</div>
 					<div>
