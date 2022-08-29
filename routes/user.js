@@ -13,6 +13,12 @@ router.post ('/register', uploadFile.single('avatar'), userValidations, userCont
 
 router.delete('/delete/:id', userController.destroy);
 
+router.get("/", userController.usersList);
+
+router.get("/:id", userController.userDetails);
+
+router.get("/edit/:id", userController.editUser);
+
 router.get ('/login', userController.login);
 
 router.post ('/login', [
