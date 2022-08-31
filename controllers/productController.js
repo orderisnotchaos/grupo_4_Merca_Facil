@@ -13,6 +13,26 @@ db.Product.findAll()
 
 const controladorProducto = {
 
+	crear: function (req, res){
+        db.Category.findAll()
+            .then(function (categories){
+                return res.render("crearProducto", {categories:categories});
+            })
+    },
+
+    guardar: function(req, res){
+
+        db.Product.create({
+			name: req.body.name,
+            price: req.body.price,
+            category_id: req.body.category, 
+            description: req.body.description,
+            image: req.body.image,
+			quantity: req.body.quantity
+        });
+        res.redirect("/products");
+    },
+
 	listado: function(req, res){
         db.Product.findAll()
             .then (function(products){
@@ -36,6 +56,35 @@ const controladorProducto = {
             })
     },
    
+
+	edit: function(req, res){
+        let pedidoProduct = db.Product.findByPk(req.params.id);
+
+        let pedidoCategory = db.Category.findAll();
+
+        Promise.all([pedidoProduct, pedidoCategory] )
+            .then(function([products, categories]){
+                res.render("edit", {products:products, categories:categories})
+            })
+    },
+
+    update: function(req, res){
+
+        db.Product.update({
+            name: req.body.name,
+            price: req.body.price,
+            category_id: req.body.category, 
+            description: req.body.description,
+            image:req.body.image,
+			quantity: req.body.quantity         
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect("/products");
+    },
+
     productCart: (req, res) =>{
 
         res.render (path.join(__dirname,"../views/productCart.ejs"));
@@ -51,7 +100,7 @@ const controladorProducto = {
         res.render (path.join(__dirname,"../views/myOrders.ejs"));
     },
     
-    mostrarCrear: (req, res) =>{
+    /*mostrarCrear: (req, res) =>{
 
 		if(req.session.user != undefined){
 
@@ -91,7 +140,7 @@ const controladorProducto = {
 		}
 
 		next();
-	},
+	},*/
 
     productos: (req, res) =>{
 		let isAdmin;
@@ -112,7 +161,7 @@ const controladorProducto = {
   		res.render ("products",{isAdmin, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
 	},
 
-    edit: (req, res) => {
+    /*edit: (req, res) => {
         const id = +req.params.id;
 		let productDetail = products.filter( function( product ){
 
@@ -177,7 +226,17 @@ const controladorProducto = {
 		fs.writeFileSync( productsFilePath , JSON.stringify( productDestroyed ), { encoding: 'utf-8' } );
 		res.redirect( '/' );
 
-	}
+	}*/
+
+	destroy: function(req, res){
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect("/products");
+    }
     
 };
 

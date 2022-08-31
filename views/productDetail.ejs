@@ -30,8 +30,9 @@
                 <div class="contenido-detalle-producto">
                     <h3 class="nombre-detalle-producto"><%=products.name%></h3>
                     <p><%=products.description%> </p>
-                    <p class="precio-detalle-producto">$ <%= products.price  %></p>
-                    <p class="detalle-categoria">Categoría: <%= products.category.dataValues.name %></p>
+                    <p class="precio-detalle-producto">$ <%=products.price%></p>
+                    <b> <p class="detalle-categoria">Categoría: </b> <%=products.category.dataValues.name%></p>
+                    <b> <p class="cantidad">Cantidad en existencia: </b> <%=products.quantity%> Unidades</p>
                     
                     <div class="botones-detalle-producto">  
                         <form name="cart_quantity" method="post" action="index.php">

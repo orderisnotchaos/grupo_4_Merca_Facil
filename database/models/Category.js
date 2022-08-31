@@ -5,11 +5,11 @@ let cols = {
             type : dataTypes.INTEGER,
             autoIncrement : true,
             primaryKey : true,
-            allowNull : false
+            //allowNull : false
         },
         name : {
             type : dataTypes.STRING,
-            allowNull : false
+            //allowNull : false
         }
     }
     let config = {
@@ -18,8 +18,8 @@ let cols = {
     }
     let Category = sequelize.define (alias, cols, config);
 
-    Category.asssociate = (models)=>{
-        Category.hasOne(models.Product, {
+    Category.associate = (models)=>{
+        Category.hasMany(models.Product, {
             as: "products",
             foreignKey: "category_id"
         });

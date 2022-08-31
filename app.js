@@ -18,7 +18,7 @@ const ruteoAdmin = require ('./routes/admin');
 const session = require('express-session'); 
 
 // Registro de las paginas donde ingresan los usuarios
-const logMiddlewares = require ('./middlewares/logMiddlewares');
+//const logMiddlewares = require ('./middlewares/logMiddlewares');
 
 
 app.use(cookieParser());

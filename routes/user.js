@@ -8,10 +8,18 @@ const userValidations = require('../middlewares/validateDataUser');
 
 const userController = require ('../controllers/userController');
 
+//ADD CREATE, READ, UPDATE, DELETE
+
 router.get ('/register', userController.register);
 router.post ('/register', uploadFile.single('avatar'), userValidations, userController.processRegister);
 
 router.delete('/delete/:id', userController.destroy);
+
+router.get("/", userController.usersList);
+
+router.get("/:id", userController.userDetails);
+
+router.get("/edit/:id", userController.editUser);
 
 router.get ('/login', userController.login);
 
@@ -34,4 +42,5 @@ router.get ('/check', function (req, res){
 
 router.get('/logout', userController.logout);
  
+
 module.exports = router;

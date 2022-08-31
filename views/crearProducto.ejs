@@ -23,10 +23,10 @@
 
     <div class="detalle-producto">
     <section>
-        <form action="/products/create" method="POST" enctype="multipart/form-data">
+        <form action="/products/create" method="POST">
             <div>
                 <table>
-                    <%  if( locals.errors ) {
+                    <!--<%  if( locals.errors ) {
 
                         errors.forEach((error) =>{ %>
                         <p class="is-danger"> <%= error.msg%></p>   
@@ -47,23 +47,14 @@
                     </tr>
 
                     <tr>
-                        <label class="form-label">Descuento:</label>
-                        <div>
-                            <input type="text" placeholder="Ingrese el descuento del producto" name="discount" class="form-input">
-                        </div>
-                    </tr>
-
-                    <tr>
                         <div>
                             <label class="form-label" for="category">Categoría:</label><br>
                             <select name="category" id="category" class="form-input">
-                                <option value="">Elegí</option>
-                                <option value="despensa">Despensa</option>
-                                <option value="bebidas" >Bebidas</option>
-                                <option value="mascotas">Mascotas</option>
-                                <option value="bebes"   >Bebes</option>
-                                <option value="cuidado-personal" >Cuidado Personal</option>
-                                <option value="limpieza">Limpieza</option>
+                                <% for (let i = 0; i < categories.length; i++ ){ %>
+                                    <option value="<%=categories[i].id%>">
+                                        <%=categories[i].name%>
+                                    </option>  
+                                <% } %>
                             </select>
                         </div>
                     </tr>
@@ -76,9 +67,16 @@
                     </tr>
 
                     <tr>
+                        <label for="name" class="form-label">Cantidad:</label>
+                        <div>
+                            <input type="text" id="quantity" name="quantity" placeholder="Ingrese la cantidad del producto" class="form-input">
+                        </div>           
+                    </tr>
+
+                    <tr>
                         <label class="form-label">Cargar Imagen:</label>
                         <div>
-                            <input type="file" name="image">
+                            <input type="file" name="image" value="<%=products.image%>">
                         </div>
                     </tr>
                 </table>

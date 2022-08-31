@@ -11,14 +11,17 @@ router.get ('/listadoProducts', productController.listado);
 
 router.get ('/', productController.productos);
 
+router.get('/create', productController.crear);
+router.post('/create', productController.guardar);
 
-router.get ('/create', productController.mostrarCrear);
-router.post('/create',fileUpload.single('image'), validationArray, productController.procesarCrear);
+//router.get ('/create', productController.mostrarCrear);
+//router.post('/create',fileUpload.single('image'), validationArray, productController.procesarCrear);
 
 router.get ('/detail/:id', productController.detail);
  
 router.get ('/edit/:id', productController.edit);
-router.put ('/edit/:id',fileUpload.single('image'), productController.update);
+router.post ('/edit/:id', productController.update);
+//router.put ('/edit/:id',fileUpload.single('image'), productController.update);
 
 router.delete('/delete/:id', productController.destroy);
 

@@ -97,6 +97,32 @@ const controladorUsuario = {
         next();
     },
 
+    usersList: (req, res) => {
+        db.Users.findAll()
+
+    .then(function() {
+        res.render("usersList", {users:users})
+    })
+    },
+
+    usersDetails: (req, res) => {
+        db.Users.findByPK(req.params,id)
+
+    .then(function(user) {
+        res.render("userDetails", {user:user})
+    })
+    },
+
+    //editUser: (req, res) => {
+
+       // let userRequest = db.Users.findByPk(req.param.id);
+
+        //let userRequests = db.users.findAll();
+
+       // Promise.all
+
+   // },
+
     destroy: (req, res) => {
 
 		let usersJSON = JSON.parse( fs.readFileSync( usersFilePath, 'utf-8' ) );
