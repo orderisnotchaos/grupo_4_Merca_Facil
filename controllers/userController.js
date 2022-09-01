@@ -5,6 +5,7 @@ const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models')
 
 const controladorUsuario = {
 
@@ -46,7 +47,7 @@ const controladorUsuario = {
             }
         }else{
             res.render('login',{errors:errors.array()});
-        }
+        };
     },
 
     logout: (req, res) => {
@@ -55,7 +56,7 @@ const controladorUsuario = {
             if(req.cookies.recordame){
                 res.cookie('recordame','', {maxAge: -1})
             }
-            res.redirect('/')
+            res.redirect('/');
     },
 
     register: (req, res) => {
@@ -102,18 +103,20 @@ const controladorUsuario = {
 
     .then(function() {
         res.render("usersList", {users:users})
-    })
+    });
     },
 
-    usersDetails: (req, res) => {
-        db.Users.findByPK(req.params,id)
+    userDetails: (req, res) => {
+        db.User.findByPk(req.params.id)
 
     .then(function(user) {
         res.render("userDetails", {user:user})
-    })
+    });
     },
 
     //editUser: (req, res) => {
+
+    
 
        // let userRequest = db.Users.findByPk(req.param.id);
 
