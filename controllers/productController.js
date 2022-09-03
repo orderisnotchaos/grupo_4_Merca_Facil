@@ -6,18 +6,22 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 let db= require ("../database/models");
 const Category = require('../database/models/Category');
 
-db.Product.findAll()
+/*db.Product.findAll()
     .then (function(data){
     products = data
-})
+})*/
 
 const controladorProducto = {
 
 	crear: function (req, res){
         db.Category.findAll()
-            .then(function (categories){
-                return res.render("crearProducto", {categories:categories});
-            })
+		.then (function(productos){
+			db.Category.findAll()
+		.then(function (categories){
+			return res.render("crearProducto", {categories:categories, products:productos});
+		})
+    })
+
     },
 
     guardar: function(req, res){
@@ -29,14 +33,18 @@ const controladorProducto = {
             description: req.body.description,
             image: req.body.image,
 			quantity: req.body.quantity
-        });
-        res.redirect("/products");
+        }).then (function(response){
+			res.redirect("/products");
+		})
+		
     },
 
 	listado: function(req, res){
         db.Product.findAll()
             .then (function(products){
-                res.render("listadoProducts", {products:products})
+			console.log(products);
+            res.render("listadoProducts", {products:products})
+			console.log(db.Product)
         })		
 	},
 
@@ -151,14 +159,19 @@ const controladorProducto = {
 		}else{
 			isAdmin =false;
 		}
-        let despensaProducts = products.filter(product => product.category === "despensa")
-        let bebidasProducts = products.filter(product => product.category === "bebidas")
-        let mascotasProducts = products.filter(product => product.category === "mascotas")
-        let bebesProducts = products.filter(product => product.category === "bebes")
-        let cuidadoPersonalProducts = products.filter(product => product.category === "cuidado-personal")
-        let limpiezaProducts = products.filter(product => product.category === "limpieza")
 
-  		res.render ("products",{isAdmin, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
+		db.Product.findAll()
+			.then (function(productos){
+				let despensaProducts = productos.filter(product => product.category === "despensa")
+				let bebidasProducts = productos.filter(product => product.category === "bebidas")
+				let mascotasProducts = productos.filter(product => product.category === "mascotas")
+				let bebesProducts = productos.filter(product => product.category === "bebes")
+				let cuidadoPersonalProducts = productos.filter(product => product.category === "cuidado-personal")
+				let limpiezaProducts = productos.filter(product => product.category === "limpieza")
+		
+			res.render ("products",{isAdmin, products:productos, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
+			
+		})
 	},
 
     /*edit: (req, res) => {
