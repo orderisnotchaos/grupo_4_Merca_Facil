@@ -23,6 +23,7 @@ router.get("/list/:id", userController.userDetails); //error
 
 router.get ('/login', userController.login);
 
+
 router.post ('/login', [
 
     check('email').isEmail().withMessage('Email invalido'),

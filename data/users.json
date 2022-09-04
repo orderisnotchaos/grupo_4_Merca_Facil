@@ -85,5 +85,17 @@
         "registrarse": "",
         "image": "1661302599979_img.jpg",
         "id": 8
+    },
+    {
+        "nombre": "prueba",
+        "apellido": "prueba",
+        "tipo-de-documento": "cedula-de-ciudadania",
+        "cedula": "1234",
+        "telefono": "1234",
+        "email": "prueba@gmail.com",
+        "password": "1234567",
+        "registrarse": "",
+        "image": "1662308447388_img.png",
+        "id": 9
     }
 ]

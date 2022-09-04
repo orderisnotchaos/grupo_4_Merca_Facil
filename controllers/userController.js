@@ -7,6 +7,7 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const db = require('../database/models')
 
+
 const controladorUsuario = {
 
     login: (req, res) => {
@@ -14,40 +15,44 @@ const controladorUsuario = {
         if(req.session.user != undefined){
             return res.render('logueado');
         }
-        
         return res.render('login');
     },
-
-
-    processLogin: (req, res) => {
-
-        let errors = validationResult(req);
-
+   
+    processLogin:(req,res) => {
+        let errors = validationResult(req)
+        
         if(errors.isEmpty()){
-
-            let usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
-
-            if( usuarioAlogear == undefined ){
-                res.render('login',{logueoInvalido:'usuario o contraseña inválidos'});
-            }else{
-
-                if(usuarioAlogear.password === req.body.password ){
-                    req.session.user ={
-                        ...req.body,
-                        userType: usuarioAlogear.userType
-                    }
-
-                if(req.body.recordar != undefined){
-                    res.cookie('recordame', usuarioAlogear.email, {maxAge: 60000000000});
-                }
-                    res.render('index');
-                }else{
-                    res.render('login', {logueoInvalido:'usuario o contraseña inválidos'})
-                }
-            }
+           db.User.findOne({
+               where: {email:req.body.email}
+           })
+           .then((user)=>{
+               
+            req.session.user ={
+                id:user.id,
+                userName :user.firstName + "" + user.lastName,
+                email:user.email,
+                avatar :user.avatar,
+                isAdmin: user.isAdmin,
+                password: user.password,
+                address: user.address,
+                phone:  user.phone
+            } 
+       
+            if(req.body.recordar != undefined){
+                res.cookie('recordame', req.session.user.email, { maxAge: 5000*60})
+            }       
+            
+                                               
+            res.redirect('/')
+           })             
         }else{
-            res.render('login',{errors:errors.array()});
-        };
+            res.render('login2',{
+                errors: errors.mapped(),
+                title: 'Login',
+                session: req.session
+                
+            })
+        }                       
     },
 
     logout: (req, res) => {
@@ -60,10 +65,76 @@ const controladorUsuario = {
     },
 
     register: (req, res) => {
-        res.render (path.join(__dirname,"../views/register.ejs"));
+        res.render ("register");
     },
 
-    processRegister: (req, res, next) => {
+    processRegister:(req,res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+
+            let {firstName,lastName,email,password,avatar,address,phone} = req.body
+
+               db.User.create({                    
+                    firstName: firstName,  
+                    lastName: lastName,
+                    email: email,
+                    password: password,
+                    isAdmin: 0,
+                    avatar:"image.jpg" + "" + avatar,
+                    address: address,
+                    phone: phone,
+                })
+               
+                .then(()=>{
+                    
+                   res.redirect('/users/login')
+                })
+                
+                
+            }else{
+                res.render('register', {
+                    
+                })
+            }                  
+        },
+
+    usersList: (req, res) => {
+        db.Users.findAll()
+
+    .then(function() {
+        res.render("usersList", {users:users})
+    });
+    },
+
+    userDetails: (req, res) => {
+        db.User.findByPk(req.params.id)
+
+    .then(function(user) {
+        res.render("userDetails", {user:user})
+    });
+    },
+
+    
+
+    destroy: (req, res) => {
+
+		let usersJSON = JSON.parse( fs.readFileSync( usersFilePath, 'utf-8' ) );
+		const id = +req.params.id;
+
+		let userDestroyed = usersJSON.filter( function( user ){
+
+			return user.id !== id;
+
+		});
+
+		console.log( userDestroyed );
+
+		fs.writeFileSync( usersFilePath , JSON.stringify( userDestroyed ), { encoding: 'utf-8' } );
+		res.redirect( '/' );
+    
+    }
+
+    /*processRegister: (req, res, next) => {
         const resultValidation = validationResult(req);
         
         if (resultValidation.errors.length > 0) {
@@ -96,23 +167,38 @@ const controladorUsuario = {
         }
 
         next();
-    },
+    },*/
 
-    usersList: (req, res) => {
-        db.Users.findAll()
+     /*processLogin: (req, res) => {
 
-    .then(function() {
-        res.render("usersList", {users:users})
-    });
-    },
+        let errors = validationResult(req);
 
-    userDetails: (req, res) => {
-        db.User.findByPk(req.params.id)
+        if(errors.isEmpty()){
 
-    .then(function(user) {
-        res.render("userDetails", {user:user})
-    });
-    },
+            let usuarioAlogear = usersJSON.find(user => user.email === req.body.email);
+
+            if( usuarioAlogear == undefined ){
+                res.render('login',{logueoInvalido:'usuario o contraseña inválidos'});
+            }else{
+
+                if(usuarioAlogear.password === req.body.password ){
+                    req.session.user ={
+                        ...req.body,
+                        userType: usuarioAlogear.userType
+                    }
+
+                if(req.body.recordar != undefined){
+                    res.cookie('recordame', usuarioAlogear.email, {maxAge: 60000000000});
+                }
+                    res.render('index');
+                }else{
+                    res.render('login', {logueoInvalido:'usuario o contraseña inválidos'})
+                }
+            }
+        }else{
+            res.render('login',{errors:errors.array()});
+        };
+    },*/
 
     //editUser: (req, res) => {
 
@@ -125,24 +211,8 @@ const controladorUsuario = {
        // Promise.all
 
    // },
-
-    destroy: (req, res) => {
-
-		let usersJSON = JSON.parse( fs.readFileSync( usersFilePath, 'utf-8' ) );
-		const id = +req.params.id;
-
-		let userDestroyed = usersJSON.filter( function( user ){
-
-			return user.id !== id;
-
-		});
-
-		console.log( userDestroyed );
-
-		fs.writeFileSync( usersFilePath , JSON.stringify( userDestroyed ), { encoding: 'utf-8' } );
-		res.redirect( '/' );
-    
-    }
 };
 
 module.exports = controladorUsuario;
+
+
