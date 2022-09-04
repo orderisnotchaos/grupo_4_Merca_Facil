@@ -46,6 +46,77 @@
                 <button id="back" type="button">VOLVER</button>
         </section>
     </main>
+
+</div>
+<section class="box-registro">
+    <form action="/edit/<%=user.id%>" method="POST" enctype="multipart/form-data" class="form-registro">
+        <div>
+            <label>Nombres:</label>
+            <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
+            value= "<%=user.firstName%>">
+            
+            <% if (locals.errors && errors.nombre) { %>
+                <div class="text-danger">
+                    <%= errors.nombre.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            
+            <label>Apellidos:</label>
+            <input type="text" placeholder="Ingrese sus apellidos" name="apellido" value="<%=user.lastName%>">
+        </div>
+        <div class="flex-container">
+        <% if (locals.errors && errors.apellido) { %>
+                <div class="text-danger">
+                    <%= errors.apellido.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <label>Teléfono:</label>
+            <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono" value="<%=user.phone%>">
+            <% if (locals.errors && errors.telefono) { %>
+                <div class="text-danger">
+                    <%= errors.telefono.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="text" placeholder="Ingrese su correo electrónico" name="email" value="<%=user.email%>">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" placeholder="Ingrese su contraseña" name="password" value="<%=user.password%>">
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %>
+                </div>
+                <% } %> 
+        </div>
+
+        <div>
+            <label class="form-label">Cargar imagen de avatar:</label>
+                    <div>
+                        <input type="file" name="avatar">
+            <% if (locals.errors && errors.avatar) { %>
+                <div class="text-danger">
+                    <%= errors.avatar.msg %>
+                </div>
+                <% } %> 
+            </div>
+
+        </div>
+        <div>
+            <button type="submit" class="btn-form2" id="Editar" name="Editar">Editar</button>
+        </div>
+
 </body>
 
 

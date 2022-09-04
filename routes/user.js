@@ -19,7 +19,9 @@ router.get("/list", userController.usersList);
 
 router.get("/list/:id", userController.userDetails); //error
 
-//router.get("/edit/:id", userController.editUser);
+router.patch("/edit/:id", userController.editUser);
+
+router.delete("/delete:id", userController.deleteUser)
 
 router.get ('/login', userController.login);
 

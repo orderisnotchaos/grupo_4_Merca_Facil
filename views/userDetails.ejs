@@ -58,6 +58,13 @@
     <button>Editar Usuario</button>
 
 </a>
+
+<div>
+    <form action="users/delete/<%user.id>%." method="POST">
+    <button type="submit" class="btn-form2" id="Borrar" name="Borrar">Borrar Usuario</button>
+</form>
+</div>
+
         <%- include('./partials/footer')-%>
 
 </html>

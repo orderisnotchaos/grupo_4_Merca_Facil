@@ -114,17 +114,25 @@ const controladorUsuario = {
     });
     },
 
-    //editUser: (req, res) => {
+    editUser: (req, res) => {
 
-    
+       let userRequest = db.Users.findByPk(req.param.id);
 
-       // let userRequest = db.Users.findByPk(req.param.id);
+        let userRequests = db.users.findAll(req.params.id);
 
-        //let userRequests = db.users.findAll();
+       Promise.all
 
-       // Promise.all
+   },
 
-   // },
+   delete: (req, res) => {
+    db.Users.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    res.redirect("/users");
+
+   },
 
     destroy: (req, res) => {
 

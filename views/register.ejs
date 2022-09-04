@@ -37,7 +37,7 @@
                     <% } %> 
                 
             </div>
-            
+    
             <div>
                 
                 <label>Apellidos:</label>
@@ -49,24 +49,6 @@
                         <%= errors.apellido.msg %>
                     </div>
                     <% } %> 
-
-                <div>
-                    <label>Tipo de documento:</label>
-                    <select name="tipo-de-documento">
-                        <option value="DNI"> DNI</option>
-                        <option value="Libreta-de-enrolamiento"> Libreta de enrolamiento</option>
-                        <option value="cedula-de-ciudadania"> Cédula de Ciudadanía</option>
-                    </select>
-                </div>
-                <div>
-                    <label>No cédula  de Ciudadanía:</label>
-                    <input type="text" placeholder="Ingrese su cédula" name="cedula">
-                    <% if (locals.errors && errors.cedula) { %>
-                        <div class="text-danger">
-                            <%= errors.cedula.msg %>
-                        </div>
-                        <% } %> 
-                </div>
             </div>
             <div>
                 <label>Teléfono:</label>
@@ -106,7 +88,6 @@
                     </div>
                     <% } %> 
                 </div>
-
             </div>
 
             <div>
