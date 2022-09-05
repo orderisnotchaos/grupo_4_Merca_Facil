@@ -34,4 +34,3 @@ router.get ('/mispedidos', productController.mispedidos);
 router.get ('/pago', productController.checkout);
 
 module.exports = router;
-

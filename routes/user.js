@@ -14,13 +14,17 @@ router.post ('/register', uploadFile.single('avatar'), userValidations, userCont
 
 //READ
 router.get("/list", userController.usersList);
-//router.get("/list/:id", userController.userDetails); //error
+
+//DETALLE USUARIO
+router.get("/list/:id", userController.userDetails);
 
 //UPDATE
-//router.patch("/edit/:id", userController.editUser);
+router.get("/edit/:id", userController.editUser);
+router.patch("/edit/:id", userController.updateUser);
+
 
 //DELETE
-//router.delete("/delete:id", userController.deleteUser)
+router.delete("/delete:id", userController.deleteUser)
 
 //LOGIN & LOGOUT
 router.get ('/login', userController.login);
@@ -41,9 +45,6 @@ router.get ('/check', function (req, res){
 });
 
 router.get('/logout', userController.logout);
-
-//DESTROY
-router.delete('/delete/:id', userController.destroy);
 
 
 module.exports = router;

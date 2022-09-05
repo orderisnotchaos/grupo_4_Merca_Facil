@@ -5,20 +5,20 @@ const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const db = require('../database/models')
+const db = require('../database/models/User');
 
 
-const controladorUsuario = {
+const userController = {
 
-    login: (req, res) => {
+     login: (req, res) => {
 
         if(req.session.user != undefined){
             return res.render('logueado');
         }
         return res.render('login');
-    },
+     },
    
-    processLogin:(req,res) => {
+     processLogin:(req,res) => {
         let errors = validationResult(req)
         
         if(errors.isEmpty()){
@@ -40,12 +40,10 @@ const controladorUsuario = {
        
             if(req.body.recordar != undefined){
                 res.cookie('recordame', req.session.user.email, { maxAge: 5000*60})
-            }       
-            
-                                               
+            }                                                
             res.redirect('/')
            })             
-        }else{
+         } else{
             res.render('login2',{
                 errors: errors.mapped(),
                 title: 'Login',
@@ -53,26 +51,26 @@ const controladorUsuario = {
                 
             })
         };                   
-    },
+     },
 
-    logout: (req, res) => {
+     logout: (req, res) => {
         req.session.destroy();
             
             if(req.cookies.recordame){
                 res.cookie('recordame','', {maxAge: -1})
             }
             res.redirect('/');
-    },
+     },
 
-    register: (req, res) => {
+     register: (req, res) => {
         res.render ("register");
-    },
+     },
 
-    processRegister:(req,res) => {
+     processRegister:(req,res) => {
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
-            let {firstName,lastName,email,password,isAdmin,avatar,address,phone} = req.body
+            let {firstName, lastName, email, password, isAdmin, avatar, address, phone} = req.body
 
                db.User.create({                    
                     firstName: firstName,  
@@ -83,77 +81,81 @@ const controladorUsuario = {
                     avatar:"image.jpg" + "" + avatar,
                     address: address,
                     phone: phone,
-                })
-               
-                .then(()=>{
+                })            
+                 .then(()=>{
                     
-                   res.redirect('/users/login')
+                   res.redirect('/users/login') //por que a login???
                 })
                 
                 
-            }else{
+             }else{
                 res.render('register', {
                     
-                })
-            };                 
-        },
+                 })
+             };                 
+      },
 
-    usersList: (req, res) => {
-        db.Users.findAll()
+	 usersList: function(req, res) {
+        db.User.findAll()
+            .then (function(users){
+            res.render("usersList", {users:users})
+			
+         });		
+	  },
 
-    .then(function() {
-        res.render("usersList", {users:users})
-    });
-    },
-
-    userDetails: (req, res) => {
+     userDetails: (req, res) => {
         db.User.findByPk(req.params.id)
 
     .then(function(user) {
-        res.render("userDetails", {user:user})
-    });
-    },
+        res.render("userDetails", {users:users});
+          });
+     },
 
-    //editUser: (req, res) => {
+     editUser: (req, res) => {
 
-     // let userRequest = db.Users.findByPk(req.param.id);
+        db.User.findByPk(req.params.id)
 
-      //  let userRequests = db.users.findAll(req.params.id);
+    .then(function(user) {
+         res.render("editUser", {users:users});
 
-    //   Promise.all
+         });
+     },
 
-   //},
+     updateUser: (req, res) => {
+        db.User.update({
 
-   delete: (req, res) => {
-    db.Users.destroy({
-        where: {
-            id: req.params.id
-        }
-    })
-    res.redirect("/users");
+                    firstName: req.body.firstName,  
+                    lastName: req.body.lastName,
+                    email: req.body.email,
+                    password: req.body.password,
+                    isAdmin: req.body.isAdmin,
+                    avatar:"image.jpg" + "" + avatar,
+                    address: req.body.address,
+                    phone: req.body.phone,
+                     }, {
+                         where: {
+                         id: req.params.id
+                    }
+                });
 
-   },
+                res.redirect("/users/" + req.params,id)
+     },
 
-    destroy: (req, res) => {
+     deleteUser: (req, res) => {
+        
+        db.User.destroy({
+         where: {
+         id: req.params.id
+          }
+        })
+     
+     res.redirect("/users");
+     
+     },
 
-		let usersJSON = JSON.parse( fs.readFileSync( usersFilePath, 'utf-8' ) );
-		const id = +req.params.id;
+};
 
-		let userDestroyed = usersJSON.filter( function( user ){
 
-			return user.id !== id;
-
-		});
-
-		console.log( userDestroyed );
-
-		fs.writeFileSync( usersFilePath , JSON.stringify( userDestroyed ), { encoding: 'utf-8' } );
-		res.redirect( '/' );
-    
-    },
-
-    };
-
-module.exports = controladorUsuario;
+module.exports = userController;
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>MercaFacil - Producto Guardado</title>
+        <title>MercaFacil</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
@@ -21,31 +21,37 @@
         <%- include('./partials/header.ejs')-%>
 
 
-<h1> <%=user.title%> </h1>
+<h1> <%=user.id%> </h1>
+
 <ul>
 
-
 <li>
 
-    Dato: <%=user.title%>
+    Nombre: <%=user.lastName%>
     
 </li>
 
 <li>
 
-    Dato: <%=user.title%>
+    Apellidos: <%=user.email%>
     
 </li>
 
 <li>
 
-    Dato: <%=user.title%>
+    Email: <%=user.email%>
     
 </li>
 
 <li>
 
-    Dato: <%=user.title%>
+    Dirección: <%=user.address%>
+    
+</li>
+
+<li>
+
+    Telefono: <%=user.phone%>
     
 </li>
 
@@ -55,14 +61,18 @@
 
 <a href="/users/edit/<%=user.id%>">
   
-    <button>Editar Usuario</button>
+    <button type="submit" class="btn-form2">Editar Usuario</button>
 
 </a>
 
 <div>
-    <form action="users/delete/<%user.id>%." method="POST">
-    <button type="submit" class="btn-form2" id="Borrar" name="Borrar">Borrar Usuario</button>
-</form>
+
+     <form action="users/delete/<%=user.id>%" method="POST">
+
+     <button type="submit" class="btn-form2" id="Borrar" name="Borrar">Borrar Usuario</button>
+
+     </form>
+
 </div>
 
         <%- include('./partials/footer')-%>
