@@ -35,27 +35,10 @@
                     </div>
                     <% } %> -->
             </div>
-    
+            
             <div>
                 <label>Apellidos:</label>
                 <input type="text" placeholder="Ingrese sus apellidos" name="lastName">
-            </div>
-
-            <div class="flex-container">
-            <% if (locals.errors && errors.apellido) { %>
-                    <div class="text-danger">
-                        <%= errors.apellido.msg %>
-                    </div>
-                    <% } %> 
-            </div>
-            <div>
-                <label>Teléfono:</label>
-                <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono">
-                <% if (locals.errors && errors.telefono) { %>
-                    <div class="text-danger">
-                        <%= errors.telefono.msg %>
-                    </div>
-                    <% } %> 
             </div>
 
             <div class="flex-container"> </div>
@@ -65,12 +48,6 @@
                 <input type="text" placeholder="Ingrese su correo electrónico" name="email">
                 
             </div>
-
-            <div>
-                <label>Dirección:</label>
-                <input type="text" placeholder="Ingrese su dirección" name="address">
-            </div>
-            
             <div>
                 <label>Contraseña:</label>
                 <input type="password" placeholder="Ingrese su contraseña" name="password">
@@ -80,23 +57,29 @@
                 <label>Perfil:</label>
                 <select name="isAdmin">
                     
-                    <option value="Admin"> 0</option>
+                    <option value="0"> Usuario</option>
+                    <option value="1"> Administrador</option>
                     
                 </select>
             </div>
 
             <div>
+                <label>Telefono:</label>
+                <input type="text" placeholder="Ingrese su telefono" name="phone">
+            </div>
 
-                <label class="form-label">Cargar imagen de avatar:</label>
-                        <div>
-                            <input type="file" name="avatar">
-                <% if (locals.errors && errors.avatar) { %>
-                    <div class="text-danger">
-                        <%= errors.avatar.msg %>
+            <div>
+                <label>Dirección:</label>
+                <input type="text" placeholder="Ingrese su dirección" name="address">
+            </div>
+
+            <div>
+                <label class="form-label">Cargar Imagen:</label>
+                    <div>
+                        <input type="file" name="avatar" value="">
                     </div>
-                    <% } %> 
-                </div>
-    
+            </div>
+
             <div>
                 <button type="submit" class="btn-form2" id="registrarse" name="registrarse">REGISTRARSE</button>
             </div>

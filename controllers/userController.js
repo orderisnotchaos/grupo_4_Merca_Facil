@@ -72,14 +72,14 @@ const controladorUsuario = {
         let errors = validationResult(req);
         if(errors.isEmpty()){
 
-            let {firstName,lastName,email,password,avatar,address,phone} = req.body
+            let {firstName,lastName,email,password,isAdmin,avatar,address,phone} = req.body
 
                db.User.create({                    
                     firstName: firstName,  
                     lastName: lastName,
                     email: email,
                     password: password,
-                    isAdmin: 0,
+                    isAdmin: isAdmin,
                     avatar:"image.jpg" + "" + avatar,
                     address: address,
                     phone: phone,
