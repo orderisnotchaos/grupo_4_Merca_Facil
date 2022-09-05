@@ -101,7 +101,7 @@ const controladorProducto = {
                 }
             }
         })       
-        res.render("products", { products:products, isAdmin })
+        res.render("/products", { products:products, isAdmin })
     },  
 
     productos: (req, res) =>{

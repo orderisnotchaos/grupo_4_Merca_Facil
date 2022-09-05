@@ -4,7 +4,7 @@ const fs = require('fs');
 const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
-const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); BORRAR?
 const db = require('../database/models/User');
 
 
