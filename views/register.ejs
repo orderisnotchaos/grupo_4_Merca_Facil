@@ -27,22 +27,20 @@
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
-                <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
-                value= "<%= locals.oldData ? oldData.nombre : null %>">
+                <input type="text" placeholder="Ingrese su nombre completo" name="firstName">
                 
-                <% if (locals.errors && errors.nombre) { %>
+                <!--<% if (locals.errors && errors.nombre) { %>
                     <div class="text-danger">
                         <%= errors.nombre.msg %>
                     </div>
-                    <% } %> 
-                
+                    <% } %> -->
             </div>
     
             <div>
-                
                 <label>Apellidos:</label>
-                <input type="text" placeholder="Ingrese sus apellidos" name="apellido">
+                <input type="text" placeholder="Ingrese sus apellidos" name="lastName">
             </div>
+
             <div class="flex-container">
             <% if (locals.errors && errors.apellido) { %>
                     <div class="text-danger">
@@ -59,26 +57,36 @@
                     </div>
                     <% } %> 
             </div>
+
+            <div class="flex-container"> </div>
+            
             <div>
                 <label>Email:</label>
                 <input type="text" placeholder="Ingrese su correo electrónico" name="email">
-                <% if (locals.errors && errors.email) { %>
-                    <div class="text-danger">
-                        <%= errors.email.msg %>
-                    </div>
-                    <% } %> 
-            </div>
-            <div>
-                <label>Contraseña:</label>
-                <input type="password" placeholder="Ingrese su contraseña" name="password">
-                <% if (locals.errors && errors.password) { %>
-                    <div class="text-danger">
-                        <%= errors.password.msg %>
-                    </div>
-                    <% } %> 
+                
             </div>
 
             <div>
+                <label>Dirección:</label>
+                <input type="text" placeholder="Ingrese su dirección" name="address">
+            </div>
+            
+            <div>
+                <label>Contraseña:</label>
+                <input type="password" placeholder="Ingrese su contraseña" name="password">
+               
+            </div>
+            <div>
+                <label>Perfil:</label>
+                <select name="isAdmin">
+                    
+                    <option value="Admin"> 0</option>
+                    
+                </select>
+            </div>
+
+            <div>
+
                 <label class="form-label">Cargar imagen de avatar:</label>
                         <div>
                             <input type="file" name="avatar">
@@ -88,11 +96,11 @@
                     </div>
                     <% } %> 
                 </div>
-            </div>
-
+    
             <div>
                 <button type="submit" class="btn-form2" id="registrarse" name="registrarse">REGISTRARSE</button>
             </div>
+
         </form>
         <div class="box-img-registro">
             <img src="/images/register.png" class="img">

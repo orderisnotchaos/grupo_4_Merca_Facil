@@ -65,25 +65,29 @@
     {
         "nombre": "Andrés María",
         "apellido": "Valle",
-        "tipo-de-documento": "DNI",
-        "cedula": "39805063",
         "telefono": "01141957202",
         "email": "aferrarivalle@gmail.com",
         "password": "12345",
-        "registrarse": "",
         "image": "1659911957486_img.png",
         "id": 7
     },
     {
         "nombre": "Maria",
         "apellido": "Cabaneiro",
-        "tipo-de-documento": "cedula-de-ciudadania",
-        "cedula": "12345678",
         "telefono": "12345678",
         "email": "pppp@correo.com",
         "password": "123456",
-        "registrarse": "",
         "image": "1661302599979_img.jpg",
         "id": 8
+    },
+    {
+        "nombre": "prueba",
+        "apellido": "prueba",
+        "telefono": "1234",
+        "email": "prueba@gmail.com",
+        "password": "1234567",
+        "registrarse": "",
+        "image": "1662308447388_img.png",
+        "id": 9
     }
 ]
