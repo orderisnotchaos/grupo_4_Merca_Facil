@@ -14,13 +14,13 @@ router.post ('/register', uploadFile.single('avatar'), userValidations, userCont
 
 //READ
 router.get("/list", userController.usersList);
-router.get("/list/:id", userController.userDetails); //error
+//router.get("/list/:id", userController.userDetails); //error
 
 //UPDATE
-router.patch("/edit/:id", userController.editUser);
+//router.patch("/edit/:id", userController.editUser);
 
 //DELETE
-router.delete("/delete:id", userController.deleteUser)
+//router.delete("/delete:id", userController.deleteUser)
 
 //LOGIN & LOGOUT
 router.get ('/login', userController.login);
