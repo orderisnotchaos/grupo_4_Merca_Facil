@@ -27,13 +27,13 @@
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
-                <input type="text" placeholder="Ingrese su nombre completo" name="firstName">
-                
-                <!--<% if (locals.errors && errors.nombre) { %>
+                <input type="text" placeholder="Ingrese su nombre completo" name="firstName"
+                value= "<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
                     <div class="text-danger">
                         <%= errors.nombre.msg %>
                     </div>
-                    <% } %> -->
+                <% } %>
             </div>
             
             <div>
@@ -41,42 +41,71 @@
                 <input type="text" placeholder="Ingrese sus apellidos" name="lastName">
             </div>
 
-            <div class="flex-container"> </div>
+            <div class="flex-container">
+                <% if (locals.errors && errors.apellido) { %>
+                    <div class="text-danger">
+                        <%= errors.apellido.msg %>
+                    </div>
+                <% } %> 
+            </div>
             
             <div>
                 <label>Email:</label>
                 <input type="text" placeholder="Ingrese su correo electrónico" name="email">
-                
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div>
+
             <div>
                 <label>Contraseña:</label>
                 <input type="password" placeholder="Ingrese su contraseña" name="password">
-               
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
             </div>
+            
             <div>
                 <label>Perfil:</label>
                 <select name="isAdmin">
-                    
                     <option value="0"> Usuario</option>
                     <option value="1"> Administrador</option>
-                    
                 </select>
             </div>
 
             <div>
                 <label>Telefono:</label>
                 <input type="text" placeholder="Ingrese su telefono" name="phone">
+                <% if (locals.errors && errors.telefono) { %>
+                    <div class="text-danger">
+                        <%= errors.telefono.msg %>
+                    </div>
+                <% } %> 
             </div>
 
             <div>
                 <label>Dirección:</label>
                 <input type="text" placeholder="Ingrese su dirección" name="address">
+                <% if (locals.errors && errors.address) { %>
+                    <div class="text-danger">
+                        <%= errors.address.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div>
                 <label class="form-label">Cargar Imagen:</label>
                     <div>
                         <input type="file" name="avatar" value="">
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div class="text-danger">
+                                <%= errors.avatar.msg %>
+                            </div>
+                        <% } %> 
                     </div>
             </div>
 

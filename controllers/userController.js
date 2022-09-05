@@ -69,8 +69,8 @@ const controladorUsuario = {
     },
 
     processRegister:(req,res) => {
-        let errors = validationResult(req);
-        if(errors.isEmpty()){
+        let resultValidation = validationResult(req);
+        if(resultValidation.isEmpty()){
 
             let {firstName,lastName,email,password,isAdmin,avatar,address,phone} = req.body
 
@@ -93,7 +93,8 @@ const controladorUsuario = {
                 
             }else{
                 res.render('register', {
-                    
+                    errors: resultValidation.mapped(),
+                
                 })
             };                 
         },
