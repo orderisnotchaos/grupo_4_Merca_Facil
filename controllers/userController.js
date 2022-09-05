@@ -81,16 +81,14 @@ const userController = {
                     avatar:"image.jpg" + "" + avatar,
                     address: address,
                     phone: phone,
-                })            
-                 .then(()=>{
-                    
+                 })            
+                     .then(()=>{
                    res.redirect('/users/login') //por que a login???
-                })
-                
-                
-             }else{
-                res.render('register', {
-                    
+                 })
+   
+              } else{
+                res.render('register', { errors: resultValidation.mapped(),
+
                  })
              };                 
       },
@@ -115,7 +113,7 @@ const userController = {
 
         db.User.findByPk(req.params.id)
 
-    .then(function(user) {
+      .then(function(user) {
          res.render("editUser", {users:users});
 
          });
