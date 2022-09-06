@@ -5,16 +5,17 @@ const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usersJSON = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models');
 
 const controladorUsuario = {
 
     login: (req, res) => {
 
         if(req.session.user != undefined){
-            return res.render('logueado');
+            res.render('logueado');
         }
         
-        return res.render('login');
+        res.render('login');
     },
 
 
@@ -34,16 +35,16 @@ const controladorUsuario = {
                     req.session.user ={
                         ...req.body,
                         userType: usuarioAlogear.userType
-                    }
+                    };
 
-                if(req.body.recordar != undefined){
-                    res.cookie('recordame', usuarioAlogear.email, {maxAge: 60000000000});
-                }
-                    res.render('index');
+                    if(req.body.recordar != undefined){
+                        res.cookie('recordame', usuarioAlogear.email, {maxAge: 60000000000});
+                    }
+                        res.render('index');
                 }else{
-                    res.render('login', {logueoInvalido:'usuario o contraseña inválidos'})
+                    res.render('login', {logueoInvalido:'usuario o contraseña inválidos'});
                 }
-            }
+                }
         }else{
             res.render('login',{errors:errors.array()});
         }
@@ -53,13 +54,13 @@ const controladorUsuario = {
         req.session.destroy();
             
             if(req.cookies.recordame){
-                res.cookie('recordame','', {maxAge: -1})
+                res.cookie('recordame','', {maxAge: -1});
             }
-            res.redirect('/')
+            res.redirect('/');
     },
 
     register: (req, res) => {
-        res.render (path.join(__dirname,"../views/register.ejs"));
+        res.render ("register");
     },
 
     processRegister: (req, res, next) => {
@@ -100,17 +101,17 @@ const controladorUsuario = {
     usersList: (req, res) => {
         db.Users.findAll()
 
-    .then(function() {
-        res.render("usersList", {users:users})
-    })
+        .then(function() {
+            res.render("usersList", {users:users});
+        })
     },
 
-    usersDetails: (req, res) => {
-        db.Users.findByPK(req.params,id)
+    userDetails: (req, res) => {
 
-    .then(function(user) {
-        res.render("userDetails", {user:user})
-    })
+        db.User.findByPk(req.params.id).then((user) =>{
+
+            res.render("userDetails", {user});
+        });
     },
 
     //editUser: (req, res) => {

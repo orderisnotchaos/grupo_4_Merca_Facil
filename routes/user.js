@@ -19,7 +19,7 @@ router.get("/", userController.usersList);
 
 router.get("/:id", userController.userDetails);
 
-router.get("/edit/:id", userController.editUser);
+//router.get("/edit/:id", userController.editUser);
 
 router.get ('/login', userController.login);
 

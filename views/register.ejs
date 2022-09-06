@@ -27,9 +27,10 @@
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
-                <input type="text" placeholder="Ingrese su nombre completo" name="nombre"
-                value= "<%= locals.oldData ? oldData.nombre : null %>">
-                
+                <div id="inputNombreContainer">
+                    <input type="text" id="inputNombre" placeholder="Ingrese su nombre completo" name="nombre"
+                    value= "<%= locals.oldData ? oldData.nombre : null %>">
+                </div>
                 <% if (locals.errors && errors.nombre) { %>
                     <div class="text-danger">
                         <%= errors.nombre.msg %>
@@ -41,7 +42,9 @@
             <div>
                 
                 <label>Apellidos:</label>
-                <input type="text" placeholder="Ingrese sus apellidos" name="apellido">
+                <div id="inputApellidoContainer">
+                    <input type="text" placeholder="Ingrese sus apellidos" name="apellido" id="inputApellido">
+                </div>
             </div>
             <div class="flex-container">
             <% if (locals.errors && errors.apellido) { %>
@@ -52,7 +55,7 @@
 
                 <div>
                     <label>Tipo de documento:</label>
-                    <select name="tipo-de-documento">
+                    <select name="tipo-de-documento" id="documento">
                         <option value="DNI"> DNI</option>
                         <option value="Libreta-de-enrolamiento"> Libreta de enrolamiento</option>
                         <option value="cedula-de-ciudadania"> Cédula de Ciudadanía</option>
@@ -60,7 +63,7 @@
                 </div>
                 <div>
                     <label>No cédula  de Ciudadanía:</label>
-                    <input type="text" placeholder="Ingrese su cédula" name="cedula">
+                    <input type="text" placeholder="Ingrese su cédula" name="cedula" id="numeroDocumento">
                     <% if (locals.errors && errors.cedula) { %>
                         <div class="text-danger">
                             <%= errors.cedula.msg %>
@@ -70,7 +73,7 @@
             </div>
             <div>
                 <label>Teléfono:</label>
-                <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono">
+                <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono" id="telefono">
                 <% if (locals.errors && errors.telefono) { %>
                     <div class="text-danger">
                         <%= errors.telefono.msg %>
@@ -79,7 +82,9 @@
             </div>
             <div>
                 <label>Email:</label>
-                <input type="text" placeholder="Ingrese su correo electrónico" name="email">
+                <div id="inputEmailContainer">
+                    <input type="text" placeholder="Ingrese su correo electrónico" name="email" id="email">
+                </div>
                 <% if (locals.errors && errors.email) { %>
                     <div class="text-danger">
                         <%= errors.email.msg %>
@@ -88,7 +93,7 @@
             </div>
             <div>
                 <label>Contraseña:</label>
-                <input type="password" placeholder="Ingrese su contraseña" name="password">
+                <input type="password" placeholder="Ingrese su contraseña" name="password" id="password">
                 <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
                         <%= errors.password.msg %>
@@ -99,7 +104,7 @@
             <div>
                 <label class="form-label">Cargar imagen de avatar:</label>
                         <div>
-                            <input type="file" name="avatar">
+                            <input type="file" name="avatar" id="image">
                 <% if (locals.errors && errors.avatar) { %>
                     <div class="text-danger">
                         <%= errors.avatar.msg %>
@@ -118,7 +123,8 @@
         </div>
 
     </section>    
-
+    
+    <script src="/js/registerValidations.js"></script>
 </body>
 
 <%- include('./partials/footer')-%>
