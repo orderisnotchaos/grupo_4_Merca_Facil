@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>MercaFacil - Producto Guardado</title>
+        <title>MercaFacil</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
@@ -21,24 +21,28 @@
         <%- include('./partials/header.ejs')-%>
 
 
-<h1> Listado de usuarios </h1>
-<ul>
+ <h1> Listado de usuarios </h1>
 
-<%- for (let i = 0; i < users.length; i++) { %>
-<li>
+ <ul>
+
+<% for (let i = 0; i < users.length; i++) { %>
+
+     <li>
 
     <a href="/users/<%=users[i].id%>">
 
-    <%=user[i].title%>
+    <%=users[i].title%>
     
-</li>
+     </a>
+
+     </li>
 
 
-<% } -%>
+<% } %>
 
-</ul>
+ </ul>
 
 
-        <%- include('./partials/footer')-%>
+<%- include('./partials/footer')-%>
 
 </html>

@@ -5,23 +5,22 @@ const { validationResult } = require('express-validator');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 let db= require ("../database/models");
 const Category = require('../database/models/Category');
-
-db.Product.findAll()
-    .then (function(data){
-    products = data
-})
+const { Op } = require("sequelize");
 
 const controladorProducto = {
 
 	crear: function (req, res){
         db.Category.findAll()
-            .then(function (categories){
-                return res.render("crearProducto", {categories:categories});
-            })
+		.then (function(productos){
+			db.Category.findAll()
+		.then(function (categories){
+			return res.render("crearProducto", {categories:categories, products:productos});
+		})
+    })
+
     },
 
     guardar: function(req, res){
-
         db.Product.create({
 			name: req.body.name,
             price: req.body.price,
@@ -29,14 +28,17 @@ const controladorProducto = {
             description: req.body.description,
             image: req.body.image,
 			quantity: req.body.quantity
-        });
-        res.redirect("/products");
+        }).then (function(response){
+			res.redirect("/products");
+		})
     },
 
 	listado: function(req, res){
         db.Product.findAll()
             .then (function(products){
-                res.render("listadoProducts", {products:products})
+			console.log(products);
+            res.render("listadoProducts", {products:products})
+			console.log(db.Product)
         })		
 	},
 
@@ -44,7 +46,7 @@ const controladorProducto = {
 		let isAdmin;
 
 		if(req.session.user != undefined){
-			isAdmin = req.session.user.userType == 'Admin' ? true : false;
+			isAdmin = req.session.user.isAdmin == '1' ? true : false;
 		}else{
 			isAdmin =false;
 		}
@@ -52,24 +54,21 @@ const controladorProducto = {
 			{ model:db.Category, as:'category'}
 			]})
             .then(function(products) {
-                res.render("productDetail", {products:products, isAdmin})
-            })
+            res.render("productDetail", {products:products, isAdmin})
+        })
     },
    
-
 	edit: function(req, res){
         let pedidoProduct = db.Product.findByPk(req.params.id);
-
         let pedidoCategory = db.Category.findAll();
 
         Promise.all([pedidoProduct, pedidoCategory] )
             .then(function([products, categories]){
-                res.render("edit", {products:products, categories:categories})
-            })
+            res.render("edit", {products:products, categories:categories})
+        })
     },
 
     update: function(req, res){
-
         db.Product.update({
             name: req.body.name,
             price: req.body.price,
@@ -85,7 +84,50 @@ const controladorProducto = {
         res.redirect("/products");
     },
 
-    productCart: (req, res) =>{
+	search: async (req, res) => {
+		let isAdmin;
+
+		if(req.session.user != undefined){
+			isAdmin = req.session.user.isAdmin == '1' ? true : false;
+		}else{
+			isAdmin =false;
+		}
+
+        const keyword = req.query.busqueda;
+        const products = await db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: `%${keyword}%`
+                }
+            }
+        })       
+        res.render("products", { products:products, isAdmin })
+    },  
+
+    productos: (req, res) =>{
+		let isAdmin;
+
+		if(req.session.user != undefined){
+			isAdmin = req.session.user.isAdmin == '1' ? true : false;
+		}else{
+			isAdmin =false;
+		}
+
+		db.Product.findAll()
+			.then (function(productos){
+				let despensaProducts = productos.filter(product => product.category === "despensa")
+				let bebidasProducts = productos.filter(product => product.category === "bebidas")
+				let mascotasProducts = productos.filter(product => product.category === "mascotas")
+				let bebesProducts = productos.filter(product => product.category === "bebes")
+				let cuidadoPersonalProducts = productos.filter(product => product.category === "cuidado-personal")
+				let limpiezaProducts = productos.filter(product => product.category === "limpieza")
+		
+			res.render ("products",{isAdmin, products:productos, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
+			
+		})
+	},
+	
+	productCart: (req, res) =>{
 
         res.render (path.join(__dirname,"../views/productCart.ejs"));
     },
@@ -99,68 +141,16 @@ const controladorProducto = {
 
         res.render (path.join(__dirname,"../views/myOrders.ejs"));
     },
-    
-    /*mostrarCrear: (req, res) =>{
 
-		if(req.session.user != undefined){
+	destroy: function(req, res){
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
 
-			if(req.session.user.userType == 'Admin'){
-
-        		return res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
-			}else{
-
-				return res.send('no tienes permiso para loguear en esta página');
-			}
-		}
-		return res.send('no tienes permiso para loguear en esta página');
-    },
-
-	procesarCrear: (req, res, next) =>{
-		let errors = validationResult(req);
-		console.log(req.body);
-		if(errors.isEmpty()){
-			req.body.image = req.file.filename;
-			req.body.id = products[ products.length-1 ].id+1 ;
-			products.push(req.body);
-			fs.writeFile(productsFilePath,JSON.stringify(products),'utf8',(err) => {
-				if (err)
-
-				  console.log(err);
-
-				else {
-
-				  console.log("File written successfully\n");
-
-				}});
-
-			res.render(path.join(__dirname, "../views/productSaved.ejs"));
-		} else{
-
-			res.render(path.join(__dirname, "../views/crearProducto.ejs"), {errors:errors.array()});
-		}
-
-		next();
-	},*/
-
-    productos: (req, res) =>{
-		let isAdmin;
-
-		if(req.session.user != undefined){
-
-			isAdmin = req.session.user.userType == 'Admin' ? true : false;
-		}else{
-			isAdmin =false;
-		}
-        let despensaProducts = products.filter(product => product.category === "despensa")
-        let bebidasProducts = products.filter(product => product.category === "bebidas")
-        let mascotasProducts = products.filter(product => product.category === "mascotas")
-        let bebesProducts = products.filter(product => product.category === "bebes")
-        let cuidadoPersonalProducts = products.filter(product => product.category === "cuidado-personal")
-        let limpiezaProducts = products.filter(product => product.category === "limpieza")
-
-  		res.render ("products",{isAdmin, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
-	},
-
+        res.redirect("/products");
+    }
     /*edit: (req, res) => {
         const id = +req.params.id;
 		let productDetail = products.filter( function( product ){
@@ -226,17 +216,50 @@ const controladorProducto = {
 		fs.writeFileSync( productsFilePath , JSON.stringify( productDestroyed ), { encoding: 'utf-8' } );
 		res.redirect( '/' );
 
-	}*/
+	},*/
 
-	destroy: function(req, res){
-        db.Product.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
+	/*mostrarCrear: (req, res) =>{
 
-        res.redirect("/products");
-    }
+		if(req.session.user != undefined){
+
+			if(req.session.user.userType == 'Admin'){
+
+        		return res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
+			}else{
+
+				return res.send('no tienes permiso para loguear en esta página');
+			}
+		}
+		return res.send('no tienes permiso para loguear en esta página');
+    },
+
+	procesarCrear: (req, res, next) =>{
+		let errors = validationResult(req);
+		console.log(req.body);
+		if(errors.isEmpty()){
+			req.body.image = req.file.filename;
+			req.body.id = products[ products.length-1 ].id+1 ;
+			products.push(req.body);
+			fs.writeFile(productsFilePath,JSON.stringify(products),'utf8',(err) => {
+				if (err)
+
+				  console.log(err);
+
+				else {
+
+				  console.log("File written successfully\n");
+
+				}});
+
+			res.render(path.join(__dirname, "../views/productSaved.ejs"));
+		} else{
+
+			res.render(path.join(__dirname, "../views/crearProducto.ejs"), {errors:errors.array()});
+		}
+
+		next();
+	},*/
+
     
 };
 
