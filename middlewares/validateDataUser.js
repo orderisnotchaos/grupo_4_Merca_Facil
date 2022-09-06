@@ -3,11 +3,11 @@ const path = require('path');
 
 
 const userValidations = [
-    body('nombre').notEmpty().withMessage('Tienes que completar el formulario con tu nombre'),
-    body('apellido').notEmpty().withMessage('Tienes que completar el formulario con tu apellido'),
+    body('firstName').notEmpty().withMessage('Tienes que completar el formulario con tu nombre'),
+    body('lastName').notEmpty().withMessage('Tienes que completar el formulario con tu apellido'),
     body('email').isEmail().withMessage('Tienes que completar el formulario con tu email'),
     body('password').notEmpty().withMessage('Tienes que completar el formulario con una contraseña'),
-    body('telefono').notEmpty().withMessage('Tienes que completar el formulario con tu telefono'),
+    body('phone').notEmpty().withMessage('Tienes que completar el formulario con tu telefono'),
     body('address').notEmpty().withMessage('Tienes que completar el formulario con tu dirección'),
     
     body('avatar').custom((value, {req}) => {

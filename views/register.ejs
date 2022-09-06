@@ -29,9 +29,9 @@
                 <label>Nombres:</label>
                 <input type="text" placeholder="Ingrese su nombre completo" name="firstName"
                 value= "<%= locals.oldData ? oldData.nombre : null %>">
-                <% if (locals.errors && errors.nombre) { %>
+                <% if (locals.errors && errors.firstName) { %>
                     <div class="text-danger">
-                        <%= errors.nombre.msg %>
+                        <%= errors.firstName.msg %>
                     </div>
                 <% } %>
             </div>
@@ -42,9 +42,9 @@
             </div>
 
             <div class="flex-container">
-                <% if (locals.errors && errors.apellido) { %>
+                <% if (locals.errors && errors.lastName) { %>
                     <div class="text-danger">
-                        <%= errors.apellido.msg %>
+                        <%= errors.lastName.msg %>
                     </div>
                 <% } %> 
             </div>
@@ -80,9 +80,9 @@
             <div>
                 <label>Telefono:</label>
                 <input type="text" placeholder="Ingrese su telefono" name="phone">
-                <% if (locals.errors && errors.telefono) { %>
+                <% if (locals.errors && errors.phone) { %>
                     <div class="text-danger">
-                        <%= errors.telefono.msg %>
+                        <%= errors.phone.msg %>
                     </div>
                 <% } %> 
             </div>
