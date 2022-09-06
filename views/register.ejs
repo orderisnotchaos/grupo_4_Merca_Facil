@@ -27,17 +27,9 @@
         <form action="/users/register" method="POST" enctype="multipart/form-data" class="form-registro">
             <div>
                 <label>Nombres:</label>
-<<<<<<< HEAD
-                <div id="inputNombreContainer">
-                    <input type="text" id="inputNombre" placeholder="Ingrese su nombre completo" name="nombre"
-                    value= "<%= locals.oldData ? oldData.nombre : null %>">
-                </div>
-                <% if (locals.errors && errors.nombre) { %>
-=======
                 <input type="text" placeholder="Ingrese su nombre completo" name="firstName"
                 value= "<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.firstName) { %>
->>>>>>> ab7d35e85fce46808d969e9b533c220fdd054493
                     <div class="text-danger">
                         <%= errors.firstName.msg %>
                     </div>
@@ -46,42 +38,11 @@
             
             <div>
                 <label>Apellidos:</label>
-<<<<<<< HEAD
-                <div id="inputApellidoContainer">
-                    <input type="text" placeholder="Ingrese sus apellidos" name="apellido" id="inputApellido">
-                </div>
-=======
                 <input type="text" placeholder="Ingrese sus apellidos" name="lastName">
->>>>>>> ab7d35e85fce46808d969e9b533c220fdd054493
             </div>
 
-<<<<<<< HEAD
-                <div>
-                    <label>Tipo de documento:</label>
-                    <select name="tipo-de-documento" id="documento">
-                        <option value="DNI"> DNI</option>
-                        <option value="Libreta-de-enrolamiento"> Libreta de enrolamiento</option>
-                        <option value="cedula-de-ciudadania"> Cédula de Ciudadanía</option>
-                    </select>
-                </div>
-                <div>
-                    <label>No cédula  de Ciudadanía:</label>
-                    <input type="text" placeholder="Ingrese su cédula" name="cedula" id="numeroDocumento">
-                    <% if (locals.errors && errors.cedula) { %>
-                        <div class="text-danger">
-                            <%= errors.cedula.msg %>
-                        </div>
-                        <% } %> 
-                </div>
-            </div>
-            <div>
-                <label>Teléfono:</label>
-                <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono" id="telefono">
-                <% if (locals.errors && errors.telefono) { %>
-=======
             <div class="flex-container">
                 <% if (locals.errors && errors.lastName) { %>
->>>>>>> ab7d35e85fce46808d969e9b533c220fdd054493
                     <div class="text-danger">
                         <%= errors.lastName.msg %>
                     </div>
@@ -119,16 +80,9 @@
             </div>
 
             <div>
-<<<<<<< HEAD
-                <label class="form-label">Cargar imagen de avatar:</label>
-                        <div>
-                            <input type="file" name="avatar" id="image">
-                <% if (locals.errors && errors.avatar) { %>
-=======
                 <label>Telefono:</label>
                 <input type="text" placeholder="Ingrese su telefono" name="phone">
                 <% if (locals.errors && errors.phone) { %>
->>>>>>> ab7d35e85fce46808d969e9b533c220fdd054493
                     <div class="text-danger">
                         <%= errors.phone.msg %>
                     </div>
