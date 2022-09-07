@@ -26,22 +26,25 @@ const userController = {
                where: {email:req.body.email}
            })
            .then((user)=>{
-               
-            req.session.user ={
-                id:user.id,
-                userName :user.firstName + "" + user.lastName,
-                email:user.email,
-                avatar :user.avatar,
-                isAdmin: user.isAdmin,
-                password: user.password,
-                address: user.address,
-                phone:  user.phone
-            } 
-       
-            if(req.body.recordar != undefined){
-                res.cookie('recordame', req.session.user.email, { maxAge: 5000*60})
-            }                                                
-            res.redirect('/')
+            if(user !== null){
+                req.session.user ={
+                    id:user.id,
+                    userName :user.firstName + "" + user.lastName,
+                    email:user.email,
+                    avatar :user.avatar,
+                    isAdmin: user.isAdmin,
+                    password: user.password,
+                    address: user.address,
+                    phone:  user.phone
+                } 
+        
+                if(req.body.recordar != undefined){
+                    res.cookie('recordame', req.session.user.email, { maxAge: 5000*60})
+                }                                                
+                res.redirect('/')
+            }else{
+                res.render('login', {errors: ' mail o password no coinciden'});
+            }
            })             
          } else{
             res.render('login2',{

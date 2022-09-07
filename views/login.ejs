@@ -47,15 +47,17 @@
                 <form  class="box-form" action="/users/login" method="POST" >
                     
                         <label class="form-label-hide" >Ingrese su Correo Electrónico</label>
-                        <input type="email" name="email" placeholder="Email"><br>
-                  
+                        <div id="inputEmailContainer">
+                            <input type="email" name="email" placeholder="Email" id="email"><br>
+                        </div>
                         <label class="form-label-hide" >Ingrese su contraseña</label>
-                        <input type="password" name="password" placeholder="Contraseña"><br>
-                        
+                        <div id="inputPasswordContainer">
+                            <input type="password" name="password" placeholder="Contraseña" id="password"><br>
+                        </div>
                         <label class="form-label-hide recordar-pass" for="recordar-pass">Recordame</label>
                         <input type="checkbox" name="recordar" id="recordar-pass">
 
-                        <input class="btn-form2" type="submit" value="INGRESA"><br>   
+                        <input class="btn-form2" type="submit" value="INGRESA" id="submit"><br>   
 
                 </form>
                 <p class="link-pass-lost">
@@ -72,7 +74,7 @@
                 <img src="/images/Login.png" alt="Banner Login" class="img-login">
             </section>
         </div> 
-
+        <script src="/js/loginValidations.js"></script>
     </body>
     <%- include('./partials/footer')-%>
 </html>

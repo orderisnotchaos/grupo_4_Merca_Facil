@@ -34,8 +34,8 @@
                      <% } %> -->
                     <tr>
                         <label class="form-label">Nombre del producto:</label>
-                        <div>
-                            <input type="text" placeholder="Ingrese el nombre del producto" name="name" class="form-input">
+                        <div id="inputNameContainer">
+                            <input type="text" placeholder="Ingrese el nombre del producto" name="name" class="form-input" id="name">
                         </div>
                     </tr>
 
@@ -61,8 +61,8 @@
 
                     <tr>
                         <label class="form-label">Descripción:</label>
-                        <div>
-                            <textarea type="text"  name="description" placeholder="Ingrese la descripción del producto" id="description" class="form-input"></textarea>
+                        <div id="descriptionContainer">
+                            <textarea type="text" id="description"  name="description" placeholder="Ingrese la descripción del producto" id="description" class="form-input"></textarea>
                         </div>
                     </tr>
 
@@ -75,20 +75,22 @@
 
                     <tr>
                         <label class="form-label">Cargar Imagen:</label>
-                        <div>
-                            <input type="file" name="image" value="<%=products.image%>">
+                        <div id="inputImageContainer">
+                            <input type="file" name="image" id="image" value="<%=products.image%>">
                         </div>
                     </tr>
                 </table>
             </div>
             <div>
-                <input type="submit" value="CREAR" id="crear" class="button">
+                <input type="submit" value="CREAR" id="create" class="button">
             </div>
 
         </form>
 
     </section>
-    </div>  
-    <%- include('./partials/footer')-%>
+    </div> 
+    <script src="/js/createProductValidations.js"></script>
 </body>
+    <%- include('./partials/footer')-%>
+
 </html>
