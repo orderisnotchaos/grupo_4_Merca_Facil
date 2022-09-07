@@ -28,7 +28,9 @@
 				<div class="contenido-detalle-producto">
 					<div class="contenido-detalle-producto">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" value="<%=products.name%>" placeholder="Eje: Caminador" class="form-input">
+						<div id="inputNameContainer">
+							<input type="text" id="name" name="name" value="<%=products.name%>" placeholder="Eje: Caminador" class="form-input">
+						</div>
 					</div>
 					<div>
 						<label for="price" class="form-label">Precio del producto:</label>
@@ -53,7 +55,9 @@
 						</select>
 					</div>
 						<label for="description" class="form-label">Descripción:</label>
-						<textarea name="description" id="description" class="form-input"><%= products.description %></textarea>
+						<div id="descriptionContainer">
+							<textarea name="description" id="description" class="form-input"><%= products.description %></textarea>
+						</div>
 					</div>
 					<div class="contenido-detalle-producto">
 						<label for="name" class="form-label">Cantidad:</label>
@@ -61,9 +65,9 @@
 					</div>
 					<div>
 						<label class="form-label">Cargar Imagen:</label><br>
-                        <input type="file" name="image" value="<%=products.image%>">
-                        
-					</div>
+						<div>					
+                        	<input type="file" name="image" value="<%=products.image%>" id="image">
+						</div>
 					<div>
 						<input type="submit" value="GUARDAR" id="guardar" class="button">
 					</div>
@@ -71,6 +75,8 @@
 			</form>
     </div>
         </main>
+
+		<script src="/js/modifyProductValidations.js"></script>
 </body>
 
 <%- include('./partials/footer')-%>

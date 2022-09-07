@@ -1,6 +1,6 @@
 window.addEventListener('load', () =>{
-
-    let buttonCreate = document.querySelector('#create');
+    console.log("renderiza la vista")
+    let buttonCreate = document.querySelector('#guardar');
     let textAreaDescription = document.querySelector('#description');
     let inputName = document.querySelector('#name');
     let inputImage = document.querySelector('#image')
@@ -13,7 +13,7 @@ window.addEventListener('load', () =>{
 
                 if(!textAreaDescriptionContainer.innerHTML.includes("La descripción debe tener al menos 20 caractéres")){
 
-                    textAreaDescriptionContainer.innerHTML += "<p class = \"text-danger\">La descripción debe tener al menos 20 caractéres</p>";
+                    textAreaDescriptionContainer.innerHTML += "<p class = \"is-danger\">La descripción debe tener al menos 20 caractéres</p>";
                 }
             }
         
@@ -24,7 +24,7 @@ window.addEventListener('load', () =>{
                 let inputNameContainer = document.querySelector('#inputNameContainer');
                 if(!inputNameContainer.innerHTML.includes("el nombre debe tener al menos 5 caractéres")){
 
-                    inputNameContainer.innerHTML += "<p class = \"text-danger\">el nombre debe tener al menos 5 caractéres</p>";
+                    inputNameContainer.innerHTML += "<p class = \"is-danger\">el nombre debe tener al menos 5 caractéres</p>";
                 }
             }
         }else{
@@ -33,7 +33,7 @@ window.addEventListener('load', () =>{
             let inputNameContainer = document.querySelector('#inputNameContainer');
             if(!inputNameContainer.innerHTML.includes("debes escribir un nombre")){
 
-                inputNameContainer.innerHTML += "<p class = \"text-danger\">debes escribir un nombre</p>";
+                inputNameContainer.innerHTML += "<p class = \"is-danger\">debes escribir un nombre</p>";
             }
         }
         if(inputImage.value !== ''){
@@ -43,7 +43,7 @@ window.addEventListener('load', () =>{
                 let inputImageContainer = document.querySelector('#inputImageContainer');
                 if(!inputImageContainer.innerHTML.includes("Los formatos permitidos son JPG, JPEG, PNG y GIF")){
 
-                    inputImageContainer.innerHTML += "<p class = \"text-danger\">Los formatos permitidos son JPG, JPEG, PNG y GIF</p>";
+                    inputImageContainer.innerHTML += "<p class = \"is-danger\">Los formatos permitidos son JPG, JPEG, PNG y GIF</p>";
                 }
             }
         }

@@ -6,6 +6,11 @@
     font-family: "Font Awesome 6 Free" !important;
 }
 
+.is-danger{
+
+    color: red;
+}
+
 .detalle-producto{  
     font-family: 'Montserrat', sans-serif !important;
     justify-content: center;
