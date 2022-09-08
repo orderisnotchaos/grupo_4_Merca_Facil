@@ -1,19 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edición de Usuario</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/editUser.css">
-    <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&display=swap" rel="stylesheet">
-</head>
+<section class="box-registro">
+    <form action="/edit/<%=user.id%>" method="POST" enctype="multipart/form-data" class="form-registro">
+        
+        <div>
+    
+            <label>Nombres:</label>
+            <input type="text" placeholder="Ingrese su nombre completo" name="nobre"
+            value= "<%=user.firstName%>">
+            
+            <% if (locals.errors && errors.nombre) { %>
+                <div class="text-danger">
+                    <%= errors.nombre.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            
+            <label>Apellidos:</label>
+            <input type="text" placeholder="Ingrese sus apellidos" name="apellido" value="<%=user.lastName%>">
+        </div>
+        <div class="flex-container">
+        <% if (locals.errors && errors.apellido) { %>
+                <div class="text-danger">
+                    <%= errors.apellido.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <label>Teléfono:</label>
+            <input type="text" placeholder="Ingrese su No. de teléfono" name="telefono" value="<%=user.phone%>">
+            <% if (locals.errors && errors.telefono) { %>
+                <div class="text-danger">
+                    <%= errors.telefono.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="text" placeholder="Ingrese su correo electrónico" name="email" value="<%=user.email%>">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+                <% } %> 
+        </div>
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" placeholder="Ingrese su contraseña" name="password" value="<%=user.password%>">
+            <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                    <%= errors.password.msg %>
+                </div>
+                <% } %> 
+        </div>
+
+        <div>
+            <label class="form-label">Cargar imagen de avatar:</label>
+                    <div>
+                        <input type="file" name="avatar">
+            <% if (locals.errors && errors.avatar) { %>
+                <div class="text-danger">
+                    <%= errors.avatar.msg %>
+                </div>
+                <% } %> 
+            </div>
+
+        </div>
+        <div>
+            <button type="submit" class="btn-form2" id="Editar" name="Editar">Editar</button>
+        </div>
+
+</body>
+
 <body>
     <!-Header>
     <%- include('./partials/header.ejs')-%>
@@ -25,15 +82,22 @@
         <section id="formEditUser">
         <form action="/users/edit/<%=user.id%>" method="POST">  
             
-             
+            <div>   
                 <label for="inAvatar"></label>
                     <input type="image" src="https://www.donkey.bike/wp-content/uploads/2020/12/user-member-avatar-face-profile-icon-vector-22965342-300x300.jpg">    
-                    <input id= "updateAvatar" type="file" name="avatar" value="<%=user.avatar%>">
+                    <input id= "updateAvatar" type="file" value="<%=user.avatar%>">
+            </div> 
+
+            <div>
+                    <input type="file" name="avatar">
                         <% if (locals.errors && errors.avatar) { %>
-                         class="text-danger">
-                         <%= errors.avatar.msg %>                           
-                        <% } %>                                         
-            
+                            <div class="text-danger">
+                             <%= errors.avatar.msg %>
+                            </div>
+                        <% } %> 
+            </div>
+                               
+            <div>
                 <label for="inName">NOMBRE</label>
                     <input id= "inName" type="text" placeholder="Nombre completo" name="nombre" value= "<%=user.firstName%>">
                         <% if (locals.errors && errors.nombre) { %>
@@ -41,9 +105,9 @@
                              <%= errors.nombre.msg %>
                             </div>
                         <% } %>                  
-                    
+            </div>         
                
-            
+            <div>
                 <label for="inLastName">APELLIDO</label>
                     <input id= "inLastName" type="text" placeholder="Apellido completo" name="apellido" value="<%=user.lastName%>">
                         <% if (locals.errors && errors.apellido) { %>
@@ -51,9 +115,9 @@
                              <%= errors.apellido.msg %>
                             </div>
                         <% } %>            
-                     
+            </div>          
 
-            
+            <div>
                 <label for="inEmail">EMAIL</label>
                     <input id= "inEmail" type="email" placeholder="correo@correo.com" name="email" value="<%=user.email%>">               
                         <% if (locals.errors && errors.email) { %>
@@ -61,9 +125,9 @@
                              <%= errors.email.msg %>
                             </div>
                         <% } %>            
-            
+            </div>
 
-            
+            <div>
                 <label for="inPassword">CONTRASEÑA</label>
                     <input id= "inPassword" type="password" placeholder="Contraseña" name="password" value="<%=user.password%>">                 
                         <% if (locals.errors && errors.password) { %>
@@ -71,17 +135,17 @@
                              <%= errors.password.msg %>
                             </div>
                         <% } %>            
-            
+            </div>
 
-            
+            <div>
                 <label for="inRole">ROL</label>
                     <select name="role" id="inRole">             
                         <option value="client">Cliente</option>
                         <option value="admin">Administrador</option>
                     </select>
-            
+            </div>
 
-            
+            <div>
                 <label for="inAddress">TELÉFONO</label>
                     <input id= "inAddress" type="text" placeholder="Dirección" name="telefono" value="<%=user.phone%>">
                         <% if (locals.errors && errors.telefono) { %>
@@ -89,9 +153,9 @@
                              <%= errors.telefono.msg %>
                             </div>
                         <% } %>                
-            
+            </div>
 
-            
+            <div>
                 <label for="inAddress">DIRECCIÓN</label>
                    <input id= "inAddress" type="text" placeholder="Dirección" name="address" value="<%=user.address%>">
                         <% if (locals.errors && errors.address) { %>
@@ -99,21 +163,22 @@
                              <%= errors.telefono.msg %>
                             </div>
                         <% } %> 
-              
+            </div>   
 
-           
+            <div>
                 <button id="update" type="submit">ACTUALIZAR</button>
+            </div>
 
-           
-                <button method="POST" id="delete" type="submit">ELIMINAR USUARIO</button>
-           
+            <div>
+                <button id="delete" type="button">ELIMINAR</button>
+            </div>
+
+            <div>
+                <button id="back" type="button">VOLVER</button>
+            </div>
 
             </section>
    
     </main>
 
 </body>
-
-<!-Footer->
-<%- include('./partials/footer')-%>
-</html>

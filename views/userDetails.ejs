@@ -20,6 +20,10 @@
 
         <%- include('./partials/header.ejs')-%>
 
+        <div class="sub-header">
+            <h2>Detalle del Usuario</h2>
+        </div>
+
 
 <h1> <%=user.id%> </h1>
 
@@ -27,13 +31,13 @@
 
 <li>
 
-    Nombre: <%=user.lastName%>
+    Nombre: <%=user.firstName%>
     
 </li>
 
 <li>
 
-    Apellidos: <%=user.email%>
+    Apellidos: <%=user.lastName%>
     
 </li>
 
@@ -67,7 +71,7 @@
 
 <div>
 
-     <form action="/users/delete/<%=user.id%>" method="POST">
+     <form action="/users/list<%= user.id %>?_method=DELETE" method="POST">
 
      <button type="submit" class="btn-form2" id="Borrar" name="Borrar">Borrar Usuario</button>
 

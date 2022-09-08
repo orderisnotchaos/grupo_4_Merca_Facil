@@ -147,21 +147,35 @@ const userController = {
                  id: req.params.id
                 }
         });
-        res.redirect("/users/list"); //antes ("/users/list" + req.params.id)
+        res.redirect("/users/list"); //Antes ("/users/list" + req.params.id)
     },
 
-    deleteUser: (req, res) => {
+    deleteUser: async function(req, res){
+
+        const user = await db.USer.findByPk(req.params.id);
+            if(user !== null){
+                fs.unlinkSync(path.resolve(__dirname, '../public/images/'+user.avatar))
+            }
+            if(req.params.id !== null){
+                db.User.destroy({
+                    where: {
+                      id: req.params.id
+                    }
+                });
+            };
+        res.redirect("/user/list");
+    },
+
+    /*deleteUser: (req, res) => { //VERSION ANTERIOR DE METODO PARA BORRAR USUARIO
         db.User.destroy({
             where: {
              id: req.params.id
             }
         });
-     res.redirect("/user/lists");
-    },
+     res.redirect("/user/list");
+    },*/
 
 };
 
-
 module.exports = userController;
-
 
