@@ -100,15 +100,15 @@ const userController = {
         db.User.findAll()
             .then (function(users){
             res.render("usersList", {users:users})
-			
-         });		
+			console.log(users)
+         } );		
 	  },
 
      userDetails: (req, res) => {
         db.User.findByPk(req.params.id)
 
     .then(function(user) {
-        res.render("userDetails", {users:users});
+        res.render("userDetails", {user:user});
           });
      },
 
@@ -117,7 +117,7 @@ const userController = {
         db.User.findByPk(req.params.id)
 
       .then(function(user) {
-         res.render("editUser", {users:users});
+         res.render("editUser", {user:user});
 
          });
      },

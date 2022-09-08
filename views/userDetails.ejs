@@ -59,7 +59,7 @@
 
 </ul>
 
-<a href="/users/edit/<%=user%>">
+<a href="/users/edit/<%=user.id%>">
   
     <button type="submit" class="btn-form2">Editar Usuario</button>
 
@@ -67,7 +67,7 @@
 
 <div>
 
-     <form action="users/delete/<%=user.id>%" method="POST">
+     <form action="/users/delete/<%=user.id%>" method="POST">
 
      <button type="submit" class="btn-form2" id="Borrar" name="Borrar">Borrar Usuario</button>
 
