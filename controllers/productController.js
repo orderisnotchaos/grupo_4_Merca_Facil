@@ -1,26 +1,21 @@
 const path = require('path');
-const fs = require('fs');
 const { off } = require('process');
+const fs = require('fs');
 const { validationResult } = require('express-validator');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 let db= require ("../database/models");
-const Category = require('../database/models/Category');
 const { Op } = require("sequelize");
 
 const controladorProducto = {
 
 	crear: function (req, res){
-        db.Category.findAll()
-		.then (function(productos){
-			db.Category.findAll()
-		.then(function (categories){
-			return res.render("crearProducto", {categories:categories, products:productos});
-		})
-    })
 
+			db.Category.findAll()
+			.then(function (categories){
+				return res.render("crearProducto", {categories});
+			});
     },
 
-    guardar: function(req, res){
+    guardar: function (req, res){
         db.Product.create({
 			name: req.body.name,
             price: req.body.price,
@@ -36,10 +31,8 @@ const controladorProducto = {
 	listado: function(req, res){
         db.Product.findAll()
             .then (function(products){
-			console.log(products);
             res.render("listadoProducts", {products:products})
-			console.log(db.Product)
-        })		
+        	});
 	},
 
 	detail: function(req, res){
@@ -142,13 +135,20 @@ const controladorProducto = {
         res.render (path.join(__dirname,"../views/myOrders.ejs"));
     },
 
-	destroy: function(req, res){
-        db.Product.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
+	destroy: async function(req, res){
 
+	const product = await db.Product.findByPk(req.params.id);
+			if(product !== null){
+				fs.unlinkSync(path.resolve(__dirname, '../public/images/'+product.image))
+			}
+
+		if(req.params.id !== null){
+			db.Product.destroy({
+				where: {
+					id: req.params.id
+				}
+			});
+		}
         res.redirect("/products");
     }
     /*edit: (req, res) => {

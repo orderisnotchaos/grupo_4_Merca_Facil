@@ -8,8 +8,10 @@ destination: (req, file, cb) =>{
 },
 
 filename: (req, file, callback) => {
-	const newFilename = 'products/' + req.body.category + '/' + Date.now() + path.extname(file.originalname);
-	callback(null, newFilename);
+	
+	const newFileName = 'products/' + req.body.category + '/' + Date.now() + path.extname(file.originalname);
+	req.body.image = newFileName;
+	callback(null, newFileName);
 }
 
 });

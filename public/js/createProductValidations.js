@@ -48,9 +48,9 @@ window.addEventListener('load', () =>{
             }
         }
         if(errorsCounter > 0){
-
-            e.preventDefault();
             errorsCounter = 0;
+            e.preventDefault();
+
         }
     });
 });
