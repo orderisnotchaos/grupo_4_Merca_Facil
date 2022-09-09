@@ -20,7 +20,7 @@ router.get("/list/:id", userController.userDetails);
 
 //UPDATE
 router.get("/edit/:id", userController.editUser);
-router.patch("/edit/:id", userController.updateUser);
+router.post("/edit/:id", userController.updateUser);
 
 
 //DELETE
