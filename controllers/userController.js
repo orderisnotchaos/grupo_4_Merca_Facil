@@ -45,7 +45,7 @@ const userController = {
                 }
             })             
         }else{
-            res.render('login2',{
+            res.render('login',{
                 errors: errors.mapped(),
                 title: 'Login',
                 session: req.session
@@ -95,17 +95,9 @@ const userController = {
 	usersList: function(req, res) { //INTENTAR HACER QUE SOLO ABRA EL RENDER USERLIST COMO ADMIN.
         db.User.findAll()
             .then (function(users){
-<<<<<<< HEAD
-            console.log(users);
-            res.render("usersList", {users:users})
-			
-         });		
-	  },
-=======
              res.render("usersList", {users:users})
             });		
 	},
->>>>>>> a7dac7357e236826bcd710fb098e940f21dcfd87
 
     userDetails: (req, res) => { //INTENTAR HACER QUE SOLO ABRA EL RENDER USERDETAILS COMO ADMIN.
         let isAdmin;
@@ -118,12 +110,6 @@ const userController = {
         db.User.findByPk(req.params.id)
 
         .then(function(user) {
-<<<<<<< HEAD
-            res.render("userDetails", {user:user});
-            });
-        },
-=======
->>>>>>> a7dac7357e236826bcd710fb098e940f21dcfd87
 
             if(isAdmin = false){
                 res.redirect('/users/list')
@@ -140,11 +126,7 @@ const userController = {
         db.User.findByPk(req.params.id)
 
         .then(function(user) {
-<<<<<<< HEAD
-         res.render("editUser", {users:users});
-=======
          res.render("editUser", {user:user});
->>>>>>> a7dac7357e236826bcd710fb098e940f21dcfd87
 
         });
     },
