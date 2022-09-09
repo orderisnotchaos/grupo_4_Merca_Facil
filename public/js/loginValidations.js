@@ -7,18 +7,32 @@ window.addEventListener('load', (e) =>{
     let validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             
     submitButton.addEventListener('click',(e) => {
+
+        let inputEmailContainer = document.querySelector('#inputEmailContainer');
+        let inputPasswordContainer = document.querySelector('#inputPasswordContainer');
         if(!inputEmail.value.match(validEmailRegex) ){
 
             errorsCounter++;
-            let inputEmailContainer = document.querySelector('#inputEmailContainer');
-            inputEmailContainer.innerHTML += "<p class=\"text-danger\"> el mail debe ser válido</p>";                
+            if(!inputEmailContainer.innerHTML.includes('el mail debe ser válido')){
+
+                inputEmailContainer.innerHTML += "<p class=\"text-danger\" id = \" invalidMail\"> el mail debe ser válido</p>";                
+            }
         }
-    
+        if(inputPassword.value.lengt > 0 && 
+            inputPasswordContainer.innerHTML.includes("debes ingresar una contraseña")){
+
+                let pDanger = document.querySelector('#invalidPassword');
+                pDanger.value.display = 'none';
+        }
         if(inputPassword.value.length === 0){
     
             errorsCounter++;
-            let inputPasswordContainer = document.querySelector('#inputPasswordContainer');
-            inputPasswordContainer.innerHTML += "<p class=\"text-danger\"> debes ingresar una contraseña </p>";
+            if(!inputPasswordContainer.innerHTML.includes("debes ingresar una contraseña")){
+
+                inputPasswordContainer.innerHTML += "<p class=\"text-danger\" id = \"invalidPassword\"> debes ingresar una contraseña </p>";
+            }
+            let pDanger = document.querySelector('#invalidPassword');
+            pDanger.value.display = 'block';
         }
     
         if( errorsCounter > 0 ){

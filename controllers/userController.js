@@ -99,6 +99,7 @@ const userController = {
 	 usersList: function(req, res) {
         db.User.findAll()
             .then (function(users){
+            console.log(users);
             res.render("usersList", {users:users})
 			
          });		
@@ -107,16 +108,16 @@ const userController = {
      userDetails: (req, res) => {
         db.User.findByPk(req.params.id)
 
-    .then(function(user) {
-        res.render("userDetails", {users:users});
-          });
-     },
+        .then(function(user) {
+            res.render("userDetails", {user:user});
+            });
+        },
 
      editUser: (req, res) => {
 
         db.User.findByPk(req.params.id)
 
-      .then(function(user) {
+        .then(function(user) {
          res.render("editUser", {users:users});
 
          });
