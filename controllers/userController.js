@@ -112,7 +112,7 @@ const userController = {
         .then(function(user) {
 
             if(isAdmin = false){
-                res.redirect('/users/list')
+                res.redirect('/users/usersList')
             
             }else
 
@@ -147,33 +147,17 @@ const userController = {
                  id: req.params.id
                 }
         });
-        res.redirect("/users/list"); //Antes ("/users/list" + req.params.id)
+        res.redirect("/users/usersList");  //Antes ("/users/usersList" + req.params.id)
     },
 
-    deleteUser: async function(req, res){
-
-        const user = await db.USer.findByPk(req.params.id);
-            if(user !== null){
-                fs.unlinkSync(path.resolve(__dirname, '../public/images/'+user.avatar))
-            }
-            if(req.params.id !== null){
-                db.User.destroy({
-                    where: {
-                      id: req.params.id
-                    }
-                });
-            };
-        res.redirect("/user/list");
-    },
-
-    /*deleteUser: (req, res) => { //VERSION ANTERIOR DE METODO PARA BORRAR USUARIO
+    deleteUser: (req, res) => {
         db.User.destroy({
             where: {
              id: req.params.id
             }
         });
-     res.redirect("/user/list");
-    },*/
+     res.redirect("/users/usersList");
+    },
 
 };
 

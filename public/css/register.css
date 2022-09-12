@@ -48,9 +48,44 @@
     text-align: center;
 }
 
+.usersList{
+    display: flex; 
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 30px 45px;
+    width: 20%;
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 15px;
+    border:none;
+    background-color: #3E9855;
+    color: white;
+     font-size: 230%;
+
+}
+
+
 .text-danger{
     color: red;
 }
+
+.text-insideBox{
+margin-top: 10px;
+padding: 8px;
+border-radius: 8px;
+border: 1px solid gray;
+}
+
+.button-register {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    border:none;
+    background-color: #3E9855;
+    color: white;
+}
+
+
 
 
 @media  (max-width : 991px) {

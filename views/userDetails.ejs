@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/register.css">  
         <link rel="stylesheet" href="/css/productSaved.css">
         <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,31 +32,31 @@
 
 <li>
 
-    Nombre: <%=user.firstName%>
+    <h3 class="registo-text">Nombre: <%=user.firstName%> </h3>
     
 </li>
 
 <li>
 
-    Apellidos: <%=user.lastName%>
+    <h3 class="registo-text">Apellidos: <%=user.lastName%> </h3>
     
 </li>
 
 <li>
 
-    Email: <%=user.email%>
+    <h3 class="registo-text"> Email: <%=user.email%> </h3>
     
 </li>
 
 <li>
 
-    Dirección: <%=user.address%>
+    <h3 class="registo-text">Dirección: <%=user.address%> </h3>
     
 </li>
 
 <li>
 
-    Telefono: <%=user.phone%>
+    <h3 class="registo-text"> Telefono: <%=user.phone%> </h3>
     
 </li>
 
@@ -65,17 +66,18 @@
 
 <a href="/users/edit/<%=user.id%>">
   
-    <button type="submit" class="btn-form2">Editar Usuario</button>
+    <button type="submit" class="button-register">Editar Usuario</button>
 
 </a>
 
 <div>
 
-     <form action="/users/list<%= user.id %>?_method=DELETE" method="POST">
 
-     <button type="submit" class="btn-form2" id="Borrar" name="Borrar">Borrar Usuario</button>
+     <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+        <button type="submit" class="button-register" id="Borrar" name="Borrar">Eliminar Usuario</button>
+    </form>
 
-     </form>
+
 
 </div>
 

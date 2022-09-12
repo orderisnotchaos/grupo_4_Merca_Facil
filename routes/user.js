@@ -13,10 +13,10 @@ router.get ('/register', userController.register);
 router.post ('/register', uploadFile.single('avatar'), userValidations, userController.processRegister);
 
 //READ
-router.get("/list", userController.usersList);
+router.get("/usersList", userController.usersList);
 
 //DETALLE USUARIO
-router.get("/list/:id", userController.userDetails);
+router.get("/usersList/:id", userController.userDetails);
 
 //UPDATE
 router.get("/edit/:id", userController.editUser);
@@ -24,7 +24,7 @@ router.post("/edit/:id", userController.updateUser);
 
 
 //DELETE
-router.delete("/delete:id", userController.deleteUser)
+router.delete("/delete/:id", userController.deleteUser);
 
 //LOGIN & LOGOUT
 router.get ('/login', userController.login);

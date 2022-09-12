@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="/css/normalize.css">    
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/register.css">  
     <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
             <div>
                 <label>Nombres:</label>
                 <div id="inputNombreContainer">
-                    <input type="text" placeholder="Ingrese su nombre completo" name="firstName"
+                    <input type="text-insideBox" placeholder="Ingrese su nombre completo" name="firstName"
                     value= "<%= locals.oldData ? oldData.nombre : null %>" id="inputNombre">
                 </div>
                 <% if (locals.errors && errors.firstName) { %>
@@ -118,7 +118,7 @@
             </div>
 
             <div>
-                <button type="submit" class="btn-form2" id="registrarse" name="registrarse">REGISTRARSE</button>
+                <button type="submit" class="button-register" id="registrarse" name="registrarse">REGISTRARSE</button>
             </div>
 
         </form>
