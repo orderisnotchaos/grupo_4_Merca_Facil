@@ -107,10 +107,10 @@
 
             <div>
                 <label class="form-label">Cargar Imagen:</label>
-                    <div>
+                    <div id = "inputImageContainer">
                         <input type="file" name="avatar" value="" id="image">
                         <% if (locals.errors && errors.avatar) { %>
-                            <div class="text-danger" id = "inputImageContainer">
+                            <div class="text-danger" >
                                 <%= errors.avatar.msg %>
                             </div>
                         <% } %> 

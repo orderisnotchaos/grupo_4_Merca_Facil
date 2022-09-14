@@ -82,7 +82,7 @@ window.addEventListener('load', function(){
                 inputPasswordContainer.innerHTML.includes('la password debe tener más de 8 caractéres')){
 
                     let pDanger = document.querySelector('#invalidPassword');
-                    pDanger.stlye.display = 'none';
+                    pDanger.style.display = 'none';
                 }
 
             if(inputContraseña.value.length < 8){
