@@ -61,7 +61,7 @@ window.addEventListener('load', function(){
 
             let validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             
-            if(!inputEmail.value.match(validEmailRegex) &&
+            if(inputEmail.value.match(validEmailRegex) &&
              inputEmailContainer.innerHTML.includes('el mail debe ser válido')){
 
                 let pDanger =document.querySelector('#invalidMail');
