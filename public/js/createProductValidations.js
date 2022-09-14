@@ -4,7 +4,6 @@ window.addEventListener('load', () =>{
     let errorsCounter = 0;
     buttonCreate.addEventListener('click', (e) => {
 
-        e.preventDefault();
         let textAreaDescription = document.querySelector('#description');
         let inputName = document.querySelector('#name');
         let inputImage = document.querySelector('#image')

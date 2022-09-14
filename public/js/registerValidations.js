@@ -1,59 +1,116 @@
 
 window.addEventListener('load', function(){
-    let registerForm = document.querySelector('form.form-registro');
-    let submitButton = document.querySelector('#registrarse');
-    let inputNombre = document.querySelector('#inputNombre');
-    let inputApellido = document.querySelector('#inputApellido');
 
-    let inputTelefono = document.querySelector('#phone');
-    let inputEmail = document.querySelector('#email');
-    let inputContraseña = document.querySelector('#password');    
-    let inputImagen = document.querySelector('#image');
+    let submitButton = document.querySelector('#registrarse');
+
     let errorsCounter = 0;
+
     submitButton.addEventListener('click',function(evt){
+
+        let inputNombre = document.querySelector('#inputNombre');
+        let inputApellido = document.querySelector('#inputApellido');
+        let inputEmail = document.querySelector('#email');
+        let inputContraseña = document.querySelector('#password');    
+        let inputImage = document.querySelector('#image');
         
+        let inputNombreContainer = document.querySelector('#inputNombreContainer');
+        let inputApellidoContainer = document.querySelector('#inputApellidoContainer');
+        let inputEmailContainer = document.querySelector('#inputEmailContainer');
+        let inputPasswordContainer = document.querySelector('#inputPasswordContainer');
+        let inputImageContainer = document.querySelector('#inputImageContainer');
 
         if(
             isInputNotNull(
                 inputNombre, inputApellido,
-                inputContraseña, inputEmail, inputImagen
+                inputContraseña, inputEmail, inputImage
         )){
 
+            if(inputNombre.value.length > 2 &&
+                 inputNombreContainer.innerHTML.includes('el nombre debe tener más de dos carácteres')){
+
+                let pDanger = document.querySelector('#invalidName');
+                pDanger.style.display = 'none';
+            }
             if(inputNombre.value.length  < 2){
 
                 errorsCounter++;
-                let inputNombreContainer = document.querySelector('#inputNombreContainer');
-                inputNombreContainer.innerHTML += "<p class=\"text-danger\"> el nombre debe tener más de dos carácteres</p>";
+                if(!inputNombreContainer.innerHTML.includes('el nombre debe tener más de dos carácteres')){
+                    inputNombreContainer.innerHTML += "<p class=\"text-danger\" id = \"invalidName\"> el nombre debe tener más de dos carácteres</p>";
+                }
+                let pDanger = document.querySelector('#invalidName');
+                pDanger.style.display = 'block';
+
+            }
+
+            if(inputApellido.value.length > 2 && 
+                inputApellidoContainer.innerHTML.includes('el apellido debe tener más de dos carácteres')){
+                let pDanger = document.querySelector('#invalidSurname');
+                pDanger.style.display = 'none'
             }
 
             if(inputApellido.value.length < 2){
 
                 errorsCounter++;
-                let inputApellidoContainer = document.querySelector('#inputApellidoContainer');
-                inputApellidoContainer.innerHTML += "<p class=\"text-danger\"> el apellido debe tener más de dos carácteres</p>";                
+                if(!inputApellidoContainer.innerHTML.includes('el apellido debe tener más de dos carácteres')){
+                    inputApellidoContainer.innerHTML += "<p class=\"text-danger\" id = \"invalidSurname\"> el apellido debe tener más de dos carácteres</p>";                
+                }
+
+                let pDanger = document.querySelector('#invalidSurname');
+                pDanger.style.display = 'block';
             }
 
             let validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             
+            if(!inputEmail.value.match(validEmailRegex) &&
+             inputEmailContainer.innerHTML.includes('el mail debe ser válido')){
+
+                let pDanger =document.querySelector('#invalidMail');
+                pDanger.style.display = 'none';
+            }
             if(!inputEmail.value.match(validEmailRegex) ){
 
                 errorsCounter++;
-                let inputEmailContainer = document.querySelector('#inputEmailContainer');
-                inputEmailContainer.innerHTML += "<p class=\"text-danger\"> el mail debe ser válido</p>";                
+                if(!inputEmailContainer.innerHTML.includes('el mail debe ser válido')){
+                    inputEmailContainer.innerHTML += "<p class=\"text-danger\" id = \"invalidMail\"> el mail debe ser válido</p>";                
+                }
+
+                let pDanger = document.querySelector('#invalidMail');
+                pDanger.style.display = 'block';
             }
+
+            if(inputContraseña.value.length > 8 &&
+                inputPasswordContainer.innerHTML.includes('la password debe tener más de 8 caractéres')){
+
+                    let pDanger = document.querySelector('#invalidPassword');
+                    pDanger.stlye.display = 'none';
+                }
 
             if(inputContraseña.value.length < 8){
 
                 errorsCounter++;
-                let inputPasswordContainer = document.querySelector('#inputPasswordContainer');
-                inputPasswordContainer.innerHTML += "<p class=\"text-danger\"> la password debe tener más de 8 caractéres</p>";                
+                if(!inputPasswordContainer.innerHTML.includes('la password debe tener más de 8 caractéres')){
+                    inputPasswordContainer.innerHTML += "<p class=\"text-danger\" id = \"invalidPassword\"> la password debe tener más de 8 caractéres</p>";                
+                }
+
+                let pDanger = document.querySelector('#invalidPassword');
+                pDanger.style.display = 'block';
             }
 
-            if(!isValidImgFormat(inputImagen.value)){
+            if(isValidImgFormat(inputImage.value) && 
+            inputImageContainer.innerHTML.includes('extensiones permitidas : JPG, JPEG, PNG, GIF')){
+
+                let pDanger = document.querySelector('#invalidFormat')
+                pDanger.style.display = 'none';
+            }
+            if(!isValidImgFormat(inputImage.value)){
 
                 errorsCounter++;
-                let inputImageContainer = document.querySelector('#inputImageContainer');
-                inputImageContainer.innerHTML += "<p class=\"text-danger\"> extensiones permitidas : JPG, JPEG, PNG, GIF</p>";
+                if(!inputImageContainer.innerHTML.includes('extensiones permitidas : JPG, JPEG, PNG, GIF')){
+                    inputImageContainer.innerHTML += "<p class=\"text-danger\" id = \"invalidFormat\"> extensiones permitidas : JPG, JPEG, PNG, GIF</p>";
+                }
+
+                let pDanger = document.querySelector('#invalidFormat');
+                pDanger.style.display = 'block';
             }
         }
 

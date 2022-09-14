@@ -110,7 +110,7 @@
                     <div>
                         <input type="file" name="avatar" value="" id="image">
                         <% if (locals.errors && errors.avatar) { %>
-                            <div class="text-danger">
+                            <div class="text-danger" id = "inputImageContainer">
                                 <%= errors.avatar.msg %>
                             </div>
                         <% } %> 
