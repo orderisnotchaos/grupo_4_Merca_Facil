@@ -11,9 +11,9 @@ const userController = {
     login: (req, res) => {
 
         if(req.session.user != undefined){
-            res.render('logueado');
+            res.render('logueado',{user:req.session.user});
         }
-        return res.render('login');
+        return res.render('login',{user:req.session.user});
     },
 
     processLogin:(req,res) => {
@@ -41,14 +41,15 @@ const userController = {
                 }                                                
                 res.redirect('/')
                  }else{
-                res.render('login', {errors: ' mail o password no coinciden'});
+                res.render('login', {errors: ' mail o password no coinciden', user:req.session.user});
                 }
             })             
         }else{
             res.render('login',{
                 errors: errors.mapped(),
                 title: 'Login',
-                session: req.session
+                session: req.session,
+                user:req.session.user
                 
             })
         };                   
@@ -64,7 +65,7 @@ const userController = {
     },
 
     register: (req, res) => {
-        res.render ("register");
+        res.render ("register", {user:req.session.user});
     },
 
     processRegister:(req,res) => {
@@ -88,14 +89,26 @@ const userController = {
                     })
    
        }else{
-            res.render('register', { errors: errors.mapped(),})
+            res.render('register', { errors: errors.mapped(),user:req.session.user})
         };                 
     },
 
 	usersList: function(req, res) { //INTENTAR HACER QUE SOLO ABRA EL RENDER USERLIST COMO ADMIN.
+        let isAdmin;
+
+		if(req.session.user != undefined){
+			isAdmin = req.session.user.isAdmin == '1' ? true : false;
+		}else{
+			isAdmin =false;
+		}
         db.User.findAll()
             .then (function(users){
-             res.render("usersList", {users:users})
+                if(isAdmin){
+                    res.render("usersList", {users:users, user:req.session.user})
+                }else{
+                    //TODO: crear un ejs para el caso en el que no se tenga permiso para acceder a la página
+                    res.send('no tienes permiso para ingresar a ésta página');
+                }
             });		
 	},
 
@@ -109,14 +122,14 @@ const userController = {
 		}
         db.User.findByPk(req.params.id)
 
-        .then(function(user) {
+        .then(function(us) {
 
-            if(isAdmin = false){
+            if(isAdmin == false){
                 res.redirect('/users/usersList')
             
             }else
 
-             {res.render("userDetails", {user:user, isAdmin})};
+             {res.render("userDetails", {us:us, isAdmin, user:req.session.user})};
 
         });
     },
@@ -125,8 +138,8 @@ const userController = {
 
         db.User.findByPk(req.params.id)
 
-        .then(function(user) {
-         res.render("editUser", {user:user});
+        .then(function(us) {
+         res.render("editUser", {us:us, user:req.session.user});
 
         });
     },

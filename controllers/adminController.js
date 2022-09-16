@@ -4,15 +4,15 @@ const path = require ('path');
 const controladorAdmin = {
 
     dashboardUsers: (req, res) =>{
-        res.render (path.join(__dirname,"../views/dashboardUsers.ejs"));
+        res.render (path.join(__dirname,"../views/dashboardUsers.ejs"), {user:req.session.user});
     },
 
     editUser: (req, res) =>{
-        res.render (path.join(__dirname,"../views/editUser.ejs"));
+        res.render (path.join(__dirname,"../views/editUser.ejs"), {user:req.session.user});
     },
 
     panel: (req, res) =>{
-        res.render (path.join(__dirname,"../views/panelAdmin.ejs"));
+        res.render (path.join(__dirname,"../views/panelAdmin.ejs"), {user:req.session.user});
     }
 
 };

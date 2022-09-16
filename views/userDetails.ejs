@@ -26,37 +26,37 @@
         </div>
 
 
-<h1> <%=user.id%> </h1>
+<h1> <%=us.id%> </h1>
 
 <ul>
 
 <li>
 
-    <h3 class="registo-text">Nombre: <%=user.firstName%> </h3>
+    <h3 class="registo-text">Nombre: <%=us.firstName%> </h3>
     
 </li>
 
 <li>
 
-    <h3 class="registo-text">Apellidos: <%=user.lastName%> </h3>
+    <h3 class="registo-text">Apellidos: <%=us.lastName%> </h3>
     
 </li>
 
 <li>
 
-    <h3 class="registo-text"> Email: <%=user.email%> </h3>
+    <h3 class="registo-text"> Email: <%=us.email%> </h3>
     
 </li>
 
 <li>
 
-    <h3 class="registo-text">Dirección: <%=user.address%> </h3>
+    <h3 class="registo-text">Dirección: <%=us.address%> </h3>
     
 </li>
 
 <li>
 
-    <h3 class="registo-text"> Telefono: <%=user.phone%> </h3>
+    <h3 class="registo-text"> Telefono: <%=us.phone%> </h3>
     
 </li>
 
@@ -64,7 +64,7 @@
 
 </ul>
 
-<a href="/users/edit/<%=user.id%>">
+<a href="/users/edit/<%=us.id%>">
   
     <button type="submit" class="button-register">Editar Usuario</button>
 
@@ -73,7 +73,7 @@
 <div>
 
 
-     <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+     <form action="/users/delete/<%= us.id %>?_method=DELETE" method="POST" style="display: inline-flex">
         <button type="submit" class="button-register" id="Borrar" name="Borrar">Eliminar Usuario</button>
     </form>
 

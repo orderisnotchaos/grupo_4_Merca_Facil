@@ -11,7 +11,7 @@ const controladorProducto = {
 
 			db.Category.findAll()
 			.then(function (categories){
-				return res.render("crearProducto", {categories});
+				return res.render("crearProducto", {categories, user:req.session.user});
 			});
     },
 
@@ -31,7 +31,7 @@ const controladorProducto = {
 	listado: function(req, res){
         db.Product.findAll()
             .then (function(products){
-            res.render("listadoProducts", {products:products})
+            res.render("listadoProducts", {products:products, user:req.session.user})
         	});
 	},
 
@@ -47,7 +47,7 @@ const controladorProducto = {
 			{ model:db.Category, as:'category'}
 			]})
             .then(function(products) {
-            res.render("productDetail", {products:products, isAdmin})
+            res.render("productDetail", {products:products, isAdmin, user:req.session.user})
         })
     },
    
@@ -57,7 +57,7 @@ const controladorProducto = {
 
         Promise.all([pedidoProduct, pedidoCategory] )
             .then(function([products, categories]){
-            res.render("edit", {products:products, categories:categories})
+            res.render("edit", {products:products, categories:categories, user:req.session.user})
         })
     },
 
@@ -94,7 +94,7 @@ const controladorProducto = {
                 }
             }
         })       
-        res.render("products", { products:products, isAdmin })
+        res.render("products", { products:products, isAdmin, user:req.session.user })
     },  
 
     productos: (req, res) =>{
@@ -115,24 +115,24 @@ const controladorProducto = {
 				let cuidadoPersonalProducts = productos.filter(product => product.category === "cuidado-personal")
 				let limpiezaProducts = productos.filter(product => product.category === "limpieza")
 		
-			res.render ("products",{isAdmin, products:productos, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts}); 
+			res.render ("products",{isAdmin, products:productos, despensaProducts, bebidasProducts, mascotasProducts, bebesProducts, cuidadoPersonalProducts, limpiezaProducts, user:req.session.user}); 
 			
 		})
 	},
 	
 	productCart: (req, res) =>{
 
-        res.render (path.join(__dirname,"../views/productCart.ejs"));
+        res.render (path.join(__dirname,"../views/productCart.ejs"), {user:req.session.user});
     },
   
     checkout: (req, res) =>{
 
-        res.render (path.join(__dirname,"../views/checkout.ejs"));
+        res.render (path.join(__dirname,"../views/checkout.ejs"), {user:req.session.user});
     },
 
     mispedidos: (req, res) =>{
 
-        res.render (path.join(__dirname,"../views/myOrders.ejs"));
+        res.render (path.join(__dirname,"../views/myOrders.ejs"), {user:req.session.user});
     },
 
 	destroy: async function(req, res){
@@ -150,117 +150,7 @@ const controladorProducto = {
 			});
 		}
         res.redirect("/products");
-    }
-    /*edit: (req, res) => {
-        const id = +req.params.id;
-		let productDetail = products.filter( function( product ){
-
-			return product.id === id;
-
-		});
-		productDetail = productDetail[ 0 ];
-		res.render('edit', { title: productDetail.name, productToEdit: productDetail } );
-	}, 
-    
-    update: (req, res) => {
-
-		let products = JSON.parse( fs.readFileSync( productsFilePath, 'utf-8' ) );
-		const id     = +req.params.id;
-
-		let name        = req.body.name;
-		let price       = req.body.price;
-		let discount    = req.body.discount;
-		let category    = req.body.category;
-		let description = req.body.description;
-        
-
-		let editProduct = {
-
-			id: id,
-			name: name,
-			price: price,
-			discount: discount,
-			category: category ? category : products.find(product => product.id === id).category,
-			description: description,
-            image: req.file ? req.file.filename : products.find(product => product.id === id).image
-
-		};	
-
-		for( let i in products ) {
-
-			if( products[ i ].id === id ) {
-
-				products[ i ] = editProduct;
-				break;
-			}
-		}
-
-		fs.writeFileSync( productsFilePath , JSON.stringify( products ), { encoding: 'utf-8' } );
-		res.redirect( '/products' );
-
-	},
-
-	destroy : (req, res) => {
-
-		let products = JSON.parse( fs.readFileSync( productsFilePath, 'utf-8' ) );
-		const id     = +req.params.id;
-
-		let productDestroyed = products.filter( function( product ){
-
-			return product.id !== id;
-
-		});
-
-		console.log( productDestroyed );
-
-		fs.writeFileSync( productsFilePath , JSON.stringify( productDestroyed ), { encoding: 'utf-8' } );
-		res.redirect( '/' );
-
-	},*/
-
-	/*mostrarCrear: (req, res) =>{
-
-		if(req.session.user != undefined){
-
-			if(req.session.user.userType == 'Admin'){
-
-        		return res.render ( path.join(__dirname, "../views/crearProducto.ejs"));
-			}else{
-
-				return res.send('no tienes permiso para loguear en esta página');
-			}
-		}
-		return res.send('no tienes permiso para loguear en esta página');
-    },
-
-	procesarCrear: (req, res, next) =>{
-		let errors = validationResult(req);
-		console.log(req.body);
-		if(errors.isEmpty()){
-			req.body.image = req.file.filename;
-			req.body.id = products[ products.length-1 ].id+1 ;
-			products.push(req.body);
-			fs.writeFile(productsFilePath,JSON.stringify(products),'utf8',(err) => {
-				if (err)
-
-				  console.log(err);
-
-				else {
-
-				  console.log("File written successfully\n");
-
-				}});
-
-			res.render(path.join(__dirname, "../views/productSaved.ejs"));
-		} else{
-
-			res.render(path.join(__dirname, "../views/crearProducto.ejs"), {errors:errors.array()});
-		}
-
-		next();
-	},*/
-
-    
+    } 
 };
 
 module.exports = controladorProducto;

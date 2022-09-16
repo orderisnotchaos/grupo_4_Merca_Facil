@@ -13,26 +13,30 @@
         </div>
     </div>
     <nav class="nav">
-      <ul class="nav__ul">
-          <li class="nav__li"><a href = "/">Inicio</a></li>
-          <li class="nav__li"><a href = "/aboutUs"></i>Nosotros</a></li>
-          <li class="nav__li"><a href = "/products"></i>Productos</a></li>
-          <li class="nav__li"><a href = "/contact"></i>Contacto</a></li>
-
-          <li class="nav__li"><a href = "/users/usersList"></i>Users</a></li>
-   
-
-          <div class="dropdown">
+        <ul class="nav__ul">
+            <li class="nav__li"><a href = "/">Inicio</a></li>
+            <li class="nav__li"><a href = "/aboutUs"></i>Nosotros</a></li>
+            <li class="nav__li"><a href = "/products"></i>Productos</a></li>
+            <li class="nav__li"><a href = "/contact"></i>Contacto</a></li>
+            <% if(user){ %>
+                <% if(user.isAdmin == '1'){ %>
+                    <li class="nav__li"><a href = "/users/usersList"></i>Users</a></li>
+                <% } %>
+            <% } %>
+            
+            <% if(user == undefined){ %>
+                <li class="nav__li"><a href = "/users/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></i> Ingresar</a></li>
+            <% }else{ %>
+            <div class="dropdown">
             <li class="nav__li dropbtn"><i class="fa-solid fa-user"></i><a href="#"> Mi cuenta <i class="fa-solid fa-angle-down"></i></a></li>
             <ul class="dropdown-content nav__ul">
-                <li class="nav__li"><a href = "/users/login"><i class="fa-solid fa-arrow-right-to-bracket"></i></i> Ingresar</a></li>
-                <li class="nav__li"><a href = "/users/register"><i class="fa-solid fa-user-check"></i></i> Registro</a></li>
                 <li class="nav__li"><a href = "/products/productCart"><i class="fa-solid fa-cart-arrow-down"></i> Carro de compra</a></li>
                 <li class="nav__li"><a href = "/products/pago"><i class="fa-solid fa-credit-card"></i> Finalizar compra</a></li>
                 <li class="nav__li"><a href = "/products/mispedidos"><i class="fa-solid fa-box"></i> Pedidos</a></li>
                 <li class="nav__li"><a href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesion</a></li>
             </ul>
-        </div>
+            </div>
+            <% } %>
         </ul>        
   </nav>
   <nav class="nav-mobil">
