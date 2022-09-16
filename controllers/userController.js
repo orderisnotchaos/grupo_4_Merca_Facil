@@ -145,6 +145,7 @@ const userController = {
     },
 
     updateUser: (req, res) => {
+        console.log (req.body)
         db.User.update({
 
                 firstName: req.body.firstName,  

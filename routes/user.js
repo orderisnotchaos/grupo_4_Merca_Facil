@@ -20,7 +20,7 @@ router.get("/usersList/:id", userController.userDetails);
 
 //UPDATE
 router.get("/edit/:id", userController.editUser);
-router.post("/edit/:id", userController.updateUser);
+router.post("/edit/:id", uploadFile.single('avatar'), userController.updateUser);
 
 
 //DELETE

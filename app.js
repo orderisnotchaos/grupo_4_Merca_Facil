@@ -7,6 +7,7 @@ const exp = require("constants");
 const helmet = require('helmet');
 const recordameMiddleware = require('./middlewares/recordameMiddleware');
 const cookieParser = require("cookie-parser");
+const bodyParser = require('body-parser');
 
 //app.use(helmet());
 
@@ -23,8 +24,9 @@ const session = require('express-session');
 
 app.use(cookieParser());
 
-app.use(express.urlencoded({ extended: true }));  //obtener informacion al enviar el formulario
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.json());
+
 
 app.use( express.static (__dirname + "\\public"));
 app.use(session({secret: "Secreto", 
