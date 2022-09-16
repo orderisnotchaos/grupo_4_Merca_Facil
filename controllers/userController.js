@@ -145,14 +145,14 @@ const userController = {
     },
 
     updateUser: (req, res) => {
-        console.log (req.body)
+
         db.User.update({
 
                 firstName: req.body.firstName,  
                 lastName: req.body.lastName,
                 email: req.body.email,
                 password: req.body.password,
-                isAdmin: req.body.isAdmin,
+                isAdmin: (req.body.isAdmin == 'client') ? 0 : 1,
                 avatar:req.body.avatar, //Antes: "image.jpg" + "" + avatar,
                 address: req.body.address,
                 phone: req.body.phone,
