@@ -2,6 +2,13 @@ main {
     text-align: center;
     justify-content: center;
     display: flex;
+    width: 100%;
+}
+
+#userDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #formEditUser {
@@ -45,10 +52,10 @@ main {
 /*Botones*/
 button:hover {
     cursor: pointer;
-    transform: scale(0.99);
+    transform: scale(0.95);
 }
 
-#update {
+#update,#edit {
     margin-top: 10px;
     padding: 8px;
     border-radius: 8px;

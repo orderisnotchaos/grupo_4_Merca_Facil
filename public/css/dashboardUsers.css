@@ -5,7 +5,7 @@
 }
 
 .fa-solid {
-    font-family: "Font Awesome 6 Free";
+    font-family: "Font Awesome 6 Free" !important;
 }
 
 main {

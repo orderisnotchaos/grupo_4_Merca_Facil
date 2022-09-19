@@ -1,86 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>MercaFacil</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="stylesheet" href="/css/register.css">  
-        <link rel="stylesheet" href="/css/productSaved.css">
-        <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-        <script type="text/javascript" src="/js/scripts.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-
-    <body>
-
-        <%- include('./partials/header.ejs')-%>
-
-        <div class="sub-header">
-            <h2>Detalle del Usuario</h2>
-        </div>
-
-
-<h1> <%=us.id%> </h1>
-
-<ul>
-
-<li>
-
-    <h3 class="registo-text">Nombre: <%=us.firstName%> </h3>
-    
-</li>
-
-<li>
-
-    <h3 class="registo-text">Apellidos: <%=us.lastName%> </h3>
-    
-</li>
-
-<li>
-
-    <h3 class="registo-text"> Email: <%=us.email%> </h3>
-    
-</li>
-
-<li>
-
-    <h3 class="registo-text">Dirección: <%=us.address%> </h3>
-    
-</li>
-
-<li>
-
-    <h3 class="registo-text"> Telefono: <%=us.phone%> </h3>
-    
-</li>
-
-
-
-</ul>
-
-<a href="/users/edit/<%=us.id%>">
-  
-    <button type="submit" class="button-register">Editar Usuario</button>
-
-</a>
-
-<div>
-
-
-     <form action="/users/delete/<%= us.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-        <button type="submit" class="button-register" id="Borrar" name="Borrar">Eliminar Usuario</button>
-    </form>
-
-
-
-</div>
-
-        <%- include('./partials/footer')-%>
-
+<head>
+    <title>MercaFacil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/editUser.css">
+    <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <%- include('./partials/header.ejs')-%>
+    <div class="sub-header">
+        <h2>Detalle del Usuario</h2>
+    </div>
+    <main>
+        <section id="userDetail">
+            <h1> <%=us.id%> </h1>
+            <div class="userAvatar">
+                <%=us.avatar%>
+            </div>
+            <div><h3>NOMBRE</h3>
+                <div><%=us.firstName%></div>
+            </div>
+            <div><h3>APELLIDOS</h3>
+                <div><%=us.lastName%></div>
+            </div>
+            <div><h3>EMAIL</h3>
+                <div><%=us.email%></div>
+            </div>
+            <div><h3>DIRECCIÓN</h3>
+                <div><%=us.address%></div>
+            </div>
+            <div><h3>TELÉFONO</h3>
+                <div><%=us.phone%></div>
+            </div>
+            <div>
+                <a href="/users/edit/<%=us.id%>">
+                    <button id="edit" type="submit" class="button-register">EDITAR USUARIO</button>
+                </a>
+            </div>
+            <div>
+                <form action="/users/delete/<%=us.id%>?_method=DELETE" method="POST">
+                    <button class="btn-block" id="delete" type="submit">ELIMINAR USUARIO</button>
+                </form>
+            </div>
+            <div>
+                <a href="/users/usersList">
+                    <button class="btn-block" id="back" type="button">VOLVER</button>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+<!-Footer->
+<%- include('./partials/footer')-%>
 </html>

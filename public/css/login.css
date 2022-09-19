@@ -60,7 +60,6 @@
     }
 
     .box-img-login{
-        width: 100%;
-        align-self: flex-start;
+        display: none;
     }
 }

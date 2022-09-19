@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>MercaFacil - Listado de Usuarios</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="/css/register.css">
-        <link rel="stylesheet" href="/css/normalize.css">
-        <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-        <script type="text/javascript" src="/js/scripts.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <title>MercaFacil - Listado de Usuarios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/dashboardUsers.css">
+    <link rel="icon" data-head-react="true" href="/images/logo-banner.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-    <body>
-
-        <%- include('./partials/header.ejs')-%>
-
-
- <h1> Listado de usuarios </h1>
-
- <ul>
-
-<% for (let i = 0; i < users.length; i++) { %>
-
-     <li>
-
-    <a href="/users/usersList/<%=users[i].id%>" class="usersList" type="userList-text">
-
-    <%=users[i].dataValues.firstName%>
-    
-     </a>
-
-     </li>
-
-
-<% } %>
-
- </ul>
+<body>
+    <!-Header>
+    <%- include('./partials/header.ejs')-%>
+<div class="sub-header">
+    <h2 class="name-panel">LISTADO DE USUARIOS</h2>
+</div>
+<main>
+    <section id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>AVATAR</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>EMAIL</th>
+                    <th>CONTRASEÑA</th>
+                    <th>ROL</th>
+                    <th>DIRECCIÓN</th>
+                    <th>TELÉFONO</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="res">
+                <% for (let i = 0; i < users.length; i++) { %>
+                <tr>
+                    <td><%=users[i].dataValues.avatar%></td>
+                    <td><%=users[i].dataValues.firstName%></td>
+                    <td><%=users[i].dataValues.lastName%></td>
+                    <td><%=users[i].dataValues.email%></td>
+                    <td><%=users[i].dataValues.password%></td>
+                    <td><%=users[i].dataValues.isAdmin%></td>
+                    <td><%=users[i].dataValues.address%></td>
+                    <td><%=users[i].dataValues.phone%></td>
+                    <td id="edit">
+                        <a href="/users/usersList/<%=users[i].id%>" class="fa-solid fa-pen-to-square" type="userList-text"></a>
+                    </td>
+                    <td id="delete">
+                        <a class="fa-solid fa-trash"></a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </section>
+</main>
 
 
 <%- include('./partials/footer')-%>

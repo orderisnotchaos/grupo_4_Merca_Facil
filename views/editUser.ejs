@@ -23,78 +23,66 @@
  </div>
     <main>
         <section id="formEditUser">
-        <form action="/users/edit/<%=us.id%>" method="POST" enctype="multipart/form-data">  
-             
+            <form action="/users/edit/<%=us.id%>" method="POST" enctype="multipart/form-data">
                 <label for="inAvatar"></label>
-                    <input type="image" src="https://www.donkey.bike/wp-content/uploads/2020/12/user-member-avatar-face-profile-icon-vector-22965342-300x300.jpg">    
-                    <input id= "avatar" type="file" name="avatar" value="<%=us.avatar%>">
-                        <% if (locals.errors && errors.avatar) { %>
+                <input type="image" src="https://www.donkey.bike/wp-content/uploads/2020/12/user-member-avatar-face-profile-icon-vector-22965342-300x300.jpg">
+                <input id= "avatar" type="file" name="avatar" value="<%=us.avatar%>">
+                    <% if (locals.errors && errors.avatar) { %>
                          class="text-danger">
                          <%= errors.avatar.msg %>                           
-                        <% } %>                                         
-            
+                        <% } %>
                 <label for="firstName">NOMBRE</label>
-                    <input id= "firstName" type="text" placeholder="Nombre completo" name="firstName" value= "<%=us.firstName%>">
-                        <% if (locals.errors && errors.nombre) { %>
-                            <div class="text-danger">
-                             <%= errors.nombre.msg %>
-                            </div>
-                        <% } %>                  
-            
+                <input id= "firstName" type="text" placeholder="Nombre completo" name="firstName" value= "<%=us.firstName%>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="text-danger">
+                            <%= errors.nombre.msg %>
+                        </div>
+                        <% } %>
                 <label for="lastName">APELLIDO</label>
-                    <input id= "lastName" type="text" placeholder="Apellido completo" name="lastName" value="<%=us.lastName%>">
-                        <% if (locals.errors && errors.apellido) { %>
-                            <div class="text-danger">
-                             <%= errors.apellido.msg %>
-                            </div>
-                        <% } %>            
-        
+                <input id= "lastName" type="text" placeholder="Apellido completo" name="lastName" value="<%=us.lastName%>">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class="text-danger">
+                            <%= errors.apellido.msg %>
+                        </div>
+                    <% } %>
                 <label for="email">EMAIL</label>
-                    <input id= "email" type="email" placeholder="correo@correo.com" name="email" value="<%=us.email%>">               
-                        <% if (locals.errors && errors.email) { %>
-                            <div class="text-danger">
-                             <%= errors.email.msg %>
-                            </div>
-                        <% } %>            
-
+                <input id= "email" type="email" placeholder="correo@correo.com" name="email" value="<%=us.email%>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                 <label for="password">CONTRASEÑA</label>
-                    <input id= "password" type="password" placeholder="Contraseña" name="password" value="<%=us.password%>">                 
-                        <% if (locals.errors && errors.password) { %>
-                            <div class="text-danger">
-                             <%= errors.password.msg %>
-                            </div>
-                        <% } %>            
-
+                <input id= "password" type="password" placeholder="Contraseña" name="password" value="<%=us.password%>">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
                 <label for="isAdmin">ROL</label>
-                    <select name="isAdmin" id="isAdmin">             
-                        <option value="client">Cliente</option>
-                        <option value="admin">Administrador</option>
-                    </select>
-            
-
-            
+                <select name="isAdmin" id="isAdmin">             
+                    <option value="client">Cliente</option>
+                    <option value="admin">Administrador</option>
+                </select>
                 <label for="phone">TELÉFONO</label>
-                    <input id= "phone" type="text" placeholder="Dirección" name="phone" value="<%=us.phone%>">
-                        <% if (locals.errors && errors.telefono) { %>
-                            <div class="text-danger">
-                             <%= errors.telefono.msg %>
-                            </div>
-                        <% } %>                
-            
-
-            
+                <input id= "phone" type="text" placeholder="Dirección" name="phone" value="<%=us.phone%>">
+                    <% if (locals.errors && errors.telefono) { %>
+                        <div class="text-danger">
+                            <%= errors.telefono.msg %>
+                        </div>
+                    <% } %>
                 <label for="address">DIRECCIÓN</label>
-                   <input id= "address" type="text" placeholder="Dirección" name="address" value="<%=us.address%>">
-                        <% if (locals.errors && errors.address) { %>
-                            <div class="text-danger">
-                             <%= errors.telefono.msg %>
-                            </div>
-                        <% } %> 
-              
+                <input id= "address" type="text" placeholder="Dirección" name="address" value="<%=us.address%>">
+                    <% if (locals.errors && errors.address) { %>
+                        <div class="text-danger">
+                            <%= errors.telefono.msg %>
+                        </div>
+                    <% } %> 
+                <button id="update" type="submit">ACTUALIZAR</button>
+                <button id="back" type="button" onClick="history.go(-1);">VOLVER</button>
+                <div>
+                </div>
 
-           
-                
-                <input type="submit" value="GUARDAR" id="update" class="button">
             </form> 
             </section>
    

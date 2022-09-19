@@ -9,6 +9,7 @@
 .box-form-contacto textarea{
     font-size: 24px;
     width: 100%;
+    text-align: center;
 }
 
 .box-contacto {
@@ -22,7 +23,8 @@
     align-items: center;
     align-self: center;
     padding: 50px 30px;
-    width: 50%;    
+    width: 50%;
+    text-align: center;
 }
 
 .box-img-contacto img{
@@ -33,11 +35,13 @@
     display: block;
     font-size: 24px;
     width: 100%;
+    text-align: center;
 }
 
 .box-contacto label{
     font-weight: 600;
     margin-bottom: 10px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 /* Pantallas de escritorio normales y TV incluso */
@@ -54,6 +58,10 @@
 @media (max-width: 767px) and (min-width: 200px) {
     .box-form-contacto{
         width: 100%;
+    }
+
+    .box-img-contacto {
+        display: none;
     }
 
     .form-contacto{
