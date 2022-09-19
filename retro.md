@@ -131,3 +131,67 @@ Dinamica "estrella de mar".
 
 5)Hacer menos:
 *Posponer actividades y/o tareas de sprint pasados.
+
+
+----- RETRO. CONCLUSIONES SPRINT 6 -----
+
+
+1)Hacer igual:
+*Seguir motivados.
+*Comunicación en el equipo.
+*Motivarnos como equipo y seguir adelante con el proyecto.
+
+2)Hacer mas:
+*Meter mano al codigo sin miedo a hacer cambios.
+
+3)Empezar a hacer:
+*Mejoras visuales y de codigo
+*Igualdad de sintaxis en todo el proyecto
+
+4)Dejar de hacer:
+*No atender a las reuniones cuando se acuerda una fecha.
+
+5)Hacer menos:
+*Posponer actividades y/o tareas de sprint pasados.
+
+
+----- RETRO. CONCLUSIONES SPRINT 7 -----
+
+
+1)Hacer igual:
+*Seguir motivados.
+*Comunicación en el equipo.
+*Motivarnos como equipo y seguir adelante con el proyecto.
+
+2)Hacer mas:
+*Reuniones de equipo.
+
+3)Empezar a hacer:
+*Mejoras visuales y de codigo
+
+4)Dejar de hacer:
+*Sin comentarios.
+
+5)Hacer menos:
+*Posponer actividades y/o tareas de sprint pasados.
+
+
+----- RETRO. CONCLUSIONES SPRINT 8 -----
+
+
+1)Hacer igual:
+*Seguir motivados.
+*Trabajo en equipo.
+
+2)Hacer mas:
+*Reuniones de equipo.
+*Hacer arreglaos visuales de CSS.
+
+3)Empezar a hacer:
+*Mejoras visuales y de codigo
+
+4)Dejar de hacer:
+*Sin comentarios.
+
+5)Hacer menos:
+*Posponer actividades y/o tareas de sprint pasados.

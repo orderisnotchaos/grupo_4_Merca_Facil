@@ -7,6 +7,7 @@ const controladorMain = {
     index: (req, res) =>{
         db.Product.findAll()
             .then (function(products){
+                console.log(products);
                 res.render (path.join(__dirname,"../views/index.ejs"), {products:products, user:req.session.user});
         	});
         
