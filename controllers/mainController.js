@@ -1,11 +1,15 @@
 const res = require('express/lib/response');
 const path = require('path');
+let db= require ("../database/models");
 
 const controladorMain = {
     
     index: (req, res) =>{
+        db.Product.findAll()
+            .then (function(products){
+                res.render (path.join(__dirname,"../views/index.ejs"), {products:products, user:req.session.user});
+        	});
         
-        res.render (path.join(__dirname,"../views/index.ejs"), {user:req.session.user});
     },
 
     contacto: (req, res) =>{
