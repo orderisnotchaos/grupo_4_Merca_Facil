@@ -5,7 +5,7 @@ module.exports = {
     "database": "mercafacildb",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": "3306"
+    "port": "3308"
   },
   "test": {
     "username": "root",

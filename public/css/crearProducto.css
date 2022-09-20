@@ -2,6 +2,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.form-label {
+    font-family: 'Bebas Neue', cursive;
+}
+
 .fa-solid{
     font-family: "Font Awesome 6 Free" !important;
 }
@@ -46,8 +50,6 @@
     height: 45px;
     margin-bottom: 15px;
 }
-
-
 
 .img{
     margin-left: 33.33%;

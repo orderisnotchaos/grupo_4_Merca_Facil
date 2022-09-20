@@ -11,6 +11,10 @@
     color: red;
 }
 
+.form-label {
+    font-family: 'Bebas Neue', cursive;
+}
+
 .detalle-producto{  
     font-family: 'Montserrat', sans-serif !important;
     justify-content: center;
