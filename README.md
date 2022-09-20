@@ -15,11 +15,9 @@ Estudiante de ingeniería electrónica, con gran motivación y expectativa de ap
 Licenciada en educación física y aprendiz de programación web. Actualmente cursando Full Stack en Digital House. Mexicana. Con residencia en Monterrey, Nuevo León.<br />
 . <strong>Andrés Ferrari</strong><br />
 Estudiante de ingeniería electrónica en la Universidad Tecnólogica Nacional y entusiasta en el mundo de la programación con deseos de conseguir su primera experiencia laboral formal como programador web. Amante de los animales.<br />
-. <strong>Jan Zambrano</strong><br />
-Técnico Informático con perfil híbrido que combina la tecnología y el marketing desde un punto de vista técnico. Conocimientos en manejo de base de datos, email marketing, web analytics, SEO, SEM, HTML, CSS, CMS. Venezolano, Residiendo en en el Sur de Chile, Los Ángeles Bio bio.<br />
+
 . <strong>Maria Manosalva</strong> <br />
 Iniciando en el mundo de la programación, actualmente trabajo en una empresa de telecomunicaciones. Colombiana, resido en Soacha Colombia.<br />
-
 <strong>Sitios de referencia:</strong><br />
 
 https://coto.com.ar<br />
