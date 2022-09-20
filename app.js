@@ -9,42 +9,34 @@ const recordameMiddleware = require('./middlewares/recordameMiddleware');
 const cookieParser = require("cookie-parser");
 const bodyParser = require('body-parser');
 
-//app.use(helmet());
 
 //Ruteo
 const ruteoProducto = require ('./routes/product');
 const ruteoUsuario = require ('./routes/user');
 const ruteoPrincipal = require ('./routes/main');
 const ruteoAdmin = require ('./routes/admin');
-const session = require('express-session'); 
-
-// Registro de las paginas donde ingresan los usuarios
-//const logMiddlewares = require ('./middlewares/logMiddlewares');
+const session = require('express-session');
+const ruteoAPI = require ('./routes/API');  
 
 
 app.use(cookieParser());
-
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json());
-
-
 app.use( express.static (__dirname + "\\public"));
 app.use(session({secret: "Secreto", 
                 resave: true,
                 saveUninitialized: true
                 }));
 app.set('view engine', 'ejs');
-
-app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE 
+app.use(methodOverride('_method'));
 app.use(recordameMiddleware);
-// Registro de las paginas donde ingresan los usuarios se activa luego*
-//app.use(logMiddlewares);
 
 //Ruteo
 app.use('/products', ruteoProducto);
 app.use('/users', ruteoUsuario);
 app.use('/', ruteoPrincipal);
 app.use('/', ruteoAdmin);
+app.use('/api',ruteoAPI);
 app.listen(8000,() => {
     console.log("Servidor Corriendo");
 });
