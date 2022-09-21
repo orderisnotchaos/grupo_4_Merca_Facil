@@ -19,6 +19,7 @@ const session = require('express-session');
 const ruteoAPI = require ('./routes/API');  
 
 
+
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json());
@@ -30,6 +31,16 @@ app.use(session({secret: "Secreto",
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(recordameMiddleware);
+
+app.use( ( req, res, next ) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    next();
+
+});
 
 //Ruteo
 app.use('/products', ruteoProducto);

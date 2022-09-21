@@ -73,14 +73,14 @@ const userController = {
         if(errors.isEmpty()){
 
             let {firstName, lastName, email, password, isAdmin, avatar, address, phone} = req.body
-
+                console.log(avatar);
                db.User.create({                    
                     firstName: firstName,  
                     lastName: lastName,
                     email: email,
                     password: password,
                     isAdmin: isAdmin,
-                    avatar:"image.jpg" + "" + avatar,
+                    avatar: avatar,
                     address: address,
                     phone: phone,
                 })            

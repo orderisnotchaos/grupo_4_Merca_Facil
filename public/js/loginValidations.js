@@ -34,7 +34,7 @@ window.addEventListener('load', (e) =>{
                 pDanger.style.display = 'none';
         }
         if(inputPassword.value.length === 0){
-            console.log(inputPasswordContainer.innerHTML);
+
             errorsCounter++;
             if(!inputPasswordContainer.innerHTML.includes("debes ingresar una contraseña")){
 
