@@ -4,6 +4,7 @@ const fs = require('fs');
 const cookie = require('cookie-parser');
 const {check, validationResult, body} = require('express-validator');
 const db = require('../database/models');
+const bcrypt = require('bcryptjs');
 
 
 const userController = {
@@ -21,10 +22,10 @@ const userController = {
         
         if(errors.isEmpty()){
            db.User.findOne({
-               where: {email:req.body.email}
+               where: {email:req.body.email,}
            })
            .then((user)=>{
-            if(user !== null){
+            if(user !== null && bcrypt.compareSync(req.body.password, user.password)){
                 req.session.user ={
                     id:user.id,
                     userName :user.firstName + "" + user.lastName,
@@ -73,12 +74,12 @@ const userController = {
         if(errors.isEmpty()){
 
             let {firstName, lastName, email, password, isAdmin, avatar, address, phone} = req.body
-                console.log(avatar);
+
                db.User.create({                    
                     firstName: firstName,  
                     lastName: lastName,
                     email: email,
-                    password: password,
+                    password: bcrypt.hashSync(password, 10),
                     isAdmin: isAdmin,
                     avatar: avatar,
                     address: address,
