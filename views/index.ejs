@@ -89,7 +89,7 @@
         <div class="products-container">
             <% for(let i = 0; i<products.length && i <8; i++){ %>
             <div class="product">
-                <a href="/products/detail/1"><img src="/images/<%=products[i].dataValues.image%>" alt="Despensa" class="img-categoria"></a>
+                <a href="/products/detail/<%=products[i].dataValues.id%>"><img src="/images/<%=products[i].dataValues.image%>" alt="Despensa" class="img-categoria"></a>
                 <div class="box-info-product">
                     <a class="titulo-product"><h4><%=products[i].dataValues.name%></h4></a>
                     <a class="descipcion-product"><p><%=products[i].dataValues.description%></p></a>
