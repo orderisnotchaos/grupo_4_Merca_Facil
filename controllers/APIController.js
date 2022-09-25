@@ -43,5 +43,12 @@ module.exports = {
             res.json(products)
         })
     },
+
+    categoriesList: function (req, res, next){
+
+        db.Category.findAll().then(function(categories){
+            res.json(categories);
+        })
+    }
 };
 

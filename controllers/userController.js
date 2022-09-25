@@ -152,7 +152,7 @@ const userController = {
                 firstName: req.body.firstName,  
                 lastName: req.body.lastName,
                 email: req.body.email,
-                password: req.body.password,
+                password: bcrypt.hashSync(req.body.password, 10),
                 isAdmin: (req.body.isAdmin == 'client') ? 0 : 1,
                 avatar:req.body.avatar, //Antes: "image.jpg" + "" + avatar,
                 address: req.body.address,

@@ -6,5 +6,5 @@ router.get('/users', APIController.usersList);
 router.get('/users/:id', APIController.userDetails);
 router.get('/products', APIController.listado);
 router.get('/products/:id', APIController.detail);
-
+router.get('/categories', APIController.categoriesList)
 module.exports = router;
