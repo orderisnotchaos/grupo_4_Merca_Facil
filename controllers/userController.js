@@ -86,7 +86,7 @@ const userController = {
                     phone: phone,
                 })            
                     .then(()=>{
-                     res.redirect('/users/login') //por que a login???
+                     res.redirect('/users/login')
                     })
    
        }else{

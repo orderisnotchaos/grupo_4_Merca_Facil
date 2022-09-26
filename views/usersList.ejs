@@ -35,8 +35,7 @@
                     <th>ROL</th>
                     <th>DIRECCIÓN</th>
                     <th>TELÉFONO</th>
-                    <th></th>
-                    <th></th>
+                    <th>EDITAR</th>
                 </tr>
             </thead>
             <tbody id="res">
@@ -52,9 +51,6 @@
                     <td><%=users[i].dataValues.phone%></td>
                     <td id="edit">
                         <a href="/users/usersList/<%=users[i].id%>" class="fa-solid fa-pen-to-square" type="userList-text"></a>
-                    </td>
-                    <td id="delete">
-                        <a href="/users/delete/<%=user.id%>?_method=DELETE" method="POST" class="fa-solid fa-trash"></a>
                     </td>
                 </tr>
                 <% } %>
