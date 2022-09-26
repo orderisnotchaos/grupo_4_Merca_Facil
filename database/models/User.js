@@ -9,6 +9,7 @@ let cols = {
             type : dataTypes.INTEGER,
            //allowNull : false
         },
+
         firstName : {
             type : dataTypes.STRING,
             //allowNull : false
@@ -50,6 +51,15 @@ let cols = {
 
     let User = sequelize.define (alias, cols, config);
 
+    User.associate = (models)=>{
+        User.belongsToMany(models.Product,{
+            as:"products",
+            through: "product_cart",
+            foreignKey: "user_id",
+            otherKey: "product_id",
+            timestamps : false
+        });
+    }
     return User;
 
 }

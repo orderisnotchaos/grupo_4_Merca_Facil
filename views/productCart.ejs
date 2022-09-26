@@ -31,24 +31,14 @@
                                 <th class="tg-nrix" style="background-color: #FF9234">Precio</th>
                                 <th class="tg-nrix" style="background-color: #FF9234">Cantidad</th>
                             </tr>
+                            <% for(let i=0; i<cart.length; i++){ %>
                             <tr>
-                                <td class="imagen"><img src="/images/generic-image.jpg" width="200px"alt="Imagen"/></td>  
-                                <td class="borde-tabla">PRODUCTO<br><br>Marca</td>
-                                <td class="borde-tabla">$ 000.000</td>
-                                <td class="borde-tabla"><input style="width: 80px;" type="number" value="1"/><br></td>
+                                <td class="imagen"><img src="/images/<%=cart[i].image%>" width="200px"alt="Imagen"/></td>  
+                                <td class="borde-tabla"><%=cart[i].name%><br><br><%=cart[i].category %></td>
+                                <td class="borde-tabla"><%=cart[i].price%></td>
+                                <td class="borde-tabla"><input style="width: 80px;" type="number" value="<%=cart[i].quantity%>" readonly/><br></td>
                             </tr>
-                            <tr>
-                                <td class="imagen"><img src="/images/generic-image.jpg" width="200px" alt="Imagen"/></td> 
-                                <td class="borde-tabla">PRODUCTO<br><br>Marca</td>
-                                <td class="borde-tabla">$ 000.000</td>
-                                <td class="borde-tabla"><input style="width: 80px;" type="number" value="1"/><br></td>
-                            </tr>
-                            <tr>
-                                <td class="imagen"><img src="/images/generic-image.jpg" width="200px" alt="Imagen"/></td> 
-                                <td class="borde-tabla">PRODUCTO<br><br>Marca</td>
-                                <td class="borde-tabla">$ 000.000</td>
-                                <td class="borde-tabla"><input style="width: 80px;" type="number" value="1"/><br></td>
-                            </tr>
+                            <% } %>
                         </table>
                     </div>
                     <div class="tabla2">
@@ -58,21 +48,45 @@
                             </tr>
                             <tr>
                                 <td class="tg-cly1">Subtotal</td>
-                                <td>$ 000.000</td>   
+                                <% let acumulador = 0; %>
+                                <% if(cart.length > 0) {%>
+                                    <% for(let i=0; i<cart.length;i++){ %>
+                                        <% acumulador += cart[i].price*cart[i].quantity; %>
+                                    <% } %>
+                                    
+                                <% } %>
+                                <td> <%= `$${acumulador}` %></td>
+
                             </tr>
                             <tr>
                                 <td class="tg-cly1">Total Envío</td>
-                                <td>$ 000.000</td>
+                                <% acumulador = 0; %>
+                                <% if(cart.length > 0){ %>
+                                    <% for(let i=0; i<cart.length;i++){ %>
+                                        <% acumulador += cart[i].price*cart[i].quantity; %>
+                                    <% } %>
+                                <% } %>
+                                <td> <%= `$${acumulador}` %></td>
                             </tr>
                             <tr>
                                 <td class="tg-cly1">Total a Pagar</td>
-                                <td><strong>$ 000.000</strong></td>
+                                <% acumulador = 0; %>
+                                <% if(cart.length > 0){ %>
+                                    <% for(let i=0; i<cart.length;i++){ %>
+                                        <% acumulador += cart[i].price*cart[i].quantity; %>
+                                    <% } %>
+                                <% } %>
+                                <td><strong> <%= `$${acumulador}`%> </strong></td>
                             </tr>
                             
                         </table><br>
                     <div class="tabla2-botones">
-                        <button type="submit"><i class="fas fa-check"></i> FINALIZAR COMPRA</button><br> 
-                        <button type="submit"><i class="fas fa-undo"></i> CONTINUAR CON LA COMPRA</button><br>
+                        <form action="/products/pago" method="GET">
+                            <button type="submit"><i class="fas fa-check"></i> FINALIZAR COMPRA</button><br>
+                        </form>
+                        <form action="/products" method="GET">
+                            <button type="submit"><i class="fas fa-undo"></i> CONTINUAR CON LA COMPRA</button><br>
+                        </form>
                     </div>
                     </div>
                 </div>

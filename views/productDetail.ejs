@@ -38,9 +38,9 @@
                         <form name="cart_quantity" method="post" action="index.php">
                             <input type="number" name="quantity" id="quantity" value="1" size="1">                                 
                         </form>
-                        
-                        <button class="btn-agregar-carrito" type="submit"><i class="fas fa-check"></i> AGREGAR AL CARRITO </button>
-                        
+                        <form action="/products/addtocart/<%= products.id %>" method="POST">
+                            <button class="btn-agregar-carrito" type="submit"><i class="fas fa-check"></i> AGREGAR AL CARRITO </button>
+                        </form>
                         <a href="/products/" class="btn-volver-tienda" type="submit"><i class="fas fa-undo"></i> VOLVER A PRODUCTOS </a>                         
                         
                         <% if(isAdmin){ %>

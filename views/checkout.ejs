@@ -114,15 +114,16 @@
                 </table>
                 <div class="payment">
                     <p class="mensj-pago">Paga de forma segura con tu tarjeta de crédito.</p>
-                    <form  class="box-form" action="/" method="POST"></form>
-                    <input type="number" id="numbercard" name="numbercard" placeholder="Numero de tarjeta" required>
-                    <div class="box-card-2colmn">
-                        <input type="text" id="datecard" name="datecard" placeholder="MM / AA" required>
-                        <input type="number" id="cvvcard" name="cvvcard" placeholder="Código CVV" required>
-                    </div>
-                    <p>
-                        <input class="btn-form" id="enviar" type="submit" name="enviar" value="PAGAR">
-                    </p> 
+                    <form  class="box-form" action="/users/productcart" method="POST">
+                        <input type="number" id="numbercard" name="numbercard" placeholder="Numero de tarjeta" required>
+                        <div class="box-card-2colmn">
+                            <input type="text" id="datecard" name="datecard" placeholder="MM / AA" required>
+                            <input type="number" id="cvvcard" name="cvvcard" placeholder="Código CVV" required>
+                        </div>
+                        <p>
+                            <input class="btn-form" id="enviar" type="submit" name="enviar" value="PAGAR">
+                        </p> 
+                    </form>
                 </div>
         </section>
     </div>  

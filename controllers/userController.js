@@ -6,7 +6,6 @@ const {check, validationResult, body} = require('express-validator');
 const db = require('../database/models');
 const bcrypt = require('bcryptjs');
 
-
 const userController = {
 
     login: (req, res) => {
@@ -21,26 +20,50 @@ const userController = {
         let errors = validationResult(req)
         
         if(errors.isEmpty()){
+
            db.User.findOne({
                where: {email:req.body.email,}
            })
            .then((user)=>{
             if(user !== null && bcrypt.compareSync(req.body.password, user.password)){
-                req.session.user ={
-                    id:user.id,
-                    userName :user.firstName + "" + user.lastName,
-                    email:user.email,
-                    avatar :user.avatar,
-                    isAdmin: user.isAdmin,
-                    password: user.password,
-                    address: user.address,
-                    phone:  user.phone
-                } 
-        
-                if(req.body.recordar != undefined){
-                    res.cookie('recordame', req.session.user.email, { maxAge: 5000*60})
-                }                                                
-                res.redirect('/')
+                db.User.findOne({
+                    where: {
+                        id: user.id,
+                    },    
+                    include : [{model:db.Product, as:'products'}]
+                }).then(userProducts => {
+                    db.ProductCart.findAll({
+                        where:{
+                            user_id:user.id
+                        }
+                    }).then(product_cart =>{
+                        req.session.user ={
+                            id:user.id,
+                            userName :user.firstName + "" + user.lastName,
+                            email:user.email,
+                            avatar :user.avatar,
+                            isAdmin: user.isAdmin,
+                            password: user.password,
+                            address: user.address,
+                            phone:  user.phone,
+                            cart : []
+                        } 
+                        for(let i=0; i< userProducts.products.length;i++){
+                            for(let j=0; j<product_cart.length;j++){
+                                if(userProducts.products[i].dataValues.id == product_cart[j].product_id){
+                                    userProducts.products[i].dataValues.quantity = product_cart[j].quantity; 
+                                }
+                            }
+                            req.session.user.cart.push(userProducts.products[i].dataValues);
+                        }
+                        if(req.body.recordar != undefined){
+                            res.cookie('recordame', req.session.user.email, { maxAge: 5000*60});
+                        } 
+                        res.redirect('/');
+                    });
+                    
+                });
+                            
                  }else{
                 res.render('login', {errors: ' mail o password no coinciden', user:req.session.user});
                 }
@@ -171,14 +194,40 @@ const userController = {
              id: req.params.id
             }
         });
+        db.ProductCart.destroy(
+            {
+                where:{
+                    user_id:req.params.id,
+                }
+            }
+        );
+
      res.redirect("/users/usersList");
     },
 
     productCart: function(req,res,next){
+
         if(req.session.user !== undefined){
-            res.render('productCart', {user:req.session.user});
+
+            res.render('productCart', {user:req.session.user, cart:req.session.user.cart});
+            
         }else{
             res.redirect("/users/login");
+        }
+    },
+
+    processPurchase: function(req, res){
+        if(req.session.user !== undefined){
+            db.ProductCart.destroy(
+                {
+                    where:{
+                        user_id:req.session.user.id,
+                    }
+                }
+            ).then(()=>{
+                req.session.user.cart = [];
+                res.redirect('/');
+            });
         }
     }
 

@@ -24,7 +24,32 @@ const userValidations = [
             }
         }
         return true;
-    } )
+    } )    
 ];
 
 module.exports = userValidations;
+
+/*validateEmail: check('email')
+  
+.trim()
+
+.normalizeEmail()
+
+.isEmail()
+
+.withMessage('Email invalido')
+
+// Validate email in use or not
+.custom(async (email) => {
+    const existingUser = 
+        await repo.getOneBy({ email })
+          
+    if (existingUser) {
+        throw new Error('Este email ya ha sido registrado.')
+    }
+})
+O
+
+
+
+*/

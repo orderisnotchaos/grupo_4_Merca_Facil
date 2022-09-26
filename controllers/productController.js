@@ -23,7 +23,7 @@ const controladorProducto = {
             description: req.body.description,
             image: req.body.image,
 			quantity: req.body.quantity
-        }).then (function(response){
+        }).then (function(){
 			res.redirect("/products");
 		})
     },
@@ -121,8 +121,42 @@ const controladorProducto = {
 	},
 	
 	productCart: (req, res) =>{
+		if(req.session.user != undefined){
+			db.ProductCart.findOne({
+				where:{
+					[Op.and] : [
+						{product_id : req.params.id},
+						{user_id: req.session.user.id}
+					]
+				}
+			}).then(pCart =>{
+				if(pCart != null){
+					db.ProductCart.update({
+						quantity: pCart.dataValues.quantity+1,
+					}, {where:{[Op.and] :[{product_id : pCart.dataValues.product_id},{user_id: pCart.dataValues.user_id}]}});
+					for(let i = 0;i<req.session.user.cart.length;i++){
+						if(req.session.user.cart[i].id == pCart.dataValues.product_id){
+							console.log(req.session.user.cart[i].quantity++);
+							return res.redirect('/products');
+						}
+					}
+				}else{
+					
+					db.ProductCart.create({
+						product_id: req.params.id,
+						user_id: req.session.user.id,
+						quantity: 1,
+		
+					});
 
-        res.render (path.join(__dirname,"../views/productCart.ejs"), {user:req.session.user});
+					db.Product.findByPk(req.params.id).then(prod =>{
+						req.session.user.cart.push(prod.dataValues);
+						res.redirect('/products');
+					});
+				}
+			});
+		}
+
     },
   
     checkout: (req, res) =>{

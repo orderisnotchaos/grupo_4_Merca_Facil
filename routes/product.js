@@ -27,7 +27,7 @@ router.get('/search', productController.search);
 router.delete('/delete/:id', productController.destroy);
 
 
-router.get ('/productCart', productController.productCart);
+router.post ('/addtocart/:id', productController.productCart);
 router.get ('/mispedidos', productController.mispedidos);
 router.get ('/pago', productController.checkout);
 
