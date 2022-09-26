@@ -174,6 +174,14 @@ const userController = {
      res.redirect("/users/usersList");
     },
 
+    productCart: function(req,res,next){
+        if(req.session.user !== undefined){
+            res.render('productCart', {user:req.session.user});
+        }else{
+            res.redirect("/users/login");
+        }
+    }
+
 };
 
 module.exports = userController;
