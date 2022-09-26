@@ -46,5 +46,6 @@ router.get ('/check', function (req, res){
 
 router.get('/logout', userController.logout);
 
+router.get('/productcart', userController.productCart);
 
 module.exports = router;
