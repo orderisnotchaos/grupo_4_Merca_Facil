@@ -19,7 +19,7 @@ router.get ('/listadoProducts', productController.listado);
 router.get ('/detail/:id', productController.detail);
  
 router.get ('/edit/:id', productController.edit);
-router.post ('/edit/:id', productController.update);
+router.post ('/edit/:id',fileUpload.single('image'), productController.update);
 //router.put ('/edit/:id',fileUpload.single('image'), productController.update);
 router.get('/search', productController.search);
 
