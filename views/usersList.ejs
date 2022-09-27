@@ -41,7 +41,7 @@
             <tbody id="res">
                 <% for (let i = 0; i < users.length; i++) { %>
                 <tr>
-                    <td><%=users[i].dataValues.avatar%></td>
+                    <td><img src="/images/avatars/<%=users[i].dataValues.avatar%>"></td>
                     <td><%=users[i].dataValues.firstName%></td>
                     <td><%=users[i].dataValues.lastName%></td>
                     <td><%=users[i].dataValues.email%></td>
