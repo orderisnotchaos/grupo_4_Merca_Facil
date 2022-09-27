@@ -136,7 +136,7 @@ const controladorProducto = {
 					}, {where:{[Op.and] :[{product_id : pCart.dataValues.product_id},{user_id: pCart.dataValues.user_id}]}});
 					for(let i = 0;i<req.session.user.cart.length;i++){
 						if(req.session.user.cart[i].id == pCart.dataValues.product_id){
-							console.log(req.session.user.cart[i].quantity++);
+							req.session.user.cart[i].quantity++;
 							return res.redirect('/products');
 						}
 					}
@@ -150,11 +150,15 @@ const controladorProducto = {
 					});
 
 					db.Product.findByPk(req.params.id).then(prod =>{
+						prod.dataValues.quantity = 1;
 						req.session.user.cart.push(prod.dataValues);
 						res.redirect('/products');
 					});
 				}
 			});
+		}else{
+
+			res.render('loguear', {user:req.session.user});
 		}
 
     },

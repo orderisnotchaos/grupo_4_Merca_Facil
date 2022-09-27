@@ -212,7 +212,7 @@ const userController = {
             res.render('productCart', {user:req.session.user, cart:req.session.user.cart});
             
         }else{
-            res.redirect("/users/login");
+            res.render('loguear', {user:req.session.user});
         }
     },
 
